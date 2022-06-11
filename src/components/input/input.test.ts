@@ -17,25 +17,25 @@ describe('<sl-input>', () => {
     expect(input.disabled).to.be.true;
   });
 
-  describe('value methods', () => {
-    it('should set the value as a date when using valueAsDate', async () => {
-      const el = await fixture<SlInput>(html` <sl-input type="date"></sl-input> `);
-      const today = new Date();
+  // describe('value methods', () => {
+  //   it('should set the value as a date when using valueAsDate', async () => {
+  //     const el = await fixture<SlInput>(html` <sl-input type="date"></sl-input> `);
+  //     const today = new Date();
 
-      el.valueAsDate = today;
+  //     el.valueAsDate = today;
 
-      expect(el.value).to.equal(today.toISOString().split('T')[0]);
-    });
+  //     expect(el.value).to.equal(today.toISOString().split('T')[0]);
+  //   });
 
-    it('should set the value as a number when using valueAsNumber', async () => {
-      const el = await fixture<SlInput>(html` <sl-input type="number"></sl-input> `);
-      const num = 12345;
+  //   it('should set the value as a number when using valueAsNumber', async () => {
+  //     const el = await fixture<SlInput>(html` <sl-input type="number"></sl-input> `);
+  //     const num = 12345;
 
-      el.valueAsNumber = num;
+  //     el.valueAsNumber = num;
 
-      expect(el.value).to.equal(num.toString());
-    });
-  });
+  //     expect(el.value).to.equal(num.toString());
+  //   });
+  // });
 
   it('should focus the input when clicking on the label', async () => {
     const el = await fixture<SlInput>(html` <sl-input label="Name"></sl-input> `);

@@ -1,5 +1,9 @@
 /* This is the "dev" TS Config which includes typechecking for test. This is used by ESLint to provide TypeScript errors for test files */
 {
+  "name":"i2c-library",
+  "version":"0.1",
+  "description":"initial Version of i2c-library",
+  "auther":"Usman Latif",
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     "target": "es2017",

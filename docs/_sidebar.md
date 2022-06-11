@@ -64,6 +64,7 @@
   - [Tag](/components/tag)
   - [Textarea](/components/textarea)
   - [Tooltip](/components/tooltip)
+  - [Test](/components/test)
   <!--plop:component-->
 
 - Utilities
