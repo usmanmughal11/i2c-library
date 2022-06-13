@@ -8,7 +8,7 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```html preview
 <div class="qr-overview">
-  <i2c-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></i2c-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" label="Scan this code to visit i2c-Library on the web!"></i2c-qr-code>
   <br />
 
   <i2c-input maxlength="255" clearable label="Value"></i2c-input>
@@ -54,7 +54,7 @@ const App = () => {
   return (
     <>
       <div className="qr-overview">
-        <SlQrCode value={value} label="Scan this code to visit Shoelace on the web!" />
+        <SlQrCode value={value} label="Scan this code to visit i2c-Library on the web!" />
         <br />
 
         <SlInput maxlength="255" clearable onInput={event => setValue(event.target.value)} />

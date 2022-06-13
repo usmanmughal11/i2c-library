@@ -8,14 +8,14 @@ import {
   i as i2
 } from "./chunk.IL5OPZ67.js";
 import {
-  color_picker_styles_default
-} from "./chunk.GPJFNGBO.js";
-import {
   l as l2
 } from "./chunk.OEDEK5QG.js";
 import {
   FormSubmitController
 } from "./chunk.S6I2SNDG.js";
+import {
+  color_picker_styles_default
+} from "./chunk.GPJFNGBO.js";
 import {
   LocalizeController
 } from "./chunk.E66L43KD.js";

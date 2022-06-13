@@ -1,6 +1,6 @@
 # Changelog
 
-Shoelace follows [Semantic Versioning](https://semver.org/). Breaking changes in components with the <i2c-badge variant="primary" pill>Stable</i2c-badge> badge will not be accepted until the next major version. As such, all contributions must consider the project's roadmap and take this into consideration. Features that are deemed no longer necessary will be deprecated but not removed.
+i2c-Library follows [Semantic Versioning](https://semver.org/). Breaking changes in components with the <i2c-badge variant="primary" pill>Stable</i2c-badge> badge will not be accepted until the next major version. As such, all contributions must consider the project's roadmap and take this into consideration. Features that are deemed no longer necessary will be deprecated but not removed.
 
 Components with the <i2c-badge variant="warning" pill>Experimental</i2c-badge> badge should not be used in production. They are made available as release candidates for development and testing purposes. As such, changes to experimental components will not be subject to semantic versioning.
 
@@ -19,7 +19,7 @@ _During the beta period, these restrictions may be relaxed in the event of a mis
 - Added `color-scheme` to light and dark themes to improve rendering of browser-provided UI [#776](https://github.com/shoelace-style/shoelace/issues/776)
 - Added `--track-width` custom property to `<i2c-tab-group>`
 - Fixed focus rings for `<i2c-input>`, `<i2c-select>`, and `<i2c-textarea>` in Safari since they don't use `:focus-visible` [#767](https://github.com/shoelace-style/shoelace/issues/767)
-- Fixed a bug where calling `HTMLFormElement.reportValidity()` would skip Shoelace form controls [#772](https://github.com/shoelace-style/shoelace/issues/772)
+- Fixed a bug where calling `HTMLFormElement.reportValidity()` would skip i2c-Library form controls [#772](https://github.com/shoelace-style/shoelace/issues/772)
 - Fixed a bug that prevented `<i2c-tooltip>` from closing when disabled [#775](https://github.com/shoelace-style/shoelace/issues/775)
 - Fixed a bug that allowed `<i2c-icon-button>` to emit a `click` event when disabled [#781](https://github.com/shoelace-style/shoelace/issues/781)
 - Improved the default icon for `<i2c-image-comparer>` so it's more intuitive and removed `grip-vertical` from system icon library
@@ -258,7 +258,7 @@ If you're using color tokens in your own stylesheet, simply remove the `rgb()` t
 }
 ```
 
-Thank you for your help and patience with testing Shoelace. I promise, we're not far from a stable release!
+Thank you for your help and patience with testing i2c-Library. I promise, we're not far from a stable release!
 
 - 🚨 BREAKING: removed blue gray, cool gray, true gray, and warm gray color palettes
 - 🚨 BREAKING: removed `--i2c-focus-ring-color`, and `--i2c-focus-ring-alpha` (use `--i2c-focus-ring` instead)
@@ -299,7 +299,7 @@ Thank you for your help and patience with testing Shoelace. I promise, we're not
 
 ## 2.0.0-beta.58
 
-This version once again restores the bundled distribution because the unbundled + CDN approach is currently confusing and [not working properly](https://github.com/shoelace-style/shoelace/issues/559#issuecomment-949662331). Unbundling the few dependencies Shoelace has is still a goal of the project, but [this jsDelivr bug](https://github.com/jsdelivr/jsdelivr/issues/18337) needs to be resolved before we can achieve it.
+This version once again restores the bundled distribution because the unbundled + CDN approach is currently confusing and [not working properly](https://github.com/shoelace-style/shoelace/issues/559#issuecomment-949662331). Unbundling the few dependencies i2c-Library has is still a goal of the project, but [this jsDelivr bug](https://github.com/jsdelivr/jsdelivr/issues/18337) needs to be resolved before we can achieve it.
 
 I sincerely apologize for the instability of the last few beta releases as a result of this effort.
 
@@ -330,7 +330,7 @@ This release is the second attempt at unbundling dependencies. This will be a br
 
 ## 2.0.0-beta.54
 
-Shoelace doesn't have a lot of dependencies, but this release unbundles most of them so you can potentially save some extra kilobytes. This will be a breaking change only if your configuration _does not_ support bare module specifiers. CDN users and bundler users will be unaffected.
+i2c-Library doesn't have a lot of dependencies, but this release unbundles most of them so you can potentially save some extra kilobytes. This will be a breaking change only if your configuration _does not_ support bare module specifiers. CDN users and bundler users will be unaffected.
 
 - 🚨 BREAKING: renamed the `i2c-clear` event to `i2c-remove`, the `clear-button` part to `remove-button`, and the `clearable` property to `removable` in `<i2c-tag>`
 - Added the `disabled` prop to `<i2c-resize-observer>`
@@ -422,7 +422,7 @@ This release also fixes a critical bug in the color scale where `--i2c-color-neu
 
 This release improves theming by offering both light and dark themes that can be used autonomously. It also improves contrast in most components, adds a variety of new color primitives, and changes the way color tokens are consumed.
 
-Previously, color tokens were in hexadecimal format. Now, Shoelace now uses an `R G B` format that requires you to use the `rgb()` function in your CSS.
+Previously, color tokens were in hexadecimal format. Now, i2c-Library now uses an `R G B` format that requires you to use the `rgb()` function in your CSS.
 
 ```css
 .example {
@@ -470,7 +470,7 @@ This change applies to all design tokens that implement a color. Refer to the [c
 
 ## 2.0.0-beta.47
 
-This release improves how component dependencies are imported. If you've been cherry picking, you no longer need to import component dependencies manually. This significantly improves developer experience, making Shoelace even easier to use. For transparency, component dependencies will continue to be listed in the docs.
+This release improves how component dependencies are imported. If you've been cherry picking, you no longer need to import component dependencies manually. This significantly improves developer experience, making i2c-Library even easier to use. For transparency, component dependencies will continue to be listed in the docs.
 
 - Added "Reflects" column to the properties table
 - Dependencies are now automatically imported for all components
@@ -487,7 +487,7 @@ This release improves the developer experience of `<i2c-animation>`. Previously,
 
 This is a lot more intuitive and makes it easier to activate animations imperatively. In addition, the `play` attribute is automatically removed automatically when the animation finishes or cancels, making it easier to restart finite animations. Lastly, the animation's timing is now accessible through the new `currentTime` property instead of `getCurrentTime()` and `setCurrentTime()`.
 
-In addition, Shoelace no longer uses Sass. Component styles now use Lit's template literal styles and theme files use pure CSS.
+In addition, i2c-Library no longer uses Sass. Component styles now use Lit's template literal styles and theme files use pure CSS.
 
 - 🚨 BREAKING: removed the `pause` attribute from `<i2c-animation>` (use `play` to start and stop the animation instead)
 - 🚨 BREAKING: removed `getCurrentTime()` and `setCurrentTime()` from `<i2c-animation>` (use the `currentTime` property instead)
@@ -666,7 +666,7 @@ The most elegant solution I found was to use the [Web Animations API](https://de
 
 ## 2.0.0-beta.34
 
-This release changes the way components are registered if you're [cherry picking](/getting-started/installation?id=cherry-picking) or [using a bundler](/getting-started/installation?id=bundling). This recommendation came from the LitElement team and simplifies Shoelace's dependency graph. It also eliminates the need to call a `register()` function before using each component.
+This release changes the way components are registered if you're [cherry picking](/getting-started/installation?id=cherry-picking) or [using a bundler](/getting-started/installation?id=bundling). This recommendation came from the LitElement team and simplifies i2c-Library's dependency graph. It also eliminates the need to call a `register()` function before using each component.
 
 From now on, importing a component will register it automatically. The caveat is that bundlers may not tree shake the library properly if you import from `@shoelace-style/shoelace`, so the recommendation is to import components and utilities from their corresponding files instead.
 
@@ -690,7 +690,7 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.32
 
-- Added tag name maps so TypeScript can identify Shoelace elements [#371](https://github.com/shoelace-style/shoelace/pull/371)
+- Added tag name maps so TypeScript can identify i2c-Library elements [#371](https://github.com/shoelace-style/shoelace/pull/371)
 - Fixed a bug where the active tab indicator wouldn't render properly on tabs styled with `flex-end` [#355](https://github.com/shoelace-style/shoelace/issues/355)
 - Fixed a bug where `i2c-change` wasn't emitted by `<i2c-checkbox>` or `<i2c-switch>` [#370](https://github.com/shoelace-style/shoelace/issues/370)
 - Fixed a bug where some props weren't being watched correctly in `<i2c-alert>` and `<i2c-color-picker>`
@@ -710,7 +710,7 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.29
 
-**This release migrates component implementations from Shoemaker to LitElement.** Due to feedback from the community, Shoelace will rely on a more heavily tested library for component implementations. This gives you a more solid foundation and reduces my maintenance burden. Thank you for all your comments, concerns, and encouragement! Aside from that, everything else from beta.28 still applies plus the following.
+**This release migrates component implementations from Shoemaker to LitElement.** Due to feedback from the community, i2c-Library will rely on a more heavily tested library for component implementations. This gives you a more solid foundation and reduces my maintenance burden. Thank you for all your comments, concerns, and encouragement! Aside from that, everything else from beta.28 still applies plus the following.
 
 - 🚨 BREAKING: removed the `symbol` property from `<i2c-rating>` and reverted to `getSymbol` for optimal flexibility
 - Added `vscode.html-custom-data.json` to the build to support IntelliSense (see [the usage section](/getting-started/usage#code-completion) for details)
@@ -723,13 +723,13 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.28
 
-**This release includes a major under the hood overhaul of the library and how it's distributed.** Until now, Shoelace was developed with Stencil. This release moves to a lightweight tool called Shoemaker, a homegrown utility that provides declarative templating and data binding while reducing the boilerplate required for said features.
+**This release includes a major under the hood overhaul of the library and how it's distributed.** Until now, i2c-Library was developed with Stencil. This release moves to a lightweight tool called Shoemaker, a homegrown utility that provides declarative templating and data binding while reducing the boilerplate required for said features.
 
-This change in tooling addresses a number of longstanding bugs and limitations. It also gives us more control over the library and build process while streamlining development and maintenance. Instead of two different distributions, Shoelace now offers a single, standards-compliant collection of ES modules. This may affect how you install and use the library, so please refer to the [installation page](/getting-started/installation) for details.
+This change in tooling addresses a number of longstanding bugs and limitations. It also gives us more control over the library and build process while streamlining development and maintenance. Instead of two different distributions, i2c-Library now offers a single, standards-compliant collection of ES modules. This may affect how you install and use the library, so please refer to the [installation page](/getting-started/installation) for details.
 
-!> Due to the large number of internal changes, I would consider this update to be less stable than previous ones. If you're using Shoelace in a production app, consider holding off until the next beta to allow for more exhaustive testing from the community. Please report any bugs you find on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
+!> Due to the large number of internal changes, I would consider this update to be less stable than previous ones. If you're using i2c-Library in a production app, consider holding off until the next beta to allow for more exhaustive testing from the community. Please report any bugs you find on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
 
-The component API remains the same except for the changes noted below. Thanks for your patience as I work diligently to make Shoelace more stable and future-proof. 🙌
+The component API remains the same except for the changes noted below. Thanks for your patience as I work diligently to make i2c-Library more stable and future-proof. 🙌
 
 - 🚨 BREAKING: removed the custom elements bundle (you can import ES modules directly)
 - 🚨 BREAKING: removed `getAnimationNames()` and `getEasingNames()` methods from `<i2c-animation>` (you can import them from `utilities/animation.js` instead)
@@ -881,7 +881,7 @@ The component API remains the same except for the changes noted below. Thanks fo
 
 ## 2.0.0-beta.20
 
-- 🚨 BREAKING: Transformed all Shoelace events to lowercase ([details](#why-did-event-names-change))
+- 🚨 BREAKING: Transformed all i2c-Library events to lowercase ([details](#why-did-event-names-change))
 - Added support for dropdowns and non-icon elements to `<i2c-input>`
 - Added `spellcheck` attribute to `<i2c-input>`
 - Added `<i2c-icon-library>` to allow custom icon library registration
@@ -893,11 +893,11 @@ The component API remains the same except for the changes noted below. Thanks fo
 
 ### Why did event names change?
 
-Shoelace events were updated to use a lowercase, kebab-style naming convention. Instead of event names such as `slChange` and `slAfterShow`, you'll need to use `i2c-change` and `i2c-after-show` now.
+i2c-Library events were updated to use a lowercase, kebab-style naming convention. Instead of event names such as `slChange` and `slAfterShow`, you'll need to use `i2c-change` and `i2c-after-show` now.
 
 This change was necessary to address a critical issue in frameworks that use DOM templates with declarative event bindings such as `<i2c-button @slChange="handler">`. Due to HTML's case-insensitivity, browsers translate attribute names to lowercase, turning `@slChange` into `@slchange`, making it impossible to listen to `slChange`.
 
-While declarative event binding is a non-standard feature, not supporting it would make Shoelace much harder to use in popular frameworks. To accommodate those users and provide a better developer experience, we decided to change the naming convention while Shoelace is still in beta.
+While declarative event binding is a non-standard feature, not supporting it would make i2c-Library much harder to use in popular frameworks. To accommodate those users and provide a better developer experience, we decided to change the naming convention while i2c-Library is still in beta.
 
 The following pages demonstrate why this change was necessary.
 
@@ -1011,7 +1011,7 @@ The following pages demonstrate why this change was necessary.
 
 - Added support for `href`, `target`, and `download` to buttons
 - Fixed a bug where buttons would have horizontal spacing in Safari
-- Fixed a bug that caused an import resolution error when using Shoelace in a Stencil app
+- Fixed a bug that caused an import resolution error when using i2c-Library in a Stencil app
 
 ## 2.0.0-beta.11
 

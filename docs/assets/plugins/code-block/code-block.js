@@ -314,7 +314,7 @@
           `import ReactDOM from 'https://cdn.skypack.dev/react-dom@${reactVersion}';\n` +
           `import { setBasePath } from 'https://cdn.skypack.dev/@shoelace-style/shoelace@${version}/dist/utilities/base-path';\n` +
           `\n` +
-          `// Set the base path for Shoelace assets\n` +
+          `// Set the base path for i2c-Library assets\n` +
           `setBasePath('https://cdn.skypack.dev/@shoelace-style/shoelace@${version}/dist/')\n` +
           `\n${convertModuleLinks(reactExample)}\n` +
           `\n` +

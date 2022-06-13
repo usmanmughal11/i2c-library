@@ -1,12 +1,12 @@
 # Vue (version 2)
 
-Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use Shoelace in your Vue apps with ease.
+Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use i2c-Library in your Vue apps with ease.
 
 !> These instructions are for Vue 2. If you're using Vue 3 or above, please see the [Vue 3 instructions](/frameworks/vue).
 
 ## Installation
 
-To add Shoelace to your Vue app, install the package from npm.
+To add i2c-Library to your Vue app, install the package from npm.
 
 ```bash
 npm install @shoelace-style/shoelace
@@ -25,7 +25,7 @@ setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dis
 
 ## Configuration
 
-You'll need to tell Vue to ignore Shoelace components. This is pretty easy because they all start with `i2c-`.
+You'll need to tell Vue to ignore i2c-Library components. This is pretty easy because they all start with `i2c-`.
 
 ```js
 import { createApp } from 'vue';
@@ -38,7 +38,7 @@ app.config.compilerOptions.isCustomElement = tag => tag.startsWith('i2c-');
 app.mount('#app');
 ```
 
-Now you can start using Shoelace components in your app!
+Now you can start using i2c-Library components in your app!
 
 ## Usage
 
@@ -62,7 +62,7 @@ One caveat is there's currently [no support for v-model on custom elements](http
 ></i2c-input>
 ```
 
-If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-i2c-model) adds a custom directive that will work just like `v-model` but for Shoelace components. To install it, use this command.
+If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-i2c-model) adds a custom directive that will work just like `v-model` but for i2c-Library components. To install it, use this command.
 
 ```bash
 npm install @shoelace-style/vue-i2c-model
@@ -71,7 +71,7 @@ npm install @shoelace-style/vue-i2c-model
 Next, import the directive and enable it like this.
 
 ```js
-import ShoelaceModelDirective from '@shoelace-style/vue-i2c-model';
+import i2c-LibraryModelDirective from '@shoelace-style/vue-i2c-model';
 import { createApp } from 'vue';
 import App from './App.vue';
 
@@ -89,4 +89,4 @@ Now you can use the `v-i2c-model` directive to keep your data in sync!
 <i2c-input v-i2c-model="name"></i2c-input>
 ```
 
-?> Are you using Shoelace with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md)
+?> Are you using i2c-Library with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md)

@@ -7,7 +7,7 @@ Formats a date/time using the specified locale and options.
 Localization is handled by the browser's [`Intl.DateTimeFormat` API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat). No language packs are required.
 
 ```html preview
-<!-- Shoelace 2 release date 🎉 -->
+<!-- i2c-Library 2 release date 🎉 -->
 <i2c-format-date date="2020-07-15T09:17:00-04:00"></i2c-format-date>
 ```
 

@@ -1,6 +1,6 @@
 # Integrating with Rails
 
-This page explains how to integrate Shoelace with a Rails app.
+This page explains how to integrate i2c-Library with a Rails app.
 
 ?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-rails.md) to make it better.
 
@@ -14,15 +14,15 @@ This integration has been tested with the following:
 
 ## Instructions
 
-To get started using Shoelace with Rails, the following packages must be installed.
+To get started using i2c-Library with Rails, the following packages must be installed.
 
 ```bash
-yarn add @shoelace-style/shoelace copy-webpack-plugin
+yarn add @shoelace-style/i2c-Library copy-webpack-plugin
 ```
 
 ### Importing the Default Theme
 
-The next step is to import Shoelace's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
+The next step is to import i2c-Library's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
 
 ```css
 @import '@shoelace-style/shoelace/dist/themes/light';
@@ -33,7 +33,7 @@ Fore more details about themes, please refer to [Theme Basics](/getting-started/
 
 ### Importing Required Scripts
 
-After importing the theme, you'll need to import the JavaScript files for Shoelace. Add the following code to `app/javascript/packs/application.js`.
+After importing the theme, you'll need to import the JavaScript files for i2c-Library. Add the following code to `app/javascript/packs/application.js`.
 
 ```js
 import '../stylesheets/application.scss'
@@ -50,16 +50,16 @@ setBasePath(rootUrl + '/packs/js/')
 
 ### webpack Config
 
-Next we need to add Shoelace's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
+Next we need to add i2c-Library's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
 
 ```js
 const { environment } = require('@rails/webpacker');
 
-// Shoelace config
+// i2c-Library config
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
-// Add shoelace assets to webpack's build process
+// Add i2c-Library assets to webpack's build process
 environment.plugins.append(
   'CopyPlugin',
   new CopyPlugin({
@@ -94,9 +94,9 @@ The final step is to add the corresponding `pack_tags` to the page. You should h
 </html>
 ```
 
-Now you can start using Shoelace components with Rails!
+Now you can start using i2c-Library components with Rails!
 
 ## Additional Resources
 
 - There is a third-party [example repo](https://github.com/ParamagicDev/rails-shoelace-example), courtesy of [ParamagicDev](https://github.com/ParamagicDev) available to help you get started.
-- If you would like to avoid repeating this process, check out the associated [Railsbyte for Shoelace](https://railsbytes.com/templates/X8BsEb).
+- If you would like to avoid repeating this process, check out the associated [Railsbyte for i2c-Library](https://railsbytes.com/templates/X8BsEb).

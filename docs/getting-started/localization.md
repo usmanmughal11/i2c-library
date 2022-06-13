@@ -1,6 +1,6 @@
 # Localization
 
-Components can be localized by importing the appropriate translation file and setting the desired [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element. Here's an example that renders Shoelace components in Spanish.
+Components can be localized by importing the appropriate translation file and setting the desired [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element. Here's an example that renders i2c-Library components in Spanish.
 
 ```html
 <html lang="es">
@@ -18,9 +18,9 @@ Through the magic of a mutation observer, changing the `lang` attribute will aut
 
 ## Available Translations
 
-Shoelace ships with a number of translations. The default is English (US), which also serves as the fallback locale. As such, you do not need to import the English translation. To see a list of all available translations in the latest version, [refer to this directory](https://github.com/shoelace-style/shoelace/tree/current/src/translations).
+i2c-Library ships with a number of translations. The default is English (US), which also serves as the fallback locale. As such, you do not need to import the English translation. To see a list of all available translations in the latest version, [refer to this directory](https://github.com/shoelace-style/shoelace/tree/current/src/translations).
 
-The location of translations depends on how you're consuming Shoelace.
+The location of translations depends on how you're consuming i2c-Library.
 
 - If you're using the CDN, [import them from the CDN](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace?path=dist%2Ftranslations)
 - If you're using a bundler, import them from `@shoelace-style/shoelace/dist/translations/[lang].js`
@@ -43,7 +43,7 @@ The locale set by `<html lang="...">` is the default locale for the document. If
 2. Look for `es`
 3. Fall back to `en`
 
-Shoelace uses English as a fallback to provide a better experience than rendering nothing or throwing an error.
+i2c-Library uses English as a fallback to provide a better experience than rendering nothing or throwing an error.
 
 ### Submitting New Translations or Improvements
 
@@ -53,7 +53,7 @@ Regional translations are welcome! For example, if a German translation (`de`) e
 
 If you have any questions, please start a [discussion](https://github.com/shoelace-style/shoelace/discussions) or ask in the [community chat](https://discord.gg/mg8f26C).
 
-?> Shoelace provides a localization mechanism for component internals. This is not designed to be used as localization tool for your entire application. You should use a more appropriate tool such as [i18next](https://www.i18next.com/) if you need to localize content in your app.
+?> i2c-Library provides a localization mechanism for component internals. This is not designed to be used as localization tool for your entire application. You should use a more appropriate tool such as [i18next](https://www.i18next.com/) if you need to localize content in your app.
 
 ## Multiple Locales Per Page
 

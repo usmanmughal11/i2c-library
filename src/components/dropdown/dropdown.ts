@@ -299,7 +299,7 @@ export default class SlDropdown extends LitElement {
 
     if (accessibleTrigger) {
       switch (accessibleTrigger.tagName.toLowerCase()) {
-        // Shoelace buttons have to update the internal button so it's announced correctly by screen readers
+        // i2c-Library buttons have to update the internal button so it's announced correctly by screen readers
         case 'i2c-button':
         case 'i2c-icon-button':
           target = (accessibleTrigger as SlButton | SlIconButton).button;

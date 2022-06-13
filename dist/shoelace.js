@@ -53,13 +53,13 @@ import {
 } from "./chunks/chunk.HHVHUWN5.js";
 import "./chunks/chunk.FWFERI34.js";
 import {
-  SlRating
-} from "./chunks/chunk.HOE42IOZ.js";
-import "./chunks/chunk.JME4RO5L.js";
-import {
   SlRange
 } from "./chunks/chunk.UUKUQK6S.js";
 import "./chunks/chunk.TE7O2IZD.js";
+import {
+  SlRating
+} from "./chunks/chunk.HOE42IOZ.js";
+import "./chunks/chunk.JME4RO5L.js";
 import {
   SlRelativeTime
 } from "./chunks/chunk.2J53FPY3.js";
@@ -122,8 +122,29 @@ import {
   SlFormatNumber
 } from "./chunks/chunk.BJEU3ETR.js";
 import {
+  SlCheckbox
+} from "./chunks/chunk.O63ZV2HF.js";
+import "./chunks/chunk.MJSQ733I.js";
+import {
+  SlDetails
+} from "./chunks/chunk.O257MAMK.js";
+import "./chunks/chunk.V3CHBFA4.js";
+import {
+  SlDialog
+} from "./chunks/chunk.5SE6WE7N.js";
+import "./chunks/chunk.BQLXYG6H.js";
+import "./chunks/chunk.LYIOWSOS.js";
+import {
+  SlDivider
+} from "./chunks/chunk.FPOVK7WN.js";
+import "./chunks/chunk.WM5YOCLX.js";
+import {
+  SlCard
+} from "./chunks/chunk.3BIF454A.js";
+import "./chunks/chunk.CIQDTUDK.js";
+import {
   SlColorPicker
-} from "./chunks/chunk.SDMZT2YE.js";
+} from "./chunks/chunk.6AHX3C7H.js";
 import {
   SlVisuallyHidden
 } from "./chunks/chunk.4ZEIAOD3.js";
@@ -141,44 +162,23 @@ import {
 } from "./chunks/chunk.LFUAGJMT.js";
 import "./chunks/chunk.FZS7I7HO.js";
 import "./chunks/chunk.F4OB4K33.js";
-import "./chunks/chunk.GPJFNGBO.js";
-import {
-  SlDetails
-} from "./chunks/chunk.O257MAMK.js";
-import "./chunks/chunk.V3CHBFA4.js";
-import {
-  SlDialog
-} from "./chunks/chunk.7QLDF6NG.js";
-import "./chunks/chunk.BQLXYG6H.js";
+import "./chunks/chunk.OEDEK5QG.js";
 import "./chunks/chunk.SCUNOITN.js";
 import "./chunks/chunk.PW5AZSPR.js";
-import "./chunks/chunk.LYIOWSOS.js";
-import {
-  SlDivider
-} from "./chunks/chunk.FPOVK7WN.js";
-import "./chunks/chunk.WM5YOCLX.js";
 import {
   SlButton
-} from "./chunks/chunk.Q3R5QECI.js";
+} from "./chunks/chunk.6BWKWOQC.js";
 import {
   SlSpinner
 } from "./chunks/chunk.2VBWKRKQ.js";
 import "./chunks/chunk.NIATRW6M.js";
+import "./chunks/chunk.S6I2SNDG.js";
 import "./chunks/chunk.42Q2SCQF.js";
 import {
   SlButtonGroup
 } from "./chunks/chunk.5CEV7Y3Q.js";
 import "./chunks/chunk.5MUHO5GX.js";
-import {
-  SlCard
-} from "./chunks/chunk.3BIF454A.js";
-import "./chunks/chunk.CIQDTUDK.js";
-import {
-  SlCheckbox
-} from "./chunks/chunk.ALZA23AD.js";
-import "./chunks/chunk.OEDEK5QG.js";
-import "./chunks/chunk.S6I2SNDG.js";
-import "./chunks/chunk.MJSQ733I.js";
+import "./chunks/chunk.GPJFNGBO.js";
 import {
   SlAvatar
 } from "./chunks/chunk.IV54V4IS.js";
@@ -247,61 +247,61 @@ import {
 } from "./chunks/chunk.H3IZUSJ7.js";
 import "./chunks/chunk.K2NRSETB.js";
 export {
-  SlAlert,
-  SlAnimatedImage,
-  SlAnimation,
-  SlAvatar,
-  SlBadge,
-  SlBreadcrumb,
-  SlBreadcrumbItem,
-  SlButton,
-  SlButtonGroup,
-  SlCard,
-  SlCheckbox,
-  SlColorPicker,
-  SlDetails,
-  SlDialog,
-  SlDivider,
-  SlDrawer,
-  SlDropdown,
-  SlFormatBytes,
-  SlFormatDate,
-  SlFormatNumber,
-  SlIcon,
-  SlIconButton,
-  SlImageComparer,
-  SlInclude,
-  SlInput,
-  SlMenu,
-  SlMenuItem,
-  SlMenuLabel,
-  SlMutationObserver,
-  SlProgressBar,
-  SlProgressRing,
-  SlQrCode,
-  SlRadio,
-  SlRadioButton,
-  SlRadioGroup,
-  SlRange,
-  SlRating,
-  SlRelativeTime,
-  SlResizeObserver,
-  SlResponsiveMedia,
-  SlSelect,
-  SlSkeleton,
-  SlSpinner,
-  SlSplitPanel,
-  SlSwitch,
-  SlTab,
-  SlTabGroup,
-  SlTabPanel,
-  SlTag,
-  SlTextarea,
-  SlTooltip,
-  SlVisuallyHidden,
   getAnimationNames,
   getBasePath,
   getEasingNames,
+  SlAlert as i2cAlert,
+  SlAnimatedImage as i2cAnimatedImage,
+  SlAnimation as i2cAnimation,
+  SlAvatar as i2cAvatar,
+  SlBadge as i2cBadge,
+  SlBreadcrumb as i2cBreadcrumb,
+  SlBreadcrumbItem as i2cBreadcrumbItem,
+  SlButton as i2cButton,
+  SlButtonGroup as i2cButtonGroup,
+  SlCard as i2cCard,
+  SlCheckbox as i2cCheckbox,
+  SlColorPicker as i2cColorPicker,
+  SlDetails as i2cDetails,
+  SlDialog as i2cDialog,
+  SlDivider as i2cDivider,
+  SlDrawer as i2cDrawer,
+  SlDropdown as i2cDropdown,
+  SlFormatBytes as i2cFormatBytes,
+  SlFormatDate as i2cFormatDate,
+  SlFormatNumber as i2cFormatNumber,
+  SlIcon as i2cIcon,
+  SlIconButton as i2cIconButton,
+  SlImageComparer as i2cImageComparer,
+  SlInclude as i2cInclude,
+  SlInput as i2cInput,
+  SlMenu as i2cMenu,
+  SlMenuItem as i2cMenuItem,
+  SlMenuLabel as i2cMenuLabel,
+  SlMutationObserver as i2cMutationObserver,
+  SlProgressBar as i2cProgressBar,
+  SlProgressRing as i2cProgressRing,
+  SlQrCode as i2cQrCode,
+  SlRadio as i2cRadio,
+  SlRadioButton as i2cRadioButton,
+  SlRadioGroup as i2cRadioGroup,
+  SlRange as i2cRange,
+  SlRating as i2cRating,
+  SlRelativeTime as i2cRelativeTime,
+  SlResizeObserver as i2cResizeObserver,
+  SlResponsiveMedia as i2cResponsiveMedia,
+  SlSelect as i2cSelect,
+  SlSkeleton as i2cSkeleton,
+  SlSpinner as i2cSpinner,
+  SlSplitPanel as i2cSplitPanel,
+  SlSwitch as i2cSwitch,
+  SlTab as i2cTab,
+  SlTabGroup as i2cTabGroup,
+  SlTabPanel as i2cTabPanel,
+  SlTag as i2cTag,
+  SlTextarea as i2cTextarea,
+  SlTooltip as i2cTooltip,
+  SlVisuallyHidden as i2cVisuallyHidden,
   registerIconLibrary,
   setBasePath,
   unregisterIconLibrary

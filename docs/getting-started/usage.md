@@ -1,6 +1,6 @@
 # Usage
 
-Shoelace components are just regular HTML elements, or [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to be precise. You can use them like any other element. Each component has detailed documentation that describes its full API, including properties, events, methods, and more.
+i2c-Library components are just regular HTML elements, or [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) to be precise. You can use them like any other element. Each component has detailed documentation that describes its full API, including properties, events, methods, and more.
 
 If you're new to custom elements, often referred to as "web components," this section will familiarize you with how to use them.
 
@@ -50,7 +50,7 @@ Refer to a component's documentation for a complete list of its custom events.
 
 ## Methods
 
-Some components have methods you can call to trigger various behaviors. For example, you can set focus on a Shoelace input using the `focus()` method.
+Some components have methods you can call to trigger various behaviors. For example, you can set focus on a i2c-Library input using the `focus()` method.
 
 ```html
 <i2c-input></i2c-input>
@@ -100,7 +100,7 @@ Custom elements cannot have self-closing tags. Similar to `<script>` and `<texta
 
 ## Differences from Native Elements
 
-You might expect similarly named elements to share the same API as native HTML elements. This is not always the case. Shoelace components **are not** designed to be one-to-one replacements for their HTML counterparts.
+You might expect similarly named elements to share the same API as native HTML elements. This is not always the case. i2c-Library components **are not** designed to be one-to-one replacements for their HTML counterparts.
 
 For example, `<button>` and `<i2c-button>` both have a `type` attribute, but it does different things. The former controls whether the button submits a form and the latter controls the button's appearance.
 
@@ -108,7 +108,7 @@ For example, `<button>` and `<i2c-button>` both have a `type` attribute, but it 
 
 ## Waiting for Components to Load
 
-Web components are registered with JavaScript, so depending on how and when you load Shoelace, you may notice a [Flash of Undefined Custom Elements (FOUCE)](https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/) when the page loads. There are a couple ways to prevent this, both of which are described in the linked article.
+Web components are registered with JavaScript, so depending on how and when you load i2c-Library, you may notice a [Flash of Undefined Custom Elements (FOUCE)](https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/) when the page loads. There are a couple ways to prevent this, both of which are described in the linked article.
 
 One option is to use the [`:defined`](https://developer.mozilla.org/en-US/docs/Web/CSS/:defined) CSS pseudo-class to "hide" custom elements that haven't been registered yet. You can scope it to specific tags or you can hide all undefined custom elements as shown below.
 
@@ -153,9 +153,9 @@ A clever way to use this method is to hide the `<body>` with `opacity: 0` and ad
 
 ### VS Code
 
-Shoelace ships with a file called `vscode.html-custom-data.json` that can be used to describe its components to Visual Studio Code. This enables code completion for Shoelace components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
+i2c-Library ships with a file called `vscode.html-custom-data.json` that can be used to describe its components to Visual Studio Code. This enables code completion for i2c-Library components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
 
-1. [Install Shoelace locally](/getting-started/installation#local-installation)
+1. [Install i2c-Library locally](/getting-started/installation#local-installation)
 2. Create a folder called `.vscode` at the root of your project
 3. Create a file inside the folder called `settings.json`
 4. Add the following to the file

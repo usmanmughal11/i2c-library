@@ -205,7 +205,7 @@ It's often helpful to have a button that works like a link. This is possible by 
 ```html preview
 <i2c-button href="https://example.com/">Link</i2c-button>
 <i2c-button href="https://example.com/" target="_blank">New Window</i2c-button>
-<i2c-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</i2c-button>
+<i2c-button href="/assets/images/i2c_logo.svg" download="shoelace.svg">Download</i2c-button>
 <i2c-button href="https://example.com/" disabled>Disabled</i2c-button>
 ```
 
@@ -218,7 +218,7 @@ const App = () => (
     <SlButton href="https://example.com/" target="_blank">
       New Window
     </SlButton>
-    <SlButton href="/assets/images/wordmark.svg" download="shoelace.svg">
+    <SlButton href="/assets/images/i2c_logo.svg" download="shoelace.svg">
       Download
     </SlButton>
     <SlButton href="https://example.com/" disabled>

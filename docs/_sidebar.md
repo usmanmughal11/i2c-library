@@ -8,18 +8,18 @@
   - [Form Controls](/getting-started/form-controls)
   - [Localization](/getting-started/localization)
 
-- Frameworks
+<!-- - Frameworks
 
   - [React](/frameworks/react)
   - [Vue](/frameworks/vue)
-  - [Angular](/frameworks/angular)
+  - [Angular](/frameworks/angular) -->
 
-- Resources
+<!-- - Resources
 
   - [Community](/resources/community)
   - [Accessibility](/resources/accessibility)
   - [Contributing](/resources/contributing)
-  - [Changelog](/resources/changelog)
+  - [Changelog](/resources/changelog) -->
 
 - Components
 
@@ -91,8 +91,8 @@
   - [Transition](/tokens/transition)
   - [Z-index](/tokens/z-index)
 
-- Tutorials
+<!-- - Tutorials
 
   - [Integrating with Laravel](/tutorials/integrating-with-laravel)
   - [Integrating with NextJS](/tutorials/integrating-with-nextjs)
-  - [Integrating with Rails](/tutorials/integrating-with-rails)
+  - [Integrating with Rails](/tutorials/integrating-with-rails) -->

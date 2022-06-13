@@ -48,7 +48,7 @@ fs.mkdirSync(outdir, { recursive: true });
       target: 'es2017',
       entryPoints: [
         // The whole shebang
-        './src/shoelace.ts',
+        './src/i2cLibrary.ts',
         // Components
         ...(await globby('./src/components/**/!(*.(style|test)).ts')),
         // Translations
@@ -141,7 +141,7 @@ fs.mkdirSync(outdir, { recursive: true });
 
       setTimeout(() => {
         const url = `http://localhost:${port}`;
-        console.log(chalk.cyan(`Launched the Shoelace dev server at ${url} 🥾\n`));
+        console.log(chalk.cyan(`Launched the i2c-Library dev server at ${url} 🥾\n`));
         if (Object.keys(bs.sockets.sockets).length === 0) {
           open(url);
         } else {

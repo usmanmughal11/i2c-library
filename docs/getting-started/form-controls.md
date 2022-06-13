@@ -1,14 +1,14 @@
 # Form Controls
 
-Every Shoelace component makes use of a [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) to encapsulate markup, styles, and behavior. One caveat of this approach is that native `<form>` elements do not recognize form controls located inside a shadow root.
+Every i2c-Library component makes use of a [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) to encapsulate markup, styles, and behavior. One caveat of this approach is that native `<form>` elements do not recognize form controls located inside a shadow root.
 
-Shoelace solves this problem by using the [`formdata`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event) event, which is [available in all modern browsers](https://caniuse.com/mdn-api_htmlformelement_formdata_event). This means, when a form is submitted, Shoelace form controls will automatically append their values to the `FormData` object that's used to submit the form. In most cases, things will "just work." However, if you're using a form serialization library, it might need to be adapted to recognize Shoelace form controls.
+i2c-Library solves this problem by using the [`formdata`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event) event, which is [available in all modern browsers](https://caniuse.com/mdn-api_htmlformelement_formdata_event). This means, when a form is submitted, i2c-Library form controls will automatically append their values to the `FormData` object that's used to submit the form. In most cases, things will "just work." However, if you're using a form serialization library, it might need to be adapted to recognize i2c-Library form controls.
 
 ?> If you're using an older browser that doesn't support the `formdata` event, a lightweight polyfill will be automatically applied to ensure forms submit as expected.
 
 ## A Note About Event Handling
 
-Shoelace uses event listeners to intercept the form's `formdata` and `submit` events. This allows it to inject data and trigger validation as necessary. If you're also attaching an event listener to the form, _you must attach it after Shoelace form controls are connected to the DOM_, otherwise your logic will run before Shoelace has a chance to inject form data and validate form controls.
+i2c-Library uses event listeners to intercept the form's `formdata` and `submit` events. This allows it to inject data and trigger validation as necessary. If you're also attaching an event listener to the form, _you must attach it after i2c-Library form controls are connected to the DOM_, otherwise your logic will run before i2c-Library has a chance to inject form data and validate form controls.
 
 ## Form Serialization
 
@@ -23,7 +23,7 @@ const data = new FormData(form);
 // All form control data is available in a FormData object
 ```
 
-However, some folks find `FormData` tricky to work with or they need to pass a JSON payload to their server. To accommodate this, Shoelace offers a serialization utility that gathers form data and returns a simple JavaScript object instead.
+However, some folks find `FormData` tricky to work with or they need to pass a JSON payload to their server. To accommodate this, i2c-Library offers a serialization utility that gathers form data and returns a simple JavaScript object instead.
 
 ```js
 import { serialize } from '@shoelace-style/shoelace/dist/utilities/form.js';
@@ -38,7 +38,7 @@ This results in an object with name/value pairs that map to each form control. I
 
 ## Form Control Validation
 
-Client-side validation can be enabled through the browser's [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) for Shoelace form controls. You can activate it using attributes such as `required`, `pattern`, `minlength`, and `maxlength`. Shoelace implements many of the same attributes as native form controls, but check each form control's documentation for a list of all supported properties.
+Client-side validation can be enabled through the browser's [Constraint Validation API](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) for i2c-Library form controls. You can activate it using attributes such as `required`, `pattern`, `minlength`, and `maxlength`. i2c-Library implements many of the same attributes as native form controls, but check each form control's documentation for a list of all supported properties.
 
 As the user interacts with a form control, its `invalid` attribute will reflect its validity based on its current value and the constraints that have been defined. When a form control is invalid, the containing form will not be submitted. Instead, the browser will show the user a relevant error message. If you don't want to use client-side validation, you can suppress this behavior by adding `novalidate` to the surrounding `<form>` element.
 

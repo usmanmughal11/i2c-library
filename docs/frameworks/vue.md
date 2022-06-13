@@ -1,12 +1,12 @@
 # Vue
 
-Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use Shoelace in your Vue apps with ease.
+Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use i2c-Library in your Vue apps with ease.
 
 ?> These instructions are for Vue 3 and above. If you're using Vue 2, please see the [Vue 2 instructions](/frameworks/vue-2).
 
 ## Installation
 
-To add Shoelace to your Vue app, install the package from npm.
+To add i2c-Library to your Vue app, install the package from npm.
 
 ```bash
 npm install @shoelace-style/shoelace
@@ -25,7 +25,7 @@ setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dis
 
 ## Configuration
 
-You'll need to tell Vue to ignore Shoelace components. This is pretty easy because they all start with `i2c-`.
+You'll need to tell Vue to ignore i2c-Library components. This is pretty easy because they all start with `i2c-`.
 
 ```js
 import { fileURLToPath, URL } from 'url';
@@ -52,7 +52,7 @@ export default defineConfig({
 });
 ```
 
-Now you can start using Shoelace components in your app!
+Now you can start using i2c-Library components in your app!
 
 ## Usage
 
@@ -97,4 +97,4 @@ When binding complex data such as objects and arrays, use the `.prop` modifier t
 <i2c-color-picker :swatches.prop="mySwatches" />
 ```
 
-?> Are you using Shoelace with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md)
+?> Are you using i2c-Library with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md)

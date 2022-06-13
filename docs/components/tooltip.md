@@ -314,7 +314,7 @@ const App = () => (
 );
 ```
 
-To override it globally, set it in a root block in your stylesheet after the Shoelace stylesheet is loaded.
+To override it globally, set it in a root block in your stylesheet after the i2c-Library stylesheet is loaded.
 
 ```css
 :root {

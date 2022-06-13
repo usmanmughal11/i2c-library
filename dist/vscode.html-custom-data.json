@@ -39,6 +39,23 @@
       ]
     },
     {
+      "name": "i2c-animated-image",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The image's src attribute."
+        },
+        {
+          "name": "alt",
+          "description": "The image's alt attribute."
+        },
+        {
+          "name": "play",
+          "description": "When set, the image will animate. Otherwise, it will be paused."
+        }
+      ]
+    },
+    {
       "name": "i2c-avatar",
       "attributes": [
         {
@@ -71,23 +88,6 @@
       ]
     },
     {
-      "name": "i2c-animated-image",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The image's src attribute."
-        },
-        {
-          "name": "alt",
-          "description": "The image's alt attribute."
-        },
-        {
-          "name": "play",
-          "description": "When set, the image will animate. Otherwise, it will be paused."
-        }
-      ]
-    },
-    {
       "name": "i2c-animation",
       "attributes": [
         {
@@ -112,7 +112,7 @@
         },
         {
           "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`."
+          "description": "The easing function to use for the animation. This can be a i2c-Library easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`."
         },
         {
           "name": "end-delay",

@@ -1,10 +1,10 @@
 # Angular
 
-Angular [plays nice](https://custom-elements-everywhere.com/#angular) with custom elements, so you can use Shoelace in your Angular apps with ease.
+Angular [plays nice](https://custom-elements-everywhere.com/#angular) with custom elements, so you can use i2c-Library in your Angular apps with ease.
 
 ## Installation
 
-To add Shoelace to your Angular app, install the package from npm.
+To add i2c-Library to your Angular app, install the package from npm.
 
 ```bash
 npm install @shoelace-style/shoelace
@@ -41,6 +41,6 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
-Now you can start using Shoelace components in your app!
+Now you can start using i2c-Library components in your app!
 
-?> Are you using Shoelace with Angular? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)
+?> Are you using i2c-Library with Angular? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)

@@ -318,7 +318,7 @@
       // Add version
       const version = document.createElement('div');
       version.classList.add('sidebar-version');
-      version.textContent = isDev ? 'Development' : isNext ? 'Next' : metadata.package.version;
+      version.textContent = isDev ? 'Library - 0.1' : isNext ? 'Next' : metadata.package.version;
       target.appendChild(version);
 
       // Store version for reuse
@@ -327,18 +327,18 @@
       // Add repo buttons
       const buttons = document.createElement('div');
       buttons.classList.add('sidebar-buttons');
-      buttons.innerHTML = `
-        <i2c-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-          <i2c-icon slot="prefix" name="heart"></i2c-icon> Sponsor
-        </i2c-button>
-        <i2c-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-          <i2c-icon slot="prefix" name="github"></i2c-icon> <span class="github-star-count">Star</span>
-        </i2c-button>
-        <i2c-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-          <i2c-icon slot="prefix" name="twitter"></i2c-icon> Follow
-        </i2c-button>
-      `;
-      target.appendChild(buttons);
+      // buttons.innerHTML = `
+      //   <i2c-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+      //     <i2c-icon slot="prefix" name="heart"></i2c-icon> Sponsor
+      //   </i2c-button>
+      //   <i2c-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
+      //     <i2c-icon slot="prefix" name="github"></i2c-icon> <span class="github-star-count">Star</span>
+      //   </i2c-button>
+      //   <i2c-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
+      //     <i2c-icon slot="prefix" name="twitter"></i2c-icon> Follow
+      //   </i2c-button>
+      // `;
+      // target.appendChild(buttons);
     });
 
     hook.beforeEach(async (content, next) => {

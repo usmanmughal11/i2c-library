@@ -1,6 +1,6 @@
 import {
   SlColorPicker
-} from "./chunk.SDMZT2YE.js";
+} from "./chunk.6AHX3C7H.js";
 
 // src/react/color-picker/index.ts
 import * as React from "react";
