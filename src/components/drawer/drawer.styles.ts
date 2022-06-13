@@ -6,9 +6,9 @@ export default css`
 
   :host {
     --size: 25rem;
-    --header-spacing: var(--sl-spacing-large);
-    --body-spacing: var(--sl-spacing-large);
-    --footer-spacing: var(--sl-spacing-large);
+    --header-spacing: var(--i2c-spacing-large);
+    --body-spacing: var(--i2c-spacing-large);
+    --footer-spacing: var(--i2c-spacing-large);
 
     display: contents;
   }
@@ -29,7 +29,7 @@ export default css`
 
   .drawer--fixed {
     position: fixed;
-    z-index: var(--sl-z-index-drawer);
+    z-index: var(--i2c-z-index-drawer);
   }
 
   .drawer__panel {
@@ -39,9 +39,9 @@ export default css`
     z-index: 2;
     max-width: 100%;
     max-height: 100%;
-    background-color: var(--sl-panel-background-color);
-    box-shadow: var(--sl-shadow-x-large);
-    transition: var(--sl-transition-medium) transform;
+    background-color: var(--i2c-panel-background-color);
+    box-shadow: var(--i2c-shadow-x-large);
+    transition: var(--i2c-transition-medium) transform;
     overflow: auto;
     pointer-events: all;
   }
@@ -93,8 +93,8 @@ export default css`
   .drawer__title {
     flex: 1 1 auto;
     font: inherit;
-    font-size: var(--sl-font-size-large);
-    line-height: var(--sl-line-height-dense);
+    font-size: var(--i2c-font-size-large);
+    line-height: var(--i2c-line-height-dense);
     padding: var(--header-spacing);
     margin: 0;
   }
@@ -103,7 +103,7 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    font-size: var(--sl-font-size-x-large);
+    font-size: var(--i2c-font-size-x-large);
     padding: 0 var(--header-spacing);
   }
 
@@ -119,8 +119,8 @@ export default css`
     padding: var(--footer-spacing);
   }
 
-  .drawer__footer ::slotted(sl-button:not(:last-of-type)) {
-    margin-inline-end: var(--sl-spacing-x-small);
+  .drawer__footer ::slotted(i2c-button:not(:last-of-type)) {
+    margin-inline-end: var(--i2c-spacing-x-small);
   }
 
   .drawer:not(.drawer--has-footer) .drawer__footer {
@@ -134,7 +134,7 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--sl-overlay-background-color);
+    background-color: var(--i2c-overlay-background-color);
     pointer-events: all;
   }
 

@@ -8,7 +8,7 @@ import styles from './visually-hidden.styles';
  *
  * @slot - The content you'd like to be visually hidden.
  */
-@customElement('sl-visually-hidden')
+@customElement('i2c-visually-hidden')
 export default class SlVisuallyHidden extends LitElement {
   static styles = styles;
 
@@ -19,6 +19,6 @@ export default class SlVisuallyHidden extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-visually-hidden': SlVisuallyHidden;
+    'i2c-visually-hidden': SlVisuallyHidden;
   }
 }

@@ -1,17 +1,17 @@
 # Animation
 
-[component-header:sl-animation]
+[component-header:i2c-animation]
 
 Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
 
-To animate an element, wrap it in `<sl-animation>` and set an animation `name`. The animation will not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
+To animate an element, wrap it in `<i2c-animation>` and set an animation `name`. The animation will not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
 
 ```html preview
 <div class="animation-overview">
-  <sl-animation name="bounce" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="jello" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="heartBeat" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="flip" duration="2000" play><div class="box"></div></sl-animation>
+  <i2c-animation name="bounce" duration="2000" play><div class="box"></div></i2c-animation>
+  <i2c-animation name="jello" duration="2000" play><div class="box"></div></i2c-animation>
+  <i2c-animation name="heartBeat" duration="2000" play><div class="box"></div></i2c-animation>
+  <i2c-animation name="flip" duration="2000" play><div class="box"></div></i2c-animation>
 </div>
 
 <style>
@@ -19,7 +19,7 @@ To animate an element, wrap it in `<sl-animation>` and set an animation `name`. 
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
     margin: 1.5rem;
   }
 </style>
@@ -33,7 +33,7 @@ const css = `
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
     margin: 1.5rem;
   }
 `;
@@ -60,7 +60,7 @@ const App = () => (
 );
 ```
 
-?> The animation will only be applied to the first child element found in `<sl-animation>`.
+?> The animation will only be applied to the first child element found in `<i2c-animation>`.
 
 ## Examples
 
@@ -70,14 +70,14 @@ This example demonstrates all of the baked-in animations and easings. Animations
 
 ```html preview
 <div class="animation-sandbox">
-  <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
+  <i2c-animation name="bounce" easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </i2c-animation>
 
   <div class="controls">
-    <sl-select label="Animation" value="bounce"></sl-select>
-    <sl-select label="Easing" value="linear"></sl-select>
-    <sl-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></sl-input>
+    <i2c-select label="Animation" value="bounce"></i2c-select>
+    <i2c-select label="Easing" value="linear"></i2c-select>
+    <i2c-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></i2c-input>
   </div>
 </div>
 
@@ -85,15 +85,15 @@ This example demonstrates all of the baked-in animations and easings. Animations
   import { getAnimationNames, getEasingNames } from '/dist/utilities/animation.js';
 
   const container = document.querySelector('.animation-sandbox');
-  const animation = container.querySelector('sl-animation');
-  const animationName = container.querySelector('.controls sl-select:nth-child(1)');
-  const easingName = container.querySelector('.controls sl-select:nth-child(2)');
-  const playbackRate = container.querySelector('sl-input[type="number"]');
+  const animation = container.querySelector('i2c-animation');
+  const animationName = container.querySelector('.controls i2c-select:nth-child(1)');
+  const easingName = container.querySelector('.controls i2c-select:nth-child(2)');
+  const playbackRate = container.querySelector('i2c-input[type="number"]');
   const animations = getAnimationNames();
   const easings = getEasingNames();
 
   animations.map(name => {
-    const menuItem = Object.assign(document.createElement('sl-menu-item'), {
+    const menuItem = Object.assign(document.createElement('i2c-menu-item'), {
       textContent: name,
       value: name
     });
@@ -101,23 +101,23 @@ This example demonstrates all of the baked-in animations and easings. Animations
   });
 
   easings.map(name => {
-    const menuItem = Object.assign(document.createElement('sl-menu-item'), {
+    const menuItem = Object.assign(document.createElement('i2c-menu-item'), {
       textContent: name,
       value: name
     });
     easingName.appendChild(menuItem);
   });
 
-  animationName.addEventListener('sl-change', () => (animation.name = animationName.value));
-  easingName.addEventListener('sl-change', () => (animation.easing = easingName.value));
-  playbackRate.addEventListener('sl-input', () => (animation.playbackRate = playbackRate.value));
+  animationName.addEventListener('i2c-change', () => (animation.name = animationName.value));
+  easingName.addEventListener('i2c-change', () => (animation.easing = easingName.value));
+  playbackRate.addEventListener('i2c-input', () => (animation.playbackRate = playbackRate.value));
 </script>
 
 <style>
   .animation-sandbox .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 
   .animation-sandbox .controls {
@@ -125,7 +125,7 @@ This example demonstrates all of the baked-in animations and easings. Animations
     margin-top: 2rem;
   }
 
-  .animation-sandbox .controls sl-select {
+  .animation-sandbox .controls i2c-select {
     margin-bottom: 1rem;
   }
 </style>
@@ -137,12 +137,12 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ```html preview
 <div class="animation-scroll">
-  <sl-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></sl-animation>
+  <i2c-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></i2c-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-scroll');
-  const animation = container.querySelector('sl-animation');
+  const animation = container.querySelector('i2c-animation');
   const box = animation.querySelector('.box');
 
   // Watch for the box to enter and exit the viewport. Note that we're observing the box, not the animation element!
@@ -163,7 +163,7 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 </style>
 ```
@@ -181,7 +181,7 @@ const css = `
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 `;
 
@@ -224,13 +224,13 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
 
 ```html preview
 <div class="animation-keyframes">
-  <sl-animation easing="ease-in-out" duration="2000" play>
+  <i2c-animation easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </i2c-animation>
 </div>
 
 <script>
-  const animation = document.querySelector('.animation-keyframes sl-animation');
+  const animation = document.querySelector('.animation-keyframes i2c-animation');
   animation.keyframes = [
     {
       offset: 0,
@@ -253,7 +253,7 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
   .animation-keyframes .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 </style>
 ```
@@ -265,7 +265,7 @@ const css = `
   .animation-keyframes .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 `;
 
@@ -308,15 +308,15 @@ Animations won't play until you apply the `play` attribute. You can omit it init
 
 ```html preview
 <div class="animation-form">
-  <sl-animation name="rubberBand" duration="1000" iterations="1">
-    <sl-button variant="primary">Click me</sl-button>
-  </sl-animation>
+  <i2c-animation name="rubberBand" duration="1000" iterations="1">
+    <i2c-button variant="primary">Click me</i2c-button>
+  </i2c-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-form');
-  const animation = container.querySelector('sl-animation');
-  const button = container.querySelector('sl-button');
+  const animation = container.querySelector('i2c-animation');
+  const button = container.querySelector('i2c-button');
 
   button.addEventListener('click', () => {
     animation.play = true;
@@ -343,4 +343,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-animation]
+[component-metadata:i2c-animation]

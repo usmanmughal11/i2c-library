@@ -5,13 +5,13 @@ import '../../components/button-group/button-group';
 import styles from './radio-group.styles';
 import type SlRadio from '../../components/radio/radio';
 
-const RADIO_CHILDREN = ['sl-radio', 'sl-radio-button'];
+const RADIO_CHILDREN = ['i2c-radio', 'i2c-radio-button'];
 
 /**
  * @since 2.0
  * @status stable
  *
- * @dependency sl-button-group
+ * @dependency i2c-button-group
  *
  * @slot - The default slot where radio controls are placed.
  * @slot label - The radio group label. Required for proper accessibility. Alternatively, you can use the label prop.
@@ -21,7 +21,7 @@ const RADIO_CHILDREN = ['sl-radio', 'sl-radio-button'];
  * @csspart button-group - The button group that wraps radio buttons.
  * @csspart button-group__base - The button group's `base` part.
  */
-@customElement('sl-radio-group')
+@customElement('i2c-radio-group')
 export default class SlRadioGroup extends LitElement {
   static styles = styles;
 
@@ -89,7 +89,7 @@ export default class SlRadioGroup extends LitElement {
     const radios = this.getAllRadios();
     const checkedRadio = radios.find(radio => radio.checked);
 
-    this.hasButtonGroup = !!radios.find(radio => radio.tagName.toLowerCase() === 'sl-radio-button');
+    this.hasButtonGroup = !!radios.find(radio => radio.tagName.toLowerCase() === 'i2c-radio-button');
 
     radios.forEach(radio => {
       radio.setAttribute('role', 'radio');
@@ -120,7 +120,7 @@ export default class SlRadioGroup extends LitElement {
           <slot name="label">${this.label}</slot>
         </legend>
         ${this.hasButtonGroup
-          ? html`<sl-button-group part="button-group">${defaultSlot}</sl-button-group>`
+          ? html`<i2c-button-group part="button-group">${defaultSlot}</i2c-button-group>`
           : defaultSlot}
       </fieldset>
     `;
@@ -129,6 +129,6 @@ export default class SlRadioGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-radio-group': SlRadioGroup;
+    'i2c-radio-group': SlRadioGroup;
   }
 }

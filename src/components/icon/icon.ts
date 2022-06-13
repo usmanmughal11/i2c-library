@@ -14,12 +14,12 @@ let parser: DOMParser;
  * @since 2.0
  * @status stable
  *
- * @event sl-load - Emitted when the icon has loaded.
- * @event sl-error - Emitted when the icon fails to load due to an error.
+ * @event i2c-load - Emitted when the icon has loaded.
+ * @event i2c-error - Emitted when the icon fails to load due to an error.
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-icon')
+@customElement('i2c-icon')
 export default class SlIcon extends LitElement {
   static styles = styles;
 
@@ -94,17 +94,17 @@ export default class SlIcon extends LitElement {
           if (svgEl !== null) {
             library?.mutator?.(svgEl);
             this.svg = svgEl.outerHTML;
-            emit(this, 'sl-load');
+            emit(this, 'i2c-load');
           } else {
             this.svg = '';
-            emit(this, 'sl-error');
+            emit(this, 'i2c-error');
           }
         } else {
           this.svg = '';
-          emit(this, 'sl-error');
+          emit(this, 'i2c-error');
         }
       } catch {
-        emit(this, 'sl-error');
+        emit(this, 'i2c-error');
       }
     } else if (this.svg.length > 0) {
       // If we can't resolve a URL and an icon was previously set, remove it
@@ -133,6 +133,6 @@ export default class SlIcon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon': SlIcon;
+    'i2c-icon': SlIcon;
   }
 }

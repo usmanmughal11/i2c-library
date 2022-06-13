@@ -16,10 +16,10 @@ import styles from './tooltip.styles';
  * @slot - The tooltip's target element. Only the first element will be used as the target.
  * @slot content - The tooltip's content. Alternatively, you can use the content prop.
  *
- * @event sl-show - Emitted when the tooltip begins to show.
- * @event sl-after-show - Emitted after the tooltip has shown and all animations are complete.
- * @event sl-hide - Emitted when the tooltip begins to hide.
- * @event sl-after-hide - Emitted after the tooltip has hidden and all animations are complete.
+ * @event i2c-show - Emitted when the tooltip begins to show.
+ * @event i2c-after-show - Emitted after the tooltip has shown and all animations are complete.
+ * @event i2c-hide - Emitted when the tooltip begins to hide.
+ * @event i2c-after-hide - Emitted after the tooltip has hidden and all animations are complete.
  *
  * @csspart base - The component's internal wrapper.
  *
@@ -30,7 +30,7 @@ import styles from './tooltip.styles';
  * @animation tooltip.show - The animation to use when showing the tooltip.
  * @animation tooltip.hide - The animation to use when hiding the tooltip.
  */
-@customElement('sl-tooltip')
+@customElement('i2c-tooltip')
 export default class SlTooltip extends LitElement {
   static styles = styles;
 
@@ -137,7 +137,7 @@ export default class SlTooltip extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'i2c-after-show');
   }
 
   /** Hides the tooltip */
@@ -147,7 +147,7 @@ export default class SlTooltip extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'i2c-after-hide');
   }
 
   getTarget() {
@@ -217,7 +217,7 @@ export default class SlTooltip extends LitElement {
       }
 
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'i2c-show');
 
       await stopAnimations(this.tooltip);
       this.startPositioner();
@@ -225,10 +225,10 @@ export default class SlTooltip extends LitElement {
       const { keyframes, options } = getAnimation(this, 'tooltip.show', { dir: this.localize.dir() });
       await animateTo(this.tooltip, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'i2c-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'i2c-hide');
 
       await stopAnimations(this.tooltip);
       const { keyframes, options } = getAnimation(this, 'tooltip.hide', { dir: this.localize.dir() });
@@ -236,7 +236,7 @@ export default class SlTooltip extends LitElement {
       this.tooltip.hidden = true;
       this.stopPositioner();
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'i2c-after-hide');
     }
   }
 
@@ -302,7 +302,7 @@ export default class SlTooltip extends LitElement {
         top: typeof arrowY === 'number' ? `${arrowY}px` : '',
         right: '',
         bottom: '',
-        [staticSide]: 'calc(var(--sl-tooltip-arrow-size) * -1)'
+        [staticSide]: 'calc(var(--i2c-tooltip-arrow-size) * -1)'
       });
     });
   }
@@ -360,6 +360,6 @@ setDefaultAnimation('tooltip.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tooltip': SlTooltip;
+    'i2c-tooltip': SlTooltip;
   }
 }

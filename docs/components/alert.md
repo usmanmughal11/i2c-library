@@ -1,14 +1,14 @@
 # Alert
 
-[component-header:sl-alert]
+[component-header:i2c-alert]
 
 Alerts are used to display important messages inline or as toast notifications.
 
 ```html preview
-<sl-alert open>
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<i2c-alert open>
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   This is a standard alert. You can customize its content and even the icon.
-</sl-alert>
+</i2c-alert>
 ```
 
 ```jsx react
@@ -31,43 +31,43 @@ const App = () => (
 Set the `variant` attribute to change the alert's variant.
 
 ```html preview
-<sl-alert variant="primary" open>
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<i2c-alert variant="primary" open>
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   <strong>This is super informative</strong><br />
   You can tell by how pretty the alert is.
-</sl-alert>
+</i2c-alert>
 
 <br />
 
-<sl-alert variant="success" open>
-  <sl-icon slot="icon" name="check2-circle"></sl-icon>
+<i2c-alert variant="success" open>
+  <i2c-icon slot="icon" name="check2-circle"></i2c-icon>
   <strong>Your changes have been saved</strong><br />
   You can safely exit the app now.
-</sl-alert>
+</i2c-alert>
 
 <br />
 
-<sl-alert variant="neutral" open>
-  <sl-icon slot="icon" name="gear"></sl-icon>
+<i2c-alert variant="neutral" open>
+  <i2c-icon slot="icon" name="gear"></i2c-icon>
   <strong>Your settings have been updated</strong><br />
   Settings will take affect on next login.
-</sl-alert>
+</i2c-alert>
 
 <br />
 
-<sl-alert variant="warning" open>
-  <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
+<i2c-alert variant="warning" open>
+  <i2c-icon slot="icon" name="exclamation-triangle"></i2c-icon>
   <strong>Your session has ended</strong><br />
   Please login again to continue.
-</sl-alert>
+</i2c-alert>
 
 <br />
 
-<sl-alert variant="danger" open>
-  <sl-icon slot="icon" name="exclamation-octagon"></sl-icon>
+<i2c-alert variant="danger" open>
+  <i2c-icon slot="icon" name="exclamation-octagon"></i2c-icon>
   <strong>Your account has been deleted</strong><br />
   We're very sorry to see you go!
-</sl-alert>
+</i2c-alert>
 ```
 
 ```jsx react
@@ -126,14 +126,14 @@ const App = () => (
 Add the `closable` attribute to show a close button that will hide the alert.
 
 ```html preview
-<sl-alert variant="primary" open closable class="alert-closable">
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<i2c-alert variant="primary" open closable class="alert-closable">
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   You can close this alert any time!
-</sl-alert>
+</i2c-alert>
 
 <script>
   const alert = document.querySelector('.alert-closable');
-  alert.addEventListener('sl-after-hide', () => {
+  alert.addEventListener('i2c-after-hide', () => {
     setTimeout(() => (alert.open = true), 2000);
   });
 </script>
@@ -165,7 +165,7 @@ const App = () => {
 Icons are optional. Simply omit the `icon` slot if you don't want them.
 
 ```html preview
-<sl-alert variant="primary" open> Nothing fancy here, just a simple alert. </sl-alert>
+<i2c-alert variant="primary" open> Nothing fancy here, just a simple alert. </i2c-alert>
 ```
 
 ```jsx react
@@ -184,25 +184,25 @@ Set the `duration` attribute to automatically hide an alert after a period of ti
 
 ```html preview
 <div class="alert-duration">
-  <sl-button variant="primary">Show Alert</sl-button>
+  <i2c-button variant="primary">Show Alert</i2c-button>
 
-  <sl-alert variant="primary" duration="3000" closable>
-    <sl-icon slot="icon" name="info-circle"></sl-icon>
+  <i2c-alert variant="primary" duration="3000" closable>
+    <i2c-icon slot="icon" name="info-circle"></i2c-icon>
     This alert will automatically hide itself after three seconds, unless you interact with it.
-  </sl-alert>
+  </i2c-alert>
 </div>
 
 <script>
   const container = document.querySelector('.alert-duration');
-  const button = container.querySelector('sl-button');
-  const alert = container.querySelector('sl-alert');
+  const button = container.querySelector('i2c-button');
+  const alert = container.querySelector('i2c-alert');
 
   button.addEventListener('click', () => alert.show());
 </script>
 
 <style>
-  .alert-duration sl-alert {
-    margin-top: var(--sl-spacing-medium);
+  .alert-duration i2c-alert {
+    margin-top: var(--i2c-spacing-medium);
   }
 </style>
 ```
@@ -212,8 +212,8 @@ import { useState } from 'react';
 import { SlAlert, SlButton, SlIcon } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .alert-duration sl-alert {
-    margin-top: var(--sl-spacing-medium);
+  .alert-duration i2c-alert {
+    margin-top: var(--i2c-spacing-medium);
   }
 `;
 
@@ -247,49 +247,49 @@ You should always use the `closable` attribute so users can dismiss the notifica
 
 ```html preview
 <div class="alert-toast">
-  <sl-button variant="primary">Primary</sl-button>
-  <sl-button variant="success">Success</sl-button>
-  <sl-button variant="neutral">Neutral</sl-button>
-  <sl-button variant="warning">Warning</sl-button>
-  <sl-button variant="danger">Danger</sl-button>
+  <i2c-button variant="primary">Primary</i2c-button>
+  <i2c-button variant="success">Success</i2c-button>
+  <i2c-button variant="neutral">Neutral</i2c-button>
+  <i2c-button variant="warning">Warning</i2c-button>
+  <i2c-button variant="danger">Danger</i2c-button>
 
-  <sl-alert variant="primary" duration="3000" closable>
-    <sl-icon slot="icon" name="info-circle"></sl-icon>
+  <i2c-alert variant="primary" duration="3000" closable>
+    <i2c-icon slot="icon" name="info-circle"></i2c-icon>
     <strong>This is super informative</strong><br />
     You can tell by how pretty the alert is.
-  </sl-alert>
+  </i2c-alert>
 
-  <sl-alert variant="success" duration="3000" closable>
-    <sl-icon slot="icon" name="check2-circle"></sl-icon>
+  <i2c-alert variant="success" duration="3000" closable>
+    <i2c-icon slot="icon" name="check2-circle"></i2c-icon>
     <strong>Your changes have been saved</strong><br />
     You can safely exit the app now.
-  </sl-alert>
+  </i2c-alert>
 
-  <sl-alert variant="neutral" duration="3000" closable>
-    <sl-icon slot="icon" name="gear"></sl-icon>
+  <i2c-alert variant="neutral" duration="3000" closable>
+    <i2c-icon slot="icon" name="gear"></i2c-icon>
     <strong>Your settings have been updated</strong><br />
     Settings will take affect on next login.
-  </sl-alert>
+  </i2c-alert>
 
-  <sl-alert variant="warning" duration="3000" closable>
-    <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
+  <i2c-alert variant="warning" duration="3000" closable>
+    <i2c-icon slot="icon" name="exclamation-triangle"></i2c-icon>
     <strong>Your session has ended</strong><br />
     Please login again to continue.
-  </sl-alert>
+  </i2c-alert>
 
-  <sl-alert variant="danger" duration="3000" closable>
-    <sl-icon slot="icon" name="exclamation-octagon"></sl-icon>
+  <i2c-alert variant="danger" duration="3000" closable>
+    <i2c-icon slot="icon" name="exclamation-octagon"></i2c-icon>
     <strong>Your account has been deleted</strong><br />
     We're very sorry to see you go!
-  </sl-alert>
+  </i2c-alert>
 </div>
 
 <script>
   const container = document.querySelector('.alert-toast');
 
   ['primary', 'success', 'neutral', 'warning', 'danger'].map(variant => {
-    const button = container.querySelector(`sl-button[variant="${variant}"]`);
-    const alert = container.querySelector(`sl-alert[variant="${variant}"]`);
+    const button = container.querySelector(`i2c-button[variant="${variant}"]`);
+    const alert = container.querySelector(`i2c-alert[variant="${variant}"]`);
 
     button.addEventListener('click', () => alert.toast());
   });
@@ -378,12 +378,12 @@ For convenience, you can create a utility that emits toast notifications with a 
 
 ```html preview
 <div class="alert-toast-wrapper">
-  <sl-button variant="primary">Create Toast</sl-button>
+  <i2c-button variant="primary">Create Toast</i2c-button>
 </div>
 
 <script>
   const container = document.querySelector('.alert-toast-wrapper');
-  const button = container.querySelector('sl-button');
+  const button = container.querySelector('i2c-button');
   let count = 0;
 
   // Always escape HTML for text arguments!
@@ -395,12 +395,12 @@ For convenience, you can create a utility that emits toast notifications with a 
 
   // Custom function to emit toast notifications
   function notify(message, variant = 'primary', icon = 'info-circle', duration = 3000) {
-    const alert = Object.assign(document.createElement('sl-alert'), {
+    const alert = Object.assign(document.createElement('i2c-alert'), {
       variant,
       closable: true,
       duration: duration,
       innerHTML: `
-        <sl-icon name="${icon}" slot="icon"></sl-icon>
+        <i2c-icon name="${icon}" slot="icon"></i2c-icon>
         ${escapeHtml(message)}
       `
     });
@@ -419,10 +419,10 @@ For convenience, you can create a utility that emits toast notifications with a 
 
 The toast stack is a fixed position singleton element created and managed internally by the alert component. It will be added and removed from the DOM as needed when toasts are shown. When more than one toast is visible, they will stack vertically in the toast stack.
 
-By default, the toast stack is positioned at the top-right of the viewport. You can change its position by targeting `.sl-toast-stack` in your stylesheet. To make toasts appear at the top-left of the viewport, for example, use the following styles.
+By default, the toast stack is positioned at the top-right of the viewport. You can change its position by targeting `.i2c-toast-stack` in your stylesheet. To make toasts appear at the top-left of the viewport, for example, use the following styles.
 
 ```css
-.sl-toast-stack {
+.i2c-toast-stack {
   left: 0;
   right: auto;
 }
@@ -430,4 +430,4 @@ By default, the toast stack is positioned at the top-right of the viewport. You 
 
 ?> By design, it is not possible to show toasts in more than one stack simultaneously. Such behavior is confusing and makes for a poor user experience.
 
-[component-metadata:sl-alert]
+[component-metadata:i2c-alert]

@@ -13,14 +13,14 @@ export default css`
     position: relative;
     display: flex;
     align-items: stretch;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
-    line-height: var(--sl-line-height-normal);
-    letter-spacing: var(--sl-letter-spacing-normal);
-    color: var(--sl-color-neutral-700);
-    padding: var(--sl-spacing-2x-small) var(--sl-spacing-2x-small);
-    transition: var(--sl-transition-fast) fill;
+    font-family: var(--i2c-font-sans);
+    font-size: var(--i2c-font-size-medium);
+    font-weight: var(--i2c-font-weight-normal);
+    line-height: var(--i2c-line-height-normal);
+    letter-spacing: var(--i2c-letter-spacing-normal);
+    color: var(--i2c-color-neutral-700);
+    padding: var(--i2c-spacing-2x-small) var(--i2c-spacing-2x-small);
+    transition: var(--i2c-transition-fast) fill;
     user-select: none;
     white-space: nowrap;
     cursor: pointer;
@@ -28,7 +28,7 @@ export default css`
 
   .menu-item.menu-item--disabled {
     outline: none;
-    color: var(--sl-color-neutral-400);
+    color: var(--i2c-color-neutral-400);
     cursor: not-allowed;
   }
 
@@ -43,7 +43,7 @@ export default css`
   }
 
   .menu-item .menu-item__prefix ::slotted(*) {
-    margin-inline-end: var(--sl-spacing-x-small);
+    margin-inline-end: var(--i2c-spacing-x-small);
   }
 
   .menu-item .menu-item__suffix {
@@ -53,7 +53,7 @@ export default css`
   }
 
   .menu-item .menu-item__suffix ::slotted(*) {
-    margin-inline-start: var(--sl-spacing-x-small);
+    margin-inline-start: var(--i2c-spacing-x-small);
   }
 
   :host(:focus) {
@@ -61,10 +61,10 @@ export default css`
   }
 
   :host(:hover:not([aria-disabled='true'])) .menu-item,
-  :host(${focusVisibleSelector}:not(.sl-focus-invisible):not([aria-disabled='true'])) .menu-item {
+  :host(${focusVisibleSelector}:not(.i2c-focus-invisible):not([aria-disabled='true'])) .menu-item {
     outline: none;
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-primary-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   .menu-item .menu-item__check,

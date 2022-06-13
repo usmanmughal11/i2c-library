@@ -17,7 +17,7 @@ import styles from './progress-ring.styles';
  * @cssproperty --track-color - The color of the track.
  * @cssproperty --indicator-color - The indicator color.
  */
-@customElement('sl-progress-ring')
+@customElement('i2c-progress-ring')
 export default class SlProgressRing extends LitElement {
   static styles = styles;
   private readonly localize = new LocalizeController(this);
@@ -79,6 +79,6 @@ export default class SlProgressRing extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-progress-ring': SlProgressRing;
+    'i2c-progress-ring': SlProgressRing;
   }
 }

@@ -3,10 +3,10 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 import type SlDialog from './dialog';
 
-describe('<sl-dialog>', () => {
+describe('<i2c-dialog>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -15,23 +15,23 @@ describe('<sl-dialog>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlDialog>(
-      html` <sl-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog> `
+      html` <i2c-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog> `
     );
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit i2c-show and i2c-after-show when calling show()', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('i2c-show', showHandler);
+    el.addEventListener('i2c-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -42,16 +42,16 @@ describe('<sl-dialog>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit i2c-hide and i2c-after-hide when calling hide()', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('i2c-hide', hideHandler);
+    el.addEventListener('i2c-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -62,16 +62,16 @@ describe('<sl-dialog>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit i2c-show and i2c-after-show when setting open = true', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('i2c-show', showHandler);
+    el.addEventListener('i2c-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -82,16 +82,16 @@ describe('<sl-dialog>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit i2c-hide and i2c-after-hide when setting open = false', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('i2c-hide', hideHandler);
+    el.addEventListener('i2c-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -102,13 +102,13 @@ describe('<sl-dialog>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should not close when sl-request-close is prevented', async () => {
+  it('should not close when i2c-request-close is prevented', async () => {
     const el = await fixture<SlDialog>(html`
-      <sl-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-dialog>
+      <i2c-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i2c-dialog>
     `);
     const overlay = el.shadowRoot!.querySelector<HTMLElement>('[part="overlay"]')!;
 
-    el.addEventListener('sl-request-close', event => {
+    el.addEventListener('i2c-request-close', event => {
       event.preventDefault();
     });
     overlay.click();
@@ -117,14 +117,14 @@ describe('<sl-dialog>', () => {
   });
 
   it('should allow initial focus to be set', async () => {
-    const el = await fixture<SlDialog>(html` <sl-dialog><input /></sl-dialog> `);
+    const el = await fixture<SlDialog>(html` <i2c-dialog><input /></i2c-dialog> `);
     const input = el.querySelector('input')!;
     const initialFocusHandler = sinon.spy((event: Event) => {
       event.preventDefault();
       input.focus();
     });
 
-    el.addEventListener('sl-initial-focus', initialFocusHandler);
+    el.addEventListener('i2c-initial-focus', initialFocusHandler);
     el.show();
 
     await waitUntil(() => initialFocusHandler.calledOnce);

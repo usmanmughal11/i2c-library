@@ -15,7 +15,7 @@ import styles from './input.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
  * @slot label - The input's label. Alternatively, you can use the label prop.
  * @slot prefix - Used to prepend an icon or similar element to the input.
@@ -25,11 +25,11 @@ import styles from './input.styles';
  * @slot hide-password-icon - An icon to use in lieu of the default hide password icon.
  * @slot help-text - Help text that describes how to use the input. Alternatively, you can use the help-text prop.
  *
- * @event sl-change - Emitted when an alteration to the control's value is committed by the user.
- * @event sl-clear - Emitted when the clear button is activated.
- * @event sl-input - Emitted when the control receives input and its value changes.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event i2c-change - Emitted when an alteration to the control's value is committed by the user.
+ * @event i2c-clear - Emitted when the clear button is activated.
+ * @event i2c-input - Emitted when the control receives input and its value changes.
+ * @event i2c-focus - Emitted when the control gains focus.
+ * @event i2c-blur - Emitted when the control loses focus.
  *
  * @csspart form-control - The form control that wraps the label, input, and help-text.
  * @csspart form-control-label - The label's wrapper.
@@ -42,7 +42,7 @@ import styles from './input.styles';
  * @csspart password-toggle-button - The password toggle button.
  * @csspart suffix - The input suffix container.
  */
-@customElement('sl-input')
+@customElement('i2c-input')
 export default class SlInput extends LitElement {
   static styles = styles;
 
@@ -214,8 +214,8 @@ export default class SlInput extends LitElement {
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
-      emit(this, 'sl-input');
-      emit(this, 'sl-change');
+      emit(this, 'i2c-input');
+      emit(this, 'i2c-change');
     }
   }
 
@@ -232,19 +232,19 @@ export default class SlInput extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   handleChange() {
     this.value = this.input.value;
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   handleClearClick(event: MouseEvent) {
     this.value = '';
-    emit(this, 'sl-clear');
-    emit(this, 'sl-input');
-    emit(this, 'sl-change');
+    emit(this, 'i2c-clear');
+    emit(this, 'i2c-input');
+    emit(this, 'i2c-change');
     this.input.focus();
 
     event.stopPropagation();
@@ -259,12 +259,12 @@ export default class SlInput extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleInput() {
     this.value = this.input.value;
-    emit(this, 'sl-input');
+    emit(this, 'i2c-input');
   }
 
   handleInvalid() {
@@ -392,7 +392,7 @@ export default class SlInput extends LitElement {
                     tabindex="-1"
                   >
                     <slot name="clear-icon">
-                      <sl-icon name="x-circle-fill" library="system"></sl-icon>
+                      <i2c-icon name="x-circle-fill" library="system"></i2c-icon>
                     </slot>
                   </button>
                 `
@@ -410,12 +410,12 @@ export default class SlInput extends LitElement {
                     ${this.isPasswordVisible
                       ? html`
                           <slot name="show-password-icon">
-                            <sl-icon name="eye-slash" library="system"></sl-icon>
+                            <i2c-icon name="eye-slash" library="system"></i2c-icon>
                           </slot>
                         `
                       : html`
                           <slot name="hide-password-icon">
-                            <sl-icon name="eye" library="system"></sl-icon>
+                            <i2c-icon name="eye" library="system"></i2c-icon>
                           </slot>
                         `}
                   </button>
@@ -443,6 +443,6 @@ export default class SlInput extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-input': SlInput;
+    'i2c-input': SlInput;
   }
 }

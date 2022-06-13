@@ -11,17 +11,17 @@ import styles from './tab.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency i2c-icon-button
  *
  * @slot - The tab's label.
  *
- * @event sl-close - Emitted when the tab is closable and the close button is activated.
+ * @event i2c-close - Emitted when the tab is closable and the close button is activated.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart close-button - The close button.
  * @csspart close-button__base - The close button's `base` part.
  */
-@customElement('sl-tab')
+@customElement('i2c-tab')
 export default class SlTab extends LitElement {
   static styles = styles;
   private readonly localize = new LocalizeController(this);
@@ -29,7 +29,7 @@ export default class SlTab extends LitElement {
   @query('.tab') tab: HTMLElement;
 
   private readonly attrId = autoIncrement();
-  private readonly componentId = `sl-tab-${this.attrId}`;
+  private readonly componentId = `i2c-tab-${this.attrId}`;
 
   /** The name of the tab panel the tab will control. The panel must be located in the same tab group. */
   @property({ reflect: true }) panel = '';
@@ -57,7 +57,7 @@ export default class SlTab extends LitElement {
   }
 
   handleCloseClick() {
-    emit(this, 'sl-close');
+    emit(this, 'i2c-close');
   }
 
   render() {
@@ -81,7 +81,7 @@ export default class SlTab extends LitElement {
         <slot></slot>
         ${this.closable
           ? html`
-              <sl-icon-button
+              <i2c-icon-button
                 part="close-button"
                 exportparts="base:close-button__base"
                 name="x"
@@ -90,7 +90,7 @@ export default class SlTab extends LitElement {
                 class="tab__close-button"
                 @click=${this.handleCloseClick}
                 tabindex="-1"
-              ></sl-icon-button>
+              ></i2c-icon-button>
             `
           : ''}
       </div>
@@ -100,6 +100,6 @@ export default class SlTab extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab': SlTab;
+    'i2c-tab': SlTab;
   }
 }

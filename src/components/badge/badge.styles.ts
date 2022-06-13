@@ -12,12 +12,12 @@ export default css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--sl-font-size-x-small);
-    font-weight: var(--sl-font-weight-semibold);
-    letter-spacing: var(--sl-letter-spacing-normal);
+    font-size: var(--i2c-font-size-x-small);
+    font-weight: var(--i2c-font-weight-semibold);
+    letter-spacing: var(--i2c-letter-spacing-normal);
     line-height: 1;
-    border-radius: var(--sl-border-radius-small);
-    border: solid 1px var(--sl-color-neutral-0);
+    border-radius: var(--i2c-border-radius-small);
+    border: solid 1px var(--i2c-color-neutral-0);
     white-space: nowrap;
     padding: 3px 6px;
     user-select: none;
@@ -26,33 +26,33 @@ export default css`
 
   /* Variant modifiers */
   .badge--primary {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-primary-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   .badge--success {
-    background-color: var(--sl-color-success-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-success-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   .badge--neutral {
-    background-color: var(--sl-color-neutral-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-neutral-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   .badge--warning {
-    background-color: var(--sl-color-warning-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-warning-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   .badge--danger {
-    background-color: var(--sl-color-danger-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-danger-600);
+    color: var(--i2c-color-neutral-0);
   }
 
   /* Pill modifier */
   .badge--pill {
-    border-radius: var(--sl-border-radius-pill);
+    border-radius: var(--i2c-border-radius-pill);
   }
 
   /* Pulse modifier */
@@ -61,23 +61,23 @@ export default css`
   }
 
   .badge--pulse.badge--primary {
-    --pulse-color: var(--sl-color-primary-600);
+    --pulse-color: var(--i2c-color-primary-600);
   }
 
   .badge--pulse.badge--success {
-    --pulse-color: var(--sl-color-success-600);
+    --pulse-color: var(--i2c-color-success-600);
   }
 
   .badge--pulse.badge--neutral {
-    --pulse-color: var(--sl-color-neutral-600);
+    --pulse-color: var(--i2c-color-neutral-600);
   }
 
   .badge--pulse.badge--warning {
-    --pulse-color: var(--sl-color-warning-600);
+    --pulse-color: var(--i2c-color-warning-600);
   }
 
   .badge--pulse.badge--danger {
-    --pulse-color: var(--sl-color-danger-600);
+    --pulse-color: var(--i2c-color-danger-600);
   }
 
   @keyframes pulse {

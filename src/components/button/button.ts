@@ -14,10 +14,10 @@ import styles from './button.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-spinner
+ * @dependency i2c-spinner
  *
- * @event sl-blur - Emitted when the button loses focus.
- * @event sl-focus - Emitted when the button gains focus.
+ * @event i2c-blur - Emitted when the button loses focus.
+ * @event i2c-focus - Emitted when the button gains focus.
  *
  * @slot - The button's label.
  * @slot prefix - Used to prepend an icon or similar element to the button.
@@ -29,7 +29,7 @@ import styles from './button.styles';
  * @csspart suffix - The suffix slot's container.
  * @csspart caret - The button's caret.
  */
-@customElement('sl-button')
+@customElement('i2c-button')
 export default class SlButton extends LitElement {
   static styles = styles;
 
@@ -135,12 +135,12 @@ export default class SlButton extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleClick(event: MouseEvent) {
@@ -230,7 +230,7 @@ export default class SlButton extends LitElement {
               `
             : ''
         }
-        ${this.loading ? html`<sl-spinner></sl-spinner>` : ''}
+        ${this.loading ? html`<i2c-spinner></i2c-spinner>` : ''}
       </${tag}>
     `;
     /* eslint-enable lit/binding-positions, lit/no-invalid-html */
@@ -239,6 +239,6 @@ export default class SlButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-button': SlButton;
+    'i2c-button': SlButton;
   }
 }

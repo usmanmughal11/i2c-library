@@ -1,12 +1,12 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import type SlBreadcrumbItem from './breadcrumb-item';
 
-describe('<sl-breadcrumb-item>', () => {
+describe('<i2c-breadcrumb-item>', () => {
   let el: SlBreadcrumbItem;
 
   describe('when not provided a href attribute', () => {
     before(async () => {
-      el = await fixture<SlBreadcrumbItem>(html` <sl-breadcrumb-item>Home</sl-breadcrumb-item> `);
+      el = await fixture<SlBreadcrumbItem>(html` <i2c-breadcrumb-item>Home</i2c-breadcrumb-item> `);
     });
 
     it('should pass accessibility tests', async () => {
@@ -29,7 +29,7 @@ describe('<sl-breadcrumb-item>', () => {
     describe('and no target', () => {
       before(async () => {
         el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/">Home</sl-breadcrumb-item>
+          <i2c-breadcrumb-item href="https://jsonplaceholder.typicode.com/">Home</i2c-breadcrumb-item>
         `);
       });
 
@@ -46,7 +46,7 @@ describe('<sl-breadcrumb-item>', () => {
     describe('and target, without rel', () => {
       before(async () => {
         el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank">Help</sl-breadcrumb-item>
+          <i2c-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank">Help</i2c-breadcrumb-item>
         `);
       });
 
@@ -74,8 +74,8 @@ describe('<sl-breadcrumb-item>', () => {
     describe('and target, with rel', () => {
       before(async () => {
         el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank" rel="alternate"
-            >Help</sl-breadcrumb-item
+          <i2c-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank" rel="alternate"
+            >Help</i2c-breadcrumb-item
           >
         `);
       });
@@ -105,10 +105,10 @@ describe('<sl-breadcrumb-item>', () => {
   describe('when provided an element in the slot "prefix" to support prefix icons', () => {
     before(async () => {
       el = await fixture<SlBreadcrumbItem>(html`
-        <sl-breadcrumb-item>
+        <i2c-breadcrumb-item>
           <span class="prefix-example" slot="prefix">/</span>
           Home
-        </sl-breadcrumb-item>
+        </i2c-breadcrumb-item>
       `);
     });
 
@@ -132,10 +132,10 @@ describe('<sl-breadcrumb-item>', () => {
   describe('when provided an element in the slot "suffix" to support suffix icons', () => {
     before(async () => {
       el = await fixture<SlBreadcrumbItem>(html`
-        <sl-breadcrumb-item>
+        <i2c-breadcrumb-item>
           <span class="prefix-example" slot="suffix">/</span>
           Security
-        </sl-breadcrumb-item>
+        </i2c-breadcrumb-item>
       `);
     });
 

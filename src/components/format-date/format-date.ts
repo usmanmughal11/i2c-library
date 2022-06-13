@@ -6,7 +6,7 @@ import { LocalizeController } from '../../utilities/localize';
  * @since 2.0
  * @status stable
  */
-@customElement('sl-format-date')
+@customElement('i2c-format-date')
 export default class SlFormatDate extends LitElement {
   private readonly localize = new LocalizeController(this);
 
@@ -80,6 +80,6 @@ export default class SlFormatDate extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-format-date': SlFormatDate;
+    'i2c-format-date': SlFormatDate;
   }
 }

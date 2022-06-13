@@ -9,14 +9,14 @@ import { animations } from './animations';
  * @since 2.0
  * @status stable
  *
- * @event sl-cancel - Emitted when the animation is canceled.
- * @event sl-finish - Emitted when the animation finishes.
- * @event sl-start - Emitted when the animation starts or restarts.
+ * @event i2c-cancel - Emitted when the animation is canceled.
+ * @event i2c-finish - Emitted when the animation finishes.
+ * @event i2c-start - Emitted when the animation starts or restarts.
  *
  * @slot - The element to animate. If multiple elements are to be animated, wrap them in a single container or use
  * multiple animation elements.
  */
-@customElement('sl-animation')
+@customElement('i2c-animation')
 export default class SlAnimation extends LitElement {
   static styles = styles;
 
@@ -115,13 +115,13 @@ export default class SlAnimation extends LitElement {
   handleAnimationFinish() {
     this.play = false;
     this.hasStarted = false;
-    emit(this, 'sl-finish');
+    emit(this, 'i2c-finish');
   }
 
   handleAnimationCancel() {
     this.play = false;
     this.hasStarted = false;
-    emit(this, 'sl-cancel');
+    emit(this, 'i2c-cancel');
   }
 
   @watch('play')
@@ -129,7 +129,7 @@ export default class SlAnimation extends LitElement {
     if (this.animation) {
       if (this.play && !this.hasStarted) {
         this.hasStarted = true;
-        emit(this, 'sl-start');
+        emit(this, 'i2c-start');
       }
 
       if (this.play) {
@@ -182,7 +182,7 @@ export default class SlAnimation extends LitElement {
 
     if (this.play) {
       this.hasStarted = true;
-      emit(this, 'sl-start');
+      emit(this, 'i2c-start');
     } else {
       this.animation.pause();
     }
@@ -216,6 +216,6 @@ export default class SlAnimation extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-animation': SlAnimation;
+    'i2c-animation': SlAnimation;
   }
 }

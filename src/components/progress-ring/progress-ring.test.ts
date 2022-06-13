@@ -1,12 +1,12 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import type SlProgressRing from './progress-ring';
 
-describe('<sl-progress-ring>', () => {
+describe('<i2c-progress-ring>', () => {
   let el: SlProgressRing;
 
   describe('when provided just a value parameter', () => {
     before(async () => {
-      el = await fixture<SlProgressRing>(html`<sl-progress-ring value="25"></sl-progress-ring>`);
+      el = await fixture<SlProgressRing>(html`<i2c-progress-ring value="25"></i2c-progress-ring>`);
     });
 
     it('should pass accessibility tests', async () => {
@@ -19,7 +19,7 @@ describe('<sl-progress-ring>', () => {
 
     before(async () => {
       el = await fixture<SlProgressRing>(
-        html`<sl-progress-ring title="Titled Progress Ring" value="25"></sl-progress-ring>`
+        html`<i2c-progress-ring title="Titled Progress Ring" value="25"></i2c-progress-ring>`
       );
       base = el.shadowRoot!.querySelector('[part="base"]')!;
     });
@@ -40,7 +40,7 @@ describe('<sl-progress-ring>', () => {
   describe('when provided a ariaLabel, and value parameter', () => {
     before(async () => {
       el = await fixture<SlProgressRing>(
-        html`<sl-progress-ring ariaLabel="Labelled Progress Ring" value="25"></sl-progress-ring>`
+        html`<i2c-progress-ring ariaLabel="Labelled Progress Ring" value="25"></i2c-progress-ring>`
       );
     });
 
@@ -54,7 +54,7 @@ describe('<sl-progress-ring>', () => {
       el = await fixture<SlProgressRing>(
         html`
           <label id="labelledby">Progress Ring Label</label>
-          <sl-progress-ring ariaLabelledBy="labelledby" value="25"></sl-progress-ring>
+          <i2c-progress-ring ariaLabelledBy="labelledby" value="25"></i2c-progress-ring>
         `
       );
     });

@@ -1,11 +1,11 @@
 # Rating
 
-[component-header:sl-rating]
+[component-header:i2c-rating]
 
 Ratings give users a way to quickly view and provide feedback.
 
 ```html preview
-<sl-rating></sl-rating>
+<i2c-rating></i2c-rating>
 ```
 
 ```jsx react
@@ -21,7 +21,7 @@ const App = () => <SlRating />;
 Ratings are 0-5 by default. To change the maximum possible value, use the `max` attribute.
 
 ```html preview
-<sl-rating max="3"></sl-rating>
+<i2c-rating max="3"></i2c-rating>
 ```
 
 ```jsx react
@@ -35,7 +35,7 @@ const App = () => <SlRating max={3} />;
 Use the `precision` attribute to let users select fractional ratings.
 
 ```html preview
-<sl-rating precision="0.5" value="2.5"></sl-rating>
+<i2c-rating precision="0.5" value="2.5"></i2c-rating>
 ```
 
 ```jsx react
@@ -49,7 +49,7 @@ const App = () => <SlRating precision={0.5} value={2.5} />;
 Set the `--symbol-size` custom property to adjust the size.
 
 ```html preview
-<sl-rating style="--symbol-size: 2rem;"></sl-rating>
+<i2c-rating style="--symbol-size: 2rem;"></i2c-rating>
 ```
 
 ```jsx react
@@ -63,7 +63,7 @@ const App = () => <SlRating style={{ '--symbol-size': '2rem' }} />;
 Use the `readonly` attribute to display a rating that users can't change.
 
 ```html preview
-<sl-rating readonly value="3"></sl-rating>
+<i2c-rating readonly value="3"></i2c-rating>
 ```
 
 ```jsx react
@@ -77,7 +77,7 @@ const App = () => <SlRating readonly value={3} />;
 Use the `disable` attribute to disable the rating.
 
 ```html preview
-<sl-rating disabled value="3"></sl-rating>
+<i2c-rating disabled value="3"></i2c-rating>
 ```
 
 ```jsx react
@@ -91,11 +91,11 @@ const App = () => <SlRating disabled value={3} />;
 You can provide custom icons by passing a function to the `getSymbol` property.
 
 ```html preview
-<sl-rating class="rating-hearts" style="--symbol-color-active: #ff4136;"></sl-rating>
+<i2c-rating class="rating-hearts" style="--symbol-color-active: #ff4136;"></i2c-rating>
 
 <script>
   const rating = document.querySelector('.rating-hearts');
-  rating.getSymbol = () => '<sl-icon name="heart-fill"></sl-icon>';
+  rating.getSymbol = () => '<i2c-icon name="heart-fill"></i2c-icon>';
 </script>
 ```
 
@@ -104,7 +104,7 @@ import '@shoelace-style/shoelace/dist/components/icon/icon';
 import { SlRating } from '@shoelace-style/shoelace/dist/react';
 
 const App = () => (
-  <SlRating getSymbol={() => '<sl-icon name="heart-fill"></sl-icon>'} style={{ '--symbol-color-active': '#ff4136' }} />
+  <SlRating getSymbol={() => '<i2c-icon name="heart-fill"></i2c-icon>'} style={{ '--symbol-color-active': '#ff4136' }} />
 );
 ```
 
@@ -113,14 +113,14 @@ const App = () => (
 You can also use the `getSymbol` property to render different icons based on value.
 
 ```html preview
-<sl-rating class="rating-emojis"></sl-rating>
+<i2c-rating class="rating-emojis"></i2c-rating>
 
 <script>
   const rating = document.querySelector('.rating-emojis');
 
   rating.getSymbol = value => {
     const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-    return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+    return `<i2c-icon name="${icons[value - 1]}"></i2c-icon>`;
   };
 </script>
 ```
@@ -131,10 +131,10 @@ import { SlRating } from '@shoelace-style/shoelace/dist/react';
 
 function getSymbol(value) {
   const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-  return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+  return `<i2c-icon name="${icons[value - 1]}"></i2c-icon>`;
 }
 
 const App = () => <SlRating getSymbol={getSymbol} />;
 ```
 
-[component-metadata:sl-rating]
+[component-metadata:i2c-rating]

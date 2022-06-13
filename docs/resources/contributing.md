@@ -98,10 +98,10 @@ Alternatively, you can use [Gitpod](https://www.gitpod.io/) to setup a dev envir
 
 ### Creating New Components
 
-To scaffold a new component, run the following command, replacing `sl-tag-name` with the desired tag name.
+To scaffold a new component, run the following command, replacing `i2c-tag-name` with the desired tag name.
 
 ```bash
-npm run create sl-tag-name
+npm run create i2c-tag-name
 ```
 
 This will generate a source file, a stylesheet, and a docs page for you. When you start the dev server, you'll find the new component in the "Components" section of the sidebar.
@@ -182,11 +182,11 @@ Please do not make any changes to `prettier.config.cjs` without consulting the m
 
 Components should be composable, meaning you can easily reuse them with and within other components. This reduces the overall size of the library, expedites feature development, and maintains a consistent user experience.
 
-The `<sl-select>` component, for example, makes use of the dropdown, input, menu, and menu item components. Because it's offloading most of its functionality and styles to lower-level components, the select component remains lightweight and its appearance is consistent with other form controls and menus.
+The `<i2c-select>` component, for example, makes use of the dropdown, input, menu, and menu item components. Because it's offloading most of its functionality and styles to lower-level components, the select component remains lightweight and its appearance is consistent with other form controls and menus.
 
 ### Component Structure
 
-All components have a host element, which is a reference to the `<sl-*>` element itself. Make sure to always set the host element's `display` property to the appropriate value depending on your needs, as the default is `inline` per the custom element spec.
+All components have a host element, which is a reference to the `<i2c-*>` element itself. Make sure to always set the host element's `display` property to the appropriate value depending on your needs, as the default is `inline` per the custom element spec.
 
 ```css
 :host {
@@ -218,7 +218,7 @@ See the source of card, dialog, or drawer for examples.
 
 ### Custom Events
 
-Components must only emit custom events, and all custom events must start with `sl-` as a namespace. For compatibility with frameworks that utilize DOM templates, custom events must have lowercase, kebab-style names. For example, use `sl-change` instead of `slChange`.
+Components must only emit custom events, and all custom events must start with `i2c-` as a namespace. For compatibility with frameworks that utilize DOM templates, custom events must have lowercase, kebab-style names. For example, use `i2c-change` instead of `slChange`.
 
 This convention avoids the problem of browsers lowercasing attributes, causing some frameworks to be unable to listen to them. This problem isn't specific to one framework, but [Vue's documentation](https://vuejs.org/v2/guide/components-custom-events.html#Event-Names) provides a good explanation of the problem.
 
@@ -228,19 +228,19 @@ To expose custom properties as part of a component's API, scope them to the `:ho
 
 ```css
 :host {
-  --color: var(--sl-color-primary-500);
-  --background-color: var(--sl-color-neutral-100);
+  --color: var(--i2c-color-primary-500);
+  --background-color: var(--i2c-color-neutral-100);
 }
 ```
 
-Then use the following syntax for comments so they appear in the generated docs. Do not use the `--sl-` prefix, as that is reserved for design tokens that live in the global scope.
+Then use the following syntax for comments so they appear in the generated docs. Do not use the `--i2c-` prefix, as that is reserved for design tokens that live in the global scope.
 
 ```js
 /**
  * @cssproperty --color: The component's text color.
  * @cssproperty --background-color: The component's background color.
  */
-@customElement('sl-example')
+@customElement('i2c-example')
 export default class SlExample {
   // ...
 }
@@ -272,7 +272,7 @@ When composing elements, use `part` to export the host element and `exportparts`
 render() {
   return html`
     <div part="base">
-      <sl-icon part="icon" exportparts="base:icon__base" ...></sl-icon>
+      <i2c-icon part="icon" exportparts="base:icon__base" ...></i2c-icon>
     </div>
   `;
 }

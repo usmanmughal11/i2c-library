@@ -1,12 +1,12 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import type SlProgressBar from './progress-bar';
 
-describe('<sl-progress-bar>', () => {
+describe('<i2c-progress-bar>', () => {
   let el: SlProgressBar;
 
   describe('when provided just a value parameter', () => {
     before(async () => {
-      el = await fixture<SlProgressBar>(html`<sl-progress-bar value="25"></sl-progress-bar>`);
+      el = await fixture<SlProgressBar>(html`<i2c-progress-bar value="25"></i2c-progress-bar>`);
     });
 
     it('should pass accessibility tests', async () => {
@@ -20,7 +20,7 @@ describe('<sl-progress-bar>', () => {
 
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar title="Titled Progress Ring" value="25"></sl-progress-bar>`
+        html`<i2c-progress-bar title="Titled Progress Ring" value="25"></i2c-progress-bar>`
       );
       base = el.shadowRoot!.querySelector('[part="base"]')!;
       indicator = el.shadowRoot!.querySelector('[part="indicator"]')!;
@@ -44,7 +44,7 @@ describe('<sl-progress-bar>', () => {
 
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar title="Titled Progress Ring" indeterminate></sl-progress-bar>`
+        html`<i2c-progress-bar title="Titled Progress Ring" indeterminate></i2c-progress-bar>`
       );
       base = el.shadowRoot!.querySelector('[part="base"]')!;
     });
@@ -61,7 +61,7 @@ describe('<sl-progress-bar>', () => {
   describe('when provided a ariaLabel, and value parameter', () => {
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar ariaLabel="Labelled Progress Ring" value="25"></sl-progress-bar>`
+        html`<i2c-progress-bar ariaLabel="Labelled Progress Ring" value="25"></i2c-progress-bar>`
       );
     });
 
@@ -75,7 +75,7 @@ describe('<sl-progress-bar>', () => {
       el = await fixture<SlProgressBar>(
         html`
           <label id="labelledby">Progress Ring Label</label>
-          <sl-progress-bar ariaLabelledBy="labelledby" value="25"></sl-progress-bar>
+          <i2c-progress-bar ariaLabelledBy="labelledby" value="25"></i2c-progress-bar>
         `
       );
     });

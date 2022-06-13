@@ -9,10 +9,10 @@ import styles from './animated-image.styles';
  * @since 2.0
  * @status experimental
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
- * @event sl-load - Emitted when the image loads successfully.
- * @event sl-error - Emitted when the image fails to load.
+ * @event i2c-load - Emitted when the image loads successfully.
+ * @event i2c-error - Emitted when the image fails to load.
  *
  * @part - control-box - The container that surrounds the pause/play icons and provides their background.
  * @part - play-icon - The icon to use for the play button.
@@ -21,7 +21,7 @@ import styles from './animated-image.styles';
  * @cssproperty --control-box-size - The size of the icon box.
  * @cssproperty --icon-size - The size of the play/pause icons.
  */
-@customElement('sl-animated-image')
+@customElement('i2c-animated-image')
 export default class SlAnimatedImage extends LitElement {
   static styles = styles;
 
@@ -52,13 +52,13 @@ export default class SlAnimatedImage extends LitElement {
     this.frozenFrame = canvas.toDataURL('image/gif');
 
     if (!this.isLoaded) {
-      emit(this, 'sl-load');
+      emit(this, 'i2c-load');
       this.isLoaded = true;
     }
   }
 
   handleError() {
-    emit(this, 'sl-error');
+    emit(this, 'i2c-error');
   }
 
   @watch('play')
@@ -102,8 +102,8 @@ export default class SlAnimatedImage extends LitElement {
 
               <div part="control-box" class="animated-image__control-box">
                 ${this.play
-                  ? html`<sl-icon part="pause-icon" name="pause-fill" library="system"></sl-icon>`
-                  : html`<sl-icon part="play-icon" name="play-fill" library="system"></sl-icon>`}
+                  ? html`<i2c-icon part="pause-icon" name="pause-fill" library="system"></i2c-icon>`
+                  : html`<i2c-icon part="play-icon" name="play-fill" library="system"></i2c-icon>`}
               </div>
             `
           : ''}
@@ -114,6 +114,6 @@ export default class SlAnimatedImage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-animated-image': SlAnimatedImage;
+    'i2c-animated-image': SlAnimatedImage;
   }
 }

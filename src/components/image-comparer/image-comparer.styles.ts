@@ -49,7 +49,7 @@ export default css`
     top: 0;
     width: var(--divider-width);
     height: 100%;
-    background-color: var(--sl-color-neutral-0);
+    background-color: var(--i2c-color-neutral-0);
     transform: translateX(calc(var(--divider-width) / -2));
     cursor: ew-resize;
   }
@@ -62,16 +62,16 @@ export default css`
     top: calc(50% - (var(--handle-size) / 2));
     width: var(--handle-size);
     height: var(--handle-size);
-    background-color: var(--sl-color-neutral-0);
-    border-radius: var(--sl-border-radius-circle);
+    background-color: var(--i2c-color-neutral-0);
+    border-radius: var(--i2c-border-radius-circle);
     font-size: calc(var(--handle-size) * 0.5);
-    color: var(--sl-color-neutral-600);
+    color: var(--i2c-color-neutral-600);
     cursor: inherit;
     z-index: 10;
   }
 
   .image-comparer__handle${focusVisibleSelector} {
-    outline: var(--sl-focus-ring);
-    outline-offset: var(--sl-focus-ring-offset);
+    outline: var(--i2c-focus-ring);
+    outline-offset: var(--i2c-focus-ring-offset);
   }
 `;

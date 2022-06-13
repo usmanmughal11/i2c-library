@@ -9,13 +9,13 @@ export default css`
   }
 
   .menu-label {
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    line-height: var(--sl-line-height-normal);
-    letter-spacing: var(--sl-letter-spacing-normal);
-    color: var(--sl-color-neutral-500);
-    padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-large);
+    font-family: var(--i2c-font-sans);
+    font-size: var(--i2c-font-size-small);
+    font-weight: var(--i2c-font-weight-semibold);
+    line-height: var(--i2c-line-height-normal);
+    letter-spacing: var(--i2c-letter-spacing-normal);
+    color: var(--i2c-color-neutral-500);
+    padding: var(--i2c-spacing-2x-small) var(--i2c-spacing-x-large);
     user-select: none;
   }
 `;

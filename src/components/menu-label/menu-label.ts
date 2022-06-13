@@ -10,7 +10,7 @@ import styles from './menu-label.styles';
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-menu-label')
+@customElement('i2c-menu-label')
 export default class SlMenuLabel extends LitElement {
   static styles = styles;
 
@@ -25,6 +25,6 @@ export default class SlMenuLabel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu-label': SlMenuLabel;
+    'i2c-menu-label': SlMenuLabel;
   }
 }

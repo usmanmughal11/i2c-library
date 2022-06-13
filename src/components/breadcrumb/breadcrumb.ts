@@ -12,11 +12,11 @@ import type SlBreadcrumbItem from '../../components/breadcrumb-item/breadcrumb-i
  * @slot - One or more breadcrumb items to display.
  * @slot separator - The separator to use between breadcrumb items.
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-breadcrumb')
+@customElement('i2c-breadcrumb')
 export default class SlBreadcrumb extends LitElement {
   static styles = styles;
 
@@ -47,7 +47,7 @@ export default class SlBreadcrumb extends LitElement {
 
   handleSlotChange() {
     const items = [...this.defaultSlot.assignedElements({ flatten: true })].filter(
-      item => item.tagName.toLowerCase() === 'sl-breadcrumb-item'
+      item => item.tagName.toLowerCase() === 'i2c-breadcrumb-item'
     ) as SlBreadcrumbItem[];
 
     items.forEach((item, index) => {
@@ -87,7 +87,7 @@ export default class SlBreadcrumb extends LitElement {
       </nav>
 
       <slot name="separator" hidden aria-hidden="true">
-        <sl-icon name=${this.localize.dir() === 'rtl' ? 'chevron-left' : 'chevron-right'} library="system"></sl-icon>
+        <i2c-icon name=${this.localize.dir() === 'rtl' ? 'chevron-left' : 'chevron-right'} library="system"></i2c-icon>
       </slot>
     `;
   }
@@ -95,6 +95,6 @@ export default class SlBreadcrumb extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-breadcrumb': SlBreadcrumb;
+    'i2c-breadcrumb': SlBreadcrumb;
   }
 }

@@ -1,11 +1,11 @@
 # Test
 
-[component-header:sl-test]
+[component-header:i2c-test]
 
 A description of the component goes here.
 
 ```html preview
-<sl-test></sl-test>
+<i2c-test></i2c-test>
 ```
 
 ## Examples
@@ -18,4 +18,4 @@ TODO
 
 TODO
 
-[component-metadata:sl-test]
+[component-metadata:i2c-test]

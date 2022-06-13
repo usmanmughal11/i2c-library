@@ -1,11 +1,11 @@
 # Progress Ring
 
-[component-header:sl-progress-ring]
+[component-header:i2c-progress-ring]
 
 Progress rings are used to show the progress of a determinate operation in a circular fashion.
 
 ```html preview
-<sl-progress-ring value="25"></sl-progress-ring>
+<i2c-progress-ring value="25"></i2c-progress-ring>
 ```
 
 ```jsx react
@@ -21,7 +21,7 @@ const App = () => <SlProgressRing value="25" />;
 Use the `--size` custom property to set the diameter of the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" style="--size: 200px;"></sl-progress-ring>
+<i2c-progress-ring value="50" style="--size: 200px;"></i2c-progress-ring>
 ```
 
 ```jsx react
@@ -35,7 +35,7 @@ const App = () => <SlProgressRing value="50" style={{ '--size': '200px' }} />;
 Use the `--track-width` custom property to set the width of the progress ring's track.
 
 ```html preview
-<sl-progress-ring value="50" style="--track-width: 10px;"></sl-progress-ring>
+<i2c-progress-ring value="50" style="--track-width: 10px;"></i2c-progress-ring>
 ```
 
 ```jsx react
@@ -49,13 +49,13 @@ const App = () => <SlProgressRing value="50" style={{ '--track-width': '10px' }}
 To change the color, use the `--track-color` and `--indicator-color` custom properties.
 
 ```html preview
-<sl-progress-ring
+<i2c-progress-ring
   value="50"
   style="
     --track-color: pink; 
     --indicator-color: deeppink;
   "
-></sl-progress-ring>
+></i2c-progress-ring>
 ```
 
 ```jsx react
@@ -77,7 +77,7 @@ const App = () => (
 Use the `label` attribute to label the progress ring and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-ring value="50" label="Upload progress"></sl-progress-ring>
+<i2c-progress-ring value="50" label="Upload progress"></i2c-progress-ring>
 ```
 
 ```jsx react
@@ -91,12 +91,12 @@ const App = () => <SlProgressRing value="50" label="Upload progress" />;
 Use the default slot to show a label inside the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</sl-progress-ring>
+<i2c-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</i2c-progress-ring>
 
 <br />
 
-<sl-button circle><sl-icon name="dash" label="Decrease"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus" label="Increase"></sl-icon></sl-button>
+<i2c-button circle><i2c-icon name="dash" label="Decrease"></i2c-icon></i2c-button>
+<i2c-button circle><i2c-icon name="plus" label="Increase"></i2c-icon></i2c-button>
 
 <script>
   const progressRing = document.querySelector('.progress-ring-values');
@@ -151,4 +151,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-progress-ring]
+[component-metadata:i2c-progress-ring]

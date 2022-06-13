@@ -10,21 +10,21 @@ import { getAnimation, setDefaultAnimation } from '../../utilities/animation-reg
 import { LocalizeController } from '../../utilities/localize';
 import styles from './alert.styles';
 
-const toastStack = Object.assign(document.createElement('div'), { className: 'sl-toast-stack' });
+const toastStack = Object.assign(document.createElement('div'), { className: 'i2c-toast-stack' });
 
 /**
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency i2c-icon-button
  *
  * @slot - The alert's content.
  * @slot icon - An icon to show in the alert.
  *
- * @event sl-show - Emitted when the alert opens.
- * @event sl-after-show - Emitted after the alert opens and all animations are complete.
- * @event sl-hide - Emitted when the alert closes.
- * @event sl-after-hide - Emitted after the alert closes and all animations are complete.
+ * @event i2c-show - Emitted when the alert opens.
+ * @event i2c-after-show - Emitted after the alert opens and all animations are complete.
+ * @event i2c-hide - Emitted when the alert closes.
+ * @event i2c-after-hide - Emitted after the alert closes and all animations are complete.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart icon - The container that wraps the alert icon.
@@ -38,7 +38,7 @@ const toastStack = Object.assign(document.createElement('div'), { className: 'sl
  * @animation alert.hide - The animation to use when hiding the alert.
  */
 
-@customElement('sl-alert')
+@customElement('i2c-alert')
 export default class SlAlert extends LitElement {
   static styles = styles;
 
@@ -74,7 +74,7 @@ export default class SlAlert extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'i2c-after-show');
   }
 
   /** Hides the alert */
@@ -84,7 +84,7 @@ export default class SlAlert extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'i2c-after-hide');
   }
 
   /**
@@ -108,13 +108,13 @@ export default class SlAlert extends LitElement {
       });
 
       this.addEventListener(
-        'sl-after-hide',
+        'i2c-after-hide',
         () => {
           toastStack.removeChild(this);
           resolve();
 
           // Remove the toast stack from the DOM when there are no more alerts
-          if (toastStack.querySelector('sl-alert') === null) {
+          if (toastStack.querySelector('i2c-alert') === null) {
             toastStack.remove();
           }
         },
@@ -142,7 +142,7 @@ export default class SlAlert extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'i2c-show');
 
       if (this.duration < Infinity) {
         this.restartAutoHide();
@@ -153,10 +153,10 @@ export default class SlAlert extends LitElement {
       const { keyframes, options } = getAnimation(this, 'alert.show', { dir: this.localize.dir() });
       await animateTo(this.base, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'i2c-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'i2c-hide');
 
       clearTimeout(this.autoHideTimeout);
 
@@ -165,7 +165,7 @@ export default class SlAlert extends LitElement {
       await animateTo(this.base, keyframes, options);
       this.base.hidden = true;
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'i2c-after-hide');
     }
   }
 
@@ -205,14 +205,14 @@ export default class SlAlert extends LitElement {
 
         ${this.closable
           ? html`
-              <sl-icon-button
+              <i2c-icon-button
                 part="close-button"
                 exportparts="base:close-button__base"
                 class="alert__close-button"
                 name="x"
                 library="system"
                 @click=${this.handleCloseClick}
-              ></sl-icon-button>
+              ></i2c-icon-button>
             `
           : ''}
       </div>
@@ -238,6 +238,6 @@ setDefaultAnimation('alert.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-alert': SlAlert;
+    'i2c-alert': SlAlert;
   }
 }

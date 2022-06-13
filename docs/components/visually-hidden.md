@@ -1,6 +1,6 @@
 # Visually Hidden
 
-[component-header:sl-visually-hidden]
+[component-header:i2c-visually-hidden]
 
 The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
 
@@ -10,9 +10,9 @@ Since visually hidden content can receive focus when tabbing, the element will b
 
 ```html preview
 <div style="min-height: 100px;">
-  <sl-visually-hidden>
+  <i2c-visually-hidden>
     <a href="#">Skip to main content</a>
-  </sl-visually-hidden>
+  </i2c-visually-hidden>
 </div>
 ```
 
@@ -25,8 +25,8 @@ In this example, the link will open a new window. Screen readers will announce "
 ```html preview
 <a href="https://example.com/" target="_blank">
   Visit External Page
-  <sl-icon name="box-arrow-up-right"></sl-icon>
-  <sl-visually-hidden>opens in a new window</sl-visually-hidden>
+  <i2c-icon name="box-arrow-up-right"></i2c-icon>
+  <i2c-visually-hidden>opens in a new window</i2c-visually-hidden>
 </a>
 ```
 
@@ -35,13 +35,13 @@ In this example, the link will open a new window. Screen readers will announce "
 Adding a title or label may seem redundant at times, but they're very helpful for unsighted users. Rather than omit them, you can provide context to unsighted users with visually hidden content.
 
 ```html preview
-<sl-card style="width: 100%; max-width: 360px;">
+<i2c-card style="width: 100%; max-width: 360px;">
   <header>
-    <sl-visually-hidden>Personal Info</sl-visually-hidden>
+    <i2c-visually-hidden>Personal Info</i2c-visually-hidden>
   </header>
-  <sl-input label="Name" style="margin-bottom: .5rem;"></sl-input>
-  <sl-input label="Email" type="email"></sl-input>
-</sl-card>
+  <i2c-input label="Name" style="margin-bottom: .5rem;"></i2c-input>
+  <i2c-input label="Email" type="email"></i2c-input>
+</i2c-card>
 ```
 
-[component-metadata:sl-visually-hidden]
+[component-metadata:i2c-visually-hidden]

@@ -1,6 +1,6 @@
 # Format Number
 
-[component-header:sl-format-number]
+[component-header:i2c-format-number]
 
 Formats a number using the specified locale and options.
 
@@ -8,17 +8,17 @@ Localization is handled by the browser's [`Intl.NumberFormat` API](https://devel
 
 ```html preview
 <div class="format-number-overview">
-  <sl-format-number value="1000"></sl-format-number>
+  <i2c-format-number value="1000"></i2c-format-number>
   <br /><br />
-  <sl-input type="number" value="1000" label="Number to Format" style="max-width: 180px;"></sl-input>
+  <i2c-input type="number" value="1000" label="Number to Format" style="max-width: 180px;"></i2c-input>
 </div>
 
 <script>
   const container = document.querySelector('.format-number-overview');
-  const formatter = container.querySelector('sl-format-number');
-  const input = container.querySelector('sl-input');
+  const formatter = container.querySelector('i2c-format-number');
+  const input = container.querySelector('i2c-input');
 
-  input.addEventListener('sl-input', () => (formatter.value = input.value || 0));
+  input.addEventListener('i2c-input', () => (formatter.value = input.value || 0));
 </script>
 ```
 
@@ -53,11 +53,11 @@ const App = () => {
 To get the value as a percent, set the `type` attribute to `percent`.
 
 ```html preview
-<sl-format-number type="percent" value="0"></sl-format-number><br />
-<sl-format-number type="percent" value="0.25"></sl-format-number><br />
-<sl-format-number type="percent" value="0.50"></sl-format-number><br />
-<sl-format-number type="percent" value="0.75"></sl-format-number><br />
-<sl-format-number type="percent" value="1"></sl-format-number>
+<i2c-format-number type="percent" value="0"></i2c-format-number><br />
+<i2c-format-number type="percent" value="0.25"></i2c-format-number><br />
+<i2c-format-number type="percent" value="0.50"></i2c-format-number><br />
+<i2c-format-number type="percent" value="0.75"></i2c-format-number><br />
+<i2c-format-number type="percent" value="1"></i2c-format-number>
 ```
 
 ```jsx react
@@ -83,9 +83,9 @@ const App = () => (
 Use the `lang` attribute to set the number formatting locale.
 
 ```html preview
-English: <sl-format-number value="2000" lang="en" minimum-fraction-digits="2"></sl-format-number><br />
-German: <sl-format-number value="2000" lang="de" minimum-fraction-digits="2"></sl-format-number><br />
-Russian: <sl-format-number value="2000" lang="ru" minimum-fraction-digits="2"></sl-format-number>
+English: <i2c-format-number value="2000" lang="en" minimum-fraction-digits="2"></i2c-format-number><br />
+German: <i2c-format-number value="2000" lang="de" minimum-fraction-digits="2"></i2c-format-number><br />
+Russian: <i2c-format-number value="2000" lang="ru" minimum-fraction-digits="2"></i2c-format-number>
 ```
 
 ```jsx react
@@ -107,11 +107,11 @@ const App = () => (
 To format a number as a monetary value, set the `type` attribute to `currency` and set the `currency` attribute to the desired ISO 4217 currency code. You should also specify `lang` to ensure the the number is formatted correctly for the target locale.
 
 ```html preview
-<sl-format-number type="currency" currency="USD" value="2000" lang="en-US"></sl-format-number><br />
-<sl-format-number type="currency" currency="GBP" value="2000" lang="en-GB"></sl-format-number><br />
-<sl-format-number type="currency" currency="EUR" value="2000" lang="de"></sl-format-number><br />
-<sl-format-number type="currency" currency="RUB" value="2000" lang="ru"></sl-format-number><br />
-<sl-format-number type="currency" currency="CNY" value="2000" lang="zh-cn"></sl-format-number>
+<i2c-format-number type="currency" currency="USD" value="2000" lang="en-US"></i2c-format-number><br />
+<i2c-format-number type="currency" currency="GBP" value="2000" lang="en-GB"></i2c-format-number><br />
+<i2c-format-number type="currency" currency="EUR" value="2000" lang="de"></i2c-format-number><br />
+<i2c-format-number type="currency" currency="RUB" value="2000" lang="ru"></i2c-format-number><br />
+<i2c-format-number type="currency" currency="CNY" value="2000" lang="zh-cn"></i2c-format-number>
 ```
 
 ```jsx react
@@ -132,4 +132,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-format-number]
+[component-metadata:i2c-format-number]

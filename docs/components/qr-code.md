@@ -1,6 +1,6 @@
 # QR Code
 
-[component-header:sl-qr-code]
+[component-header:i2c-qr-code]
 
 Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
@@ -8,19 +8,19 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```html preview
 <div class="qr-overview">
-  <sl-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></sl-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></i2c-qr-code>
   <br />
 
-  <sl-input maxlength="255" clearable label="Value"></sl-input>
+  <i2c-input maxlength="255" clearable label="Value"></i2c-input>
 </div>
 
 <script>
   const container = document.querySelector('.qr-overview');
-  const qrCode = container.querySelector('sl-qr-code');
-  const input = container.querySelector('sl-input');
+  const qrCode = container.querySelector('i2c-qr-code');
+  const input = container.querySelector('i2c-input');
 
   input.value = qrCode.value;
-  input.addEventListener('sl-input', () => (qrCode.value = input.value));
+  input.addEventListener('i2c-input', () => (qrCode.value = input.value));
 </script>
 
 <style>
@@ -28,7 +28,7 @@ QR codes are useful for providing small pieces of information to users who can q
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview i2c-input {
     margin-top: 1rem;
   }
 </style>
@@ -43,7 +43,7 @@ const css = `
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview i2c-input {
     margin-top: 1rem;
   }
 `;
@@ -73,7 +73,7 @@ const App = () => {
 Use the `fill` and `background` attributes to modify the QR code's colors. You should always ensure good contrast for optimal compatibility with QR code scanners.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" fill="deeppink" background="white"></sl-qr-code>
+<i2c-qr-code value="https://shoelace.style/" fill="deeppink" background="white"></i2c-qr-code>
 ```
 
 ```jsx react
@@ -87,7 +87,7 @@ const App = () => <SlQrCode value="https://shoelace.style/" fill="deeppink" back
 Use the `size` attribute to change the size of the QR code.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" size="64"></sl-qr-code>
+<i2c-qr-code value="https://shoelace.style/" size="64"></i2c-qr-code>
 ```
 
 ```jsx react
@@ -101,7 +101,7 @@ const App = () => <SlQrCode value="https://shoelace.style/" size="64" />;
 Create a rounded effect with the `radius` attribute.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" radius="0.5"></sl-qr-code>
+<i2c-qr-code value="https://shoelace.style/" radius="0.5"></i2c-qr-code>
 ```
 
 ```jsx react
@@ -116,10 +116,10 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 
 ```html preview
 <div class="qr-error-correction">
-  <sl-qr-code value="https://shoelace.style/" error-correction="L"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="M"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="Q"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="H"></sl-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" error-correction="L"></i2c-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" error-correction="M"></i2c-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" error-correction="Q"></i2c-qr-code>
+  <i2c-qr-code value="https://shoelace.style/" error-correction="H"></i2c-qr-code>
 </div>
 
 <style>
@@ -158,4 +158,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-qr-code]
+[component-metadata:i2c-qr-code]

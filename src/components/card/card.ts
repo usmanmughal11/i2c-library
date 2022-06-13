@@ -24,7 +24,7 @@ import styles from './card.styles';
  * @cssproperty --border-width - The width of card borders.
  * @cssproperty --padding - The padding to use for card sections.*
  */
-@customElement('sl-card')
+@customElement('i2c-card')
 export default class SlCard extends LitElement {
   static styles = styles;
 
@@ -63,6 +63,6 @@ export default class SlCard extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-card': SlCard;
+    'i2c-card': SlCard;
   }
 }

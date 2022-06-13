@@ -1,15 +1,15 @@
 # Tag
 
-[component-header:sl-tag]
+[component-header:i2c-tag]
 
 Tags are used as labels to organize things or to indicate a selection.
 
 ```html preview
-<sl-tag variant="primary">Primary</sl-tag>
-<sl-tag variant="success">Success</sl-tag>
-<sl-tag variant="neutral">Neutral</sl-tag>
-<sl-tag variant="warning">Warning</sl-tag>
-<sl-tag variant="danger">Danger</sl-tag>
+<i2c-tag variant="primary">Primary</i2c-tag>
+<i2c-tag variant="success">Success</i2c-tag>
+<i2c-tag variant="neutral">Neutral</i2c-tag>
+<i2c-tag variant="warning">Warning</i2c-tag>
+<i2c-tag variant="danger">Danger</i2c-tag>
 ```
 
 ```jsx react
@@ -33,9 +33,9 @@ const App = () => (
 Use the `size` attribute to change a tab's size.
 
 ```html preview
-<sl-tag size="small">Small</sl-tag>
-<sl-tag size="medium">Medium</sl-tag>
-<sl-tag size="large">Large</sl-tag>
+<i2c-tag size="small">Small</i2c-tag>
+<i2c-tag size="medium">Medium</i2c-tag>
+<i2c-tag size="large">Large</i2c-tag>
 ```
 
 ```jsx react
@@ -55,9 +55,9 @@ const App = () => (
 Use the `pill` attribute to give tabs rounded edges.
 
 ```html preview
-<sl-tag size="small" pill>Small</sl-tag>
-<sl-tag size="medium" pill>Medium</sl-tag>
-<sl-tag size="large" pill>Large</sl-tag>
+<i2c-tag size="small" pill>Small</i2c-tag>
+<i2c-tag size="medium" pill>Medium</i2c-tag>
+<i2c-tag size="large" pill>Large</i2c-tag>
 ```
 
 ```jsx react
@@ -84,15 +84,15 @@ Use the `removable` attribute to add a remove button to the tag.
 
 ```html preview
 <div class="tags-removable">
-  <sl-tag size="small" removable>Small</sl-tag>
-  <sl-tag size="medium" removable>Medium</sl-tag>
-  <sl-tag size="large" removable>Large</sl-tag>
+  <i2c-tag size="small" removable>Small</i2c-tag>
+  <i2c-tag size="medium" removable>Medium</i2c-tag>
+  <i2c-tag size="large" removable>Large</i2c-tag>
 </div>
 
 <script>
   const div = document.querySelector('.tags-removable');
 
-  div.addEventListener('sl-remove', event => {
+  div.addEventListener('i2c-remove', event => {
     const tag = event.target;
     tag.style.opacity = '0';
     setTimeout(() => (tag.style.opacity = '1'), 2000);
@@ -100,8 +100,8 @@ Use the `removable` attribute to add a remove button to the tag.
 </script>
 
 <style>
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable i2c-tag {
+    transition: var(--i2c-transition-medium) opacity;
   }
 </style>
 ```
@@ -110,8 +110,8 @@ Use the `removable` attribute to add a remove button to the tag.
 import { SlTag } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable i2c-tag {
+    transition: var(--i2c-transition-medium) opacity;
   }
 `;
 
@@ -144,4 +144,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-tag]
+[component-metadata:i2c-tag]

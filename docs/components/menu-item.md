@@ -1,27 +1,27 @@
 # Menu Item
 
-[component-header:sl-menu-item]
+[component-header:i2c-menu-item]
 
 Menu items provide options for the user to pick from in a menu.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>Option 1</sl-menu-item>
-  <sl-menu-item>Option 2</sl-menu-item>
-  <sl-menu-item>Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item checked>Checked</sl-menu-item>
-  <sl-menu-item disabled>Disabled</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-item>Option 1</i2c-menu-item>
+  <i2c-menu-item>Option 2</i2c-menu-item>
+  <i2c-menu-item>Option 3</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-item checked>Checked</i2c-menu-item>
+  <i2c-menu-item disabled>Disabled</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-item>
     Prefix Icon
-    <sl-icon slot="prefix" name="gift"></sl-icon>
-  </sl-menu-item>
-  <sl-menu-item>
+    <i2c-icon slot="prefix" name="gift"></i2c-icon>
+  </i2c-menu-item>
+  <i2c-menu-item>
     Suffix Icon
-    <sl-icon slot="suffix" name="heart"></sl-icon>
-  </sl-menu-item>
-</sl-menu>
+    <i2c-icon slot="suffix" name="heart"></i2c-icon>
+  </i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -55,11 +55,11 @@ const App = () => (
 Use the `checked` attribute to draw menu items in a checked state.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>Option 1</sl-menu-item>
-  <sl-menu-item checked>Option 2</sl-menu-item>
-  <sl-menu-item>Option 3</sl-menu-item>
-</sl-menu>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-item>Option 1</i2c-menu-item>
+  <i2c-menu-item checked>Option 2</i2c-menu-item>
+  <i2c-menu-item>Option 3</i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -79,11 +79,11 @@ const App = () => (
 Add the `disabled` attribute to disable the menu item so it cannot be selected.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>Option 1</sl-menu-item>
-  <sl-menu-item disabled>Option 2</sl-menu-item>
-  <sl-menu-item>Option 3</sl-menu-item>
-</sl-menu>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-item>Option 1</i2c-menu-item>
+  <i2c-menu-item disabled>Option 2</i2c-menu-item>
+  <i2c-menu-item>Option 3</i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -103,25 +103,25 @@ const App = () => (
 Add content to the start and end of menu items using the `prefix` and `suffix` slots.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-item>
+    <i2c-icon slot="prefix" name="house"></i2c-icon>
     Home
-  </sl-menu-item>
+  </i2c-menu-item>
 
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="envelope"></sl-icon>
+  <i2c-menu-item>
+    <i2c-icon slot="prefix" name="envelope"></i2c-icon>
     Messages
-    <sl-badge slot="suffix" variant="primary" pill>12</sl-badge>
-  </sl-menu-item>
+    <i2c-badge slot="suffix" variant="primary" pill>12</i2c-badge>
+  </i2c-menu-item>
 
-  <sl-divider></sl-divider>
+  <i2c-divider></i2c-divider>
 
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="gear"></sl-icon>
+  <i2c-menu-item>
+    <i2c-icon slot="prefix" name="gear"></i2c-icon>
     Settings
-  </sl-menu-item>
-</sl-menu>
+  </i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -154,19 +154,19 @@ const App = () => (
 
 ### Value & Selection
 
-The `value` attribute can be used to assign a hidden value, such as a unique identifier, to a menu item. When an item is selected, the `sl-select` event will be emitted and a reference to the item will be available at `event.detail.item`. You can use this reference to access the selected item's value, its checked state, and more.
+The `value` attribute can be used to assign a hidden value, such as a unique identifier, to a menu item. When an item is selected, the `i2c-select` event will be emitted and a reference to the item will be available at `event.detail.item`. You can use this reference to access the selected item's value, its checked state, and more.
 
 ```html preview
-<sl-menu class="menu-value" style="max-width: 200px;">
-  <sl-menu-item value="opt-1">Option 1</sl-menu-item>
-  <sl-menu-item value="opt-2">Option 2</sl-menu-item>
-  <sl-menu-item value="opt-3">Option 3</sl-menu-item>
-</sl-menu>
+<i2c-menu class="menu-value" style="max-width: 200px;">
+  <i2c-menu-item value="opt-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="opt-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="opt-3">Option 3</i2c-menu-item>
+</i2c-menu>
 
 <script>
   const menu = document.querySelector('.menu-value');
 
-  menu.addEventListener('sl-select', event => {
+  menu.addEventListener('i2c-select', event => {
     const item = event.detail.item;
 
     // Toggle checked state
@@ -202,4 +202,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-menu-item]
+[component-metadata:i2c-menu-item]

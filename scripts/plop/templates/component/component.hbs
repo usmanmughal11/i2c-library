@@ -8,9 +8,9 @@ import styles from './{{ tagWithoutPrefix tag }}.styles';
  * @since 2.0
  * @status experimental
  *
- * @dependency sl-example
+ * @dependency i2c-example
  *
- * @event sl-event-name - Emitted as an example.
+ * @event i2c-event-name - Emitted as an example.
  *
  * @slot - The default slot.
  * @slot example - An example slot.
@@ -29,7 +29,7 @@ export default class {{ properCase tag }} extends LitElement {
   @watch('someProp')
   doSomething() {
     // Example event
-    emit(this, 'sl-event-name');
+    emit(this, 'i2c-event-name');
   }
 
   render() {

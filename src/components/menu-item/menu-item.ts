@@ -11,9 +11,9 @@ import styles from './menu-item.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
- * @event sl-label-change - Emitted when the menu item's text label changes. For performance reasons, this event is only
+ * @event i2c-label-change - Emitted when the menu item's text label changes. For performance reasons, this event is only
  *   emitted if the default slot's `slotchange` event is triggered. It will not fire when the label is first set.
  *
  * @slot - The menu item's label.
@@ -25,7 +25,7 @@ import styles from './menu-item.styles';
  * @csspart label - The menu item label.
  * @csspart suffix - The suffix container.
  */
-@customElement('sl-menu-item')
+@customElement('i2c-menu-item')
 export default class SlMenuItem extends LitElement {
   static styles = styles;
 
@@ -73,7 +73,7 @@ export default class SlMenuItem extends LitElement {
 
     if (textLabel !== this.cachedTextLabel) {
       this.cachedTextLabel = textLabel;
-      emit(this, 'sl-label-change');
+      emit(this, 'i2c-label-change');
     }
   }
 
@@ -89,7 +89,7 @@ export default class SlMenuItem extends LitElement {
         })}
       >
         <span class="menu-item__check">
-          <sl-icon name="check-lg" library="system" aria-hidden="true"></sl-icon>
+          <i2c-icon name="check-lg" library="system" aria-hidden="true"></i2c-icon>
         </span>
 
         <span part="prefix" class="menu-item__prefix">
@@ -105,7 +105,7 @@ export default class SlMenuItem extends LitElement {
         </span>
 
         <span class="menu-item__chevron">
-          <sl-icon name="chevron-right" library="system" aria-hidden="true"></sl-icon>
+          <i2c-icon name="chevron-right" library="system" aria-hidden="true"></i2c-icon>
         </span>
       </div>
     `;
@@ -114,6 +114,6 @@ export default class SlMenuItem extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu-item': SlMenuItem;
+    'i2c-menu-item': SlMenuItem;
   }
 }

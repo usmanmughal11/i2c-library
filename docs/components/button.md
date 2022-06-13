@@ -1,11 +1,11 @@
 # Button
 
-[component-header:sl-button]
+[component-header:i2c-button]
 
 Buttons represent actions that are available to the user.
 
 ```html preview
-<sl-button>Button</sl-button>
+<i2c-button>Button</i2c-button>
 ```
 
 ```jsx react
@@ -21,12 +21,12 @@ const App = () => <SlButton>Button</SlButton>;
 Use the `variant` attribute to set the button's variant.
 
 ```html preview
-<sl-button variant="default">Default</sl-button>
-<sl-button variant="primary">Primary</sl-button>
-<sl-button variant="success">Success</sl-button>
-<sl-button variant="neutral">Neutral</sl-button>
-<sl-button variant="warning">Warning</sl-button>
-<sl-button variant="danger">Danger</sl-button>
+<i2c-button variant="default">Default</i2c-button>
+<i2c-button variant="primary">Primary</i2c-button>
+<i2c-button variant="success">Success</i2c-button>
+<i2c-button variant="neutral">Neutral</i2c-button>
+<i2c-button variant="warning">Warning</i2c-button>
+<i2c-button variant="danger">Danger</i2c-button>
 ```
 
 ```jsx react
@@ -49,9 +49,9 @@ const App = () => (
 Use the `size` attribute to change a button's size.
 
 ```html preview
-<sl-button size="small">Small</sl-button>
-<sl-button size="medium">Medium</sl-button>
-<sl-button size="large">Large</sl-button>
+<i2c-button size="small">Small</i2c-button>
+<i2c-button size="medium">Medium</i2c-button>
+<i2c-button size="large">Large</i2c-button>
 ```
 
 ```jsx react
@@ -71,12 +71,12 @@ const App = () => (
 Use the `outline` attribute to draw outlined buttons with transparent backgrounds.
 
 ```html preview
-<sl-button variant="default" outline>Default</sl-button>
-<sl-button variant="primary" outline>Primary</sl-button>
-<sl-button variant="success" outline>Success</sl-button>
-<sl-button variant="neutral" outline>Neutral</sl-button>
-<sl-button variant="warning" outline>Warning</sl-button>
-<sl-button variant="danger" outline>Danger</sl-button>
+<i2c-button variant="default" outline>Default</i2c-button>
+<i2c-button variant="primary" outline>Primary</i2c-button>
+<i2c-button variant="success" outline>Success</i2c-button>
+<i2c-button variant="neutral" outline>Neutral</i2c-button>
+<i2c-button variant="warning" outline>Warning</i2c-button>
+<i2c-button variant="danger" outline>Danger</i2c-button>
 ```
 
 ```jsx react
@@ -111,9 +111,9 @@ const App = () => (
 Use the `pill` attribute to give buttons rounded edges.
 
 ```html preview
-<sl-button size="small" pill>Small</sl-button>
-<sl-button size="medium" pill>Medium</sl-button>
-<sl-button size="large" pill>Large</sl-button>
+<i2c-button size="small" pill>Small</i2c-button>
+<i2c-button size="medium" pill>Medium</i2c-button>
+<i2c-button size="large" pill>Large</i2c-button>
 ```
 
 ```jsx react
@@ -139,17 +139,17 @@ const App = () => (
 Use the `circle` attribute to create circular icon buttons.
 
 ```html preview
-<sl-button variant="default" size="small" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<i2c-button variant="default" size="small" circle>
+  <i2c-icon name="gear" label="Settings"></i2c-icon>
+</i2c-button>
 
-<sl-button variant="default" size="medium" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<i2c-button variant="default" size="medium" circle>
+  <i2c-icon name="gear" label="Settings"></i2c-icon>
+</i2c-button>
 
-<sl-button variant="default" size="large" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<i2c-button variant="default" size="large" circle>
+  <i2c-icon name="gear" label="Settings"></i2c-icon>
+</i2c-button>
 ```
 
 ```jsx react
@@ -175,9 +175,9 @@ const App = () => (
 Use the `text` variant to create text buttons that share the same size as regular buttons but don't have backgrounds or borders.
 
 ```html preview
-<sl-button variant="text" size="small">Text</sl-button>
-<sl-button variant="text" size="medium">Text</sl-button>
-<sl-button variant="text" size="large">Text</sl-button>
+<i2c-button variant="text" size="small">Text</i2c-button>
+<i2c-button variant="text" size="medium">Text</i2c-button>
+<i2c-button variant="text" size="large">Text</i2c-button>
 ```
 
 ```jsx react
@@ -203,10 +203,10 @@ const App = () => (
 It's often helpful to have a button that works like a link. This is possible by setting the `href` attribute, which will make the component render an `<a>` under the hood. This gives you all the default link behavior the browser provides (e.g. <kbd>CMD/CTRL/SHIFT + CLICK</kbd>) and exposes the `target` and `download` attributes.
 
 ```html preview
-<sl-button href="https://example.com/">Link</sl-button>
-<sl-button href="https://example.com/" target="_blank">New Window</sl-button>
-<sl-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</sl-button>
-<sl-button href="https://example.com/" disabled>Disabled</sl-button>
+<i2c-button href="https://example.com/">Link</i2c-button>
+<i2c-button href="https://example.com/" target="_blank">New Window</i2c-button>
+<i2c-button href="/assets/images/wordmark.svg" download="shoelace.svg">Download</i2c-button>
+<i2c-button href="https://example.com/" disabled>Disabled</i2c-button>
 ```
 
 ```jsx react
@@ -235,9 +235,9 @@ const App = () => (
 As expected, buttons can be given a custom width by setting the `width` attribute. This is useful for making buttons span the full width of their container on smaller screens.
 
 ```html preview
-<sl-button variant="default" size="small" style="width: 100%; margin-bottom: 1rem;">Small</sl-button>
-<sl-button variant="default" size="medium" style="width: 100%; margin-bottom: 1rem;">Medium</sl-button>
-<sl-button variant="default" size="large" style="width: 100%;">Large</sl-button>
+<i2c-button variant="default" size="small" style="width: 100%; margin-bottom: 1rem;">Small</i2c-button>
+<i2c-button variant="default" size="medium" style="width: 100%; margin-bottom: 1rem;">Medium</i2c-button>
+<i2c-button variant="default" size="large" style="width: 100%;">Large</i2c-button>
 ```
 
 ```jsx react
@@ -263,57 +263,57 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-button variant="default" size="small">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<i2c-button variant="default" size="small">
+  <i2c-icon slot="prefix" name="gear"></i2c-icon>
   Settings
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default" size="small">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<i2c-button variant="default" size="small">
+  <i2c-icon slot="suffix" name="arrow-counterclockwise"></i2c-icon>
   Refresh
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default" size="small">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<i2c-button variant="default" size="small">
+  <i2c-icon slot="prefix" name="link-45deg"></i2c-icon>
+  <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
   Open
-</sl-button>
+</i2c-button>
 
 <br /><br />
 
-<sl-button variant="default">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<i2c-button variant="default">
+  <i2c-icon slot="prefix" name="gear"></i2c-icon>
   Settings
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<i2c-button variant="default">
+  <i2c-icon slot="suffix" name="arrow-counterclockwise"></i2c-icon>
   Refresh
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<i2c-button variant="default">
+  <i2c-icon slot="prefix" name="link-45deg"></i2c-icon>
+  <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
   Open
-</sl-button>
+</i2c-button>
 
 <br /><br />
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<i2c-button variant="default" size="large">
+  <i2c-icon slot="prefix" name="gear"></i2c-icon>
   Settings
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<i2c-button variant="default" size="large">
+  <i2c-icon slot="suffix" name="arrow-counterclockwise"></i2c-icon>
   Refresh
-</sl-button>
+</i2c-button>
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<i2c-button variant="default" size="large">
+  <i2c-icon slot="prefix" name="link-45deg"></i2c-icon>
+  <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
   Open
-</sl-button>
+</i2c-button>
 ```
 
 ```jsx react
@@ -383,9 +383,9 @@ const App = () => (
 Use the `caret` attribute to add a dropdown indicator when a button will trigger a dropdown, menu, or popover.
 
 ```html preview
-<sl-button size="small" caret>Small</sl-button>
-<sl-button size="medium" caret>Medium</sl-button>
-<sl-button size="large" caret>Large</sl-button>
+<i2c-button size="small" caret>Small</i2c-button>
+<i2c-button size="medium" caret>Medium</i2c-button>
+<i2c-button size="large" caret>Large</i2c-button>
 ```
 
 ```jsx react
@@ -411,12 +411,12 @@ const App = () => (
 Use the `loading` attribute to make a button busy. The width will remain the same as before, preventing adjacent elements from moving around. Clicks will be suppressed until the loading state is removed.
 
 ```html preview
-<sl-button variant="default" loading>Default</sl-button>
-<sl-button variant="primary" loading>Primary</sl-button>
-<sl-button variant="success" loading>Success</sl-button>
-<sl-button variant="neutral" loading>Neutral</sl-button>
-<sl-button variant="warning" loading>Warning</sl-button>
-<sl-button variant="danger" loading>Danger</sl-button>
+<i2c-button variant="default" loading>Default</i2c-button>
+<i2c-button variant="primary" loading>Primary</i2c-button>
+<i2c-button variant="success" loading>Success</i2c-button>
+<i2c-button variant="neutral" loading>Neutral</i2c-button>
+<i2c-button variant="warning" loading>Warning</i2c-button>
+<i2c-button variant="danger" loading>Danger</i2c-button>
 ```
 
 ```jsx react
@@ -451,12 +451,12 @@ const App = () => (
 Use the `disabled` attribute to disable a button. Clicks will be suppressed until the disabled state is removed.
 
 ```html preview
-<sl-button variant="default" disabled>Default</sl-button>
-<sl-button variant="primary" disabled>Primary</sl-button>
-<sl-button variant="success" disabled>Success</sl-button>
-<sl-button variant="neutral" disabled>Neutral</sl-button>
-<sl-button variant="warning" disabled>Warning</sl-button>
-<sl-button variant="danger" disabled>Danger</sl-button>
+<i2c-button variant="default" disabled>Default</i2c-button>
+<i2c-button variant="primary" disabled>Primary</i2c-button>
+<i2c-button variant="success" disabled>Success</i2c-button>
+<i2c-button variant="neutral" disabled>Neutral</i2c-button>
+<i2c-button variant="warning" disabled>Warning</i2c-button>
+<i2c-button variant="danger" disabled>Danger</i2c-button>
 ```
 
 ```jsx react
@@ -493,16 +493,16 @@ const App = () => (
 
 ### Styling Buttons
 
-This example demonstrates how to style buttons using a custom class. This is the recommended approach if you need to add additional variations. To customize an existing variation, modify the selector to target the button's `variant` attribute instead of a class (e.g. `sl-button[variant="primary"]`).
+This example demonstrates how to style buttons using a custom class. This is the recommended approach if you need to add additional variations. To customize an existing variation, modify the selector to target the button's `variant` attribute instead of a class (e.g. `i2c-button[variant="primary"]`).
 
 ```html preview
-<sl-button class="pink">Pink Button</sl-button>
+<i2c-button class="pink">Pink Button</i2c-button>
 
 <style>
-  sl-button.pink::part(base) {
+  i2c-button.pink::part(base) {
     /* Set design tokens for height and border width */
-    --sl-input-height-medium: 48px;
-    --sl-input-border-width: 4px;
+    --i2c-input-height-medium: 48px;
+    --i2c-input-border-width: 4px;
 
     border-radius: 0;
     background-color: #ff1493;
@@ -513,14 +513,14 @@ This example demonstrates how to style buttons using a custom class. This is the
     color: white;
     font-size: 1.125rem;
     box-shadow: 0 2px 10px #0002;
-    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+    transition: var(--i2c-transition-medium) transform ease, var(--i2c-transition-medium) border ease;
   }
 
-  sl-button.pink::part(base):hover {
+  i2c-button.pink::part(base):hover {
     transform: scale(1.05) rotate(-1deg);
   }
 
-  sl-button.pink::part(base):active {
+  i2c-button.pink::part(base):active {
     border-top-color: #ad005c;
     border-right-color: #ff7ac1;
     border-bottom-color: #ff7ac1;
@@ -528,11 +528,11 @@ This example demonstrates how to style buttons using a custom class. This is the
     transform: scale(1.05) rotate(-1deg) translateY(2px);
   }
 
-  sl-button.pink::part(base):focus-visible {
+  i2c-button.pink::part(base):focus-visible {
     outline: dashed 2px deeppink;
     outline-offset: 4px;
   }
 </style>
 ```
 
-[component-metadata:sl-button]
+[component-metadata:i2c-button]

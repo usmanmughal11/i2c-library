@@ -2,7 +2,7 @@ import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
 import type SlFormatDate from './format-date';
 
-describe('<sl-format-date>', () => {
+describe('<i2c-format-date>', () => {
   describe('defaults ', () => {
     let clock: sinon.SinonFakeTimers;
 
@@ -18,7 +18,7 @@ describe('<sl-format-date>', () => {
     });
 
     it('default properties', async () => {
-      const el = await fixture<SlFormatDate>(html` <sl-format-date></sl-format-date> `);
+      const el = await fixture<SlFormatDate>(html` <i2c-format-date></i2c-format-date> `);
       expect(el.date).to.deep.equal(new Date());
 
       expect(el.lang).to.be.undefined;
@@ -53,7 +53,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct language format: ${setup.lang}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" lang="${setup.lang}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" lang="${setup.lang}"></i2c-format-date>
           `
         );
         expect(el.shadowRoot?.textContent?.trim()).to.equal(setup.result);
@@ -67,10 +67,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct weekday format: ${weekdayFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               weekday="${weekdayFormat}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 
@@ -88,7 +88,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct era format: ${eraFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" era="${eraFormat}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" era="${eraFormat}"></i2c-format-date>
           `
         );
 
@@ -106,7 +106,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct year format: ${yearFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" year="${yearFormat}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" year="${yearFormat}"></i2c-format-date>
           `
         );
 
@@ -124,7 +124,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct month format: ${monthFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" month="${monthFormat}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" month="${monthFormat}"></i2c-format-date>
           `
         );
 
@@ -142,7 +142,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct day format: ${dayFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" day="${dayFormat}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" day="${dayFormat}"></i2c-format-date>
           `
         );
 
@@ -160,7 +160,7 @@ describe('<sl-format-date>', () => {
       it(`date has correct hour format: ${hourFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" hour="${hourFormat}"></sl-format-date>
+            <i2c-format-date .date="${new Date(new Date().getFullYear(), 0, 1)}" hour="${hourFormat}"></i2c-format-date>
           `
         );
 
@@ -178,10 +178,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct minute format: ${minuteFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               minute="${minuteFormat}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 
@@ -199,10 +199,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct second format: ${secondFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               second="${secondFormat}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 
@@ -220,10 +220,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct timeZoneName format: ${timeZoneNameFormat}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               time-zone-name="${timeZoneNameFormat}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 
@@ -241,10 +241,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct timeZoneName format: ${timeZone}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               time-zone="${timeZone}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 
@@ -262,10 +262,10 @@ describe('<sl-format-date>', () => {
       it(`date has correct hourFormat format: ${hourFormatValue}`, async () => {
         const el = await fixture<SlFormatDate>(
           html`
-            <sl-format-date
+            <i2c-format-date
               .date="${new Date(new Date().getFullYear(), 0, 1)}"
               hour-format="${hourFormatValue as 'auto' | '12' | '24'}"
-            ></sl-format-date>
+            ></i2c-format-date>
           `
         );
 

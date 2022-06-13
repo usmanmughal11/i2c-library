@@ -18,15 +18,15 @@ export default css`
 
   .dropdown__positioner {
     position: absolute;
-    z-index: var(--sl-z-index-dropdown);
+    z-index: var(--i2c-z-index-dropdown);
   }
 
   .dropdown__panel {
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
+    font-family: var(--i2c-font-sans);
+    font-size: var(--i2c-font-size-medium);
+    font-weight: var(--i2c-font-weight-normal);
     color: var(--color);
-    box-shadow: var(--sl-shadow-large);
+    box-shadow: var(--i2c-shadow-large);
     overflow: auto;
     overscroll-behavior: none;
     pointer-events: none;

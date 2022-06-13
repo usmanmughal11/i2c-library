@@ -11,7 +11,7 @@ import styles from './badge.styles';
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-badge')
+@customElement('i2c-badge')
 export default class SlBadge extends LitElement {
   static styles = styles;
 
@@ -48,6 +48,6 @@ export default class SlBadge extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-badge': SlBadge;
+    'i2c-badge': SlBadge;
   }
 }

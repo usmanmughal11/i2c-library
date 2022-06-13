@@ -1,11 +1,11 @@
 # Badge
 
-[component-header:sl-badge]
+[component-header:i2c-badge]
 
 Badges are used to draw attention and display statuses or counts.
 
 ```html preview
-<sl-badge>Badge</sl-badge>
+<i2c-badge>Badge</i2c-badge>
 ```
 
 ```jsx react
@@ -21,11 +21,11 @@ const App = () => <SlBadge>Badge</SlBadge>;
 Set the `variant` attribute to change the badge's variant.
 
 ```html preview
-<sl-badge variant="primary">Primary</sl-badge>
-<sl-badge variant="success">Success</sl-badge>
-<sl-badge variant="neutral">Neutral</sl-badge>
-<sl-badge variant="warning">Warning</sl-badge>
-<sl-badge variant="danger">Danger</sl-badge>
+<i2c-badge variant="primary">Primary</i2c-badge>
+<i2c-badge variant="success">Success</i2c-badge>
+<i2c-badge variant="neutral">Neutral</i2c-badge>
+<i2c-badge variant="warning">Warning</i2c-badge>
+<i2c-badge variant="danger">Danger</i2c-badge>
 ```
 
 ```jsx react
@@ -47,11 +47,11 @@ const App = () => (
 Use the `pill` attribute to give badges rounded edges.
 
 ```html preview
-<sl-badge variant="primary" pill>Primary</sl-badge>
-<sl-badge variant="success" pill>Success</sl-badge>
-<sl-badge variant="neutral" pill>Neutral</sl-badge>
-<sl-badge variant="warning" pill>Warning</sl-badge>
-<sl-badge variant="danger" pill>Danger</sl-badge>
+<i2c-badge variant="primary" pill>Primary</i2c-badge>
+<i2c-badge variant="success" pill>Success</i2c-badge>
+<i2c-badge variant="neutral" pill>Neutral</i2c-badge>
+<i2c-badge variant="warning" pill>Warning</i2c-badge>
+<i2c-badge variant="danger" pill>Danger</i2c-badge>
 ```
 
 ```jsx react
@@ -84,15 +84,15 @@ Use the `pulse` attribute to draw attention to the badge with a subtle animation
 
 ```html preview
 <div class="badge-pulse">
-  <sl-badge variant="primary" pill pulse>1</sl-badge>
-  <sl-badge variant="success" pill pulse>1</sl-badge>
-  <sl-badge variant="neutral" pill pulse>1</sl-badge>
-  <sl-badge variant="warning" pill pulse>1</sl-badge>
-  <sl-badge variant="danger" pill pulse>1</sl-badge>
+  <i2c-badge variant="primary" pill pulse>1</i2c-badge>
+  <i2c-badge variant="success" pill pulse>1</i2c-badge>
+  <i2c-badge variant="neutral" pill pulse>1</i2c-badge>
+  <i2c-badge variant="warning" pill pulse>1</i2c-badge>
+  <i2c-badge variant="danger" pill pulse>1</i2c-badge>
 </div>
 
 <style>
-  .badge-pulse sl-badge:not(:last-of-type) {
+  .badge-pulse i2c-badge:not(:last-of-type) {
     margin-right: 1rem;
   }
 </style>
@@ -102,7 +102,7 @@ Use the `pulse` attribute to draw attention to the badge with a subtle animation
 import { SlBadge } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .badge-pulse sl-badge:not(:last-of-type) {
+  .badge-pulse i2c-badge:not(:last-of-type) {
     margin-right: 1rem;
   }
 `;
@@ -137,20 +137,20 @@ const App = () => (
 One of the most common use cases for badges is attaching them to buttons. To make this easier, badges will be automatically positioned at the top-right when they're a child of a button.
 
 ```html preview
-<sl-button>
+<i2c-button>
   Requests
-  <sl-badge pill>30</sl-badge>
-</sl-button>
+  <i2c-badge pill>30</i2c-badge>
+</i2c-button>
 
-<sl-button style="margin-inline-start: 1rem;">
+<i2c-button style="margin-inline-start: 1rem;">
   Warnings
-  <sl-badge variant="warning" pill>8</sl-badge>
-</sl-button>
+  <i2c-badge variant="warning" pill>8</i2c-badge>
+</i2c-button>
 
-<sl-button style="margin-inline-start: 1rem;">
+<i2c-button style="margin-inline-start: 1rem;">
   Errors
-  <sl-badge variant="danger" pill>6</sl-badge>
-</sl-button>
+  <i2c-badge variant="danger" pill>6</i2c-badge>
+</i2c-button>
 ```
 
 ```jsx react
@@ -185,11 +185,11 @@ const App = () => (
 When including badges in menu items, use the `suffix` slot to make sure they're aligned correctly.
 
 ```html preview
-<sl-menu style="max-width: 240px;">
-  <sl-menu-label>Messages</sl-menu-label>
-  <sl-menu-item>Comments <sl-badge slot="suffix" variant="neutral" pill>4</sl-badge></sl-menu-item>
-  <sl-menu-item>Replies <sl-badge slot="suffix" variant="neutral" pill>12</sl-badge></sl-menu-item>
-</sl-menu>
+<i2c-menu style="max-width: 240px;">
+  <i2c-menu-label>Messages</i2c-menu-label>
+  <i2c-menu-item>Comments <i2c-badge slot="suffix" variant="neutral" pill>4</i2c-badge></i2c-menu-item>
+  <i2c-menu-item>Replies <i2c-badge slot="suffix" variant="neutral" pill>12</i2c-badge></i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -199,8 +199,8 @@ const App = () => (
   <SlMenu
     style={{
       maxWidth: '240px',
-      border: 'solid 1px var(--sl-panel-border-color)',
-      borderRadius: 'var(--sl-border-radius-medium)'
+      border: 'solid 1px var(--i2c-panel-border-color)',
+      borderRadius: 'var(--i2c-border-radius-medium)'
     }}
   >
     <SlMenuLabel>Messages</SlMenuLabel>
@@ -220,4 +220,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-badge]
+[component-metadata:i2c-badge]

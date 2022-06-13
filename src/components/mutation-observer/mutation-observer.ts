@@ -8,11 +8,11 @@ import styles from './mutation-observer.styles';
  * @since 2.0
  * @status stable
  *
- * @event sl-mutation - Emitted when a mutation occurs.
+ * @event i2c-mutation - Emitted when a mutation occurs.
  *
  * @slot - The content to watch for mutations.
  */
-@customElement('sl-mutation-observer')
+@customElement('i2c-mutation-observer')
 export default class SlMutationObserver extends LitElement {
   static styles = styles;
 
@@ -74,7 +74,7 @@ export default class SlMutationObserver extends LitElement {
   }
 
   handleMutation(mutationList: MutationRecord[]) {
-    emit(this, 'sl-mutation', {
+    emit(this, 'i2c-mutation', {
       detail: { mutationList }
     });
   }
@@ -113,6 +113,6 @@ export default class SlMutationObserver extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-mutation-observer': SlMutationObserver;
+    'i2c-mutation-observer': SlMutationObserver;
   }
 }

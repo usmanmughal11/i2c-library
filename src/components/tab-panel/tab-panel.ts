@@ -13,12 +13,12 @@ import styles from './tab-panel.styles';
  *
  * @cssproperty --padding - The tab panel's padding.
  */
-@customElement('sl-tab-panel')
+@customElement('i2c-tab-panel')
 export default class SlTabPanel extends LitElement {
   static styles = styles;
 
   private readonly attrId = autoIncrement();
-  private readonly componentId = `sl-tab-panel-${this.attrId}`;
+  private readonly componentId = `i2c-tab-panel-${this.attrId}`;
 
   /** The tab panel's name. */
   @property({ reflect: true }) name = '';
@@ -44,6 +44,6 @@ export default class SlTabPanel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab-panel': SlTabPanel;
+    'i2c-tab-panel': SlTabPanel;
   }
 }

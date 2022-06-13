@@ -14,9 +14,9 @@ import styles from './checkbox.styles';
  *
  * @slot - The checkbox's label.
  *
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-change - Emitted when the control's checked state changes.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event i2c-blur - Emitted when the control loses focus.
+ * @event i2c-change - Emitted when the control's checked state changes.
+ * @event i2c-focus - Emitted when the control gains focus.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart control - The checkbox control.
@@ -24,7 +24,7 @@ import styles from './checkbox.styles';
  * @csspart indeterminate-icon - The container that wraps the indeterminate icon.
  * @csspart label - The checkbox label.
  */
-@customElement('sl-checkbox')
+@customElement('i2c-checkbox')
 export default class SlCheckbox extends LitElement {
   static styles = styles;
 
@@ -91,12 +91,12 @@ export default class SlCheckbox extends LitElement {
   handleClick() {
     this.checked = !this.checked;
     this.indeterminate = false;
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   @watch('disabled', { waitUntilFirstUpdate: true })
@@ -108,7 +108,7 @@ export default class SlCheckbox extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   @watch('checked', { waitUntilFirstUpdate: true })
@@ -188,6 +188,6 @@ export default class SlCheckbox extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-checkbox': SlCheckbox;
+    'i2c-checkbox': SlCheckbox;
   }
 }

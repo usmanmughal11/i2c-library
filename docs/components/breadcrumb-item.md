@@ -1,18 +1,18 @@
 # Breadcrumb Item
 
-[component-header:sl-breadcrumb-item]
+[component-header:i2c-breadcrumb-item]
 
 Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item>
+    <i2c-icon slot="prefix" name="house"></i2c-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Clothing</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Shirts</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -32,4 +32,4 @@ const App = () => (
 
 ?> Additional demonstrations can be found in the [breadcrumb examples](/components/breadcrumb).
 
-[component-metadata:sl-breadcrumb-item]
+[component-metadata:i2c-breadcrumb-item]

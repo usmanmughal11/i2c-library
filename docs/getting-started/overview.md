@@ -2,7 +2,7 @@
 <div class="splash-start">
 <img class="splash-logo" src="/assets/images/wordmark.svg" alt="Shoelace">
 
-# <sl-visually-hidden>Shoelace:</sl-visually-hidden> A forward-thinking library of web components.
+# <i2c-visually-hidden>Shoelace:</i2c-visually-hidden> A forward-thinking library of web components.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
@@ -40,7 +40,7 @@ Add the following code to your page.
 Now you have access to all of Shoelace's components! Try adding a button:
 
 ```html preview expanded
-<sl-button>Click me</sl-button>
+<i2c-button>Click me</i2c-button>
 ```
 
 ?> This will load all of Shoelace's components, but you should probably only load the ones you're actually using. To learn how, or for other ways to install Shoelace, refer to the [installation instructions](getting-started/installation).
@@ -101,17 +101,17 @@ Designing, developing, and supporting this library requires a lot of time, effor
 
 👇 Your support is very much appreciated! 👇
 
-<sl-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-  <sl-icon slot="prefix" name="heart"></sl-icon> Become a sponsor
-</sl-button>
+<i2c-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+  <i2c-icon slot="prefix" name="heart"></i2c-icon> Become a sponsor
+</i2c-button>
 
-<sl-button class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-  <sl-icon slot="prefix" name="github"></sl-icon> <span class="github-star-count">Star</span>
-</sl-button>
+<i2c-button class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
+  <i2c-icon slot="prefix" name="github"></i2c-icon> <span class="github-star-count">Star</span>
+</i2c-button>
 
-<sl-button class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-  <sl-icon slot="prefix" name="twitter"></sl-icon> Follow
-</sl-button>
+<i2c-button class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
+  <i2c-icon slot="prefix" name="twitter"></i2c-icon> Follow
+</i2c-button>
 
 ## Attribution
 

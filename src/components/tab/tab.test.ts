@@ -2,9 +2,9 @@ import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
 import type SlTab from './tab';
 
-describe('<sl-tab>', () => {
+describe('<i2c-tab>', () => {
   it('should render default tab', async () => {
-    const el = await fixture<SlTab>(html` <sl-tab>Test</sl-tab> `);
+    const el = await fixture<SlTab>(html` <i2c-tab>Test</i2c-tab> `);
 
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -19,7 +19,7 @@ describe('<sl-tab>', () => {
   });
 
   it('should disable tab by attribute', async () => {
-    const el = await fixture<SlTab>(html` <sl-tab disabled>Test</sl-tab> `);
+    const el = await fixture<SlTab>(html` <i2c-tab disabled>Test</i2c-tab> `);
 
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -30,7 +30,7 @@ describe('<sl-tab>', () => {
   });
 
   it('should set active tab by attribute', async () => {
-    const el = await fixture<SlTab>(html` <sl-tab active>Test</sl-tab> `);
+    const el = await fixture<SlTab>(html` <i2c-tab active>Test</i2c-tab> `);
 
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -41,7 +41,7 @@ describe('<sl-tab>', () => {
   });
 
   it('should set closable by attribute', async () => {
-    const el = await fixture<SlTab>(html` <sl-tab closable>Test</sl-tab> `);
+    const el = await fixture<SlTab>(html` <i2c-tab closable>Test</i2c-tab> `);
 
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const closeButton = el.shadowRoot!.querySelector('[part="close-button"]');
@@ -54,7 +54,7 @@ describe('<sl-tab>', () => {
 
   describe('focus', () => {
     it('should focus inner div', async () => {
-      const el = await fixture<SlTab>(html` <sl-tab>Test</sl-tab> `);
+      const el = await fixture<SlTab>(html` <i2c-tab>Test</i2c-tab> `);
 
       const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -67,7 +67,7 @@ describe('<sl-tab>', () => {
 
   describe('blur', () => {
     it('shoud blur inner div', async () => {
-      const el = await fixture<SlTab>(html` <sl-tab>Test</sl-tab> `);
+      const el = await fixture<SlTab>(html` <i2c-tab>Test</i2c-tab> `);
 
       el.focus();
       await el.updateComplete;
@@ -81,12 +81,12 @@ describe('<sl-tab>', () => {
 
   describe('closable', () => {
     it('should emit close event when close button clicked', async () => {
-      const el = await fixture<SlTab>(html` <sl-tab closable>Test</sl-tab> `);
+      const el = await fixture<SlTab>(html` <i2c-tab closable>Test</i2c-tab> `);
 
       const closeButton = el.shadowRoot!.querySelector<HTMLButtonElement>('[part="close-button"]')!;
       const spy = sinon.spy();
 
-      el.addEventListener('sl-close', spy, { once: true });
+      el.addEventListener('i2c-close', spy, { once: true });
 
       closeButton.click();
 

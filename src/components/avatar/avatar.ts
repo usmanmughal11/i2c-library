@@ -9,7 +9,7 @@ import styles from './avatar.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
  * @slot icon - The default icon to use when no image or initials are present.
  *
@@ -20,7 +20,7 @@ import styles from './avatar.styles';
  *
  * @cssproperty --size - The size of the avatar.
  */
-@customElement('sl-avatar')
+@customElement('i2c-avatar')
 export default class SlAvatar extends LitElement {
   static styles = styles;
 
@@ -62,7 +62,7 @@ export default class SlAvatar extends LitElement {
           : html`
               <div part="icon" class="avatar__icon" aria-hidden="true">
                 <slot name="icon">
-                  <sl-icon name="person-fill" library="system"></sl-icon>
+                  <i2c-icon name="person-fill" library="system"></i2c-icon>
                 </slot>
               </div>
             `}
@@ -84,6 +84,6 @@ export default class SlAvatar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-avatar': SlAvatar;
+    'i2c-avatar': SlAvatar;
   }
 }

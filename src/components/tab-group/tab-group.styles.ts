@@ -5,8 +5,8 @@ export default css`
   ${componentStyles}
 
   :host {
-    --indicator-color: var(--sl-color-primary-600);
-    --track-color: var(--sl-color-neutral-200);
+    --indicator-color: var(--i2c-color-primary-600);
+    --track-color: var(--i2c-color-neutral-200);
     --track-width: 2px;
 
     display: block;
@@ -25,12 +25,12 @@ export default css`
 
   .tab-group .tab-group__indicator {
     position: absolute;
-    transition: var(--sl-transition-fast) transform ease, var(--sl-transition-fast) width ease;
+    transition: var(--i2c-transition-fast) transform ease, var(--i2c-transition-fast) width ease;
   }
 
   .tab-group--has-scroll-controls .tab-group__nav-container {
     position: relative;
-    padding: 0 var(--sl-spacing-x-large);
+    padding: 0 var(--i2c-spacing-x-large);
   }
 
   .tab-group__scroll-button {
@@ -40,7 +40,7 @@ export default css`
     position: absolute;
     top: 0;
     bottom: 0;
-    width: var(--sl-spacing-x-large);
+    width: var(--i2c-spacing-x-large);
   }
 
   .tab-group__scroll-button--start {
@@ -103,8 +103,8 @@ export default css`
     order: 2;
   }
 
-  .tab-group--top ::slotted(sl-tab-panel) {
-    --padding: var(--sl-spacing-medium) 0;
+  .tab-group--top ::slotted(i2c-tab-panel) {
+    --padding: var(--i2c-spacing-medium) 0;
   }
 
   /*
@@ -149,8 +149,8 @@ export default css`
     order: 1;
   }
 
-  .tab-group--bottom ::slotted(sl-tab-panel) {
-    --padding: var(--sl-spacing-medium) 0;
+  .tab-group--bottom ::slotted(i2c-tab-panel) {
+    --padding: var(--i2c-spacing-medium) 0;
   }
 
   /*
@@ -186,8 +186,8 @@ export default css`
     order: 2;
   }
 
-  .tab-group--start ::slotted(sl-tab-panel) {
-    --padding: 0 var(--sl-spacing-medium);
+  .tab-group--start ::slotted(i2c-tab-panel) {
+    --padding: 0 var(--i2c-spacing-medium);
   }
 
   /*
@@ -223,7 +223,7 @@ export default css`
     order: 1;
   }
 
-  .tab-group--end ::slotted(sl-tab-panel) {
-    --padding: 0 var(--sl-spacing-medium);
+  .tab-group--end ::slotted(i2c-tab-panel) {
+    --padding: 0 var(--i2c-spacing-medium);
   }
 `;

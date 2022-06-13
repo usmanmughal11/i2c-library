@@ -14,9 +14,9 @@ import styles from './rating.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
- * @event sl-change - Emitted when the rating's value changes.
+ * @event i2c-change - Emitted when the rating's value changes.
  *
  * @csspart base - The component's internal wrapper.
  *
@@ -25,7 +25,7 @@ import styles from './rating.styles';
  * @cssproperty --symbol-size - The size of symbols.
  * @cssproperty --symbol-spacing - The spacing to use around symbols.
  */
-@customElement('sl-rating')
+@customElement('i2c-rating')
 export default class SlRating extends LitElement {
   static styles = styles;
 
@@ -52,7 +52,7 @@ export default class SlRating extends LitElement {
   @property({ type: Boolean, reflect: true }) disabled = false;
 
   /** The name of the icon to display as the symbol. */
-  @property() getSymbol: (value: number) => string = () => '<sl-icon name="star-fill" library="system"></sl-icon>';
+  @property() getSymbol: (value: number) => string = () => '<i2c-icon name="star-fill" library="system"></i2c-icon>';
 
   /** Sets focus on the rating. */
   focus(options?: FocusOptions) {
@@ -160,7 +160,7 @@ export default class SlRating extends LitElement {
 
   @watch('value', { waitUntilFirstUpdate: true })
   handleValueChange() {
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   roundToPrecision(numberToRound: number, precision = 0.5) {
@@ -253,6 +253,6 @@ export default class SlRating extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-rating': SlRating;
+    'i2c-rating': SlRating;
   }
 }

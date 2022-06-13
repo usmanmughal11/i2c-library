@@ -13,7 +13,7 @@ import styles from './breadcrumb-item.styles';
  * @slot prefix - An optional prefix, usually an icon or icon button.
  * @slot suffix - An optional suffix, usually an icon or icon button.
  * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If
- * you want to change it for all items in the group, set the separator on `<sl-breadcrumb>` instead.
+ * you want to change it for all items in the group, set the separator on `<i2c-breadcrumb>` instead.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart label - The breadcrumb item's label.
@@ -21,7 +21,7 @@ import styles from './breadcrumb-item.styles';
  * @csspart suffix - The container that wraps the suffix slot.
  * @csspart separator - The container that wraps the separator slot.
  */
-@customElement('sl-breadcrumb-item')
+@customElement('i2c-breadcrumb-item')
 export default class SlBreadcrumbItem extends LitElement {
   static styles = styles;
 
@@ -87,6 +87,6 @@ export default class SlBreadcrumbItem extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-breadcrumb-item': SlBreadcrumbItem;
+    'i2c-breadcrumb-item': SlBreadcrumbItem;
   }
 }

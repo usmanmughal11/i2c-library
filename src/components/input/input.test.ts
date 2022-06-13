@@ -4,14 +4,14 @@ import sinon from 'sinon';
 import { serialize } from '../../utilities/form';
 import type SlInput from './input';
 
-describe('<sl-input>', () => {
+describe('<i2c-input>', () => {
   it('should pass accessibility tests', async () => {
-    const el = await fixture<SlInput>(html` <sl-input label="Name"></sl-input> `);
+    const el = await fixture<SlInput>(html` <i2c-input label="Name"></i2c-input> `);
     await expect(el).to.be.accessible();
   });
 
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlInput>(html` <sl-input disabled></sl-input> `);
+    const el = await fixture<SlInput>(html` <i2c-input disabled></i2c-input> `);
     const input = el.shadowRoot!.querySelector<HTMLInputElement>('[part="input"]')!;
 
     expect(input.disabled).to.be.true;
@@ -19,7 +19,7 @@ describe('<sl-input>', () => {
 
   // describe('value methods', () => {
   //   it('should set the value as a date when using valueAsDate', async () => {
-  //     const el = await fixture<SlInput>(html` <sl-input type="date"></sl-input> `);
+  //     const el = await fixture<SlInput>(html` <i2c-input type="date"></i2c-input> `);
   //     const today = new Date();
 
   //     el.valueAsDate = today;
@@ -28,7 +28,7 @@ describe('<sl-input>', () => {
   //   });
 
   //   it('should set the value as a number when using valueAsNumber', async () => {
-  //     const el = await fixture<SlInput>(html` <sl-input type="number"></sl-input> `);
+  //     const el = await fixture<SlInput>(html` <i2c-input type="number"></i2c-input> `);
   //     const num = 12345;
 
   //     el.valueAsNumber = num;
@@ -38,11 +38,11 @@ describe('<sl-input>', () => {
   // });
 
   it('should focus the input when clicking on the label', async () => {
-    const el = await fixture<SlInput>(html` <sl-input label="Name"></sl-input> `);
+    const el = await fixture<SlInput>(html` <i2c-input label="Name"></i2c-input> `);
     const label = el.shadowRoot!.querySelector('[part="form-control-label"]')!;
     const submitHandler = sinon.spy();
 
-    el.addEventListener('sl-focus', submitHandler);
+    el.addEventListener('i2c-focus', submitHandler);
     (label as HTMLLabelElement).click();
     await waitUntil(() => submitHandler.calledOnce);
 
@@ -51,24 +51,24 @@ describe('<sl-input>', () => {
 
   describe('when using constraint validation', () => {
     it('should be valid by default', async () => {
-      const el = await fixture<SlInput>(html` <sl-input></sl-input> `);
+      const el = await fixture<SlInput>(html` <i2c-input></i2c-input> `);
       expect(el.invalid).to.be.false;
     });
 
     it('should be invalid when required and empty', async () => {
-      const el = await fixture<SlInput>(html` <sl-input required></sl-input> `);
+      const el = await fixture<SlInput>(html` <i2c-input required></i2c-input> `);
       expect(el.reportValidity()).to.be.false;
       expect(el.invalid).to.be.true;
     });
 
     it('should be invalid when the pattern does not match', async () => {
-      const el = await fixture<SlInput>(html` <sl-input pattern="^test" value="fail"></sl-input> `);
+      const el = await fixture<SlInput>(html` <i2c-input pattern="^test" value="fail"></i2c-input> `);
       expect(el.invalid).to.be.true;
       expect(el.reportValidity()).to.be.false;
     });
 
     it('should be invalid when required and disabled is removed', async () => {
-      const el = await fixture<SlInput>(html` <sl-input disabled required></sl-input> `);
+      const el = await fixture<SlInput>(html` <i2c-input disabled required></i2c-input> `);
       el.disabled = false;
       await el.updateComplete;
       expect(el.invalid).to.be.true;
@@ -77,13 +77,13 @@ describe('<sl-input>', () => {
 
   describe('when serializing', () => {
     it('should serialize its name and value with FormData', async () => {
-      const form = await fixture<HTMLFormElement>(html` <form><sl-input name="a" value="1"></sl-input></form> `);
+      const form = await fixture<HTMLFormElement>(html` <form><i2c-input name="a" value="1"></i2c-input></form> `);
       const formData = new FormData(form);
       expect(formData.get('a')).to.equal('1');
     });
 
     it('should serialize its name and value with JSON', async () => {
-      const form = await fixture<HTMLFormElement>(html` <form><sl-input name="a" value="1"></sl-input></form> `);
+      const form = await fixture<HTMLFormElement>(html` <form><i2c-input name="a" value="1"></i2c-input></form> `);
       const json = serialize(form);
       expect(json.a).to.equal('1');
     });
@@ -91,8 +91,8 @@ describe('<sl-input>', () => {
 
   describe('when submitting a form', () => {
     it('should submit the form when pressing enter in a form without a submit button', async () => {
-      const form = await fixture<HTMLFormElement>(html` <form><sl-input></sl-input></form> `);
-      const input = form.querySelector('sl-input')!;
+      const form = await fixture<HTMLFormElement>(html` <form><i2c-input></i2c-input></form> `);
+      const input = form.querySelector('i2c-input')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => event.preventDefault());
 
       form.addEventListener('submit', submitHandler);
@@ -104,8 +104,8 @@ describe('<sl-input>', () => {
     });
 
     it('should prevent submission when pressing enter in an input and canceling the keydown event', async () => {
-      const form = await fixture<HTMLFormElement>(html` <form><sl-input></sl-input></form> `);
-      const input = form.querySelector('sl-input')!;
+      const form = await fixture<HTMLFormElement>(html` <form><i2c-input></i2c-input></form> `);
+      const input = form.querySelector('i2c-input')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => event.preventDefault());
       const keydownHandler = sinon.spy((event: KeyboardEvent) => {
         if (event.key === 'Enter') {
@@ -128,8 +128,8 @@ describe('<sl-input>', () => {
     it('should be invalid when the input is empty and form.reportValidity() is called', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-input required value=""></sl-input>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-input required value=""></i2c-input>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
 
@@ -139,8 +139,8 @@ describe('<sl-input>', () => {
     it('should be valid when the input is empty, reportValidity() is called, and the form has novalidate', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form novalidate>
-          <sl-input required value=""></sl-input>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-input required value=""></i2c-input>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
 
@@ -151,7 +151,7 @@ describe('<sl-input>', () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
           <input required value=""></input>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
 

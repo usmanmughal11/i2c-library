@@ -12,13 +12,13 @@ import styles from './image-comparer.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
  * @slot before - The before image, an `<img>` or `<svg>` element.
  * @slot after - The after image, an `<img>` or `<svg>` element.
  * @slot handle-icon - The icon used inside the handle.
  *
- * @event sl-change - Emitted when the position changes.
+ * @event i2c-change - Emitted when the position changes.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart before - The container that holds the "before" image.
@@ -29,7 +29,7 @@ import styles from './image-comparer.styles';
  * @cssproperty --divider-width - The width of the dividing line.
  * @cssproperty --handle-size - The size of the compare handle.
  */
-@customElement('sl-image-comparer')
+@customElement('i2c-image-comparer')
 export default class SlImageComparer extends LitElement {
   static styles = styles;
 
@@ -79,7 +79,7 @@ export default class SlImageComparer extends LitElement {
 
   @watch('position', { waitUntilFirstUpdate: true })
   handlePositionChange() {
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   render() {
@@ -134,6 +134,6 @@ export default class SlImageComparer extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-image-comparer': SlImageComparer;
+    'i2c-image-comparer': SlImageComparer;
   }
 }

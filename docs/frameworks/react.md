@@ -28,7 +28,7 @@ Now you can start using components!
 
 ### Importing Components
 
-Every Shoelace component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<sl-button>` _custom element_ in the example below.
+Every Shoelace component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<i2c-button>` _custom element_ in the example below.
 
 ```jsx
 import { SlButton } from '@shoelace-style/shoelace/dist/react';
@@ -42,7 +42,7 @@ You can find a copy + paste import for each component in the "importing" section
 
 ### Event Handling
 
-Many Shoelace components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `sl-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
+Many Shoelace components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `i2c-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
 
 Here's how you can bind the input's value to a state variable.
 

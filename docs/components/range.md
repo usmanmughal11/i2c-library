@@ -1,11 +1,11 @@
 # Range
 
-[component-header:sl-range]
+[component-header:i2c-range]
 
 Ranges allow the user to select a single value within a given range using a slider.
 
 ```html preview
-<sl-range></sl-range>
+<i2c-range></i2c-range>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => <SlRange />;
 Use the `label` attribute to give the range an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-range label="Volume" min="0" max="100"></sl-input>
+<i2c-range label="Volume" min="0" max="100"></i2c-input>
 ```
 
 ```jsx react
@@ -37,12 +37,12 @@ const App = () => <SlRange label="Volume" min={0} max={100} />;
 Add descriptive help text to a range with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-range
+<i2c-range
   label="Volume"
   help-text="Controls the volume of the current song."
   min="0"
   max="100"
-></sl-input>
+></i2c-input>
 ```
 
 ```jsx react
@@ -56,7 +56,7 @@ const App = () => <SlRange label="Volume" help-text="Controls the volume of the 
 Use the `min` and `max` attributes to set the range's minimum and maximum values, respectively. The `step` attribute determines the value's interval when increasing and decreasing.
 
 ```html preview
-<sl-range min="0" max="10" step="1"></sl-range>
+<i2c-range min="0" max="10" step="1"></i2c-range>
 ```
 
 ```jsx react
@@ -70,7 +70,7 @@ const App = () => <SlRange min={0} max={10} step={1} />;
 Use the `disabled` attribute to disable a slider.
 
 ```html preview
-<sl-range disabled></sl-range>
+<i2c-range disabled></i2c-range>
 ```
 
 ```jsx react
@@ -84,7 +84,7 @@ const App = () => <SlRange disabled />;
 By default, the tooltip is shown on top. Set `tooltip` to `bottom` to show it below the slider.
 
 ```html preview
-<sl-range tooltip="bottom"></sl-range>
+<i2c-range tooltip="bottom"></i2c-range>
 ```
 
 ```jsx react
@@ -98,7 +98,7 @@ const App = () => <SlRange tooltip="bottom" />;
 To disable the tooltip, set `tooltip` to `none`.
 
 ```html preview
-<sl-range tooltip="none"></sl-range>
+<i2c-range tooltip="none"></i2c-range>
 ```
 
 ```jsx react
@@ -112,12 +112,12 @@ const App = () => <SlRange tooltip="none" />;
 You can customize the active and inactive portions of the track using the `--track-color-active` and `--track-color-inactive` custom properties.
 
 ```html preview
-<sl-range
+<i2c-range
   style="
-  --track-color-active: var(--sl-color-primary-600);
-  --track-color-inactive: var(--sl-color-primary-100);
+  --track-color-active: var(--i2c-color-primary-600);
+  --track-color-inactive: var(--i2c-color-primary-100);
 "
-></sl-range>
+></i2c-range>
 ```
 
 ```jsx react
@@ -126,8 +126,8 @@ import { SlRange } from '@shoelace-style/shoelace/dist/react';
 const App = () => (
   <SlRange
     style={{
-      '--track-color-active': 'var(--sl-color-primary-600)',
-      '--track-color-inactive': 'var(--sl-color-primary-200)'
+      '--track-color-active': 'var(--i2c-color-primary-600)',
+      '--track-color-inactive': 'var(--i2c-color-primary-200)'
     }}
   />
 );
@@ -138,7 +138,7 @@ const App = () => (
 You can change the tooltip's content by setting the `tooltipFormatter` property to a function that accepts the range's value as an argument.
 
 ```html preview
-<sl-range min="0" max="100" step="1" class="range-with-custom-formatter"></sl-range>
+<i2c-range min="0" max="100" step="1" class="range-with-custom-formatter"></i2c-range>
 
 <script>
   const range = document.querySelector('.range-with-custom-formatter');
@@ -152,4 +152,4 @@ import { SlRange } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlRange min={0} max={100} step={1} tooltipFormatter={value => `Total - ${value}%`} />;
 ```
 
-[component-metadata:sl-range]
+[component-metadata:i2c-range]

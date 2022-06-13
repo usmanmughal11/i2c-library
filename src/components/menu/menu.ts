@@ -15,11 +15,11 @@ export interface MenuSelectEventDetail {
  *
  * @slot - The menu's content, including menu items, menu labels, and dividers.
  *
- * @event {{ item: SlMenuItem }} sl-select - Emitted when a menu item is selected.
+ * @event {{ item: SlMenuItem }} i2c-select - Emitted when a menu item is selected.
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-menu')
+@customElement('i2c-menu')
 export default class SlMenu extends LitElement {
   static styles = styles;
 
@@ -92,7 +92,7 @@ export default class SlMenu extends LitElement {
 
     // Restore focus in browsers that don't support :focus-visible when using the keyboard
     if (!hasFocusVisible) {
-      items.forEach(item => item.classList.remove('sl-focus-invisible'));
+      items.forEach(item => item.classList.remove('i2c-focus-invisible'));
     }
 
     for (const item of items) {
@@ -110,10 +110,10 @@ export default class SlMenu extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const item = target.closest('sl-menu-item');
+    const item = target.closest('i2c-menu-item');
 
     if (item?.disabled === false) {
-      emit(this, 'sl-select', { detail: { item } });
+      emit(this, 'i2c-select', { detail: { item } });
     }
   }
 
@@ -122,7 +122,7 @@ export default class SlMenu extends LitElement {
     if (!hasFocusVisible) {
       const items = this.getAllItems();
       items.forEach(item => {
-        item.classList.remove('sl-focus-invisible');
+        item.classList.remove('i2c-focus-invisible');
       });
     }
   }
@@ -186,7 +186,7 @@ export default class SlMenu extends LitElement {
 
       // Hide focus in browsers that don't support :focus-visible when using the mouse
       if (!hasFocusVisible) {
-        target.classList.add('sl-focus-invisible');
+        target.classList.add('i2c-focus-invisible');
       }
     }
   }
@@ -218,6 +218,6 @@ export default class SlMenu extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu': SlMenu;
+    'i2c-menu': SlMenu;
   }
 }

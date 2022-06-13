@@ -4,62 +4,62 @@ import sinon from 'sinon';
 import type SlRadioGroup from '../../components/radio-group/radio-group';
 import type SlRadio from './radio';
 
-describe('<sl-radio>', () => {
+describe('<i2c-radio>', () => {
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlRadio>(html` <sl-radio disabled></sl-radio> `);
+    const el = await fixture<SlRadio>(html` <i2c-radio disabled></i2c-radio> `);
     const radio = el.input;
 
     expect(radio.disabled).to.be.true;
   });
 
   it('should be valid by default', async () => {
-    const el = await fixture<SlRadio>(html` <sl-radio></sl-radio> `);
+    const el = await fixture<SlRadio>(html` <i2c-radio></i2c-radio> `);
 
     expect(el.invalid).to.be.false;
   });
 
-  it('should fire sl-change when clicked', async () => {
-    const el = await fixture<SlRadio>(html` <sl-radio></sl-radio> `);
+  it('should fire i2c-change when clicked', async () => {
+    const el = await fixture<SlRadio>(html` <i2c-radio></i2c-radio> `);
     setTimeout(() => el.input.click());
-    const event = (await oneEvent(el, 'sl-change')) as CustomEvent;
+    const event = (await oneEvent(el, 'i2c-change')) as CustomEvent;
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should fire sl-change when toggled via keyboard - space', async () => {
-    const el = await fixture<SlRadio>(html` <sl-radio></sl-radio> `);
+  it('should fire i2c-change when toggled via keyboard - space', async () => {
+    const el = await fixture<SlRadio>(html` <i2c-radio></i2c-radio> `);
     el.input.focus();
     setTimeout(() => sendKeys({ press: ' ' }));
-    const event = (await oneEvent(el, 'sl-change')) as CustomEvent;
+    const event = (await oneEvent(el, 'i2c-change')) as CustomEvent;
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should fire sl-change when toggled via keyboard - arrow key', async () => {
+  it('should fire i2c-change when toggled via keyboard - arrow key', async () => {
     const radioGroup = await fixture<SlRadioGroup>(html`
-      <sl-radio-group>
-        <sl-radio id="radio-1"></sl-radio>
-        <sl-radio id="radio-2"></sl-radio>
-      </sl-radio-group>
+      <i2c-radio-group>
+        <i2c-radio id="radio-1"></i2c-radio>
+        <i2c-radio id="radio-2"></i2c-radio>
+      </i2c-radio-group>
     `);
     const radio1 = radioGroup.querySelector<SlRadio>('#radio-1')!;
     const radio2 = radioGroup.querySelector<SlRadio>('#radio-2')!;
     radio1.input.focus();
     setTimeout(() => sendKeys({ press: 'ArrowRight' }));
-    const event = (await oneEvent(radio2, 'sl-change')) as CustomEvent;
+    const event = (await oneEvent(radio2, 'i2c-change')) as CustomEvent;
     expect(event.target).to.equal(radio2);
     expect(radio2.checked).to.be.true;
   });
 
   it('should not get checked when disabled', async () => {
     const radioGroup = await fixture<SlRadioGroup>(html`
-      <sl-radio-group>
-        <sl-radio checked></sl-radio>
-        <sl-radio disabled></sl-radio>
-      </sl-radio-group>
+      <i2c-radio-group>
+        <i2c-radio checked></i2c-radio>
+        <i2c-radio disabled></i2c-radio>
+      </i2c-radio-group>
     `);
-    const radio1 = radioGroup.querySelector<SlRadio>('sl-radio[checked]')!;
-    const radio2 = radioGroup.querySelector<SlRadio>('sl-radio[disabled]')!;
+    const radio1 = radioGroup.querySelector<SlRadio>('i2c-radio[checked]')!;
+    const radio2 = radioGroup.querySelector<SlRadio>('i2c-radio[disabled]')!;
 
     radio2.click();
     await Promise.all([radio1.updateComplete, radio2.updateComplete]);
@@ -72,16 +72,16 @@ describe('<sl-radio>', () => {
     it('should submit the correct value when a value is provided', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-radio-group>
-            <sl-radio id="radio-1" name="a" value="1" checked></sl-radio>
-            <sl-radio id="radio-2" name="a" value="2"></sl-radio>
-            <sl-radio id="radio-3" name="a" value="3"></sl-radio>
-          </sl-radio-group>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-radio-group>
+            <i2c-radio id="radio-1" name="a" value="1" checked></i2c-radio>
+            <i2c-radio id="radio-2" name="a" value="2"></i2c-radio>
+            <i2c-radio id="radio-3" name="a" value="3"></i2c-radio>
+          </i2c-radio-group>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
-      const radio = form.querySelectorAll('sl-radio')[1]!;
+      const button = form.querySelector('i2c-button')!;
+      const radio = form.querySelectorAll('i2c-radio')[1]!;
       const submitHandler = sinon.spy((event: SubmitEvent) => {
         formData = new FormData(form);
         event.preventDefault();
@@ -101,16 +101,16 @@ describe('<sl-radio>', () => {
   it('should submit "on" when no value is provided', async () => {
     const form = await fixture<HTMLFormElement>(html`
       <form>
-        <sl-radio-group>
-          <sl-radio id="radio-1" name="a" checked></sl-radio>
-          <sl-radio id="radio-2" name="a"></sl-radio>
-          <sl-radio id="radio-3" name="a"></sl-radio>
-        </sl-radio-group>
-        <sl-button type="submit">Submit</sl-button>
+        <i2c-radio-group>
+          <i2c-radio id="radio-1" name="a" checked></i2c-radio>
+          <i2c-radio id="radio-2" name="a"></i2c-radio>
+          <i2c-radio id="radio-3" name="a"></i2c-radio>
+        </i2c-radio-group>
+        <i2c-button type="submit">Submit</i2c-button>
       </form>
     `);
-    const button = form.querySelector('sl-button')!;
-    const radio = form.querySelectorAll('sl-radio')[1]!;
+    const button = form.querySelector('i2c-button')!;
+    const radio = form.querySelectorAll('i2c-radio')[1]!;
     const submitHandler = sinon.spy((event: SubmitEvent) => {
       formData = new FormData(form);
       event.preventDefault();
@@ -129,15 +129,15 @@ describe('<sl-radio>', () => {
   it('should show a constraint validation error when setCustomValidity() is called', async () => {
     const form = await fixture<HTMLFormElement>(html`
       <form>
-        <sl-radio-group>
-          <sl-radio id="radio-1" name="a" value="1" checked></sl-radio>
-          <sl-radio id="radio-2" name="a" value="2"></sl-radio>
-        </sl-radio-group>
-        <sl-button type="submit">Submit</sl-button>
+        <i2c-radio-group>
+          <i2c-radio id="radio-1" name="a" value="1" checked></i2c-radio>
+          <i2c-radio id="radio-2" name="a" value="2"></i2c-radio>
+        </i2c-radio-group>
+        <i2c-button type="submit">Submit</i2c-button>
       </form>
     `);
-    const button = form.querySelector('sl-button')!;
-    const radio = form.querySelectorAll('sl-radio')[1]!;
+    const button = form.querySelector('i2c-button')!;
+    const radio = form.querySelectorAll('i2c-radio')[1]!;
     const submitHandler = sinon.spy((event: SubmitEvent) => event.preventDefault());
 
     // Submitting the form after setting custom validity should not trigger the handler

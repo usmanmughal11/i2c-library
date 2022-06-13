@@ -25,7 +25,7 @@ setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dis
 
 ## Configuration
 
-You'll need to tell Vue to ignore Shoelace components. This is pretty easy because they all start with `sl-`.
+You'll need to tell Vue to ignore Shoelace components. This is pretty easy because they all start with `i2c-`.
 
 ```js
 import { fileURLToPath, URL } from 'url';
@@ -39,7 +39,7 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: tag => tag.startsWith('sl-')
+          isCustomElement: tag => tag.startsWith('i2c-')
         }
       }
     })
@@ -63,9 +63,9 @@ Now you can start using Shoelace components in your app!
   <div class="container">
     <h1>QR code generator</h1>
 
-    <sl-input maxlength="255" clearable label="Value" v-model="qrCode"></sl-input>
+    <i2c-input maxlength="255" clearable label="Value" v-model="qrCode"></i2c-input>
 
-    <sl-qr-code :value="qrCode"></sl-qr-code>
+    <i2c-qr-code :value="qrCode"></i2c-qr-code>
   </div>
 </template>
 
@@ -83,8 +83,8 @@ const qrCode = ref();
   margin: 0 auto;
 }
 
-sl-input {
-  margin: var(--sl-spacing-large) 0;
+i2c-input {
+  margin: var(--i2c-spacing-large) 0;
 }
 </style>
 ```
@@ -94,7 +94,7 @@ sl-input {
 When binding complex data such as objects and arrays, use the `.prop` modifier to make Vue bind them as a property instead of an attribute.
 
 ```html
-<sl-color-picker :swatches.prop="mySwatches" />
+<i2c-color-picker :swatches.prop="mySwatches" />
 ```
 
 ?> Are you using Shoelace with Vue? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md)

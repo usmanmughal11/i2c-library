@@ -37,15 +37,15 @@ declare const EyeDropper: EyeDropperConstructor;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-button
- * @dependency sl-button-group
- * @dependency sl-dropdown
- * @dependency sl-input
- * @dependency sl-visually-hidden
+ * @dependency i2c-button
+ * @dependency i2c-button-group
+ * @dependency i2c-dropdown
+ * @dependency i2c-input
+ * @dependency i2c-visually-hidden
  *
  * @slot label - The color picker's label. Alternatively, you can use the label prop.
  *
- * @event sl-change Emitted when the color picker's value changes.
+ * @event i2c-change Emitted when the color picker's value changes.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart trigger - The color picker's dropdown trigger.
@@ -79,7 +79,7 @@ declare const EyeDropper: EyeDropperConstructor;
  * @cssproperty --slider-handle-size - The diameter of the slider's handle.
  * @cssproperty --swatch-size - The size of each predefined color swatch.
  */
-@customElement('sl-color-picker')
+@customElement('i2c-color-picker')
 export default class SlColorPicker extends LitElement {
   static styles = styles;
 
@@ -227,7 +227,7 @@ export default class SlColorPicker extends LitElement {
     if (!this.inline && this.input.invalid) {
       return new Promise<void>(resolve => {
         this.dropdown.addEventListener(
-          'sl-after-show',
+          'i2c-after-show',
           () => {
             this.input.reportValidity();
             resolve();
@@ -646,7 +646,7 @@ export default class SlColorPicker extends LitElement {
     }
 
     if (this.value !== this.lastValueEmitted) {
-      emit(this, 'sl-change');
+      emit(this, 'i2c-change');
       this.lastValueEmitted = this.value;
     }
   }
@@ -669,9 +669,9 @@ export default class SlColorPicker extends LitElement {
       >
         ${this.inline
           ? html`
-              <sl-visually-hidden id="label">
+              <i2c-visually-hidden id="label">
                 <slot name="label">${this.label}</slot>
-              </sl-visually-hidden>
+              </i2c-visually-hidden>
             `
           : null}
 
@@ -776,7 +776,7 @@ export default class SlColorPicker extends LitElement {
         </div>
 
         <div class="color-picker__user-input" aria-live="polite">
-          <sl-input
+          <i2c-input
             part="input"
             type="text"
             name=${this.name}
@@ -788,13 +788,13 @@ export default class SlColorPicker extends LitElement {
             ?disabled=${this.disabled}
             aria-label=${this.localize.term('currentValue')}
             @keydown=${this.handleInputKeyDown}
-            @sl-change=${this.handleInputChange}
-          ></sl-input>
+            @i2c-change=${this.handleInputChange}
+          ></i2c-input>
 
-          <sl-button-group>
+          <i2c-button-group>
             ${!this.noFormatToggle
               ? html`
-                  <sl-button
+                  <i2c-button
                     part="format-button"
                     aria-label=${this.localize.term('toggleColorFormat')}
                     exportparts="
@@ -807,12 +807,12 @@ export default class SlColorPicker extends LitElement {
                     @click=${this.handleFormatToggle}
                   >
                     ${this.setLetterCase(this.format)}
-                  </sl-button>
+                  </i2c-button>
                 `
               : ''}
             ${hasEyeDropper
               ? html`
-                  <sl-button
+                  <i2c-button
                     part="eye-dropper-button"
                     exportparts="
                       base:eye-dropper-button__base,
@@ -823,15 +823,15 @@ export default class SlColorPicker extends LitElement {
                     "
                     @click=${this.handleEyeDropper}
                   >
-                    <sl-icon
+                    <i2c-icon
                       library="system"
                       name="eyedropper"
                       label=${this.localize.term('selectAColorFromTheScreen')}
-                    ></sl-icon>
-                  </sl-button>
+                    ></i2c-icon>
+                  </i2c-button>
                 `
               : ''}
-          </sl-button-group>
+          </i2c-button-group>
         </div>
 
         ${this.swatches.length > 0
@@ -866,13 +866,13 @@ export default class SlColorPicker extends LitElement {
 
     // Render as a dropdown
     return html`
-      <sl-dropdown
+      <i2c-dropdown
         class="color-dropdown"
         aria-disabled=${this.disabled ? 'true' : 'false'}
         .containing-element=${this}
         ?disabled=${this.disabled}
         ?hoist=${this.hoist}
-        @sl-after-hide=${this.handleAfterHide}
+        @i2c-after-hide=${this.handleAfterHide}
       >
         <button
           part="trigger"
@@ -890,12 +890,12 @@ export default class SlColorPicker extends LitElement {
           })}
           type="button"
         >
-          <sl-visually-hidden>
+          <i2c-visually-hidden>
             <slot name="label">${this.label}</slot>
-          </sl-visually-hidden>
+          </i2c-visually-hidden>
         </button>
         ${colorPicker}
-      </sl-dropdown>
+      </i2c-dropdown>
     `;
   }
 }
@@ -907,6 +907,6 @@ function toHex(value: number) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-color-picker': SlColorPicker;
+    'i2c-color-picker': SlColorPicker;
   }
 }

@@ -13,7 +13,7 @@
   }
 
   function convertModuleLinks(html) {
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('i2c-version');
 
     html = html
       .replace(/@shoelace-style\/shoelace/g, `https://cdn.skypack.dev/@shoelace-style/shoelace@${version}`)
@@ -125,7 +125,7 @@
               <div class="code-block__preview">
                 ${code.textContent}
                 <div class="code-block__resizer">
-                  <sl-icon name="grip-vertical"></sl-icon>
+                  <i2c-icon name="grip-vertical"></i2c-icon>
                 </div>
               </div>
 
@@ -278,7 +278,7 @@
   // Open in CodePen
   document.addEventListener('click', event => {
     const button = event.target.closest('button');
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('i2c-version');
 
     if (button?.classList.contains('code-block__button--codepen')) {
       const codeBlock = button.closest('.code-block');
@@ -329,8 +329,8 @@
         '\n' +
         'body {\n' +
         '  font: 16px sans-serif;\n' +
-        '  background-color: var(--sl-color-neutral-0);\n' +
-        '  color: var(--sl-color-neutral-900);\n' +
+        '  background-color: var(--i2c-color-neutral-0);\n' +
+        '  color: var(--i2c-color-neutral-900);\n' +
         '  padding: 1rem;\n' +
         '}';
 
@@ -341,7 +341,7 @@
         tags: ['shoelace', 'web components'],
         editors,
         head: `<meta name="viewport" content="width=device-width">`,
-        html_classes: `sl-theme-${isDark ? 'dark' : 'light'}`,
+        html_classes: `i2c-theme-${isDark ? 'dark' : 'light'}`,
         css_external: ``,
         js_external: ``,
         js_module: true,

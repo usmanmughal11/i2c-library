@@ -17,19 +17,19 @@ import styles from './dialog.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency i2c-icon-button
  *
  * @slot - The dialog's content.
  * @slot label - The dialog's label. Alternatively, you can use the label prop.
  * @slot footer - The dialog's footer, usually one or more buttons representing various options.
  *
- * @event sl-show - Emitted when the dialog opens.
- * @event sl-after-show - Emitted after the dialog opens and all animations are complete.
- * @event sl-hide - Emitted when the dialog closes.
- * @event sl-after-hide - Emitted after the dialog closes and all animations are complete.
- * @event sl-initial-focus - Emitted when the dialog opens and is ready to receive focus. Calling
+ * @event i2c-show - Emitted when the dialog opens.
+ * @event i2c-after-show - Emitted after the dialog opens and all animations are complete.
+ * @event i2c-hide - Emitted when the dialog closes.
+ * @event i2c-after-hide - Emitted after the dialog closes and all animations are complete.
+ * @event i2c-initial-focus - Emitted when the dialog opens and is ready to receive focus. Calling
  *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.
- * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} sl-request-close - Emitted when the user attempts to
+ * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} i2c-request-close - Emitted when the user attempts to
  *   close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling
  *   `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in
  *   destructive behavior such as data loss.
@@ -55,7 +55,7 @@ import styles from './dialog.styles';
  * @animation dialog.overlay.show - The animation to use when showing the dialog's overlay.
  * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.
  */
-@customElement('sl-dialog')
+@customElement('i2c-dialog')
 export default class SlDialog extends LitElement {
   static styles = styles;
 
@@ -109,7 +109,7 @@ export default class SlDialog extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'i2c-after-show');
   }
 
   /** Hides the dialog */
@@ -119,11 +119,11 @@ export default class SlDialog extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'i2c-after-hide');
   }
 
   private requestClose(source: 'close-button' | 'keyboard' | 'overlay') {
-    const slRequestClose = emit(this, 'sl-request-close', {
+    const slRequestClose = emit(this, 'i2c-request-close', {
       cancelable: true,
       detail: { source }
     });
@@ -148,7 +148,7 @@ export default class SlDialog extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'i2c-show');
       this.originalTrigger = document.activeElement as HTMLElement;
       this.modal.activate();
 
@@ -170,7 +170,7 @@ export default class SlDialog extends LitElement {
 
       // Set initial focus
       requestAnimationFrame(() => {
-        const slInitialFocus = emit(this, 'sl-initial-focus', { cancelable: true });
+        const slInitialFocus = emit(this, 'i2c-initial-focus', { cancelable: true });
 
         if (!slInitialFocus.defaultPrevented) {
           // Set focus to the autofocus target and restore the attribute
@@ -194,10 +194,10 @@ export default class SlDialog extends LitElement {
         animateTo(this.overlay, overlayAnimation.keyframes, overlayAnimation.options)
       ]);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'i2c-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'i2c-hide');
       this.modal.deactivate();
 
       await Promise.all([stopAnimations(this.dialog), stopAnimations(this.overlay)]);
@@ -217,7 +217,7 @@ export default class SlDialog extends LitElement {
         setTimeout(() => trigger.focus());
       }
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'i2c-after-hide');
     }
   }
 
@@ -251,7 +251,7 @@ export default class SlDialog extends LitElement {
                   <h2 part="title" class="dialog__title" id="title">
                     <slot name="label"> ${this.label.length > 0 ? this.label : String.fromCharCode(65279)} </slot>
                   </h2>
-                  <sl-icon-button
+                  <i2c-icon-button
                     part="close-button"
                     exportparts="base:close-button__base"
                     class="dialog__close"
@@ -259,7 +259,7 @@ export default class SlDialog extends LitElement {
                     label=${this.localize.term('close')}
                     library="system"
                     @click="${() => this.requestClose('close-button')}"
-                  ></sl-icon-button>
+                  ></i2c-icon-button>
                 </header>
               `
             : ''}
@@ -311,6 +311,6 @@ setDefaultAnimation('dialog.overlay.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-dialog': SlDialog;
+    'i2c-dialog': SlDialog;
   }
 }

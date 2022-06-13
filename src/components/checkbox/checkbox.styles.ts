@@ -12,10 +12,10 @@ export default css`
   .checkbox {
     display: inline-flex;
     align-items: center;
-    font-family: var(--sl-input-font-family);
-    font-size: var(--sl-input-font-size-medium);
-    font-weight: var(--sl-input-font-weight);
-    color: var(--sl-input-color);
+    font-family: var(--i2c-input-font-family);
+    font-size: var(--i2c-input-font-size-medium);
+    font-weight: var(--i2c-input-font-weight);
+    color: var(--i2c-input-color);
     vertical-align: middle;
     cursor: pointer;
   }
@@ -26,14 +26,14 @@ export default css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: var(--sl-toggle-size);
-    height: var(--sl-toggle-size);
-    border: solid var(--sl-input-border-width) var(--sl-input-border-color);
+    width: var(--i2c-toggle-size);
+    height: var(--i2c-toggle-size);
+    border: solid var(--i2c-input-border-width) var(--i2c-input-border-color);
     border-radius: 2px;
-    background-color: var(--sl-input-background-color);
-    color: var(--sl-color-neutral-0);
-    transition: var(--sl-transition-fast) border-color, var(--sl-transition-fast) background-color,
-      var(--sl-transition-fast) color, var(--sl-transition-fast) box-shadow;
+    background-color: var(--i2c-input-background-color);
+    color: var(--i2c-color-neutral-0);
+    transition: var(--i2c-transition-fast) border-color, var(--i2c-transition-fast) background-color,
+      var(--i2c-transition-fast) color, var(--i2c-transition-fast) box-shadow;
   }
 
   .checkbox__input {
@@ -46,8 +46,8 @@ export default css`
 
   .checkbox__control .checkbox__icon {
     display: inline-flex;
-    width: var(--sl-toggle-size);
-    height: var(--sl-toggle-size);
+    width: var(--i2c-toggle-size);
+    height: var(--i2c-toggle-size);
   }
 
   .checkbox__control .checkbox__icon svg {
@@ -57,30 +57,30 @@ export default css`
 
   /* Hover */
   .checkbox:not(.checkbox--checked):not(.checkbox--disabled) .checkbox__control:hover {
-    border-color: var(--sl-input-border-color-hover);
-    background-color: var(--sl-input-background-color-hover);
+    border-color: var(--i2c-input-border-color-hover);
+    background-color: var(--i2c-input-background-color-hover);
   }
 
   /* Focus */
   .checkbox:not(.checkbox--checked):not(.checkbox--disabled)
     .checkbox__input${focusVisibleSelector}
     ~ .checkbox__control {
-    outline: var(--sl-focus-ring);
-    outline-offset: var(--sl-focus-ring-offset);
+    outline: var(--i2c-focus-ring);
+    outline-offset: var(--i2c-focus-ring-offset);
   }
 
   /* Checked/indeterminate */
   .checkbox--checked .checkbox__control,
   .checkbox--indeterminate .checkbox__control {
-    border-color: var(--sl-color-primary-600);
-    background-color: var(--sl-color-primary-600);
+    border-color: var(--i2c-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
   }
 
   /* Checked/indeterminate + hover */
   .checkbox.checkbox--checked:not(.checkbox--disabled) .checkbox__control:hover,
   .checkbox.checkbox--indeterminate:not(.checkbox--disabled) .checkbox__control:hover {
-    border-color: var(--sl-color-primary-500);
-    background-color: var(--sl-color-primary-500);
+    border-color: var(--i2c-color-primary-500);
+    background-color: var(--i2c-color-primary-500);
   }
 
   /* Checked/indeterminate + focus */
@@ -88,8 +88,8 @@ export default css`
   .checkbox.checkbox--indeterminate:not(.checkbox--disabled)
     .checkbox__input${focusVisibleSelector}
     ~ .checkbox__control {
-    outline: var(--sl-focus-ring);
-    outline-offset: var(--sl-focus-ring-offset);
+    outline: var(--i2c-focus-ring);
+    outline-offset: var(--i2c-focus-ring-offset);
   }
 
   /* Disabled */
@@ -99,7 +99,7 @@ export default css`
   }
 
   .checkbox__label {
-    line-height: var(--sl-toggle-size);
+    line-height: var(--i2c-toggle-size);
     margin-inline-start: 0.5em;
     user-select: none;
   }

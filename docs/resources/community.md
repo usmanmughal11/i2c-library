@@ -13,10 +13,10 @@ The [discussion forum](https://github.com/shoelace-style/shoelace/discussions) i
 - Show the community what you're working on
 - Learn more about the project, its values, and its roadmap
 
-<sl-button variant="primary" href="https://github.com/shoelace-style/shoelace/discussions" target="_blank">
-  <sl-icon name="github" slot="prefix"></sl-icon>
+<i2c-button variant="primary" href="https://github.com/shoelace-style/shoelace/discussions" target="_blank">
+  <i2c-icon name="github" slot="prefix"></i2c-icon>
   Join the Discussion
-</sl-button>
+</i2c-button>
 
 ## Community Chat
 
@@ -27,19 +27,19 @@ The [community chat](https://discord.gg/mg8f26C) is open to the public and power
 - Show the community what you're working on
 - Chat live with other designers, developers, and Shoelace fans
 
-<sl-button variant="primary" href="https://discord.gg/mg8f26C" target="_blank">
-  <sl-icon name="discord" slot="prefix"></sl-icon>
+<i2c-button variant="primary" href="https://discord.gg/mg8f26C" target="_blank">
+  <i2c-icon name="discord" slot="prefix"></i2c-icon>
   Join the Chat
-</sl-button>
+</i2c-button>
 
 ## Stack Overflow
 
 You can post questions on Stack Overflow using [the "shoelace" tag](https://stackoverflow.com/questions/tagged/shoelace). This is a public forum where talented developers answer questions. It's a great way to get help, but it is not maintained by the Shoelace author.
 
-<sl-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=shoelace" target="_blank">
-  <sl-icon name="stack-overflow" slot="prefix"></sl-icon>
+<i2c-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=shoelace" target="_blank">
+  <i2c-icon name="stack-overflow" slot="prefix"></i2c-icon>
   Ask for Help
-</sl-button>
+</i2c-button>
 
 ## Twitter
 
@@ -47,7 +47,7 @@ Follow [@shoelace_style](https://twitter.com/shoelace_style) on Twitter for gene
 
 **Please avoid using Twitter for support questions.** The [discussion forum](https://github.com/shoelace-style/shoelace/discussions) is a much better place to share code snippets, screenshots, and other troubleshooting info. You'll have much better luck there, as more users will have a chance to help you.
 
-<sl-button variant="primary" href="https://twitter.com/shoelace_style" target="_blank">
-  <sl-icon name="twitter" slot="prefix"></sl-icon>
+<i2c-button variant="primary" href="https://twitter.com/shoelace_style" target="_blank">
+  <i2c-icon name="twitter" slot="prefix"></i2c-icon>
   Follow on Twitter
-</sl-button>
+</i2c-button>

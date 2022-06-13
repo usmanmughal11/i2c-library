@@ -15,9 +15,9 @@ import styles from './radio-button.styles';
  *
  * @slot - The radio's label.
  *
- * @event sl-blur - Emitted when the button loses focus.
- * @event sl-change - Emitted when the button's checked state changes.
- * @event sl-focus - Emitted when the button gains focus.
+ * @event i2c-blur - Emitted when the button loses focus.
+ * @event i2c-change - Emitted when the button's checked state changes.
+ * @event i2c-focus - Emitted when the button gains focus.
  *
  * @slot - The button's label.
  * @slot prefix - Used to prepend an icon or similar element to the button.
@@ -29,7 +29,7 @@ import styles from './radio-button.styles';
  * @csspart label - The button's label.
  * @csspart suffix - The suffix slot's container.
  */
-@customElement('sl-radio-button')
+@customElement('i2c-radio-button')
 export default class SlRadioButton extends LitElement {
   static styles = styles;
 
@@ -93,7 +93,7 @@ export default class SlRadioButton extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   handleClick() {
@@ -104,7 +104,7 @@ export default class SlRadioButton extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   @watch('checked')
@@ -112,7 +112,7 @@ export default class SlRadioButton extends LitElement {
     this.setAttribute('aria-checked', this.checked ? 'true' : 'false');
 
     if (this.hasUpdated) {
-      emit(this, 'sl-change');
+      emit(this, 'i2c-change');
     }
   }
 
@@ -179,6 +179,6 @@ export default class SlRadioButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-radio-button': SlRadioButton;
+    'i2c-radio-button': SlRadioButton;
   }
 }

@@ -1,11 +1,11 @@
 # Input
 
-[component-header:sl-input]
+[component-header:i2c-input]
 
 Inputs collect data from the user.
 
 ```html preview
-<sl-input></sl-input>
+<i2c-input></i2c-input>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => <SlInput />;
 Use the `label` attribute to give the input an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-input label="What is your name?"></sl-input>
+<i2c-input label="What is your name?"></i2c-input>
 ```
 
 ```jsx react
@@ -37,7 +37,7 @@ const App = () => <SlInput label="What is your name?" />;
 Add descriptive help text to an input with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-input label="Nickname" help-text="What would you like people to call you?"></sl-input>
+<i2c-input label="Nickname" help-text="What would you like people to call you?"></i2c-input>
 ```
 
 ```jsx react
@@ -51,7 +51,7 @@ const App = () => <SlInput label="Nickname" help-text="What would you like peopl
 Use the `placeholder` attribute to add a placeholder.
 
 ```html preview
-<sl-input placeholder="Type something"></sl-input>
+<i2c-input placeholder="Type something"></i2c-input>
 ```
 
 ```jsx react
@@ -65,7 +65,7 @@ const App = () => <SlInput placeholder="Type something" />;
 Add the `clearable` attribute to add a clear button when the input has content.
 
 ```html preview
-<sl-input placeholder="Clearable" clearable></sl-input>
+<i2c-input placeholder="Clearable" clearable></i2c-input>
 ```
 
 ```jsx react
@@ -79,11 +79,11 @@ const App = () => <SlInput placeholder="Clearable" clearable />;
 Add the `toggle-password` attribute to add a toggle button that will show the password when activated.
 
 ```html preview
-<sl-input type="password" placeholder="Password Toggle" size="small" toggle-password></sl-input>
+<i2c-input type="password" placeholder="Password Toggle" size="small" toggle-password></i2c-input>
 <br />
-<sl-input type="password" placeholder="Password Toggle" size="medium" toggle-password></sl-input>
+<i2c-input type="password" placeholder="Password Toggle" size="medium" toggle-password></i2c-input>
 <br />
-<sl-input type="password" placeholder="Password Toggle" size="large" toggle-password></sl-input>
+<i2c-input type="password" placeholder="Password Toggle" size="large" toggle-password></i2c-input>
 ```
 
 ```jsx react
@@ -105,7 +105,7 @@ const App = () => (
 Add the `filled` attribute to draw a filled input.
 
 ```html preview
-<sl-input placeholder="Type something" filled></sl-input>
+<i2c-input placeholder="Type something" filled></i2c-input>
 ```
 
 ```jsx react
@@ -119,11 +119,11 @@ const App = () => <SlInput placeholder="Type something" filled />;
 Use the `pill` attribute to give inputs rounded edges.
 
 ```html preview
-<sl-input placeholder="Small" size="small" pill></sl-input>
+<i2c-input placeholder="Small" size="small" pill></i2c-input>
 <br />
-<sl-input placeholder="Medium" size="medium" pill></sl-input>
+<i2c-input placeholder="Medium" size="medium" pill></i2c-input>
 <br />
-<sl-input placeholder="Large" size="large" pill></sl-input>
+<i2c-input placeholder="Large" size="large" pill></i2c-input>
 ```
 
 ```jsx react
@@ -145,11 +145,11 @@ const App = () => (
 The `type` attribute controls the type of input the browser renders.
 
 ```html preview
-<sl-input type="email" placeholder="Email"></sl-input>
+<i2c-input type="email" placeholder="Email"></i2c-input>
 <br />
-<sl-input type="number" placeholder="Number"></sl-input>
+<i2c-input type="number" placeholder="Number"></i2c-input>
 <br />
-<sl-input type="date" placeholder="Date"></sl-input>
+<i2c-input type="date" placeholder="Date"></i2c-input>
 ```
 
 ```jsx react
@@ -171,11 +171,11 @@ const App = () => (
 Use the `disabled` attribute to disable an input.
 
 ```html preview
-<sl-input placeholder="Disabled" size="small" disabled></sl-input>
+<i2c-input placeholder="Disabled" size="small" disabled></i2c-input>
 <br />
-<sl-input placeholder="Disabled" size="medium" disabled></sl-input>
+<i2c-input placeholder="Disabled" size="medium" disabled></i2c-input>
 <br />
-<sl-input placeholder="Disabled" size="large" disabled></sl-input>
+<i2c-input placeholder="Disabled" size="large" disabled></i2c-input>
 ```
 
 ```jsx react
@@ -197,11 +197,11 @@ const App = () => (
 Use the `size` attribute to change an input's size.
 
 ```html preview
-<sl-input placeholder="Small" size="small"></sl-input>
+<i2c-input placeholder="Small" size="small"></i2c-input>
 <br />
-<sl-input placeholder="Medium" size="medium"></sl-input>
+<i2c-input placeholder="Medium" size="medium"></i2c-input>
 <br />
-<sl-input placeholder="Large" size="large"></sl-input>
+<i2c-input placeholder="Large" size="large"></i2c-input>
 ```
 
 ```jsx react
@@ -223,20 +223,20 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-input placeholder="Small" size="small">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<i2c-input placeholder="Small" size="small">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-input>
 <br />
-<sl-input placeholder="Medium" size="medium">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<i2c-input placeholder="Medium" size="medium">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-input>
 <br />
-<sl-input placeholder="Large" size="large">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<i2c-input placeholder="Large" size="large">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-input>
 ```
 
 ```jsx react
@@ -267,8 +267,8 @@ const App = () => (
 Use parts to customize the label's position.
 
 ```html preview
-<sl-input class="label-on-left" label="Name"></sl-input><br />
-<sl-input class="label-on-left" label="Email" type="email"></sl-input>
+<i2c-input class="label-on-left" label="Name"></i2c-input><br />
+<i2c-input class="label-on-left" label="Email" type="email"></i2c-input>
 
 <style>
   .label-on-left::part(form-control) {
@@ -289,4 +289,4 @@ Use parts to customize the label's position.
 </style>
 ```
 
-[component-metadata:sl-input]
+[component-metadata:i2c-input]

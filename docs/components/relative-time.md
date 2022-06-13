@@ -1,6 +1,6 @@
 # Relative Time
 
-[component-header:sl-relative-time]
+[component-header:i2c-relative-time]
 
 Outputs a localized time phrase relative to the current date and time.
 
@@ -8,7 +8,7 @@ Localization is handled by the browser's [`Intl.RelativeTimeFormat` API](https:/
 
 ```html preview
 <!-- Shoelace 2 release date 🎉 -->
-<sl-relative-time date="2020-07-15T09:17:00-04:00"></sl-relative-time>
+<i2c-relative-time date="2020-07-15T09:17:00-04:00"></i2c-relative-time>
 ```
 
 ```jsx react
@@ -31,12 +31,12 @@ Use the `sync` attribute to update the displayed value automatically as time pas
 
 ```html preview
 <div class="relative-time-sync">
-  <sl-relative-time sync></sl-relative-time>
+  <i2c-relative-time sync></i2c-relative-time>
 </div>
 
 <script>
   const container = document.querySelector('.relative-time-sync');
-  const relativeTime = container.querySelector('sl-relative-time');
+  const relativeTime = container.querySelector('i2c-relative-time');
 
   relativeTime.date = new Date(new Date().getTime() - 60000);
 </script>
@@ -55,9 +55,9 @@ const App = () => <SlRelativeTime date={date} sync />;
 You can change how the time is displayed using the `format` attribute. Note that some locales may display the same values for `narrow` and `short` formats.
 
 ```html preview
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="narrow"></sl-relative-time><br />
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="short"></sl-relative-time><br />
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="long"></sl-relative-time>
+<i2c-relative-time date="2020-07-15T09:17:00-04:00" format="narrow"></i2c-relative-time><br />
+<i2c-relative-time date="2020-07-15T09:17:00-04:00" format="short"></i2c-relative-time><br />
+<i2c-relative-time date="2020-07-15T09:17:00-04:00" format="long"></i2c-relative-time>
 ```
 
 ```jsx react
@@ -79,11 +79,11 @@ const App = () => (
 Use the `lang` attribute to set the desired locale.
 
 ```html preview
-English: <sl-relative-time date="2020-07-15T09:17:00-04:00" lang="en-US"></sl-relative-time><br />
-Chinese: <sl-relative-time date="2020-07-15T09:17:00-04:00" lang="zh-CN"></sl-relative-time><br />
-German: <sl-relative-time date="2020-07-15T09:17:00-04:00" lang="de"></sl-relative-time><br />
-Greek: <sl-relative-time date="2020-07-15T09:17:00-04:00" lang="el"></sl-relative-time><br />
-Russian: <sl-relative-time date="2020-07-15T09:17:00-04:00" lang="ru"></sl-relative-time>
+English: <i2c-relative-time date="2020-07-15T09:17:00-04:00" lang="en-US"></i2c-relative-time><br />
+Chinese: <i2c-relative-time date="2020-07-15T09:17:00-04:00" lang="zh-CN"></i2c-relative-time><br />
+German: <i2c-relative-time date="2020-07-15T09:17:00-04:00" lang="de"></i2c-relative-time><br />
+Greek: <i2c-relative-time date="2020-07-15T09:17:00-04:00" lang="el"></i2c-relative-time><br />
+Russian: <i2c-relative-time date="2020-07-15T09:17:00-04:00" lang="ru"></i2c-relative-time>
 ```
 
 ```jsx react
@@ -104,4 +104,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-relative-time]
+[component-metadata:i2c-relative-time]

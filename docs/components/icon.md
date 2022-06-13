@@ -1,6 +1,6 @@
 # Icon
 
-[component-header:sl-icon]
+[component-header:i2c-icon]
 
 Icons are symbols that can be used to represent various options within an application.
 
@@ -13,19 +13,19 @@ Shoelace comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](h
 All available icons in the `default` icon library are shown below. Click or tap on any icon to copy its name, then you can use it in your HTML like this.
 
 ```html
-<sl-icon name="icon-name-here"></sl-icon>
+<i2c-icon name="icon-name-here"></i2c-icon>
 ```
 
 <div class="icon-search">
   <div class="icon-search-controls">
-    <sl-input placeholder="Search Icons" clearable>
-      <sl-icon slot="prefix" name="search"></sl-icon>
-    </sl-input>
-    <sl-select value="outline">
-      <sl-menu-item value="outline">Outlined</sl-menu-item>
-      <sl-menu-item value="fill">Filled</sl-menu-item>
-      <sl-menu-item value="all">All icons</sl-menu-item>
-    </sl-select>
+    <i2c-input placeholder="Search Icons" clearable>
+      <i2c-icon slot="prefix" name="search"></i2c-icon>
+    </i2c-input>
+    <i2c-select value="outline">
+      <i2c-menu-item value="outline">Outlined</i2c-menu-item>
+      <i2c-menu-item value="fill">Filled</i2c-menu-item>
+      <i2c-menu-item value="all">All icons</i2c-menu-item>
+    </i2c-select>
   </div>
   <div class="icon-list"></div>
   <input type="text" class="icon-copy-input" aria-hidden="true" tabindex="-1">
@@ -35,32 +35,32 @@ All available icons in the `default` icon library are shown below. Click or tap 
 
 ### Colors
 
-Icons inherit their color from the current text color. Thus, you can set the `color` property on the `<sl-icon>` element or an ancestor to change the color.
+Icons inherit their color from the current text color. Thus, you can set the `color` property on the `<i2c-icon>` element or an ancestor to change the color.
 
 ```html preview
 <div style="color: #4a90e2;">
-  <sl-icon name="exclamation-triangle"></sl-icon>
-  <sl-icon name="archive"></sl-icon>
-  <sl-icon name="battery-charging"></sl-icon>
-  <sl-icon name="bell"></sl-icon>
+  <i2c-icon name="exclamation-triangle"></i2c-icon>
+  <i2c-icon name="archive"></i2c-icon>
+  <i2c-icon name="battery-charging"></i2c-icon>
+  <i2c-icon name="bell"></i2c-icon>
 </div>
 <div style="color: #9013fe;">
-  <sl-icon name="clock"></sl-icon>
-  <sl-icon name="cloud"></sl-icon>
-  <sl-icon name="download"></sl-icon>
-  <sl-icon name="file-earmark"></sl-icon>
+  <i2c-icon name="clock"></i2c-icon>
+  <i2c-icon name="cloud"></i2c-icon>
+  <i2c-icon name="download"></i2c-icon>
+  <i2c-icon name="file-earmark"></i2c-icon>
 </div>
 <div style="color: #417505;">
-  <sl-icon name="flag"></sl-icon>
-  <sl-icon name="heart"></sl-icon>
-  <sl-icon name="image"></sl-icon>
-  <sl-icon name="lightning"></sl-icon>
+  <i2c-icon name="flag"></i2c-icon>
+  <i2c-icon name="heart"></i2c-icon>
+  <i2c-icon name="image"></i2c-icon>
+  <i2c-icon name="lightning"></i2c-icon>
 </div>
 <div style="color: #f5a623;">
-  <sl-icon name="mic"></sl-icon>
-  <sl-icon name="search"></sl-icon>
-  <sl-icon name="star"></sl-icon>
-  <sl-icon name="trash"></sl-icon>
+  <i2c-icon name="mic"></i2c-icon>
+  <i2c-icon name="search"></i2c-icon>
+  <i2c-icon name="star"></i2c-icon>
+  <i2c-icon name="trash"></i2c-icon>
 </div>
 ```
 
@@ -103,22 +103,22 @@ Icons are sized relative to the current font size. To change their size, set the
 
 ```html preview
 <div style="font-size: 32px;">
-  <sl-icon name="exclamation-triangle"></sl-icon>
-  <sl-icon name="archive"></sl-icon>
-  <sl-icon name="battery-charging"></sl-icon>
-  <sl-icon name="bell"></sl-icon>
-  <sl-icon name="clock"></sl-icon>
-  <sl-icon name="cloud"></sl-icon>
-  <sl-icon name="download"></sl-icon>
-  <sl-icon name="file-earmark"></sl-icon>
-  <sl-icon name="flag"></sl-icon>
-  <sl-icon name="heart"></sl-icon>
-  <sl-icon name="image"></sl-icon>
-  <sl-icon name="lightning"></sl-icon>
-  <sl-icon name="mic"></sl-icon>
-  <sl-icon name="search"></sl-icon>
-  <sl-icon name="star"></sl-icon>
-  <sl-icon name="trash"></sl-icon>
+  <i2c-icon name="exclamation-triangle"></i2c-icon>
+  <i2c-icon name="archive"></i2c-icon>
+  <i2c-icon name="battery-charging"></i2c-icon>
+  <i2c-icon name="bell"></i2c-icon>
+  <i2c-icon name="clock"></i2c-icon>
+  <i2c-icon name="cloud"></i2c-icon>
+  <i2c-icon name="download"></i2c-icon>
+  <i2c-icon name="file-earmark"></i2c-icon>
+  <i2c-icon name="flag"></i2c-icon>
+  <i2c-icon name="heart"></i2c-icon>
+  <i2c-icon name="image"></i2c-icon>
+  <i2c-icon name="lightning"></i2c-icon>
+  <i2c-icon name="mic"></i2c-icon>
+  <i2c-icon name="search"></i2c-icon>
+  <i2c-icon name="star"></i2c-icon>
+  <i2c-icon name="trash"></i2c-icon>
 </div>
 ```
 
@@ -152,7 +152,7 @@ const App = () => (
 For non-decorative icons, use the `label` attribute to announce it to assistive devices.
 
 ```html preview
-<sl-icon name="star-fill" label="Add to favorites"></sl-icon>
+<i2c-icon name="star-fill" label="Add to favorites"></i2c-icon>
 ```
 
 ```jsx react
@@ -166,7 +166,7 @@ const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 Custom icons can be loaded individually with the `src` attribute. Only SVGs on a local or CORS-enabled endpoint are supported. If you're using more than one custom icon, it might make sense to register a [custom icon library](#icon-libraries).
 
 ```html preview
-<sl-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
+<i2c-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></i2c-icon>
 ```
 
 ```jsx react
@@ -177,7 +177,7 @@ const App = () => <SlIcon src="https://shoelace.style/assets/images/shoe.svg" st
 
 ## Icon Libraries
 
-You can register additional icons to use with the `<sl-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
+You can register additional icons to use with the `<i2c-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
 
 Shoelace ships with two built-in icon libraries, `default` and `system`. The [default icon library](#customizing-the-default-library) contains all of the icons in the Bootstrap Icons project. The [system icon library](#customizing-the-system-library) contains only a small subset of icons that are used internally by Shoelace components.
 
@@ -198,11 +198,11 @@ Here's an example that registers an icon library located in the `/assets/icons` 
 </script>
 ```
 
-To display an icon, set the `library` and `name` attributes of an `<sl-icon>` element.
+To display an icon, set the `library` and `name` attributes of an `<i2c-icon>` element.
 
 ```html
 <!-- This will show the icon located at /assets/icons/smile.svg -->
-<sl-icon library="my-icons" name="smile"></sl-icon>
+<i2c-icon library="my-icons" name="smile"></i2c-icon>
 ```
 
 If an icon is used before registration occurs, it will be empty initially but shown when registered.
@@ -231,26 +231,26 @@ Icons in this library are licensed under the [Creative Commons 4.0 License](http
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="boxicons" name="bx-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bx-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bx-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bx-save"></sl-icon>
-  <sl-icon library="boxicons" name="bx-server"></sl-icon>
-  <sl-icon library="boxicons" name="bx-wine"></sl-icon>
+  <i2c-icon library="boxicons" name="bx-bot"></i2c-icon>
+  <i2c-icon library="boxicons" name="bx-cookie"></i2c-icon>
+  <i2c-icon library="boxicons" name="bx-joystick"></i2c-icon>
+  <i2c-icon library="boxicons" name="bx-save"></i2c-icon>
+  <i2c-icon library="boxicons" name="bx-server"></i2c-icon>
+  <i2c-icon library="boxicons" name="bx-wine"></i2c-icon>
   <br />
-  <sl-icon library="boxicons" name="bxs-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-save"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-server"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-wine"></sl-icon>
+  <i2c-icon library="boxicons" name="bxs-bot"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxs-cookie"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxs-joystick"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxs-save"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxs-server"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxs-wine"></i2c-icon>
   <br />
-  <sl-icon library="boxicons" name="bxl-apple"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-chrome"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-edge"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-firefox"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-opera"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-microsoft"></sl-icon>
+  <i2c-icon library="boxicons" name="bxl-apple"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxl-chrome"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxl-edge"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxl-firefox"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxl-opera"></i2c-icon>
+  <i2c-icon library="boxicons" name="bxl-microsoft"></i2c-icon>
 </div>
 ```
 
@@ -262,12 +262,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/lu
 
 ```html preview
 <div style="font-size: 24px;">
-  <sl-icon library="lucide" name="feather"></sl-icon>
-  <sl-icon library="lucide" name="pie-chart"></sl-icon>
-  <sl-icon library="lucide" name="settings"></sl-icon>
-  <sl-icon library="lucide" name="map-pin"></sl-icon>
-  <sl-icon library="lucide" name="printer"></sl-icon>
-  <sl-icon library="lucide" name="shopping-cart"></sl-icon>
+  <i2c-icon library="lucide" name="feather"></i2c-icon>
+  <i2c-icon library="lucide" name="pie-chart"></i2c-icon>
+  <i2c-icon library="lucide" name="settings"></i2c-icon>
+  <i2c-icon library="lucide" name="map-pin"></i2c-icon>
+  <i2c-icon library="lucide" name="printer"></i2c-icon>
+  <i2c-icon library="lucide" name="shopping-cart"></i2c-icon>
 </div>
 
 <script type="module">
@@ -302,26 +302,26 @@ Icons in this library are licensed under the [Font Awesome Free License](https:/
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="fa" name="far-bell"></sl-icon>
-  <sl-icon library="fa" name="far-comment"></sl-icon>
-  <sl-icon library="fa" name="far-hand-point-right"></sl-icon>
-  <sl-icon library="fa" name="far-hdd"></sl-icon>
-  <sl-icon library="fa" name="far-heart"></sl-icon>
-  <sl-icon library="fa" name="far-star"></sl-icon>
+  <i2c-icon library="fa" name="far-bell"></i2c-icon>
+  <i2c-icon library="fa" name="far-comment"></i2c-icon>
+  <i2c-icon library="fa" name="far-hand-point-right"></i2c-icon>
+  <i2c-icon library="fa" name="far-hdd"></i2c-icon>
+  <i2c-icon library="fa" name="far-heart"></i2c-icon>
+  <i2c-icon library="fa" name="far-star"></i2c-icon>
   <br />
-  <sl-icon library="fa" name="fas-archive"></sl-icon>
-  <sl-icon library="fa" name="fas-book"></sl-icon>
-  <sl-icon library="fa" name="fas-chess-knight"></sl-icon>
-  <sl-icon library="fa" name="fas-dice"></sl-icon>
-  <sl-icon library="fa" name="fas-pizza-slice"></sl-icon>
-  <sl-icon library="fa" name="fas-scroll"></sl-icon>
+  <i2c-icon library="fa" name="fas-archive"></i2c-icon>
+  <i2c-icon library="fa" name="fas-book"></i2c-icon>
+  <i2c-icon library="fa" name="fas-chess-knight"></i2c-icon>
+  <i2c-icon library="fa" name="fas-dice"></i2c-icon>
+  <i2c-icon library="fa" name="fas-pizza-slice"></i2c-icon>
+  <i2c-icon library="fa" name="fas-scroll"></i2c-icon>
   <br />
-  <sl-icon library="fa" name="fab-apple"></sl-icon>
-  <sl-icon library="fa" name="fab-chrome"></sl-icon>
-  <sl-icon library="fa" name="fab-edge"></sl-icon>
-  <sl-icon library="fa" name="fab-firefox"></sl-icon>
-  <sl-icon library="fa" name="fab-opera"></sl-icon>
-  <sl-icon library="fa" name="fab-microsoft"></sl-icon>
+  <i2c-icon library="fa" name="fab-apple"></i2c-icon>
+  <i2c-icon library="fa" name="fab-chrome"></i2c-icon>
+  <i2c-icon library="fa" name="fab-edge"></i2c-icon>
+  <i2c-icon library="fa" name="fab-firefox"></i2c-icon>
+  <i2c-icon library="fa" name="fab-opera"></i2c-icon>
+  <i2c-icon library="fa" name="fab-microsoft"></i2c-icon>
 </div>
 ```
 
@@ -341,12 +341,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/ta
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="heroicons" name="chat"></sl-icon>
-  <sl-icon library="heroicons" name="cloud"></sl-icon>
-  <sl-icon library="heroicons" name="cog"></sl-icon>
-  <sl-icon library="heroicons" name="document-text"></sl-icon>
-  <sl-icon library="heroicons" name="gift"></sl-icon>
-  <sl-icon library="heroicons" name="volume-up"></sl-icon>
+  <i2c-icon library="heroicons" name="chat"></i2c-icon>
+  <i2c-icon library="heroicons" name="cloud"></i2c-icon>
+  <i2c-icon library="heroicons" name="cog"></i2c-icon>
+  <i2c-icon library="heroicons" name="document-text"></i2c-icon>
+  <i2c-icon library="heroicons" name="gift"></i2c-icon>
+  <i2c-icon library="heroicons" name="volume-up"></i2c-icon>
 </div>
 ```
 
@@ -366,12 +366,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/lu
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="iconoir" name="check-circled-outline"></sl-icon>
-  <sl-icon library="iconoir" name="drawer"></sl-icon>
-  <sl-icon library="iconoir" name="keyframes"></sl-icon>
-  <sl-icon library="iconoir" name="headset-help"></sl-icon>
-  <sl-icon library="iconoir" name="color-picker"></sl-icon>
-  <sl-icon library="iconoir" name="wifi"></sl-icon>
+  <i2c-icon library="iconoir" name="check-circled-outline"></i2c-icon>
+  <i2c-icon library="iconoir" name="drawer"></i2c-icon>
+  <i2c-icon library="iconoir" name="keyframes"></i2c-icon>
+  <i2c-icon library="iconoir" name="headset-help"></i2c-icon>
+  <i2c-icon library="iconoir" name="color-picker"></i2c-icon>
+  <i2c-icon library="iconoir" name="wifi"></i2c-icon>
 </div>
 ```
 
@@ -397,26 +397,26 @@ Icons in this library are licensed under the [MIT License](https://github.com/io
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="ionicons" name="alarm"></sl-icon>
-  <sl-icon library="ionicons" name="american-football"></sl-icon>
-  <sl-icon library="ionicons" name="bug"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble"></sl-icon>
-  <sl-icon library="ionicons" name="settings"></sl-icon>
-  <sl-icon library="ionicons" name="warning"></sl-icon>
+  <i2c-icon library="ionicons" name="alarm"></i2c-icon>
+  <i2c-icon library="ionicons" name="american-football"></i2c-icon>
+  <i2c-icon library="ionicons" name="bug"></i2c-icon>
+  <i2c-icon library="ionicons" name="chatbubble"></i2c-icon>
+  <i2c-icon library="ionicons" name="settings"></i2c-icon>
+  <i2c-icon library="ionicons" name="warning"></i2c-icon>
   <br />
-  <sl-icon library="ionicons" name="alarm-outline"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-outline"></sl-icon>
-  <sl-icon library="ionicons" name="bug-outline"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-outline"></sl-icon>
-  <sl-icon library="ionicons" name="settings-outline"></sl-icon>
-  <sl-icon library="ionicons" name="warning-outline"></sl-icon>
+  <i2c-icon library="ionicons" name="alarm-outline"></i2c-icon>
+  <i2c-icon library="ionicons" name="american-football-outline"></i2c-icon>
+  <i2c-icon library="ionicons" name="bug-outline"></i2c-icon>
+  <i2c-icon library="ionicons" name="chatbubble-outline"></i2c-icon>
+  <i2c-icon library="ionicons" name="settings-outline"></i2c-icon>
+  <i2c-icon library="ionicons" name="warning-outline"></i2c-icon>
   <br />
-  <sl-icon library="ionicons" name="alarm-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="bug-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="settings-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="warning-sharp"></sl-icon>
+  <i2c-icon library="ionicons" name="alarm-sharp"></i2c-icon>
+  <i2c-icon library="ionicons" name="american-football-sharp"></i2c-icon>
+  <i2c-icon library="ionicons" name="bug-sharp"></i2c-icon>
+  <i2c-icon library="ionicons" name="chatbubble-sharp"></i2c-icon>
+  <i2c-icon library="ionicons" name="settings-sharp"></i2c-icon>
+  <i2c-icon library="ionicons" name="warning-sharp"></i2c-icon>
 </div>
 ```
 
@@ -437,19 +437,19 @@ Icons in this library are licensed under the [MIT License](https://github.com/mi
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="jam" name="calendar"></sl-icon>
-  <sl-icon library="jam" name="camera"></sl-icon>
-  <sl-icon library="jam" name="filter"></sl-icon>
-  <sl-icon library="jam" name="leaf"></sl-icon>
-  <sl-icon library="jam" name="picture"></sl-icon>
-  <sl-icon library="jam" name="set-square"></sl-icon>
+  <i2c-icon library="jam" name="calendar"></i2c-icon>
+  <i2c-icon library="jam" name="camera"></i2c-icon>
+  <i2c-icon library="jam" name="filter"></i2c-icon>
+  <i2c-icon library="jam" name="leaf"></i2c-icon>
+  <i2c-icon library="jam" name="picture"></i2c-icon>
+  <i2c-icon library="jam" name="set-square"></i2c-icon>
   <br />
-  <sl-icon library="jam" name="calendar-f"></sl-icon>
-  <sl-icon library="jam" name="camera-f"></sl-icon>
-  <sl-icon library="jam" name="filter-f"></sl-icon>
-  <sl-icon library="jam" name="leaf-f"></sl-icon>
-  <sl-icon library="jam" name="picture-f"></sl-icon>
-  <sl-icon library="jam" name="set-square-f"></sl-icon>
+  <i2c-icon library="jam" name="calendar-f"></i2c-icon>
+  <i2c-icon library="jam" name="camera-f"></i2c-icon>
+  <i2c-icon library="jam" name="filter-f"></i2c-icon>
+  <i2c-icon library="jam" name="leaf-f"></i2c-icon>
+  <i2c-icon library="jam" name="picture-f"></i2c-icon>
+  <i2c-icon library="jam" name="set-square-f"></i2c-icon>
 </div>
 ```
 
@@ -473,26 +473,26 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="material" name="notifications"></sl-icon>
-  <sl-icon library="material" name="email"></sl-icon>
-  <sl-icon library="material" name="delete"></sl-icon>
-  <sl-icon library="material" name="volume_up"></sl-icon>
-  <sl-icon library="material" name="settings"></sl-icon>
-  <sl-icon library="material" name="shopping_basket"></sl-icon>
+  <i2c-icon library="material" name="notifications"></i2c-icon>
+  <i2c-icon library="material" name="email"></i2c-icon>
+  <i2c-icon library="material" name="delete"></i2c-icon>
+  <i2c-icon library="material" name="volume_up"></i2c-icon>
+  <i2c-icon library="material" name="settings"></i2c-icon>
+  <i2c-icon library="material" name="shopping_basket"></i2c-icon>
   <br />
-  <sl-icon library="material" name="notifications_round"></sl-icon>
-  <sl-icon library="material" name="email_round"></sl-icon>
-  <sl-icon library="material" name="delete_round"></sl-icon>
-  <sl-icon library="material" name="volume_up_round"></sl-icon>
-  <sl-icon library="material" name="settings_round"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_round"></sl-icon>
+  <i2c-icon library="material" name="notifications_round"></i2c-icon>
+  <i2c-icon library="material" name="email_round"></i2c-icon>
+  <i2c-icon library="material" name="delete_round"></i2c-icon>
+  <i2c-icon library="material" name="volume_up_round"></i2c-icon>
+  <i2c-icon library="material" name="settings_round"></i2c-icon>
+  <i2c-icon library="material" name="shopping_basket_round"></i2c-icon>
   <br />
-  <sl-icon library="material" name="notifications_sharp"></sl-icon>
-  <sl-icon library="material" name="email_sharp"></sl-icon>
-  <sl-icon library="material" name="delete_sharp"></sl-icon>
-  <sl-icon library="material" name="volume_up_sharp"></sl-icon>
-  <sl-icon library="material" name="settings_sharp"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_sharp"></sl-icon>
+  <i2c-icon library="material" name="notifications_sharp"></i2c-icon>
+  <i2c-icon library="material" name="email_sharp"></i2c-icon>
+  <i2c-icon library="material" name="delete_sharp"></i2c-icon>
+  <i2c-icon library="material" name="volume_up_sharp"></i2c-icon>
+  <i2c-icon library="material" name="settings_sharp"></i2c-icon>
+  <i2c-icon library="material" name="shopping_basket_sharp"></i2c-icon>
 </div>
 ```
 
@@ -517,19 +517,19 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="remixicon" name="business/cloud-line"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-line"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-line"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-line"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-line"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-line"></sl-icon>
+  <i2c-icon library="remixicon" name="business/cloud-line"></i2c-icon>
+  <i2c-icon library="remixicon" name="design/brush-line"></i2c-icon>
+  <i2c-icon library="remixicon" name="business/pie-chart-line"></i2c-icon>
+  <i2c-icon library="remixicon" name="development/bug-line"></i2c-icon>
+  <i2c-icon library="remixicon" name="media/image-line"></i2c-icon>
+  <i2c-icon library="remixicon" name="system/alert-line"></i2c-icon>
   <br />
-  <sl-icon library="remixicon" name="business/cloud-fill"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-fill"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-fill"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-fill"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-fill"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-fill"></sl-icon>
+  <i2c-icon library="remixicon" name="business/cloud-fill"></i2c-icon>
+  <i2c-icon library="remixicon" name="design/brush-fill"></i2c-icon>
+  <i2c-icon library="remixicon" name="business/pie-chart-fill"></i2c-icon>
+  <i2c-icon library="remixicon" name="development/bug-fill"></i2c-icon>
+  <i2c-icon library="remixicon" name="media/image-fill"></i2c-icon>
+  <i2c-icon library="remixicon" name="system/alert-fill"></i2c-icon>
 </div>
 ```
 
@@ -549,19 +549,19 @@ Icons in this library are licensed under the [MIT License](https://github.com/ta
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="tabler" name="alert-triangle"></sl-icon>
-  <sl-icon library="tabler" name="arrow-back"></sl-icon>
-  <sl-icon library="tabler" name="at"></sl-icon>
-  <sl-icon library="tabler" name="ball-baseball"></sl-icon>
-  <sl-icon library="tabler" name="cake"></sl-icon>
-  <sl-icon library="tabler" name="files"></sl-icon>
+  <i2c-icon library="tabler" name="alert-triangle"></i2c-icon>
+  <i2c-icon library="tabler" name="arrow-back"></i2c-icon>
+  <i2c-icon library="tabler" name="at"></i2c-icon>
+  <i2c-icon library="tabler" name="ball-baseball"></i2c-icon>
+  <i2c-icon library="tabler" name="cake"></i2c-icon>
+  <i2c-icon library="tabler" name="files"></i2c-icon>
   <br />
-  <sl-icon library="tabler" name="keyboard"></sl-icon>
-  <sl-icon library="tabler" name="moon"></sl-icon>
-  <sl-icon library="tabler" name="pig"></sl-icon>
-  <sl-icon library="tabler" name="printer"></sl-icon>
-  <sl-icon library="tabler" name="ship"></sl-icon>
-  <sl-icon library="tabler" name="toilet-paper"></sl-icon>
+  <i2c-icon library="tabler" name="keyboard"></i2c-icon>
+  <i2c-icon library="tabler" name="moon"></i2c-icon>
+  <i2c-icon library="tabler" name="pig"></i2c-icon>
+  <i2c-icon library="tabler" name="printer"></i2c-icon>
+  <i2c-icon library="tabler" name="ship"></i2c-icon>
+  <i2c-icon library="tabler" name="toilet-paper"></i2c-icon>
 </div>
 ```
 
@@ -587,25 +587,25 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="unicons" name="clock"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar"></sl-icon>
-  <sl-icon library="unicons" name="padlock"></sl-icon>
-  <sl-icon library="unicons" name="polygon"></sl-icon>
-  <sl-icon library="unicons" name="rocket"></sl-icon>
-  <sl-icon library="unicons" name="star"></sl-icon>
+  <i2c-icon library="unicons" name="clock"></i2c-icon>
+  <i2c-icon library="unicons" name="graph-bar"></i2c-icon>
+  <i2c-icon library="unicons" name="padlock"></i2c-icon>
+  <i2c-icon library="unicons" name="polygon"></i2c-icon>
+  <i2c-icon library="unicons" name="rocket"></i2c-icon>
+  <i2c-icon library="unicons" name="star"></i2c-icon>
   <br />
-  <sl-icon library="unicons" name="clock-s"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar-s"></sl-icon>
-  <sl-icon library="unicons" name="padlock-s"></sl-icon>
-  <sl-icon library="unicons" name="polygon-s"></sl-icon>
-  <sl-icon library="unicons" name="rocket-s"></sl-icon>
-  <sl-icon library="unicons" name="star-s"></sl-icon>
+  <i2c-icon library="unicons" name="clock-s"></i2c-icon>
+  <i2c-icon library="unicons" name="graph-bar-s"></i2c-icon>
+  <i2c-icon library="unicons" name="padlock-s"></i2c-icon>
+  <i2c-icon library="unicons" name="polygon-s"></i2c-icon>
+  <i2c-icon library="unicons" name="rocket-s"></i2c-icon>
+  <i2c-icon library="unicons" name="star-s"></i2c-icon>
 </div>
 ```
 
 ### Customizing the Default Library
 
-The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<sl-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
+The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<i2c-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
 
 This example will load the same set of icons from the jsDelivr CDN instead of your local assets folder.
 
@@ -641,8 +641,8 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     .then(res => res.json())  
     .then(icons => {
       const container = document.querySelector('.icon-search');
-      const input = container.querySelector('sl-input');
-      const select = container.querySelector('sl-select');
+      const input = container.querySelector('i2c-input');
+      const select = container.querySelector('i2c-select');
       const copyInput = container.querySelector('.icon-copy-input');
       const loader = container.querySelector('.icon-loader');
       const list = container.querySelector('.icon-list');
@@ -661,7 +661,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
           </svg>      
         `;
 
-        const tooltip = document.createElement('sl-tooltip');
+        const tooltip = document.createElement('i2c-tooltip');
         tooltip.content = i.name;
         
         tooltip.appendChild(item);
@@ -677,7 +677,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       });
 
       // Filter as the user types
-      input.addEventListener('sl-input', () => {
+      input.addEventListener('i2c-input', () => {
         clearTimeout(inputTimeout);
         inputTimeout = setTimeout(() => {
           [...list.querySelectorAll('.icon-list-item')].map(item => {
@@ -693,21 +693,21 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       });
 
       // Sort by type and remember preference
-      const iconType = localStorage.getItem('sl-icon:type') || 'outline';
+      const iconType = localStorage.getItem('i2c-icon:type') || 'outline';
       select.value = iconType;
       list.setAttribute('data-type', select.value);
-      select.addEventListener('sl-change', () => {
+      select.addEventListener('i2c-change', () => {
         list.setAttribute('data-type', select.value);
-        localStorage.setItem('sl-icon:type', select.value);
+        localStorage.setItem('i2c-icon:type', select.value);
       });
     });
 </script>
 
 <style>
   .icon-search {
-    border: solid 1px var(--sl-panel-border-color);
-    border-radius: var(--sl-border-radius-medium);
-    padding: var(--sl-spacing-medium);
+    border: solid 1px var(--i2c-panel-border-color);
+    border-radius: var(--i2c-border-radius-medium);
+    padding: var(--i2c-spacing-medium);
   }
 
   .icon-search [hidden] {
@@ -718,11 +718,11 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     display: flex;
   }
 
-  .icon-search-controls sl-input {
+  .icon-search-controls i2c-input {
     flex: 1 1 auto;
   }
 
-  .icon-search-controls sl-select {
+  .icon-search-controls i2c-select {
     width: 10rem;
     flex: 0 0 auto;
     margin-left: 1rem;
@@ -751,18 +751,18 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--i2c-border-radius-medium);
     font-size: 24px;
     width: 2em;
     height: 2em;
     margin: 0 auto;
     cursor: copy;
-    transition: var(--sl-transition-medium) all;
+    transition: var(--i2c-transition-medium) all;
   }
 
   .icon-list-item:hover {
-    background-color: var(--sl-color-primary-50);
-    color: var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-50);
+    color: var(--i2c-color-primary-600);
   }
 
   .icon-list[data-type="outline"] .icon-list-item[data-name$="-fill"] {
@@ -792,7 +792,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       display: block;
     }
 
-    .icon-search-controls sl-select {
+    .icon-search-controls i2c-select {
       width: auto;
       margin: 1rem 0 0 0;
     }
@@ -805,4 +805,4 @@ If you want to change the icons Shoelace uses internally, you can register an ic
   }
 </style>
 
-[component-metadata:sl-icon]
+[component-metadata:i2c-icon]

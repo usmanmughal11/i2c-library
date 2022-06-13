@@ -18,7 +18,7 @@ export default css`
 
   .tooltip-positioner {
     position: absolute;
-    z-index: var(--sl-z-index-tooltip);
+    z-index: var(--i2c-z-index-tooltip);
     pointer-events: none;
   }
 
@@ -40,21 +40,21 @@ export default css`
 
   .tooltip__content {
     max-width: var(--max-width);
-    border-radius: var(--sl-tooltip-border-radius);
-    background-color: var(--sl-tooltip-background-color);
-    font-family: var(--sl-tooltip-font-family);
-    font-size: var(--sl-tooltip-font-size);
-    font-weight: var(--sl-tooltip-font-weight);
-    line-height: var(--sl-tooltip-line-height);
-    color: var(--sl-tooltip-color);
-    padding: var(--sl-tooltip-padding);
+    border-radius: var(--i2c-tooltip-border-radius);
+    background-color: var(--i2c-tooltip-background-color);
+    font-family: var(--i2c-tooltip-font-family);
+    font-size: var(--i2c-tooltip-font-size);
+    font-weight: var(--i2c-tooltip-font-weight);
+    line-height: var(--i2c-tooltip-line-height);
+    color: var(--i2c-tooltip-color);
+    padding: var(--i2c-tooltip-padding);
   }
 
   .tooltip__arrow {
     position: absolute;
-    background: var(--sl-tooltip-background-color);
-    width: calc(var(--sl-tooltip-arrow-size) * 2);
-    height: calc(var(--sl-tooltip-arrow-size) * 2);
+    background: var(--i2c-tooltip-background-color);
+    width: calc(var(--i2c-tooltip-arrow-size) * 2);
+    height: calc(var(--i2c-tooltip-arrow-size) * 2);
     transform: rotate(45deg);
     z-index: -1;
   }

@@ -17,9 +17,9 @@ import styles from './range.styles';
  * @slot label - The input's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the input. Alternatively, you can use the help-text prop.
  *
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event i2c-change - Emitted when the control's value changes.
+ * @event i2c-blur - Emitted when the control loses focus.
+ * @event i2c-focus - Emitted when the control gains focus.
  *
  * @csspart form-control - The form control that wraps the label, input, and help-text.
  * @csspart form-control-label - The label's wrapper.
@@ -35,7 +35,7 @@ import styles from './range.styles';
  * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.
  * @cssproperty --track-height - The height of the track.
  */
-@customElement('sl-range')
+@customElement('i2c-range')
 export default class SlRange extends LitElement {
   static styles = styles;
 
@@ -130,7 +130,7 @@ export default class SlRange extends LitElement {
 
   handleInput() {
     this.value = parseFloat(this.input.value);
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
 
     this.syncRange();
   }
@@ -138,7 +138,7 @@ export default class SlRange extends LitElement {
   handleBlur() {
     this.hasFocus = false;
     this.hasTooltip = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   @watch('value', { waitUntilFirstUpdate: true })
@@ -163,7 +163,7 @@ export default class SlRange extends LitElement {
   handleFocus() {
     this.hasFocus = true;
     this.hasTooltip = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleThumbDragStart() {
@@ -294,6 +294,6 @@ export default class SlRange extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-range': SlRange;
+    'i2c-range': SlRange;
   }
 }

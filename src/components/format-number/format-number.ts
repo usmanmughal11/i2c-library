@@ -6,7 +6,7 @@ import { LocalizeController } from '../../utilities/localize';
  * @since 2.0
  * @status stable
  */
-@customElement('sl-format-number')
+@customElement('i2c-format-number')
 export default class SlFormatNumber extends LitElement {
   private readonly localize = new LocalizeController(this);
 
@@ -64,6 +64,6 @@ export default class SlFormatNumber extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-format-number': SlFormatNumber;
+    'i2c-format-number': SlFormatNumber;
   }
 }

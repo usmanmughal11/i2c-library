@@ -6,9 +6,9 @@ export default css`
 
   :host {
     --width: 31rem;
-    --header-spacing: var(--sl-spacing-large);
-    --body-spacing: var(--sl-spacing-large);
-    --footer-spacing: var(--sl-spacing-large);
+    --header-spacing: var(--i2c-spacing-large);
+    --body-spacing: var(--i2c-spacing-large);
+    --footer-spacing: var(--i2c-spacing-large);
 
     display: contents;
   }
@@ -22,7 +22,7 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: var(--sl-z-index-dialog);
+    z-index: var(--i2c-z-index-dialog);
   }
 
   .dialog__panel {
@@ -30,11 +30,11 @@ export default css`
     flex-direction: column;
     z-index: 2;
     width: var(--width);
-    max-width: calc(100% - var(--sl-spacing-2x-large));
-    max-height: calc(100% - var(--sl-spacing-2x-large));
-    background-color: var(--sl-panel-background-color);
-    border-radius: var(--sl-border-radius-medium);
-    box-shadow: var(--sl-shadow-x-large);
+    max-width: calc(100% - var(--i2c-spacing-2x-large));
+    max-height: calc(100% - var(--i2c-spacing-2x-large));
+    background-color: var(--i2c-panel-background-color);
+    border-radius: var(--i2c-border-radius-medium);
+    box-shadow: var(--i2c-shadow-x-large);
   }
 
   .dialog__panel:focus {
@@ -62,8 +62,8 @@ export default css`
   .dialog__title {
     flex: 1 1 auto;
     font: inherit;
-    font-size: var(--sl-font-size-large);
-    line-height: var(--sl-line-height-dense);
+    font-size: var(--i2c-font-size-large);
+    line-height: var(--i2c-line-height-dense);
     padding: var(--header-spacing);
     margin: 0;
   }
@@ -72,7 +72,7 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    font-size: var(--sl-font-size-x-large);
+    font-size: var(--i2c-font-size-x-large);
     padding: 0 var(--header-spacing);
   }
 
@@ -89,8 +89,8 @@ export default css`
     padding: var(--footer-spacing);
   }
 
-  .dialog__footer ::slotted(sl-button:not(:first-of-type)) {
-    margin-inline-start: var(--sl-spacing-x-small);
+  .dialog__footer ::slotted(i2c-button:not(:first-of-type)) {
+    margin-inline-start: var(--i2c-spacing-x-small);
   }
 
   .dialog:not(.dialog--has-footer) .dialog__footer {
@@ -103,6 +103,6 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--sl-overlay-background-color);
+    background-color: var(--i2c-overlay-background-color);
   }
 `;

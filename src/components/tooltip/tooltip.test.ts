@@ -2,12 +2,12 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 import type SlTooltip from './tooltip';
 
-describe('<sl-tooltip>', () => {
+describe('<i2c-tooltip>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip" open>
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
@@ -16,27 +16,27 @@ describe('<sl-tooltip>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip">
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
 
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit i2c-show and i2c-after-show when calling show()', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip">
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('i2c-show', showHandler);
+    el.addEventListener('i2c-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -47,18 +47,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit i2c-hide and i2c-after-hide when calling hide()', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip" open>
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('i2c-hide', hideHandler);
+    el.addEventListener('i2c-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -69,18 +69,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit i2c-show and i2c-after-show when setting open = true', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip">
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('i2c-show', showHandler);
+    el.addEventListener('i2c-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -91,18 +91,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit i2c-hide and i2c-after-hide when setting open = false', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip" open>
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('i2c-hide', hideHandler);
+    el.addEventListener('i2c-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -115,16 +115,16 @@ describe('<sl-tooltip>', () => {
 
   it('should hide the tooltip when tooltip is visible and disabled becomes true', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <i2c-tooltip content="This is a tooltip" open>
+        <i2c-button>Hover Me</i2c-button>
+      </i2c-tooltip>
     `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part="base"]')!;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('i2c-hide', hideHandler);
+    el.addEventListener('i2c-after-hide', afterHideHandler);
     el.disabled = true;
 
     await waitUntil(() => hideHandler.calledOnce);

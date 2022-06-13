@@ -1,15 +1,15 @@
 # Button Group
 
-[component-header:sl-button-group]
+[component-header:i2c-button-group]
 
 Button groups can be used to group related buttons into sections.
 
 ```html preview
-<sl-button-group>
-  <sl-button>Left</sl-button>
-  <sl-button>Center</sl-button>
-  <sl-button>Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button>Left</i2c-button>
+  <i2c-button>Center</i2c-button>
+  <i2c-button>Right</i2c-button>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -31,27 +31,27 @@ const App = () => (
 All button sizes are supported, but avoid mixing sizes within the same button group.
 
 ```html preview
-<sl-button-group>
-  <sl-button size="small">Left</sl-button>
-  <sl-button size="small">Center</sl-button>
-  <sl-button size="small">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="small">Left</i2c-button>
+  <i2c-button size="small">Center</i2c-button>
+  <i2c-button size="small">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button size="medium">Left</sl-button>
-  <sl-button size="medium">Center</sl-button>
-  <sl-button size="medium">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="medium">Left</i2c-button>
+  <i2c-button size="medium">Center</i2c-button>
+  <i2c-button size="medium">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button size="large">Left</sl-button>
-  <sl-button size="large">Center</sl-button>
-  <sl-button size="large">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="large">Left</i2c-button>
+  <i2c-button size="large">Center</i2c-button>
+  <i2c-button size="large">Right</i2c-button>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -91,43 +91,43 @@ const App = () => (
 Theme buttons are supported through the button's `type` attribute.
 
 ```html preview
-<sl-button-group>
-  <sl-button variant="primary">Left</sl-button>
-  <sl-button variant="primary">Center</sl-button>
-  <sl-button variant="primary">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="primary">Left</i2c-button>
+  <i2c-button variant="primary">Center</i2c-button>
+  <i2c-button variant="primary">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button variant="success">Left</sl-button>
-  <sl-button variant="success">Center</sl-button>
-  <sl-button variant="success">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="success">Left</i2c-button>
+  <i2c-button variant="success">Center</i2c-button>
+  <i2c-button variant="success">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button variant="neutral">Left</sl-button>
-  <sl-button variant="neutral">Center</sl-button>
-  <sl-button variant="neutral">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="neutral">Left</i2c-button>
+  <i2c-button variant="neutral">Center</i2c-button>
+  <i2c-button variant="neutral">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button variant="warning">Left</sl-button>
-  <sl-button variant="warning">Center</sl-button>
-  <sl-button variant="warning">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="warning">Left</i2c-button>
+  <i2c-button variant="warning">Center</i2c-button>
+  <i2c-button variant="warning">Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button variant="danger">Left</sl-button>
-  <sl-button variant="danger">Center</sl-button>
-  <sl-button variant="danger">Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="danger">Left</i2c-button>
+  <i2c-button variant="danger">Center</i2c-button>
+  <i2c-button variant="danger">Right</i2c-button>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -185,27 +185,27 @@ const App = () => (
 Pill buttons are supported through the button's `pill` attribute.
 
 ```html preview
-<sl-button-group>
-  <sl-button size="small" pill>Left</sl-button>
-  <sl-button size="small" pill>Center</sl-button>
-  <sl-button size="small" pill>Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="small" pill>Left</i2c-button>
+  <i2c-button size="small" pill>Center</i2c-button>
+  <i2c-button size="small" pill>Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button size="medium" pill>Left</sl-button>
-  <sl-button size="medium" pill>Center</sl-button>
-  <sl-button size="medium" pill>Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="medium" pill>Left</i2c-button>
+  <i2c-button size="medium" pill>Center</i2c-button>
+  <i2c-button size="medium" pill>Right</i2c-button>
+</i2c-button-group>
 
 <br /><br />
 
-<sl-button-group>
-  <sl-button size="large" pill>Left</sl-button>
-  <sl-button size="large" pill>Center</sl-button>
-  <sl-button size="large" pill>Right</sl-button>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button size="large" pill>Left</i2c-button>
+  <i2c-button size="large" pill>Center</i2c-button>
+  <i2c-button size="large" pill>Right</i2c-button>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -260,21 +260,21 @@ const App = () => (
 
 ### Dropdowns in Button Groups
 
-Dropdowns can be placed inside button groups as long as the trigger is an `<sl-button>` element.
+Dropdowns can be placed inside button groups as long as the trigger is an `<i2c-button>` element.
 
 ```html preview
-<sl-button-group>
-  <sl-button>Button</sl-button>
-  <sl-button>Button</sl-button>
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Dropdown</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button>Button</i2c-button>
+  <i2c-button>Button</i2c-button>
+  <i2c-dropdown>
+    <i2c-button slot="trigger" caret>Dropdown</i2c-button>
+    <i2c-menu>
+      <i2c-menu-item>Item 1</i2c-menu-item>
+      <i2c-menu-item>Item 2</i2c-menu-item>
+      <i2c-menu-item>Item 3</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -303,19 +303,19 @@ const App = () => (
 Create a split button using a button and a dropdown. Use a [visually hidden](/components/visually-hidden) label to ensure the dropdown is accessible to users with assistive devices.
 
 ```html preview
-<sl-button-group>
-  <sl-button variant="primary">Save</sl-button>
-  <sl-dropdown placement="bottom-end">
-    <sl-button slot="trigger" variant="primary" caret>
-      <sl-visually-hidden>More options</sl-visually-hidden>
-    </sl-button>
-    <sl-menu>
-      <sl-menu-item>Save</sl-menu-item>
-      <sl-menu-item>Save as&hellip;</sl-menu-item>
-      <sl-menu-item>Save all</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<i2c-button-group>
+  <i2c-button variant="primary">Save</i2c-button>
+  <i2c-dropdown placement="bottom-end">
+    <i2c-button slot="trigger" variant="primary" caret>
+      <i2c-visually-hidden>More options</i2c-visually-hidden>
+    </i2c-button>
+    <i2c-menu>
+      <i2c-menu-item>Save</i2c-menu-item>
+      <i2c-menu-item>Save as&hellip;</i2c-menu-item>
+      <i2c-menu-item>Save all</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -341,19 +341,19 @@ const App = () => (
 Buttons can be wrapped in tooltips to provide more detail when the user interacts with them.
 
 ```html preview
-<sl-button-group>
-  <sl-tooltip content="I'm on the left">
-    <sl-button>Left</sl-button>
-  </sl-tooltip>
+<i2c-button-group>
+  <i2c-tooltip content="I'm on the left">
+    <i2c-button>Left</i2c-button>
+  </i2c-tooltip>
 
-  <sl-tooltip content="I'm in the middle">
-    <sl-button>Center</sl-button>
-  </sl-tooltip>
+  <i2c-tooltip content="I'm in the middle">
+    <i2c-button>Center</i2c-button>
+  </i2c-tooltip>
 
-  <sl-tooltip content="I'm on the right">
-    <sl-button>Right</sl-button>
-  </sl-tooltip>
-</sl-button-group>
+  <i2c-tooltip content="I'm on the right">
+    <i2c-button>Right</i2c-button>
+  </i2c-tooltip>
+</i2c-button-group>
 ```
 
 ```jsx react
@@ -384,43 +384,43 @@ Create interactive toolbars with button groups.
 
 ```html preview
 <div class="button-group-toolbar">
-  <sl-button-group label="History">
-    <sl-tooltip content="Undo">
-      <sl-button><sl-icon name="arrow-counterclockwise" label="Undo"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Redo">
-      <sl-button><sl-icon name="arrow-clockwise" label="Redo"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <i2c-button-group label="History">
+    <i2c-tooltip content="Undo">
+      <i2c-button><i2c-icon name="arrow-counterclockwise" label="Undo"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+    <i2c-tooltip content="Redo">
+      <i2c-button><i2c-icon name="arrow-clockwise" label="Redo"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+  </i2c-button-group>
 
-  <sl-button-group label="Formatting">
-    <sl-tooltip content="Bold">
-      <sl-button><sl-icon name="type-bold" label="Bold"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Italic">
-      <sl-button><sl-icon name="type-italic" label="Italic"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Underline">
-      <sl-button><sl-icon name="type-underline" label="Underline"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <i2c-button-group label="Formatting">
+    <i2c-tooltip content="Bold">
+      <i2c-button><i2c-icon name="type-bold" label="Bold"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+    <i2c-tooltip content="Italic">
+      <i2c-button><i2c-icon name="type-italic" label="Italic"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+    <i2c-tooltip content="Underline">
+      <i2c-button><i2c-icon name="type-underline" label="Underline"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+  </i2c-button-group>
 
-  <sl-button-group label="Alignment">
-    <sl-tooltip content="Align Left">
-      <sl-button><sl-icon name="justify-left" label="Align Left"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Center">
-      <sl-button><sl-icon name="justify" label="Align Center"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Right">
-      <sl-button><sl-icon name="justify-right" label="Align Right"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <i2c-button-group label="Alignment">
+    <i2c-tooltip content="Align Left">
+      <i2c-button><i2c-icon name="justify-left" label="Align Left"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+    <i2c-tooltip content="Align Center">
+      <i2c-button><i2c-icon name="justify" label="Align Center"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+    <i2c-tooltip content="Align Right">
+      <i2c-button><i2c-icon name="justify-right" label="Align Right"></i2c-icon></i2c-button>
+    </i2c-tooltip>
+  </i2c-button-group>
 </div>
 
 <style>
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar i2c-button-group:not(:last-of-type) {
+    margin-right: var(--i2c-spacing-x-small);
   }
 </style>
 ```
@@ -429,8 +429,8 @@ Create interactive toolbars with button groups.
 import { SlButton, SlButtonGroup, SlIcon, SlTooltip } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar i2c-button-group:not(:last-of-type) {
+    margin-right: var(--i2c-spacing-x-small);
   }
 `;
 
@@ -492,4 +492,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-button-group]
+[component-metadata:i2c-button-group]

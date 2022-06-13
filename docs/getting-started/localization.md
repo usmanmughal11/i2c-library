@@ -64,8 +64,8 @@ You can use a different locale for an individual component by setting its `lang`
   ...
 
   <body>
-    <sl-button><!-- Spanish --></sl-button>
-    <sl-button lang="ru"><!-- Russian --></sl-button>
+    <i2c-button><!-- Spanish --></i2c-button>
+    <i2c-button lang="ru"><!-- Russian --></i2c-button>
   </body>
 </html>
 ```
@@ -78,7 +78,7 @@ For performance reasons, the `lang` attribute must be on the component itself, n
 
   <body>
     <div lang="ru">
-      <sl-button><!-- still in Spanish --></sl-button>
+      <i2c-button><!-- still in Spanish --></i2c-button>
     </div>
   </body>
 </html>

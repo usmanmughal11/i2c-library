@@ -10,8 +10,8 @@ export default css`
   :host {
     --thumb-size: 20px;
     --tooltip-offset: 10px;
-    --track-color-active: var(--sl-color-neutral-200);
-    --track-color-inactive: var(--sl-color-neutral-200);
+    --track-color-active: var(--i2c-color-neutral-200);
+    --track-color-inactive: var(--i2c-color-neutral-200);
     --track-height: 6px;
 
     display: block;
@@ -27,7 +27,7 @@ export default css`
     width: 100%;
     height: var(--track-height);
     background: transparent;
-    line-height: var(--sl-input-height-medium);
+    line-height: var(--i2c-input-height-medium);
     vertical-align: middle;
   }
 
@@ -44,28 +44,28 @@ export default css`
     width: var(--thumb-size);
     height: var(--thumb-size);
     border-radius: 50%;
-    background-color: var(--sl-color-primary-600);
-    border: solid var(--sl-input-border-width) var(--sl-color-primary-600);
+    background-color: var(--i2c-color-primary-600);
+    border: solid var(--i2c-input-border-width) var(--i2c-color-primary-600);
     -webkit-appearance: none;
     margin-top: calc(var(--thumb-size) / -2 + var(--track-height) / 2);
-    transition: var(--sl-transition-fast) border-color, var(--sl-transition-fast) background-color,
-      var(--sl-transition-fast) color, var(--sl-transition-fast) box-shadow, var(--sl-transition-fast) transform;
+    transition: var(--i2c-transition-fast) border-color, var(--i2c-transition-fast) background-color,
+      var(--i2c-transition-fast) color, var(--i2c-transition-fast) box-shadow, var(--i2c-transition-fast) transform;
     cursor: pointer;
   }
 
   .range__control:enabled::-webkit-slider-thumb:hover {
-    background-color: var(--sl-color-primary-500);
-    border-color: var(--sl-color-primary-500);
+    background-color: var(--i2c-color-primary-500);
+    border-color: var(--i2c-color-primary-500);
   }
 
   .range__control:enabled${focusVisibleSelector}::-webkit-slider-thumb {
-    outline: var(--sl-focus-ring);
-    outline-offset: var(--sl-focus-ring-offset);
+    outline: var(--i2c-focus-ring);
+    outline-offset: var(--i2c-focus-ring-offset);
   }
 
   .range__control:enabled::-webkit-slider-thumb:active {
-    background-color: var(--sl-color-primary-500);
-    border-color: var(--sl-color-primary-500);
+    background-color: var(--i2c-color-primary-500);
+    border-color: var(--i2c-color-primary-500);
     cursor: grabbing;
   }
 
@@ -93,26 +93,26 @@ export default css`
     height: var(--thumb-size);
     width: var(--thumb-size);
     border-radius: 50%;
-    background-color: var(--sl-color-primary-600);
-    border-color: var(--sl-color-primary-600);
-    transition: var(--sl-transition-fast) border-color, var(--sl-transition-fast) background-color,
-      var(--sl-transition-fast) color, var(--sl-transition-fast) box-shadow, var(--sl-transition-fast) transform;
+    background-color: var(--i2c-color-primary-600);
+    border-color: var(--i2c-color-primary-600);
+    transition: var(--i2c-transition-fast) border-color, var(--i2c-transition-fast) background-color,
+      var(--i2c-transition-fast) color, var(--i2c-transition-fast) box-shadow, var(--i2c-transition-fast) transform;
     cursor: pointer;
   }
 
   .range__control:enabled::-moz-range-thumb:hover {
-    background-color: var(--sl-color-primary-500);
-    border-color: var(--sl-color-primary-500);
+    background-color: var(--i2c-color-primary-500);
+    border-color: var(--i2c-color-primary-500);
   }
 
   .range__control:enabled${focusVisibleSelector}::-moz-range-thumb {
-    outline: var(--sl-focus-ring);
-    outline-offset: var(--sl-focus-ring-offset);
+    outline: var(--i2c-focus-ring);
+    outline-offset: var(--i2c-focus-ring-offset);
   }
 
   .range__control:enabled::-moz-range-thumb:active {
-    background-color: var(--sl-color-primary-500);
-    border-color: var(--sl-color-primary-500);
+    background-color: var(--i2c-color-primary-500);
+    border-color: var(--i2c-color-primary-500);
     cursor: grabbing;
   }
 
@@ -136,18 +136,18 @@ export default css`
   /* Tooltip output */
   .range__tooltip {
     position: absolute;
-    z-index: var(--sl-z-index-tooltip);
+    z-index: var(--i2c-z-index-tooltip);
     left: 1px;
-    border-radius: var(--sl-tooltip-border-radius);
-    background-color: var(--sl-tooltip-background-color);
-    font-family: var(--sl-tooltip-font-family);
-    font-size: var(--sl-tooltip-font-size);
-    font-weight: var(--sl-tooltip-font-weight);
-    line-height: var(--sl-tooltip-line-height);
-    color: var(--sl-tooltip-color);
+    border-radius: var(--i2c-tooltip-border-radius);
+    background-color: var(--i2c-tooltip-background-color);
+    font-family: var(--i2c-tooltip-font-family);
+    font-size: var(--i2c-tooltip-font-size);
+    font-weight: var(--i2c-tooltip-font-weight);
+    line-height: var(--i2c-tooltip-line-height);
+    color: var(--i2c-tooltip-color);
     opacity: 0;
-    padding: var(--sl-tooltip-padding);
-    transition: var(--sl-transition-fast) opacity;
+    padding: var(--i2c-tooltip-padding);
+    transition: var(--i2c-transition-fast) opacity;
     pointer-events: none;
   }
 
@@ -157,7 +157,7 @@ export default css`
     width: 0;
     height: 0;
     left: 50%;
-    transform: translateX(calc(-1 * var(--sl-tooltip-arrow-size)));
+    transform: translateX(calc(-1 * var(--i2c-tooltip-arrow-size)));
   }
 
   .range--tooltip-visible .range__tooltip {
@@ -170,9 +170,9 @@ export default css`
   }
 
   .range--tooltip-top .range__tooltip:after {
-    border-top: var(--sl-tooltip-arrow-size) solid var(--sl-tooltip-background-color);
-    border-left: var(--sl-tooltip-arrow-size) solid transparent;
-    border-right: var(--sl-tooltip-arrow-size) solid transparent;
+    border-top: var(--i2c-tooltip-arrow-size) solid var(--i2c-tooltip-background-color);
+    border-left: var(--i2c-tooltip-arrow-size) solid transparent;
+    border-right: var(--i2c-tooltip-arrow-size) solid transparent;
     top: 100%;
   }
 
@@ -182,9 +182,9 @@ export default css`
   }
 
   .range--tooltip-bottom .range__tooltip:after {
-    border-bottom: var(--sl-tooltip-arrow-size) solid var(--sl-tooltip-background-color);
-    border-left: var(--sl-tooltip-arrow-size) solid transparent;
-    border-right: var(--sl-tooltip-arrow-size) solid transparent;
+    border-bottom: var(--i2c-tooltip-arrow-size) solid var(--i2c-tooltip-background-color);
+    border-left: var(--i2c-tooltip-arrow-size) solid transparent;
+    border-right: var(--i2c-tooltip-arrow-size) solid transparent;
     bottom: 100%;
   }
 `;

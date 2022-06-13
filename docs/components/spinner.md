@@ -1,11 +1,11 @@
 # Spinner
 
-[component-header:sl-spinner]
+[component-header:i2c-spinner]
 
 Spinners are used to show the progress of an indeterminate operation.
 
 ```html preview
-<sl-spinner></sl-spinner>
+<i2c-spinner></i2c-spinner>
 ```
 
 ```jsx react
@@ -21,9 +21,9 @@ const App = () => <SlSpinner />;
 Spinners are sized based on the current font size. To change their size, set the `font-size` property on the spinner itself or on a parent element as shown below.
 
 ```html preview
-<sl-spinner></sl-spinner>
-<sl-spinner style="font-size: 2rem;"></sl-spinner>
-<sl-spinner style="font-size: 3rem;"></sl-spinner>
+<i2c-spinner></i2c-spinner>
+<i2c-spinner style="font-size: 2rem;"></i2c-spinner>
+<i2c-spinner style="font-size: 3rem;"></i2c-spinner>
 ```
 
 ```jsx react
@@ -43,7 +43,7 @@ const App = () => (
 The width of the spinner's track can be changed by setting the `--track-width` custom property.
 
 ```html preview
-<sl-spinner style="font-size: 50px; --track-width: 10px;"></sl-spinner>
+<i2c-spinner style="font-size: 50px; --track-width: 10px;"></i2c-spinner>
 ```
 
 ```jsx react
@@ -64,7 +64,7 @@ const App = () => (
 The spinner's colors can be changed by setting the `--indicator-color` and `--track-color` custom properties.
 
 ```html preview
-<sl-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink;"></sl-spinner>
+<i2c-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink;"></i2c-spinner>
 ```
 
 ```jsx react
@@ -81,4 +81,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-spinner]
+[component-metadata:i2c-spinner]

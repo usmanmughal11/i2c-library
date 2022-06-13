@@ -1,19 +1,19 @@
 # Select
 
-[component-header:sl-select]
+[component-header:i2c-select]
 
 Selects allow you to choose one or more items from a dropdown menu.
 
 ```html preview
-<sl-select>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<i2c-select>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-item value="option-4">Option 4</i2c-menu-item>
+  <i2c-menu-item value="option-5">Option 5</i2c-menu-item>
+  <i2c-menu-item value="option-6">Option 6</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -41,11 +41,11 @@ const App = () => (
 Use the `label` attribute to give the select an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-select label="Select one">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select label="Select one">
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -65,11 +65,11 @@ const App = () => (
 Add descriptive help text to a select with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-select label="Experience" help-text="Please tell us your skill level.">
-  <sl-menu-item value="1">Novice</sl-menu-item>
-  <sl-menu-item value="2">Intermediate</sl-menu-item>
-  <sl-menu-item value="3">Advanced</sl-menu-item>
-</sl-select>
+<i2c-select label="Experience" help-text="Please tell us your skill level.">
+  <i2c-menu-item value="1">Novice</i2c-menu-item>
+  <i2c-menu-item value="2">Intermediate</i2c-menu-item>
+  <i2c-menu-item value="3">Advanced</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -89,11 +89,11 @@ const App = () => (
 Use the `placeholder` attribute to add a placeholder.
 
 ```html preview
-<sl-select placeholder="Select one">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Select one">
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -113,11 +113,11 @@ const App = () => (
 Use the `clearable` attribute to make the control clearable.
 
 ```html preview
-<sl-select placeholder="Clearable" clearable>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Clearable" clearable>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -137,11 +137,11 @@ const App = () => (
 Add the `filled` attribute to draw a filled select.
 
 ```html preview
-<sl-select filled>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select filled>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -161,11 +161,11 @@ const App = () => (
 Use the `pill` attribute to give selects rounded edges.
 
 ```html preview
-<sl-select pill>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select pill>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -185,11 +185,11 @@ const App = () => (
 Use the `disabled` attribute to disable a select.
 
 ```html preview
-<sl-select placeholder="Disabled" disabled>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Disabled" disabled>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -209,11 +209,11 @@ const App = () => (
 Use the `value` attribute to set the current selection. When users interact with the control, its `value` will update to reflect the newly selected menu item's value. Note that the value must be an array when using the [`multiple`](#multiple) option.
 
 ```html preview
-<sl-select value="option-2">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select value="option-2">
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -234,24 +234,24 @@ To programmatically set the selection, update the `value` property as shown belo
 
 ```html preview
 <div class="selecting-example">
-  <sl-select>
-    <sl-menu-item value="option-1">Option 1</sl-menu-item>
-    <sl-menu-item value="option-2">Option 2</sl-menu-item>
-    <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  </sl-select>
+  <i2c-select>
+    <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+    <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+    <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  </i2c-select>
 
   <br />
 
-  <sl-button data-option="option-1">Set 1</sl-button>
-  <sl-button data-option="option-2">Set 2</sl-button>
-  <sl-button data-option="option-3">Set 3</sl-button>
+  <i2c-button data-option="option-1">Set 1</i2c-button>
+  <i2c-button data-option="option-2">Set 2</i2c-button>
+  <i2c-button data-option="option-3">Set 3</i2c-button>
 </div>
 
 <script>
   const container = document.querySelector('.selecting-example');
-  const select = container.querySelector('sl-select');
+  const select = container.querySelector('i2c-select');
 
-  [...container.querySelectorAll('sl-button')].map(button => {
+  [...container.querySelectorAll('i2c-button')].map(button => {
     button.addEventListener('click', () => {
       select.value = button.dataset.option;
     });
@@ -289,15 +289,15 @@ const App = () => {
 To allow multiple options to be selected, use the `multiple` attribute. With this option, `value` will be an array of strings instead of a string. It's a good practice to use `clearable` when this option is enabled.
 
 ```html preview
-<sl-select placeholder="Select a few" multiple clearable>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Select a few" multiple clearable>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-item value="option-4">Option 4</i2c-menu-item>
+  <i2c-menu-item value="option-5">Option 5</i2c-menu-item>
+  <i2c-menu-item value="option-6">Option 6</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -323,17 +323,17 @@ const App = () => (
 Options can be grouped visually using menu labels and dividers.
 
 ```html preview
-<sl-select placeholder="Select one">
-  <sl-menu-label>Group 1</sl-menu-label>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-label>Group 2</sl-menu-label>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Select one">
+  <i2c-menu-label>Group 1</i2c-menu-label>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-label>Group 2</i2c-menu-label>
+  <i2c-menu-item value="option-4">Option 4</i2c-menu-item>
+  <i2c-menu-item value="option-5">Option 5</i2c-menu-item>
+  <i2c-menu-item value="option-6">Option 6</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -359,27 +359,27 @@ const App = () => (
 Use the `size` attribute to change a select's size.
 
 ```html preview
-<sl-select placeholder="Small" size="small" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Small" size="small" multiple>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 
 <br />
 
-<sl-select placeholder="Medium" size="medium" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Medium" size="medium" multiple>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 
 <br />
 
-<sl-select placeholder="Large" size="large" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placeholder="Large" size="large" multiple>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -417,11 +417,11 @@ const App = () => (
 The preferred placement of the select's menu can be set with the `placement` attribute. Note that the actual position may vary to ensure the panel remains in the viewport. Valid placements are `top` and `bottom`.
 
 ```html preview
-<sl-select placement="top">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<i2c-select placement="top">
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+</i2c-select>
 ```
 
 ```jsx react
@@ -444,29 +444,29 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-select placeholder="Small" size="small">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<i2c-select placeholder="Small" size="small">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-select>
 <br />
-<sl-select placeholder="Medium" size="medium">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<i2c-select placeholder="Medium" size="medium">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-select>
 <br />
-<sl-select placeholder="Large" size="large">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<i2c-select placeholder="Large" size="large">
+  <i2c-icon name="house" slot="prefix"></i2c-icon>
+  <i2c-menu-item value="option-1">Option 1</i2c-menu-item>
+  <i2c-menu-item value="option-2">Option 2</i2c-menu-item>
+  <i2c-menu-item value="option-3">Option 3</i2c-menu-item>
+  <i2c-icon name="chat" slot="suffix"></i2c-icon>
+</i2c-select>
 ```
 
 ```jsx react
@@ -501,4 +501,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-select]
+[component-metadata:i2c-select]

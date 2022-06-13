@@ -20,12 +20,12 @@ import type SlMenu from '../../components/menu/menu';
  * @status stable
  *
  * @slot - The dropdown's content.
- * @slot trigger - The dropdown's trigger, usually a `<sl-button>` element.
+ * @slot trigger - The dropdown's trigger, usually a `<i2c-button>` element.
  *
- * @event sl-show - Emitted when the dropdown opens.
- * @event sl-after-show - Emitted after the dropdown opens and all animations are complete.
- * @event sl-hide - Emitted when the dropdown closes.
- * @event sl-after-hide - Emitted after the dropdown closes and all animations are complete.
+ * @event i2c-show - Emitted when the dropdown opens.
+ * @event i2c-after-show - Emitted after the dropdown opens and all animations are complete.
+ * @event i2c-hide - Emitted when the dropdown closes.
+ * @event i2c-after-hide - Emitted after the dropdown closes and all animations are complete.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart trigger - The container that wraps the trigger.
@@ -34,7 +34,7 @@ import type SlMenu from '../../components/menu/menu';
  * @animation dropdown.show - The animation to use when showing the dropdown.
  * @animation dropdown.hide - The animation to use when hiding the dropdown.
  */
-@customElement('sl-dropdown')
+@customElement('i2c-dropdown')
 export default class SlDropdown extends LitElement {
   static styles = styles;
 
@@ -130,7 +130,7 @@ export default class SlDropdown extends LitElement {
 
   getMenu() {
     const slot = this.panel.querySelector('slot')!;
-    return slot.assignedElements({ flatten: true }).find(el => el.tagName.toLowerCase() === 'sl-menu') as
+    return slot.assignedElements({ flatten: true }).find(el => el.tagName.toLowerCase() === 'i2c-menu') as
       | SlMenu
       | undefined;
   }
@@ -146,7 +146,7 @@ export default class SlDropdown extends LitElement {
     // Handle tabbing
     if (event.key === 'Tab') {
       // Tabbing within an open menu should close the dropdown and refocus the trigger
-      if (this.open && document.activeElement?.tagName.toLowerCase() === 'sl-menu-item') {
+      if (this.open && document.activeElement?.tagName.toLowerCase() === 'i2c-menu-item') {
         event.preventDefault();
         this.hide();
         this.focusOnTrigger();
@@ -190,7 +190,7 @@ export default class SlDropdown extends LitElement {
     const target = event.target as HTMLElement;
 
     // Hide the dropdown when a menu item is selected
-    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'sl-menu') {
+    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'i2c-menu') {
       this.hide();
       this.focusOnTrigger();
     }
@@ -287,7 +287,7 @@ export default class SlDropdown extends LitElement {
   // that gets slotted in) so screen readers will understand them. The accessible trigger could be the slotted element,
   // a child of the slotted element, or an element in the slotted element's shadow root.
   //
-  // For example, the accessible trigger of an <sl-button> is a <button> located inside its shadow root.
+  // For example, the accessible trigger of an <i2c-button> is a <button> located inside its shadow root.
   //
   // To determine this, we assume the first tabbable element in the trigger slot is the "accessible trigger."
   //
@@ -300,8 +300,8 @@ export default class SlDropdown extends LitElement {
     if (accessibleTrigger) {
       switch (accessibleTrigger.tagName.toLowerCase()) {
         // Shoelace buttons have to update the internal button so it's announced correctly by screen readers
-        case 'sl-button':
-        case 'sl-icon-button':
+        case 'i2c-button':
+        case 'i2c-icon-button':
           target = (accessibleTrigger as SlButton | SlIconButton).button;
           break;
 
@@ -321,7 +321,7 @@ export default class SlDropdown extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'i2c-after-show');
   }
 
   /** Hides the dropdown panel */
@@ -331,7 +331,7 @@ export default class SlDropdown extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'i2c-after-hide');
   }
 
   /**
@@ -343,15 +343,15 @@ export default class SlDropdown extends LitElement {
   }
 
   addOpenListeners() {
-    this.panel.addEventListener('sl-activate', this.handleMenuItemActivate);
-    this.panel.addEventListener('sl-select', this.handlePanelSelect);
+    this.panel.addEventListener('i2c-activate', this.handleMenuItemActivate);
+    this.panel.addEventListener('i2c-select', this.handlePanelSelect);
     document.addEventListener('keydown', this.handleDocumentKeyDown);
     document.addEventListener('mousedown', this.handleDocumentMouseDown);
   }
 
   removeOpenListeners() {
-    this.panel.removeEventListener('sl-activate', this.handleMenuItemActivate);
-    this.panel.removeEventListener('sl-select', this.handlePanelSelect);
+    this.panel.removeEventListener('i2c-activate', this.handleMenuItemActivate);
+    this.panel.removeEventListener('i2c-select', this.handlePanelSelect);
     document.removeEventListener('keydown', this.handleDocumentKeyDown);
     document.removeEventListener('mousedown', this.handleDocumentMouseDown);
   }
@@ -367,7 +367,7 @@ export default class SlDropdown extends LitElement {
 
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'i2c-show');
       this.addOpenListeners();
 
       await stopAnimations(this);
@@ -376,10 +376,10 @@ export default class SlDropdown extends LitElement {
       const { keyframes, options } = getAnimation(this, 'dropdown.show', { dir: this.localize.dir() });
       await animateTo(this.panel, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'i2c-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'i2c-hide');
       this.removeOpenListeners();
 
       await stopAnimations(this);
@@ -388,7 +388,7 @@ export default class SlDropdown extends LitElement {
       this.panel.hidden = true;
       this.stopPositioner();
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'i2c-after-hide');
     }
   }
 
@@ -494,6 +494,6 @@ setDefaultAnimation('dropdown.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-dropdown': SlDropdown;
+    'i2c-dropdown': SlDropdown;
   }
 }

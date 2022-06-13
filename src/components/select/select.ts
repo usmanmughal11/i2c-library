@@ -23,11 +23,11 @@ import type { TemplateResult } from 'lit';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-dropdown
- * @dependency sl-icon
- * @dependency sl-icon-button
- * @dependency sl-menu
- * @dependency sl-tag
+ * @dependency i2c-dropdown
+ * @dependency i2c-icon
+ * @dependency i2c-icon-button
+ * @dependency i2c-menu
+ * @dependency i2c-tag
  *
  * @slot - The select's options in the form of menu items.
  * @slot prefix - Used to prepend an icon or similar element to the select.
@@ -36,10 +36,10 @@ import type { TemplateResult } from 'lit';
  * @slot label - The select's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the select.
  *
- * @event sl-clear - Emitted when the clear button is activated.
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event i2c-clear - Emitted when the clear button is activated.
+ * @event i2c-change - Emitted when the control's value changes.
+ * @event i2c-focus - Emitted when the control gains focus.
+ * @event i2c-blur - Emitted when the control loses focus.
  *
  * @csspart form-control - The form control that wraps the label, input, and help-text.
  * @csspart form-control-label - The label's wrapper.
@@ -52,14 +52,14 @@ import type { TemplateResult } from 'lit';
  * @csspart icon - The select's icon.
  * @csspart prefix - The select's prefix.
  * @csspart suffix - The select's suffix.
- * @csspart menu - The select menu, an `<sl-menu>` element.
- * @csspart tag - The multi select option, an `<sl-tag>` element.
+ * @csspart menu - The select menu, an `<i2c-menu>` element.
+ * @csspart tag - The multi select option, an `<i2c-tag>` element.
  * @csspart tag__base - The tag's `base` part.
  * @csspart tag__content - The tag's `content` part.
  * @csspart tag__remove-button - The tag's `remove-button` part.
  * @csspart tags - The container in which multi select options are rendered.
  */
-@customElement('sl-select')
+@customElement('i2c-select')
 export default class SlSelect extends LitElement {
   static styles = styles;
 
@@ -190,14 +190,14 @@ export default class SlSelect extends LitElement {
     // Don't blur if the control is open. We'll move focus back once it closes.
     if (!this.isOpen) {
       this.hasFocus = false;
-      emit(this, 'sl-blur');
+      emit(this, 'i2c-blur');
     }
   }
 
   handleClearClick(event: MouseEvent) {
     event.stopPropagation();
     this.value = this.multiple ? [] : '';
-    emit(this, 'sl-clear');
+    emit(this, 'i2c-clear');
     this.syncItemsFromValue();
   }
 
@@ -215,7 +215,7 @@ export default class SlSelect extends LitElement {
   handleFocus() {
     if (!this.hasFocus) {
       this.hasFocus = true;
-      emit(this, 'sl-focus');
+      emit(this, 'i2c-focus');
     }
   }
 
@@ -225,7 +225,7 @@ export default class SlSelect extends LitElement {
     const lastItem = this.menuItems[this.menuItems.length - 1];
 
     // Ignore key presses on tags
-    if (target.tagName.toLowerCase() === 'sl-tag') {
+    if (target.tagName.toLowerCase() === 'i2c-tag') {
       return;
     }
 
@@ -322,13 +322,13 @@ export default class SlSelect extends LitElement {
 
   async handleMenuSlotChange() {
     // Wait for items to render before gathering labels otherwise the slot won't exist
-    this.menuItems = [...this.querySelectorAll<SlMenuItem>('sl-menu-item')];
+    this.menuItems = [...this.querySelectorAll<SlMenuItem>('i2c-menu-item')];
 
     // Check for duplicate values in menu items
     const values: string[] = [];
     this.menuItems.forEach(item => {
       if (values.includes(item.value)) {
-        console.error(`Duplicate value found in <sl-select> menu item: '${item.value}'`, item);
+        console.error(`Duplicate value found in <i2c-select> menu item: '${item.value}'`, item);
       }
 
       values.push(item.value);
@@ -359,7 +359,7 @@ export default class SlSelect extends LitElement {
     this.syncItemsFromValue();
     await this.updateComplete;
     this.invalid = !this.input.checkValidity();
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   resizeMenu() {
@@ -380,7 +380,7 @@ export default class SlSelect extends LitElement {
       this.displayLabel = checkedItems.length > 0 ? checkedItems[0].getTextLabel() : '';
       this.displayTags = checkedItems.map((item: SlMenuItem) => {
         return html`
-          <sl-tag
+          <i2c-tag
             part="tag"
             exportparts="
               base:tag__base,
@@ -393,7 +393,7 @@ export default class SlSelect extends LitElement {
             removable
             @click=${this.handleTagInteraction}
             @keydown=${this.handleTagInteraction}
-            @sl-remove=${(event: CustomEvent) => {
+            @i2c-remove=${(event: CustomEvent) => {
               event.stopPropagation();
               if (!this.disabled) {
                 item.checked = false;
@@ -402,7 +402,7 @@ export default class SlSelect extends LitElement {
             }}
           >
             ${item.getTextLabel()}
-          </sl-tag>
+          </i2c-tag>
         `;
       });
 
@@ -411,7 +411,7 @@ export default class SlSelect extends LitElement {
         this.displayLabel = '';
         this.displayTags = this.displayTags.slice(0, this.maxTagsVisible);
         this.displayTags.push(html`
-          <sl-tag
+          <i2c-tag
             part="tag"
             exportparts="
               base:tag__base,
@@ -422,7 +422,7 @@ export default class SlSelect extends LitElement {
             size=${this.size}
           >
             +${total - this.maxTagsVisible}
-          </sl-tag>
+          </i2c-tag>
         `);
       }
     } else {
@@ -475,7 +475,7 @@ export default class SlSelect extends LitElement {
         </label>
 
         <div part="form-control-input" class="form-control-input">
-          <sl-dropdown
+          <i2c-dropdown
             part="base"
             .hoist=${this.hoist}
             .placement=${this.placement}
@@ -500,8 +500,8 @@ export default class SlSelect extends LitElement {
               'select--pill': this.pill,
               'select--invalid': this.invalid
             })}
-            @sl-show=${this.handleMenuShow}
-            @sl-hide=${this.handleMenuHide}
+            @i2c-show=${this.handleMenuShow}
+            @i2c-hide=${this.handleMenuHide}
           >
             <div
               part="control"
@@ -541,7 +541,7 @@ export default class SlSelect extends LitElement {
                       tabindex="-1"
                     >
                       <slot name="clear-icon">
-                        <sl-icon name="x-circle-fill" library="system"></sl-icon>
+                        <i2c-icon name="x-circle-fill" library="system"></i2c-icon>
                       </slot>
                     </button>
                   `
@@ -552,7 +552,7 @@ export default class SlSelect extends LitElement {
               </span>
 
               <span part="icon" class="select__icon" aria-hidden="true">
-                <sl-icon name="chevron-down" library="system"></sl-icon>
+                <i2c-icon name="chevron-down" library="system"></i2c-icon>
               </span>
 
               <!-- The hidden input tricks the browser's built-in validation so it works as expected. We use an input
@@ -568,10 +568,10 @@ export default class SlSelect extends LitElement {
               />
             </div>
 
-            <sl-menu part="menu" id="menu" class="select__menu" @sl-select=${this.handleMenuSelect}>
-              <slot @slotchange=${this.handleMenuSlotChange} @sl-label-change=${this.handleMenuItemLabelChange}></slot>
-            </sl-menu>
-          </sl-dropdown>
+            <i2c-menu part="menu" id="menu" class="select__menu" @i2c-select=${this.handleMenuSelect}>
+              <slot @slotchange=${this.handleMenuSlotChange} @i2c-label-change=${this.handleMenuItemLabelChange}></slot>
+            </i2c-menu>
+          </i2c-dropdown>
         </div>
 
         <div
@@ -589,6 +589,6 @@ export default class SlSelect extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-select': SlSelect;
+    'i2c-select': SlSelect;
   }
 }

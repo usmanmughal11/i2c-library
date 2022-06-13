@@ -12,7 +12,7 @@ import styles from './split-panel.styles';
  * @since 2.0
  * @status experimental
  *
- * @event sl-reposition - Emitted when the divider's position changes.
+ * @event i2c-reposition - Emitted when the divider's position changes.
  *
  * @csspart start - The start panel.
  * @csspart end - The end panel.
@@ -29,7 +29,7 @@ import styles from './split-panel.styles';
  * @cssproperty [--min=0] - The minimum allowed size of the primary panel.
  * @cssproperty [--max=100%] - The maximum allowed size of the primary panel.
  */
-@customElement('sl-split-panel')
+@customElement('i2c-split-panel')
 export default class SlSplitPanel extends LitElement {
   static styles = styles;
 
@@ -186,7 +186,7 @@ export default class SlSplitPanel extends LitElement {
   handlePositionChange() {
     this.cachedPositionInPixels = this.percentageToPixels(this.position);
     this.positionInPixels = this.percentageToPixels(this.position);
-    emit(this, 'sl-reposition');
+    emit(this, 'i2c-reposition');
   }
 
   @watch('positionInPixels')
@@ -270,6 +270,6 @@ export default class SlSplitPanel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-split-panel': SlSplitPanel;
+    'i2c-split-panel': SlSplitPanel;
   }
 }

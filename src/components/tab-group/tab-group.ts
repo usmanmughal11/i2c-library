@@ -14,13 +14,13 @@ import type SlTab from '../../components/tab/tab';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency i2c-icon-button
  *
  * @slot - Used for grouping tab panels in the tab group.
  * @slot nav - Used for grouping tabs in the tab group.
  *
- * @event {{ name: String }} sl-tab-show - Emitted when a tab is shown.
- * @event {{ name: String }} sl-tab-hide - Emitted when a tab is hidden.
+ * @event {{ name: String }} i2c-tab-show - Emitted when a tab is shown.
+ * @event {{ name: String }} i2c-tab-hide - Emitted when a tab is hidden.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart nav - The tab group navigation container.
@@ -36,7 +36,7 @@ import type SlTab from '../../components/tab/tab';
  * @cssproperty --track-color - The color of the indicator's track (i.e. the line that separates tabs from panels).
  * @cssproperty --track-width - The width of the indicator's track (the line that separates tabs from panels).
  */
-@customElement('sl-tab-group')
+@customElement('i2c-tab-group')
 export default class SlTabGroup extends LitElement {
   static styles = styles;
   private readonly localize = new LocalizeController(this);
@@ -126,14 +126,14 @@ export default class SlTabGroup extends LitElement {
 
     return [...(slot.assignedElements() as SlTab[])].filter(el => {
       return includeDisabled
-        ? el.tagName.toLowerCase() === 'sl-tab'
-        : el.tagName.toLowerCase() === 'sl-tab' && !el.disabled;
+        ? el.tagName.toLowerCase() === 'i2c-tab'
+        : el.tagName.toLowerCase() === 'i2c-tab' && !el.disabled;
     });
   }
 
   getAllPanels() {
     const slot = this.body.querySelector('slot')!;
-    return [...slot.assignedElements()].filter(el => el.tagName.toLowerCase() === 'sl-tab-panel') as [SlTabPanel];
+    return [...slot.assignedElements()].filter(el => el.tagName.toLowerCase() === 'i2c-tab-panel') as [SlTabPanel];
   }
 
   getActiveTab() {
@@ -142,8 +142,8 @@ export default class SlTabGroup extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('sl-tab');
-    const tabGroup = tab?.closest('sl-tab-group');
+    const tab = target.closest('i2c-tab');
+    const tabGroup = tab?.closest('i2c-tab-group');
 
     // Ensure the target tab is in this tab group
     if (tabGroup !== this) {
@@ -157,8 +157,8 @@ export default class SlTabGroup extends LitElement {
 
   handleKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('sl-tab');
-    const tabGroup = tab?.closest('sl-tab-group');
+    const tab = target.closest('i2c-tab');
+    const tabGroup = tab?.closest('i2c-tab-group');
 
     // Ensure the target tab is in this tab group
     if (tabGroup !== this) {
@@ -178,7 +178,7 @@ export default class SlTabGroup extends LitElement {
       const activeEl = document.activeElement;
       const isRtl = this.localize.dir() === 'rtl';
 
-      if (activeEl?.tagName.toLowerCase() === 'sl-tab') {
+      if (activeEl?.tagName.toLowerCase() === 'i2c-tab') {
         let index = this.tabs.indexOf(activeEl as SlTab);
 
         if (event.key === 'Home') {
@@ -273,10 +273,10 @@ export default class SlTabGroup extends LitElement {
       // Emit events
       if (options.emitEvents) {
         if (previousTab) {
-          emit(this, 'sl-tab-hide', { detail: { name: previousTab.panel } });
+          emit(this, 'i2c-tab-hide', { detail: { name: previousTab.panel } });
         }
 
-        emit(this, 'sl-tab-show', { detail: { name: this.activeTab.panel } });
+        emit(this, 'i2c-tab-show', { detail: { name: this.activeTab.panel } });
       }
     }
   }
@@ -383,7 +383,7 @@ export default class SlTabGroup extends LitElement {
         <div class="tab-group__nav-container" part="nav">
           ${this.hasScrollControls
             ? html`
-                <sl-icon-button
+                <i2c-icon-button
                   part="scroll-button scroll-button--start"
                   exportparts="base:scroll-button__base"
                   class="tab-group__scroll-button tab-group__scroll-button--start"
@@ -391,7 +391,7 @@ export default class SlTabGroup extends LitElement {
                   library="system"
                   label=${this.localize.term('scrollToStart')}
                   @click=${this.handleScrollToStart}
-                ></sl-icon-button>
+                ></i2c-icon-button>
               `
             : ''}
 
@@ -404,7 +404,7 @@ export default class SlTabGroup extends LitElement {
 
           ${this.hasScrollControls
             ? html`
-                <sl-icon-button
+                <i2c-icon-button
                   part="scroll-button scroll-button--end"
                   exportparts="base:scroll-button__base"
                   class="tab-group__scroll-button tab-group__scroll-button--end"
@@ -412,7 +412,7 @@ export default class SlTabGroup extends LitElement {
                   library="system"
                   label=${this.localize.term('scrollToEnd')}
                   @click=${this.handleScrollToEnd}
-                ></sl-icon-button>
+                ></i2c-icon-button>
               `
             : ''}
         </div>
@@ -427,6 +427,6 @@ export default class SlTabGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab-group': SlTabGroup;
+    'i2c-tab-group': SlTabGroup;
   }
 }

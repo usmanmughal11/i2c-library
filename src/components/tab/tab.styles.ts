@@ -12,12 +12,12 @@ export default css`
   .tab {
     display: inline-flex;
     align-items: center;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    border-radius: var(--sl-border-radius-medium);
-    color: var(--sl-color-neutral-600);
-    padding: var(--sl-spacing-medium) var(--sl-spacing-large);
+    font-family: var(--i2c-font-sans);
+    font-size: var(--i2c-font-size-small);
+    font-weight: var(--i2c-font-weight-semibold);
+    border-radius: var(--i2c-border-radius-medium);
+    color: var(--i2c-color-neutral-600);
+    padding: var(--i2c-spacing-medium) var(--i2c-spacing-large);
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
@@ -25,7 +25,7 @@ export default css`
   }
 
   .tab:hover:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
+    color: var(--i2c-color-primary-600);
   }
 
   .tab:focus {
@@ -33,17 +33,17 @@ export default css`
   }
 
   .tab${focusVisibleSelector}:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
-    outline: var(--sl-focus-ring);
-    outline-offset: calc(-1 * var(--sl-focus-ring-width) - var(--sl-focus-ring-offset));
+    color: var(--i2c-color-primary-600);
+    outline: var(--i2c-focus-ring);
+    outline-offset: calc(-1 * var(--i2c-focus-ring-width) - var(--i2c-focus-ring-offset));
   }
 
   .tab.tab--active:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
+    color: var(--i2c-color-primary-600);
   }
 
   .tab.tab--closable {
-    padding-inline-end: var(--sl-spacing-small);
+    padding-inline-end: var(--i2c-spacing-small);
   }
 
   .tab.tab--disabled {
@@ -52,11 +52,11 @@ export default css`
   }
 
   .tab__close-button {
-    font-size: var(--sl-font-size-large);
-    margin-inline-start: var(--sl-spacing-2x-small);
+    font-size: var(--i2c-font-size-large);
+    margin-inline-start: var(--i2c-spacing-2x-small);
   }
 
   .tab__close-button::part(base) {
-    padding: var(--sl-spacing-3x-small);
+    padding: var(--i2c-spacing-3x-small);
   }
 `;

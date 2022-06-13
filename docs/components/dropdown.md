@@ -1,6 +1,6 @@
 # Dropdown
 
-[component-header:sl-dropdown]
+[component-header:i2c-dropdown]
 
 Dropdowns expose additional content that "drops down" in a panel.
 
@@ -9,26 +9,26 @@ Dropdowns consist of a trigger and a panel. By default, activating the trigger w
 Dropdowns are designed to work well with [menus](/components/menu) to provide a list of options the user can select from. However, dropdowns can also be used in lower-level applications (e.g. [color picker](/components/color-picker) and [select](/components/select)). The API gives you complete control over showing, hiding, and positioning the panel.
 
 ```html preview
-<sl-dropdown>
-  <sl-button slot="trigger" caret>Dropdown</sl-button>
-  <sl-menu>
-    <sl-menu-item>Dropdown Item 1</sl-menu-item>
-    <sl-menu-item>Dropdown Item 2</sl-menu-item>
-    <sl-menu-item>Dropdown Item 3</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item checked>Checked</sl-menu-item>
-    <sl-menu-item disabled>Disabled</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>
+<i2c-dropdown>
+  <i2c-button slot="trigger" caret>Dropdown</i2c-button>
+  <i2c-menu>
+    <i2c-menu-item>Dropdown Item 1</i2c-menu-item>
+    <i2c-menu-item>Dropdown Item 2</i2c-menu-item>
+    <i2c-menu-item>Dropdown Item 3</i2c-menu-item>
+    <i2c-divider></i2c-divider>
+    <i2c-menu-item checked>Checked</i2c-menu-item>
+    <i2c-menu-item disabled>Disabled</i2c-menu-item>
+    <i2c-divider></i2c-divider>
+    <i2c-menu-item>
       Prefix
-      <sl-icon slot="prefix" name="gift"></sl-icon>
-    </sl-menu-item>
-    <sl-menu-item>
+      <i2c-icon slot="prefix" name="gift"></i2c-icon>
+    </i2c-menu-item>
+    <i2c-menu-item>
       Suffix Icon
-      <sl-icon slot="suffix" name="heart"></sl-icon>
-    </sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+      <i2c-icon slot="suffix" name="heart"></i2c-icon>
+    </i2c-menu-item>
+  </i2c-menu>
+</i2c-dropdown>
 ```
 
 ```jsx react
@@ -64,25 +64,25 @@ const App = () => (
 
 ### Getting the Selected Item
 
-When dropdowns are used with [menus](/components/menu), you can listen for the `sl-select` event to determine which menu item was selected. The menu item element will be exposed in `event.detail.item`. You can set `value` props to make it easier to identify commands.
+When dropdowns are used with [menus](/components/menu), you can listen for the `i2c-select` event to determine which menu item was selected. The menu item element will be exposed in `event.detail.item`. You can set `value` props to make it easier to identify commands.
 
 ```html preview
 <div class="dropdown-selection">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Edit</sl-button>
-    <sl-menu>
-      <sl-menu-item value="cut">Cut</sl-menu-item>
-      <sl-menu-item value="copy">Copy</sl-menu-item>
-      <sl-menu-item value="paste">Paste</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <i2c-dropdown>
+    <i2c-button slot="trigger" caret>Edit</i2c-button>
+    <i2c-menu>
+      <i2c-menu-item value="cut">Cut</i2c-menu-item>
+      <i2c-menu-item value="copy">Copy</i2c-menu-item>
+      <i2c-menu-item value="paste">Paste</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
 </div>
 
 <script>
   const container = document.querySelector('.dropdown-selection');
-  const dropdown = container.querySelector('sl-dropdown');
+  const dropdown = container.querySelector('i2c-dropdown');
 
-  dropdown.addEventListener('sl-select', event => {
+  dropdown.addEventListener('i2c-select', event => {
     const selectedItem = event.detail.item;
     console.log(selectedItem.value);
   });
@@ -117,21 +117,21 @@ Alternatively, you can listen for the `click` event on individual menu items. No
 
 ```html preview
 <div class="dropdown-selection-alt">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Edit</sl-button>
-    <sl-menu>
-      <sl-menu-item value="cut">Cut</sl-menu-item>
-      <sl-menu-item value="copy">Copy</sl-menu-item>
-      <sl-menu-item value="paste">Paste</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <i2c-dropdown>
+    <i2c-button slot="trigger" caret>Edit</i2c-button>
+    <i2c-menu>
+      <i2c-menu-item value="cut">Cut</i2c-menu-item>
+      <i2c-menu-item value="copy">Copy</i2c-menu-item>
+      <i2c-menu-item value="paste">Paste</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
 </div>
 
 <script>
   const container = document.querySelector('.dropdown-selection-alt');
-  const cut = container.querySelector('sl-menu-item[value="cut"]');
-  const copy = container.querySelector('sl-menu-item[value="copy"]');
-  const paste = container.querySelector('sl-menu-item[value="paste"]');
+  const cut = container.querySelector('i2c-menu-item[value="cut"]');
+  const copy = container.querySelector('i2c-menu-item[value="copy"]');
+  const paste = container.querySelector('i2c-menu-item[value="paste"]');
 
   cut.addEventListener('click', () => console.log('cut'));
   copy.addEventListener('click', () => console.log('copy'));
@@ -175,17 +175,17 @@ const App = () => {
 The preferred placement of the dropdown can be set with the `placement` attribute. Note that the actual position may vary to ensure the panel remains in the viewport.
 
 ```html preview
-<sl-dropdown placement="top-start">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<i2c-dropdown placement="top-start">
+  <i2c-button slot="trigger" caret>Edit</i2c-button>
+  <i2c-menu>
+    <i2c-menu-item>Cut</i2c-menu-item>
+    <i2c-menu-item>Copy</i2c-menu-item>
+    <i2c-menu-item>Paste</i2c-menu-item>
+    <i2c-divider></i2c-divider>
+    <i2c-menu-item>Find</i2c-menu-item>
+    <i2c-menu-item>Replace</i2c-menu-item>
+  </i2c-menu>
+</i2c-dropdown>
 ```
 
 ```jsx react
@@ -213,17 +213,17 @@ const App = () => (
 The distance from the panel to the trigger can be customized using the `distance` attribute. This value is specified in pixels.
 
 ```html preview
-<sl-dropdown distance="30">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<i2c-dropdown distance="30">
+  <i2c-button slot="trigger" caret>Edit</i2c-button>
+  <i2c-menu>
+    <i2c-menu-item>Cut</i2c-menu-item>
+    <i2c-menu-item>Copy</i2c-menu-item>
+    <i2c-menu-item>Paste</i2c-menu-item>
+    <i2c-divider></i2c-divider>
+    <i2c-menu-item>Find</i2c-menu-item>
+    <i2c-menu-item>Replace</i2c-menu-item>
+  </i2c-menu>
+</i2c-dropdown>
 ```
 
 ```jsx react
@@ -251,17 +251,17 @@ const App = () => (
 The offset of the panel along the trigger can be customized using the `skidding` attribute. This value is specified in pixels.
 
 ```html preview
-<sl-dropdown skidding="30">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<i2c-dropdown skidding="30">
+  <i2c-button slot="trigger" caret>Edit</i2c-button>
+  <i2c-menu>
+    <i2c-menu-item>Cut</i2c-menu-item>
+    <i2c-menu-item>Copy</i2c-menu-item>
+    <i2c-menu-item>Paste</i2c-menu-item>
+    <i2c-divider></i2c-divider>
+    <i2c-menu-item>Find</i2c-menu-item>
+    <i2c-menu-item>Replace</i2c-menu-item>
+  </i2c-menu>
+</i2c-dropdown>
 ```
 
 ```jsx react
@@ -290,29 +290,29 @@ Dropdown panels will be clipped if they're inside a container that has `overflow
 
 ```html preview
 <div class="dropdown-hoist">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>No Hoist</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <i2c-dropdown>
+    <i2c-button slot="trigger" caret>No Hoist</i2c-button>
+    <i2c-menu>
+      <i2c-menu-item>Item 1</i2c-menu-item>
+      <i2c-menu-item>Item 2</i2c-menu-item>
+      <i2c-menu-item>Item 3</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
 
-  <sl-dropdown hoist>
-    <sl-button slot="trigger" caret>Hoist</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <i2c-dropdown hoist>
+    <i2c-button slot="trigger" caret>Hoist</i2c-button>
+    <i2c-menu>
+      <i2c-menu-item>Item 1</i2c-menu-item>
+      <i2c-menu-item>Item 2</i2c-menu-item>
+      <i2c-menu-item>Item 3</i2c-menu-item>
+    </i2c-menu>
+  </i2c-dropdown>
 </div>
 
 <style>
   .dropdown-hoist {
-    border: solid 2px var(--sl-panel-border-color);
-    padding: var(--sl-spacing-medium);
+    border: solid 2px var(--i2c-panel-border-color);
+    padding: var(--i2c-spacing-medium);
     overflow: hidden;
   }
 </style>
@@ -323,8 +323,8 @@ import { SlButton, SlDivider, SlDropdown, SlIcon, SlMenu, SlMenuItem } from '@sh
 
 const css = `
   .dropdown-hoist {
-    border: solid 2px var(--sl-panel-border-color);
-    padding: var(--sl-spacing-medium);
+    border: solid 2px var(--i2c-panel-border-color);
+    padding: var(--i2c-spacing-medium);
     overflow: hidden;
   }
 `;
@@ -360,4 +360,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-dropdown]
+[component-metadata:i2c-dropdown]

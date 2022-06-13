@@ -52,20 +52,20 @@ To make a field required, use the `required` prop. The form will not be submitte
 
 ```html preview
 <form class="input-validation-required">
-  <sl-input name="name" label="Name" required></sl-input>
+  <i2c-input name="name" label="Name" required></i2c-input>
   <br />
-  <sl-select label="Favorite Animal" clearable required>
-    <sl-menu-item value="birds">Birds</sl-menu-item>
-    <sl-menu-item value="cats">Cats</sl-menu-item>
-    <sl-menu-item value="dogs">Dogs</sl-menu-item>
-    <sl-menu-item value="other">Other</sl-menu-item>
-  </sl-select>
+  <i2c-select label="Favorite Animal" clearable required>
+    <i2c-menu-item value="birds">Birds</i2c-menu-item>
+    <i2c-menu-item value="cats">Cats</i2c-menu-item>
+    <i2c-menu-item value="dogs">Dogs</i2c-menu-item>
+    <i2c-menu-item value="other">Other</i2c-menu-item>
+  </i2c-select>
   <br />
-  <sl-textarea name="comment" label="Comment" required></sl-textarea>
+  <i2c-textarea name="comment" label="Comment" required></i2c-textarea>
   <br />
-  <sl-checkbox required>Check me before submitting</sl-checkbox>
+  <i2c-checkbox required>Check me before submitting</i2c-checkbox>
   <br /><br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <i2c-button type="submit" variant="primary">Submit</i2c-button>
 </form>
 
 <script type="module">
@@ -112,13 +112,13 @@ const App = () => {
 
 ### Input Patterns
 
-To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern), use the `pattern` attribute. This example only allows the letters A-Z, so the form will not submit if a number or symbol is entered. This only works with `<sl-input>` elements.
+To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern), use the `pattern` attribute. This example only allows the letters A-Z, so the form will not submit if a number or symbol is entered. This only works with `<i2c-input>` elements.
 
 ```html preview
 <form class="input-validation-pattern">
-  <sl-input name="letters" required label="Letters" pattern="[A-Za-z]+"></sl-input>
+  <i2c-input name="letters" required label="Letters" pattern="[A-Za-z]+"></i2c-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <i2c-button type="submit" variant="primary">Submit</i2c-button>
 </form>
 
 <script type="module">
@@ -157,11 +157,11 @@ Some input types will automatically trigger constraints, such as `email` and `ur
 
 ```html preview
 <form class="input-validation-type">
-  <sl-input variant="email" label="Email" placeholder="you@example.com" required></sl-input>
+  <i2c-input variant="email" label="Email" placeholder="you@example.com" required></i2c-input>
   <br />
-  <sl-input variant="url" label="URL" placeholder="https://example.com/" required></sl-input>
+  <i2c-input variant="url" label="URL" placeholder="https://example.com/" required></i2c-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <i2c-button type="submit" variant="primary">Submit</i2c-button>
 </form>
 
 <script type="module">
@@ -202,21 +202,21 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```html preview
 <form class="input-validation-custom">
-  <sl-input label="Type 'shoelace'" required></sl-input>
+  <i2c-input label="Type 'shoelace'" required></i2c-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <i2c-button type="submit" variant="primary">Submit</i2c-button>
 </form>
 
 <script type="module">
   const form = document.querySelector('.input-validation-custom');
-  const input = form.querySelector('sl-input');
+  const input = form.querySelector('i2c-input');
 
   form.addEventListener('submit', event => {
     event.preventDefault();
     alert('All fields are valid!');
   });
 
-  input.addEventListener('sl-input', () => {
+  input.addEventListener('i2c-input', () => {
     if (input.value === 'shoelace') {
       input.setCustomValidity('');
     } else {
@@ -268,22 +268,22 @@ const App = () => {
 The `invalid` attribute reflects the form control's validity, so you can style invalid fields using the `[invalid]` selector. The example below demonstrates how you can give erroneous fields a different appearance. Type something other than "shoelace" to demonstrate this.
 
 ```html preview
-<sl-input class="custom-input" label="Type Something" required pattern="shoelace">
+<i2c-input class="custom-input" label="Type Something" required pattern="shoelace">
   <small slot="help-text">Please enter "shoelace" to continue</small>
-</sl-input>
+</i2c-input>
 
 <style>
   .custom-input[invalid]:not([disabled])::part(label),
   .custom-input[invalid]:not([disabled])::part(help-text) {
-    color: var(--sl-color-danger-600);
+    color: var(--i2c-color-danger-600);
   }
 
   .custom-input[invalid]:not([disabled])::part(base) {
-    border-color: var(--sl-color-danger-500);
+    border-color: var(--i2c-color-danger-500);
   }
 
   .custom-input[invalid]:focus-within::part(base) {
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-danger-500);
+    box-shadow: 0 0 0 var(--i2c-focus-ring-width) var(--i2c-color-danger-500);
   }
 </style>
 ```
@@ -294,15 +294,15 @@ import { SlInput } from '@shoelace-style/shoelace/dist/react';
 const css = `
   .custom-input[invalid]:not([disabled])::part(label),
   .custom-input[invalid]:not([disabled])::part(help-text) {
-    color: var(--sl-color-danger-600);
+    color: var(--i2c-color-danger-600);
   }
 
   .custom-input[invalid]:not([disabled])::part(base) {      
-    border-color: var(--sl-color-danger-500);
+    border-color: var(--i2c-color-danger-500);
   } 
 
   .custom-input[invalid]:focus-within::part(base) {
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-danger-500);
+    box-shadow: 0 0 0 var(--i2c-focus-ring-width) var(--i2c-color-danger-500);
   }
 `;
 
@@ -327,11 +327,11 @@ Instead, toggle a class and target it in your stylesheet as shown below.
 
 ```html
 <form novalidate>
-  <sl-input class="invalid"></sl-input>
+  <i2c-input class="invalid"></i2c-input>
 </form>
 
 <style>
-  sl-input.invalid {
+  i2c-input.invalid {
     ...;
   }
 </style>

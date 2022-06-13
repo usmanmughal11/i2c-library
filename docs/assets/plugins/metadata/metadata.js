@@ -30,13 +30,13 @@
             } else if (isAttributeDifferent) {
               attributeInfo = `
                 <br>
-                <sl-tooltip content="This attribute is different from its property">
+                <i2c-tooltip content="This attribute is different from its property">
                   <small>
                     <code class="nowrap">
                       ${escapeHtml(prop.attribute)}
                     </code>
                   </small>
-                </sl-tooltip>`;
+                </i2c-tooltip>`;
             }
 
             return `
@@ -49,7 +49,7 @@
                   ${escapeHtml(prop.description)}
                 </td>
                 <td style="text-align: center;">${
-                  prop.reflects ? '<sl-icon label="yes" name="check"></sl-icon>' : ''
+                  prop.reflects ? '<i2c-icon label="yes" name="check"></i2c-icon>' : ''
                 }</td>
                 <td>${prop.type?.text ? `<code>${escapeHtml(prop.type?.text || '')}</code>` : '-'}</td>
                 <td>${prop.default ? `<code>${escapeHtml(prop.default)}</code>` : '-'}</td>
@@ -322,21 +322,21 @@
       target.appendChild(version);
 
       // Store version for reuse
-      sessionStorage.setItem('sl-version', metadata.package.version);
+      sessionStorage.setItem('i2c-version', metadata.package.version);
 
       // Add repo buttons
       const buttons = document.createElement('div');
       buttons.classList.add('sidebar-buttons');
       buttons.innerHTML = `
-        <sl-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-          <sl-icon slot="prefix" name="heart"></sl-icon> Sponsor
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-          <sl-icon slot="prefix" name="github"></sl-icon> <span class="github-star-count">Star</span>
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-          <sl-icon slot="prefix" name="twitter"></sl-icon> Follow
-        </sl-button>
+        <i2c-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+          <i2c-icon slot="prefix" name="heart"></i2c-icon> Sponsor
+        </i2c-button>
+        <i2c-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
+          <i2c-icon slot="prefix" name="github"></i2c-icon> <span class="github-star-count">Star</span>
+        </i2c-button>
+        <i2c-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
+          <i2c-icon slot="prefix" name="twitter"></i2c-icon> Follow
+        </i2c-button>
       `;
       target.appendChild(buttons);
     });
@@ -378,13 +378,13 @@
             </div>
 
             <div class="component-header__info">
-              <sl-badge variant="neutral" pill>
+              <i2c-badge variant="neutral" pill>
                 Since ${component.since || '?'}
-              </sl-badge>
+              </i2c-badge>
 
-              <sl-badge variant="${badgeType}" pill style="text-transform: capitalize;">
+              <i2c-badge variant="${badgeType}" pill style="text-transform: capitalize;">
                 ${component.status}
-              </sl-badge>
+              </i2c-badge>
             </div>
           </div>
         `;
@@ -420,42 +420,42 @@
           result += `
             ## Importing
 
-            <sl-tab-group>
-            <sl-tab slot="nav" panel="script">Script</sl-tab>
-            <sl-tab slot="nav" panel="import">Import</sl-tab>
-            <sl-tab slot="nav" panel="bundler">Bundler</sl-tab>
-            <sl-tab slot="nav" panel="react">React</sl-tab>
+            <i2c-tab-group>
+            <i2c-tab slot="nav" panel="script">Script</i2c-tab>
+            <i2c-tab slot="nav" panel="import">Import</i2c-tab>
+            <i2c-tab slot="nav" panel="bundler">Bundler</i2c-tab>
+            <i2c-tab slot="nav" panel="react">React</i2c-tab>
 
-            <sl-tab-panel name="script">\n
+            <i2c-tab-panel name="script">\n
             To import this component from [the CDN](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace) using a script tag:
 
             \`\`\`html
             <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${metadata.package.version}/${component.path}"></script>
             \`\`\`
-            </sl-tab-panel>
+            </i2c-tab-panel>
 
-            <sl-tab-panel name="import">\n
+            <i2c-tab-panel name="import">\n
             To import this component from [the CDN](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace) using a JavaScript import:
 
             \`\`\`js
             import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${metadata.package.version}/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </i2c-tab-panel>
 
-            <sl-tab-panel name="bundler">\n
+            <i2c-tab-panel name="bundler">\n
             To import this component using [a bundler](/getting-started/installation#bundling):
             \`\`\`js
             import '@shoelace-style/shoelace/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </i2c-tab-panel>
 
-            <sl-tab-panel name="react">\n
+            <i2c-tab-panel name="react">\n
             To import this component as a [React component](/frameworks/react):
             \`\`\`js
             import { ${component.name} } from '@shoelace-style/shoelace/dist/react';
             \`\`\`
-            </sl-tab-panel>
-            </sl-tab-group>
+            </i2c-tab-panel>
+            </i2c-tab-group>
           `;
         }
 

@@ -3,16 +3,16 @@ import { sendKeys } from '@web/test-runner-commands';
 import sinon from 'sinon';
 import type SlCheckbox from './checkbox';
 
-describe('<sl-checkbox>', () => {
+describe('<i2c-checkbox>', () => {
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox disabled></sl-checkbox> `);
+    const el = await fixture<SlCheckbox>(html` <i2c-checkbox disabled></i2c-checkbox> `);
     const checkbox = el.shadowRoot!.querySelector('input')!;
 
     expect(checkbox.disabled).to.be.true;
   });
 
   it('should be disabled when disabled property is set', async () => {
-    const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+    const el = await fixture<SlCheckbox>(html`<i2c-checkbox></i2c-checkbox>`);
     const checkbox = el.shadowRoot!.querySelector('input')!;
 
     el.disabled = true;
@@ -22,32 +22,32 @@ describe('<sl-checkbox>', () => {
   });
 
   it('should be valid by default', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+    const el = await fixture<SlCheckbox>(html` <i2c-checkbox></i2c-checkbox> `);
 
     expect(el.invalid).to.be.false;
   });
 
-  it('should fire sl-change when clicked', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should fire i2c-change when clicked', async () => {
+    const el = await fixture<SlCheckbox>(html` <i2c-checkbox></i2c-checkbox> `);
     setTimeout(() => el.shadowRoot!.querySelector('input')!.click());
-    const event = (await oneEvent(el, 'sl-change')) as CustomEvent;
+    const event = (await oneEvent(el, 'i2c-change')) as CustomEvent;
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should fire sl-change when toggled via keyboard', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should fire i2c-change when toggled via keyboard', async () => {
+    const el = await fixture<SlCheckbox>(html` <i2c-checkbox></i2c-checkbox> `);
     const input = el.shadowRoot!.querySelector('input')!;
     input.focus();
     setTimeout(() => sendKeys({ press: ' ' }));
-    const event = (await oneEvent(el, 'sl-change')) as CustomEvent;
+    const event = (await oneEvent(el, 'i2c-change')) as CustomEvent;
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should not fire sl-change when checked is set by javascript', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
-    el.addEventListener('sl-change', () => expect.fail('event fired'));
+  it('should not fire i2c-change when checked is set by javascript', async () => {
+    const el = await fixture<SlCheckbox>(html` <i2c-checkbox></i2c-checkbox> `);
+    el.addEventListener('i2c-change', () => expect.fail('event fired'));
     el.checked = true;
     await el.updateComplete;
     el.checked = false;
@@ -58,11 +58,11 @@ describe('<sl-checkbox>', () => {
     it('should submit the correct value when a value is provided', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" value="1" checked></sl-checkbox>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-checkbox name="a" value="1" checked></i2c-checkbox>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
+      const button = form.querySelector('i2c-button')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => {
         formData = new FormData(form);
         event.preventDefault();
@@ -80,11 +80,11 @@ describe('<sl-checkbox>', () => {
     it('should submit "on" when no value is provided', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" checked></sl-checkbox>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-checkbox name="a" checked></i2c-checkbox>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
+      const button = form.querySelector('i2c-button')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => {
         formData = new FormData(form);
         event.preventDefault();
@@ -102,12 +102,12 @@ describe('<sl-checkbox>', () => {
     it('should show a constraint validation error when setCustomValidity() is called', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" value="1" checked></sl-checkbox>
-          <sl-button type="submit">Submit</sl-button>
+          <i2c-checkbox name="a" value="1" checked></i2c-checkbox>
+          <i2c-button type="submit">Submit</i2c-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
-      const checkbox = form.querySelector('sl-checkbox')!;
+      const button = form.querySelector('i2c-button')!;
+      const checkbox = form.querySelector('i2c-checkbox')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => event.preventDefault());
 
       // Submitting the form after setting custom validity should not trigger the handler
@@ -123,7 +123,7 @@ describe('<sl-checkbox>', () => {
 
   describe('click', () => {
     it('should click the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<SlCheckbox>(html`<i2c-checkbox></i2c-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const clickSpy = sinon.spy();
 
@@ -139,7 +139,7 @@ describe('<sl-checkbox>', () => {
 
   describe('focus', () => {
     it('should focus the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<SlCheckbox>(html`<i2c-checkbox></i2c-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const focusSpy = sinon.spy();
 
@@ -155,7 +155,7 @@ describe('<sl-checkbox>', () => {
 
   describe('blur', () => {
     it('should blur the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<SlCheckbox>(html`<i2c-checkbox></i2c-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const blurSpy = sinon.spy();
 
@@ -174,7 +174,7 @@ describe('<sl-checkbox>', () => {
 
   describe('indeterminate', () => {
     it('should render indeterminate icon until checked', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox indeterminate></sl-checkbox>`);
+      const el = await fixture<SlCheckbox>(html`<i2c-checkbox indeterminate></i2c-checkbox>`);
       let indeterminateIcon = el.shadowRoot!.querySelector('[part="indeterminate-icon"]')!;
 
       expect(indeterminateIcon).not.to.be.null;

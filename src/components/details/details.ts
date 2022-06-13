@@ -13,15 +13,15 @@ import styles from './details.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
  * @slot - The details' content.
  * @slot summary - The details' summary. Alternatively, you can use the summary prop.
  *
- * @event sl-show - Emitted when the details opens.
- * @event sl-after-show - Emitted after the details opens and all animations are complete.
- * @event sl-hide - Emitted when the details closes.
- * @event sl-after-hide - Emitted after the details closes and all animations are complete.
+ * @event i2c-show - Emitted when the details opens.
+ * @event i2c-after-show - Emitted after the details opens and all animations are complete.
+ * @event i2c-hide - Emitted when the details closes.
+ * @event i2c-after-hide - Emitted after the details closes and all animations are complete.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart header - The summary header.
@@ -32,7 +32,7 @@ import styles from './details.styles';
  * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.
  * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.
  */
-@customElement('sl-details')
+@customElement('i2c-details')
 export default class SlDetails extends LitElement {
   static styles = styles;
 
@@ -63,7 +63,7 @@ export default class SlDetails extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'i2c-after-show');
   }
 
   /** Hides the details */
@@ -73,7 +73,7 @@ export default class SlDetails extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'i2c-after-hide');
   }
 
   handleSummaryClick() {
@@ -114,7 +114,7 @@ export default class SlDetails extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'i2c-show');
 
       await stopAnimations(this.body);
       this.body.hidden = false;
@@ -123,10 +123,10 @@ export default class SlDetails extends LitElement {
       await animateTo(this.body, shimKeyframesHeightAuto(keyframes, this.body.scrollHeight), options);
       this.body.style.height = 'auto';
 
-      emit(this, 'sl-after-show');
+      emit(this, 'i2c-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'i2c-hide');
 
       await stopAnimations(this.body);
 
@@ -135,7 +135,7 @@ export default class SlDetails extends LitElement {
       this.body.hidden = true;
       this.body.style.height = 'auto';
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'i2c-after-hide');
     }
   }
 
@@ -166,7 +166,7 @@ export default class SlDetails extends LitElement {
           </div>
 
           <span part="summary-icon" class="details__summary-icon">
-            <sl-icon name="chevron-right" library="system"></sl-icon>
+            <i2c-icon name="chevron-right" library="system"></i2c-icon>
           </span>
         </header>
 
@@ -198,6 +198,6 @@ setDefaultAnimation('details.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-details': SlDetails;
+    'i2c-details': SlDetails;
   }
 }

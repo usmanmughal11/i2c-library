@@ -9,23 +9,23 @@ export default css`
   }
 
   .radio-group {
-    border: solid var(--sl-panel-border-width) var(--sl-panel-border-color);
-    border-radius: var(--sl-border-radius-medium);
-    padding: var(--sl-spacing-large);
-    padding-top: var(--sl-spacing-x-small);
+    border: solid var(--i2c-panel-border-width) var(--i2c-panel-border-color);
+    border-radius: var(--i2c-border-radius-medium);
+    padding: var(--i2c-spacing-large);
+    padding-top: var(--i2c-spacing-x-small);
   }
 
   .radio-group .radio-group__label {
-    font-family: var(--sl-input-font-family);
-    font-size: var(--sl-input-font-size-medium);
-    font-weight: var(--sl-input-font-weight);
-    color: var(--sl-input-color);
-    padding: 0 var(--sl-spacing-2x-small);
+    font-family: var(--i2c-input-font-family);
+    font-size: var(--i2c-input-font-size-medium);
+    font-weight: var(--i2c-input-font-weight);
+    color: var(--i2c-input-color);
+    padding: 0 var(--i2c-spacing-2x-small);
   }
 
-  ::slotted(sl-radio:not(:last-of-type)) {
+  ::slotted(i2c-radio:not(:last-of-type)) {
     display: block;
-    margin-bottom: var(--sl-spacing-2x-small);
+    margin-bottom: var(--i2c-spacing-2x-small);
   }
 
   .radio-group:not(.radio-group--has-fieldset) {

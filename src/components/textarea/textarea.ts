@@ -16,10 +16,10 @@ import styles from './textarea.styles';
  * @slot label - The textarea's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the input.
  *
- * @event sl-change - Emitted when an alteration to the control's value is committed by the user.
- * @event sl-input - Emitted when the control receives input and its value changes.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event i2c-change - Emitted when an alteration to the control's value is committed by the user.
+ * @event i2c-input - Emitted when the control receives input and its value changes.
+ * @event i2c-focus - Emitted when the control gains focus.
+ * @event i2c-blur - Emitted when the control loses focus.
  *
  * @csspart form-control - The form control that wraps the label, input, and help-text.
  * @csspart form-control-label - The label's wrapper.
@@ -28,7 +28,7 @@ import styles from './textarea.styles';
  * @csspart base - The component's internal wrapper.
  * @csspart textarea - The textarea control.
  */
-@customElement('sl-textarea')
+@customElement('i2c-textarea')
 export default class SlTextarea extends LitElement {
   static styles = styles;
 
@@ -182,14 +182,14 @@ export default class SlTextarea extends LitElement {
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
-      emit(this, 'sl-input');
+      emit(this, 'i2c-input');
     }
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
       this.setTextareaHeight();
-      emit(this, 'sl-input');
-      emit(this, 'sl-change');
+      emit(this, 'i2c-input');
+      emit(this, 'i2c-change');
     }
   }
 
@@ -206,13 +206,13 @@ export default class SlTextarea extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   handleChange() {
     this.value = this.input.value;
     this.setTextareaHeight();
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   @watch('disabled', { waitUntilFirstUpdate: true })
@@ -224,13 +224,13 @@ export default class SlTextarea extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleInput() {
     this.value = this.input.value;
     this.setTextareaHeight();
-    emit(this, 'sl-input');
+    emit(this, 'i2c-input');
   }
 
   @watch('rows', { waitUntilFirstUpdate: true })
@@ -341,6 +341,6 @@ export default class SlTextarea extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-textarea': SlTextarea;
+    'i2c-textarea': SlTextarea;
   }
 }

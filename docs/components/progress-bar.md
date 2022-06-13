@@ -1,11 +1,11 @@
 # Progress Bar
 
-[component-header:sl-progress-bar]
+[component-header:i2c-progress-bar]
 
 Progress bars are used to show the status of an ongoing operation.
 
 ```html preview
-<sl-progress-bar value="50"></sl-progress-bar>
+<i2c-progress-bar value="50"></i2c-progress-bar>
 ```
 
 ```jsx react
@@ -21,7 +21,7 @@ const App = () => <SlProgressBar value={50} />;
 Use the `label` attribute to label the progress bar and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-bar value="50" label="Upload progress"></sl-progress-bar>
+<i2c-progress-bar value="50" label="Upload progress"></i2c-progress-bar>
 ```
 
 ```jsx react
@@ -35,7 +35,7 @@ const App = () => <SlProgressBar value="50" label="Upload progress" />;
 Use the `--height` custom property to set the progress bar's height.
 
 ```html preview
-<sl-progress-bar value="50" style="--height: 6px;"></sl-progress-bar>
+<i2c-progress-bar value="50" style="--height: 6px;"></i2c-progress-bar>
 ```
 
 ```jsx react
@@ -49,12 +49,12 @@ const App = () => <SlProgressBar value={50} style={{ '--height': '6px' }} />;
 Use the default slot to show a value.
 
 ```html preview
-<sl-progress-bar value="50" class="progress-bar-values">50%</sl-progress-bar>
+<i2c-progress-bar value="50" class="progress-bar-values">50%</i2c-progress-bar>
 
 <br />
 
-<sl-button circle><sl-icon name="dash" label="Decrease"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus" label="Increase"></sl-icon></sl-button>
+<i2c-button circle><i2c-icon name="dash" label="Decrease"></i2c-icon></i2c-button>
+<i2c-button circle><i2c-icon name="plus" label="Increase"></i2c-icon></i2c-button>
 
 <script>
   const progressBar = document.querySelector('.progress-bar-values');
@@ -112,7 +112,7 @@ const App = () => {
 The `indeterminate` attribute can be used to inform the user that the operation is pending, but its status cannot currently be determined. In this state, `value` is ignored and the label, if present, will not be shown.
 
 ```html preview
-<sl-progress-bar indeterminate></sl-progress-bar>
+<i2c-progress-bar indeterminate></i2c-progress-bar>
 ```
 
 ```jsx react
@@ -121,4 +121,4 @@ import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlProgressBar indeterminate />;
 ```
 
-[component-metadata:sl-progress-bar]
+[component-metadata:i2c-progress-bar]

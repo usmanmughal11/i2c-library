@@ -21,7 +21,7 @@ const availableUnits: UnitConfig[] = [
  * @since 2.0
  * @status stable
  */
-@customElement('sl-relative-time')
+@customElement('i2c-relative-time')
 export default class SlRelativeTime extends LitElement {
   private readonly localize = new LocalizeController(this);
   private updateTimeout: number;
@@ -119,6 +119,6 @@ function getTimeUntilNextUnit(unit: 'second' | 'minute' | 'hour' | 'day') {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-relative-time': SlRelativeTime;
+    'i2c-relative-time': SlRelativeTime;
   }
 }

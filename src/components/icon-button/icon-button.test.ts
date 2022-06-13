@@ -4,10 +4,10 @@ import type SlIconButton from './icon-button';
 
 type LinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
-describe('<sl-icon-button>', () => {
+describe('<i2c-icon-button>', () => {
   describe('defaults ', () => {
     it('default properties', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button></i2c-icon-button> `);
 
       expect(el.name).to.be.undefined;
       expect(el.library).to.be.undefined;
@@ -20,7 +20,7 @@ describe('<sl-icon-button>', () => {
     });
 
     it('renders as a button by default', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button></i2c-icon-button> `);
 
       expect(el.shadowRoot?.querySelector('button')).to.exist;
       expect(el.shadowRoot?.querySelector('a')).not.to.exist;
@@ -28,20 +28,20 @@ describe('<sl-icon-button>', () => {
   });
 
   describe('when icon attributes are present', () => {
-    it('renders an sl-icon from a library', async () => {
+    it('renders an i2c-icon from a library', async () => {
       const el = await fixture<SlIconButton>(
-        html` <sl-icon-button library="system" name="check-lg"></sl-icon-button> `
+        html` <i2c-icon-button library="system" name="check-lg"></i2c-icon-button> `
       );
-      expect(el.shadowRoot?.querySelector('sl-icon')).to.exist;
+      expect(el.shadowRoot?.querySelector('i2c-icon')).to.exist;
     });
 
-    it('renders an sl-icon from a src', async () => {
+    it('renders an i2c-icon from a src', async () => {
       const fakeId = 'test-src';
-      const el = await fixture<SlIconButton>(html` <sl-icon-button></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button></i2c-icon-button> `);
 
       el.src = `data:image/svg+xml,${encodeURIComponent(`<svg id="${fakeId}"></svg>`)}`;
 
-      const internalSlIcon = el.shadowRoot?.querySelector('sl-icon');
+      const internalSlIcon = el.shadowRoot?.querySelector('i2c-icon');
 
       await waitUntil(() => internalSlIcon?.shadowRoot?.querySelector('svg'), 'SVG not rendered');
 
@@ -53,14 +53,14 @@ describe('<sl-icon-button>', () => {
 
   describe('when href is present', () => {
     it('renders as an anchor', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button href="some/path"></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button href="some/path"></i2c-icon-button> `);
 
       expect(el.shadowRoot?.querySelector('a')).to.exist;
       expect(el.shadowRoot?.querySelector('button')).not.to.exist;
     });
 
     it(`the anchor rel is not present`, async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button href="some/path"></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button href="some/path"></i2c-icon-button> `);
       expect(el.shadowRoot?.querySelector(`a[rel]`)).not.to.exist;
     });
 
@@ -68,14 +68,14 @@ describe('<sl-icon-button>', () => {
       ['_blank', '_parent', '_self', '_top'].forEach((target: LinkTarget) => {
         it(`the anchor target is the provided target: ${target}`, async () => {
           const el = await fixture<SlIconButton>(
-            html` <sl-icon-button href="some/path" target="${target}"></sl-icon-button> `
+            html` <i2c-icon-button href="some/path" target="${target}"></i2c-icon-button> `
           );
           expect(el.shadowRoot?.querySelector(`a[target="${target}"]`)).to.exist;
         });
 
         it(`the anchor rel is set to 'noreferrer noopener'`, async () => {
           const el = await fixture<SlIconButton>(
-            html` <sl-icon-button href="some/path" target="${target}"></sl-icon-button> `
+            html` <i2c-icon-button href="some/path" target="${target}"></i2c-icon-button> `
           );
           expect(el.shadowRoot?.querySelector(`a[rel="noreferrer noopener"]`)).to.exist;
         });
@@ -86,7 +86,7 @@ describe('<sl-icon-button>', () => {
       it(`the anchor download attribute is the provided download`, async () => {
         const fakeDownload = 'some/path';
         const el = await fixture<SlIconButton>(
-          html` <sl-icon-button href="some/path" download="${fakeDownload}"></sl-icon-button> `
+          html` <i2c-icon-button href="some/path" download="${fakeDownload}"></i2c-icon-button> `
         );
 
         expect(el.shadowRoot?.querySelector(`a[download="${fakeDownload}"]`)).to.exist;
@@ -97,14 +97,14 @@ describe('<sl-icon-button>', () => {
   describe('when label is present', () => {
     it('the internal aria-label attribute is set to the provided label when rendering a button', async () => {
       const fakeLabel = 'some label';
-      const el = await fixture<SlIconButton>(html` <sl-icon-button label="${fakeLabel}"></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button label="${fakeLabel}"></i2c-icon-button> `);
       expect(el.shadowRoot?.querySelector(`button[aria-label="${fakeLabel}"]`)).to.exist;
     });
 
     it('the internal aria-label attribute is set to the provided label when rendering an anchor', async () => {
       const fakeLabel = 'some label';
       const el = await fixture<SlIconButton>(
-        html` <sl-icon-button href="some/path" label="${fakeLabel}"></sl-icon-button> `
+        html` <i2c-icon-button href="some/path" label="${fakeLabel}"></i2c-icon-button> `
       );
       expect(el.shadowRoot?.querySelector(`a[aria-label="${fakeLabel}"]`)).to.exist;
     });
@@ -112,24 +112,24 @@ describe('<sl-icon-button>', () => {
 
   describe('when disabled is present', () => {
     it('the internal button has a disabled attribute when rendering a button', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button disabled></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button disabled></i2c-icon-button> `);
       expect(el.shadowRoot?.querySelector(`button[disabled]`)).to.exist;
     });
 
     it('the internal anchor has an aria-disabled attribute when rendering an anchor', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button href="some/path" disabled></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button href="some/path" disabled></i2c-icon-button> `);
       expect(el.shadowRoot?.querySelector(`a[aria-disabled="true"]`)).to.exist;
     });
   });
 
   describe('when using methods', () => {
-    it('should emit sl-focus and sl-blur when the button is focused and blurred', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button></sl-icon-button> `);
+    it('should emit i2c-focus and i2c-blur when the button is focused and blurred', async () => {
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button></i2c-icon-button> `);
       const focusHandler = sinon.spy();
       const blurHandler = sinon.spy();
 
-      el.addEventListener('sl-focus', focusHandler);
-      el.addEventListener('sl-blur', blurHandler);
+      el.addEventListener('i2c-focus', focusHandler);
+      el.addEventListener('i2c-blur', blurHandler);
 
       el.focus();
       await waitUntil(() => focusHandler.calledOnce);
@@ -142,7 +142,7 @@ describe('<sl-icon-button>', () => {
     });
 
     it('should emit a click event when calling click()', async () => {
-      const el = await fixture<SlIconButton>(html` <sl-icon-button></sl-icon-button> `);
+      const el = await fixture<SlIconButton>(html` <i2c-icon-button></i2c-icon-button> `);
       const clickHandler = sinon.spy();
 
       el.addEventListener('click', clickHandler);

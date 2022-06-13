@@ -1,11 +1,11 @@
 # Switch
 
-[component-header:sl-switch]
+[component-header:i2c-switch]
 
 Switches allow the user to toggle an option on or off.
 
 ```html preview
-<sl-switch>Switch</sl-switch>
+<i2c-switch>Switch</i2c-switch>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => <SlSwitch>Switch</SlSwitch>;
 Use the `checked` attribute to activate the switch.
 
 ```html preview
-<sl-switch checked>Checked</sl-switch>
+<i2c-switch checked>Checked</i2c-switch>
 ```
 
 ```jsx react
@@ -37,7 +37,7 @@ const App = () => <SlSwitch checked>Checked</SlSwitch>;
 Use the `disabled` attribute to disable the switch.
 
 ```html preview
-<sl-switch disabled>Disabled</sl-switch>
+<i2c-switch disabled>Disabled</i2c-switch>
 ```
 
 ```jsx react
@@ -51,7 +51,7 @@ const App = () => <SlSwitch disabled>Disabled</SlSwitch>;
 Use the available custom properties to make the switch a different size.
 
 ```html preview
-<sl-switch style="--width: 80px; --height: 32px; --thumb-size: 26px;">Really big</sl-switch>
+<i2c-switch style="--width: 80px; --height: 32px; --thumb-size: 26px;">Really big</i2c-switch>
 ```
 
 ```jsx react
@@ -68,4 +68,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-switch]
+[component-metadata:i2c-switch]

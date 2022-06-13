@@ -11,14 +11,14 @@ import styles from './icon-button.styles';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency i2c-icon
  *
- * @event sl-blur - Emitted when the icon button loses focus.
- * @event sl-focus - Emitted when the icon button gains focus.
+ * @event i2c-blur - Emitted when the icon button loses focus.
+ * @event i2c-focus - Emitted when the icon button gains focus.
  *
  * @csspart base - The component's internal wrapper.
  */
-@customElement('sl-icon-button')
+@customElement('i2c-icon-button')
 export default class SlIconButton extends LitElement {
   static styles = styles;
 
@@ -70,12 +70,12 @@ export default class SlIconButton extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleClick(event: MouseEvent) {
@@ -112,13 +112,13 @@ export default class SlIconButton extends LitElement {
         @focus=${this.handleFocus}
         @click=${this.handleClick}
       >
-        <sl-icon
+        <i2c-icon
           class="icon-button__icon"
           name=${ifDefined(this.name)}
           library=${ifDefined(this.library)}
           src=${ifDefined(this.src)}
           aria-hidden="true"
-        ></sl-icon>
+        ></i2c-icon>
       </${tag}>
     `;
   }
@@ -126,6 +126,6 @@ export default class SlIconButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon-button': SlIconButton;
+    'i2c-icon-button': SlIconButton;
   }
 }

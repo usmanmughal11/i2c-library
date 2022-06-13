@@ -11,7 +11,7 @@ import styles from './divider.styles';
  * @cssproperty --width - The width of the divider.
  * @cssproperty --spacing - The spacing of the divider.
  */
-@customElement('sl-divider')
+@customElement('i2c-divider')
 export default class SlDivider extends LitElement {
   static styles = styles;
 
@@ -30,6 +30,6 @@ export default class SlDivider extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-divider': SlDivider;
+    'i2c-divider': SlDivider;
   }
 }

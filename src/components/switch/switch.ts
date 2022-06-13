@@ -14,9 +14,9 @@ import styles from './switch.styles';
  *
  * @slot - The switch's label.
  *
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-change - Emitted when the control's checked state changes.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event i2c-blur - Emitted when the control loses focus.
+ * @event i2c-change - Emitted when the control's checked state changes.
+ * @event i2c-focus - Emitted when the control gains focus.
  *
  * @csspart base - The component's internal wrapper.
  * @csspart control - The switch control.
@@ -27,7 +27,7 @@ import styles from './switch.styles';
  * @cssproperty --height - The height of the switch.
  * @cssproperty --thumb-size - The size of the thumb.
  */
-@customElement('sl-switch')
+@customElement('i2c-switch')
 export default class SlSwitch extends LitElement {
   static styles = styles;
 
@@ -90,7 +90,7 @@ export default class SlSwitch extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'i2c-blur');
   }
 
   @watch('checked', { waitUntilFirstUpdate: true })
@@ -101,7 +101,7 @@ export default class SlSwitch extends LitElement {
 
   handleClick() {
     this.checked = !this.checked;
-    emit(this, 'sl-change');
+    emit(this, 'i2c-change');
   }
 
   @watch('disabled', { waitUntilFirstUpdate: true })
@@ -113,20 +113,20 @@ export default class SlSwitch extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'i2c-focus');
   }
 
   handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
       this.checked = false;
-      emit(this, 'sl-change');
+      emit(this, 'i2c-change');
     }
 
     if (event.key === 'ArrowRight') {
       event.preventDefault();
       this.checked = true;
-      emit(this, 'sl-change');
+      emit(this, 'i2c-change');
     }
   }
 
@@ -171,6 +171,6 @@ export default class SlSwitch extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-switch': SlSwitch;
+    'i2c-switch': SlSwitch;
   }
 }

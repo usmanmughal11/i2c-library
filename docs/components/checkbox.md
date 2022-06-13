@@ -1,11 +1,11 @@
 # Checkbox
 
-[component-header:sl-checkbox]
+[component-header:i2c-checkbox]
 
 Checkboxes allow the user to toggle an option on or off.
 
 ```html preview
-<sl-checkbox>Checkbox</sl-checkbox>
+<i2c-checkbox>Checkbox</i2c-checkbox>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => <SlCheckbox>Checkbox</SlCheckbox>;
 Use the `checked` attribute to activate the checkbox.
 
 ```html preview
-<sl-checkbox checked>Checked</sl-checkbox>
+<i2c-checkbox checked>Checked</i2c-checkbox>
 ```
 
 ```jsx react
@@ -37,7 +37,7 @@ const App = () => <SlCheckbox checked>Checked</SlCheckbox>;
 Use the `indeterminate` attribute to make the checkbox indeterminate.
 
 ```html preview
-<sl-checkbox indeterminate>Indeterminate</sl-checkbox>
+<i2c-checkbox indeterminate>Indeterminate</i2c-checkbox>
 ```
 
 ```jsx react
@@ -51,7 +51,7 @@ const App = () => <SlCheckbox indeterminate>Indeterminate</SlCheckbox>;
 Use the `disabled` attribute to disable the checkbox.
 
 ```html preview
-<sl-checkbox disabled>Disabled</sl-checkbox>
+<i2c-checkbox disabled>Disabled</i2c-checkbox>
 ```
 
 ```jsx react
@@ -66,20 +66,20 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```html preview
 <form class="custom-validity">
-  <sl-checkbox>Check me</sl-checkbox>
+  <i2c-checkbox>Check me</i2c-checkbox>
   <br />
-  <sl-button type="submit" variant="primary" style="margin-top: 1rem;">Submit</sl-button>
+  <i2c-button type="submit" variant="primary" style="margin-top: 1rem;">Submit</i2c-button>
 </form>
 <script>
   const form = document.querySelector('.custom-validity');
-  const checkbox = form.querySelector('sl-checkbox');
+  const checkbox = form.querySelector('i2c-checkbox');
   const errorMessage = `Don't forget to check me!`;
   // Set initial validity as soon as the element is defined
-  customElements.whenDefined('sl-checkbox').then(() => {
+  customElements.whenDefined('i2c-checkbox').then(() => {
     checkbox.setCustomValidity(errorMessage);
   });
   // Update validity on change
-  checkbox.addEventListener('sl-change', () => {
+  checkbox.addEventListener('i2c-change', () => {
     checkbox.setCustomValidity(checkbox.checked ? '' : errorMessage);
   });
   // Handle submit
@@ -120,4 +120,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-checkbox]
+[component-metadata:i2c-checkbox]

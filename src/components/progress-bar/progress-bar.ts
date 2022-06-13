@@ -21,7 +21,7 @@ import styles from './progress-bar.styles';
  * @cssproperty --indicator-color - The indicator color.
  * @cssproperty --label-color - The label color.
  */
-@customElement('sl-progress-bar')
+@customElement('i2c-progress-bar')
 export default class SlProgressBar extends LitElement {
   static styles = styles;
   private readonly localize = new LocalizeController(this);
@@ -69,6 +69,6 @@ export default class SlProgressBar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-progress-bar': SlProgressBar;
+    'i2c-progress-bar': SlProgressBar;
   }
 }

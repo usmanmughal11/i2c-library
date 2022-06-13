@@ -1,21 +1,21 @@
 # Menu
 
-[component-header:sl-menu]
+[component-header:i2c-menu]
 
 Menus provide a list of options for the user to choose from.
 
 You can use [menu items](/components/menu-item), [menu labels](/components/menu-label), and [dividers](/components/divider) to compose a menu. Menus support keyboard interactions, including type-to-select an option.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item value="undo">Undo</sl-menu-item>
-  <sl-menu-item value="redo">Redo</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="cut">Cut</sl-menu-item>
-  <sl-menu-item value="copy">Copy</sl-menu-item>
-  <sl-menu-item value="paste">Paste</sl-menu-item>
-  <sl-menu-item value="delete">Delete</sl-menu-item>
-</sl-menu>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-item value="undo">Undo</i2c-menu-item>
+  <i2c-menu-item value="redo">Redo</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-item value="cut">Cut</i2c-menu-item>
+  <i2c-menu-item value="copy">Copy</i2c-menu-item>
+  <i2c-menu-item value="paste">Paste</i2c-menu-item>
+  <i2c-menu-item value="delete">Delete</i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -36,4 +36,4 @@ const App = () => (
 
 ?> Menus are intended for system menus (dropdown menus, select menus, context menus, etc.). They should not be mistaken for navigation menus which serve a different purpose and have a different semantic meaning. If you're building navigation, use `<nav>` and `<a>` elements instead.
 
-[component-metadata:sl-menu]
+[component-metadata:i2c-menu]

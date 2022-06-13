@@ -1,21 +1,21 @@
 # Menu Label
 
-[component-header:sl-menu-label]
+[component-header:i2c-menu-label]
 
 Menu labels are used to describe a group of menu items.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-label>Fruits</sl-menu-label>
-  <sl-menu-item value="apple">Apple</sl-menu-item>
-  <sl-menu-item value="banana">Banana</sl-menu-item>
-  <sl-menu-item value="orange">Orange</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-label>Vegetables</sl-menu-label>
-  <sl-menu-item value="broccoli">Broccoli</sl-menu-item>
-  <sl-menu-item value="carrot">Carrot</sl-menu-item>
-  <sl-menu-item value="zucchini">Zucchini</sl-menu-item>
-</sl-menu>
+<i2c-menu style="max-width: 200px;">
+  <i2c-menu-label>Fruits</i2c-menu-label>
+  <i2c-menu-item value="apple">Apple</i2c-menu-item>
+  <i2c-menu-item value="banana">Banana</i2c-menu-item>
+  <i2c-menu-item value="orange">Orange</i2c-menu-item>
+  <i2c-divider></i2c-divider>
+  <i2c-menu-label>Vegetables</i2c-menu-label>
+  <i2c-menu-item value="broccoli">Broccoli</i2c-menu-item>
+  <i2c-menu-item value="carrot">Carrot</i2c-menu-item>
+  <i2c-menu-item value="zucchini">Zucchini</i2c-menu-item>
+</i2c-menu>
 ```
 
 ```jsx react
@@ -36,4 +36,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-menu-label]
+[component-metadata:i2c-menu-label]

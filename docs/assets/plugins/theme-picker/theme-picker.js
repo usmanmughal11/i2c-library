@@ -25,13 +25,13 @@
         localStorage.setItem('theme', theme);
 
         // Update the UI
-        [...menu.querySelectorAll('sl-menu-item')].map(item => (item.checked = item.getAttribute('value') === theme));
+        [...menu.querySelectorAll('i2c-menu-item')].map(item => (item.checked = item.getAttribute('value') === theme));
         menuIcon.name = isDark() ? 'moon' : 'sun';
 
         // Toggle the dark mode class without transitions
         document.body.appendChild(noTransitions);
         requestAnimationFrame(() => {
-          document.documentElement.classList.toggle('sl-theme-dark', isDark());
+          document.documentElement.classList.toggle('i2c-theme-dark', isDark());
           requestAnimationFrame(() => document.body.removeChild(noTransitions));
         });
       }
@@ -39,26 +39,26 @@
       let theme = getTheme();
 
       // Generate the theme picker dropdown
-      const dropdown = document.createElement('sl-dropdown');
+      const dropdown = document.createElement('i2c-dropdown');
       dropdown.classList.add('theme-picker');
       dropdown.innerHTML = `
-        <sl-button size="small" pill slot="trigger" caret>
-          <sl-icon name="sun" label="Select Theme"></sl-icon>
-        </sl-button>
-        <sl-menu>
-          <sl-menu-label>Toggle <kbd>\\</kbd></sl-menu-label>
-          <sl-menu-item value="light">Light</sl-menu-item>
-          <sl-menu-item value="dark">Dark</sl-menu-item>
-          <sl-divider></sl-divider>
-          <sl-menu-item value="auto">Auto</sl-menu-item>
-        </sl-menu>
+        <i2c-button size="small" pill slot="trigger" caret>
+          <i2c-icon name="sun" label="Select Theme"></i2c-icon>
+        </i2c-button>
+        <i2c-menu>
+          <i2c-menu-label>Toggle <kbd>\\</kbd></i2c-menu-label>
+          <i2c-menu-item value="light">Light</i2c-menu-item>
+          <i2c-menu-item value="dark">Dark</i2c-menu-item>
+          <i2c-divider></i2c-divider>
+          <i2c-menu-item value="auto">Auto</i2c-menu-item>
+        </i2c-menu>
       `;
       document.querySelector('.sidebar-toggle').insertAdjacentElement('afterend', dropdown);
 
       // Listen for selections
-      const menu = dropdown.querySelector('sl-menu');
-      const menuIcon = dropdown.querySelector('sl-icon');
-      menu.addEventListener('sl-select', event => setTheme(event.detail.item.value));
+      const menu = dropdown.querySelector('i2c-menu');
+      const menuIcon = dropdown.querySelector('i2c-icon');
+      menu.addEventListener('i2c-select', event => setTheme(event.detail.item.value));
 
       // Update the theme when the preference changes
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => setTheme(theme));

@@ -1,6 +1,6 @@
 # Tooltip
 
-[component-header:sl-tooltip]
+[component-header:i2c-tooltip]
 
 Tooltips display additional information based on a specific action.
 
@@ -9,9 +9,9 @@ A tooltip's target is its _first child element_, so you should only wrap one ele
 Tooltips use `display: contents` so they won't interfere with how elements are positioned in a flex or grid layout.
 
 ```html preview
-<sl-tooltip content="This is a tooltip">
-  <sl-button>Hover Me</sl-button>
-</sl-tooltip>
+<i2c-tooltip content="This is a tooltip">
+  <i2c-button>Hover Me</i2c-button>
+</i2c-tooltip>
 ```
 
 ```jsx react
@@ -33,61 +33,61 @@ Use the `placement` attribute to set the preferred placement of the tooltip.
 ```html preview
 <div class="tooltip-placement-example">
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="top-start" placement="top-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="top-start" placement="top-start">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="top" placement="top">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="top" placement="top">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="top-end" placement="top-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="top-end" placement="top-end">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left-start" placement="left-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="left-start" placement="left-start">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="right-start" placement="right-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="right-start" placement="right-start">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left" placement="left">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="left" placement="left">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="right" placement="right">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="right" placement="right">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left-end" placement="left-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="left-end" placement="left-end">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="right-end" placement="right-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="right-end" placement="right-end">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="bottom-start" placement="bottom-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="bottom-start" placement="bottom-start">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="bottom" placement="bottom">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="bottom" placement="bottom">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
 
-    <sl-tooltip content="bottom-end" placement="bottom-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <i2c-tooltip content="bottom-end" placement="bottom-end">
+      <i2c-button></i2c-button>
+    </i2c-tooltip>
   </div>
 </div>
 
@@ -102,21 +102,21 @@ Use the `placement` attribute to set the preferred placement of the tooltip.
     clear: both;
   }
 
-  .tooltip-placement-example sl-button {
+  .tooltip-placement-example i2c-button {
     float: left;
     width: 2.5rem;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-  .tooltip-placement-example-row:nth-child(1) sl-tooltip:first-child sl-button,
-  .tooltip-placement-example-row:nth-child(5) sl-tooltip:first-child sl-button {
+  .tooltip-placement-example-row:nth-child(1) i2c-tooltip:first-child i2c-button,
+  .tooltip-placement-example-row:nth-child(5) i2c-tooltip:first-child i2c-button {
     margin-left: calc(40px + 0.25rem);
   }
 
-  .tooltip-placement-example-row:nth-child(2) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(3) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(4) sl-tooltip:nth-child(2) sl-button {
+  .tooltip-placement-example-row:nth-child(2) i2c-tooltip:nth-child(2) i2c-button,
+  .tooltip-placement-example-row:nth-child(3) i2c-tooltip:nth-child(2) i2c-button,
+  .tooltip-placement-example-row:nth-child(4) i2c-tooltip:nth-child(2) i2c-button {
     margin-left: calc((40px * 3) + (0.25rem * 3));
   }
 </style>
@@ -136,21 +136,21 @@ const css = `
     clear: both;
   }
 
-  .tooltip-placement-example sl-button {
+  .tooltip-placement-example i2c-button {
     float: left;
     width: 2.5rem;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-  .tooltip-placement-example-row:nth-child(1) sl-tooltip:first-child sl-button,
-  .tooltip-placement-example-row:nth-child(5) sl-tooltip:first-child sl-button {
+  .tooltip-placement-example-row:nth-child(1) i2c-tooltip:first-child i2c-button,
+  .tooltip-placement-example-row:nth-child(5) i2c-tooltip:first-child i2c-button {
     margin-left: calc(40px + 0.25rem);
   }
 
-  .tooltip-placement-example-row:nth-child(2) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(3) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(4) sl-tooltip:nth-child(2) sl-button {
+  .tooltip-placement-example-row:nth-child(2) i2c-tooltip:nth-child(2) i2c-button,
+  .tooltip-placement-example-row:nth-child(3) i2c-tooltip:nth-child(2) i2c-button,
+  .tooltip-placement-example-row:nth-child(4) i2c-tooltip:nth-child(2) i2c-button {
     margin-left: calc((40px * 3) + (0.25rem * 3));
   }
 `;
@@ -227,9 +227,9 @@ const App = () => (
 Set the `trigger` attribute to `click` to toggle the tooltip on click instead of hover.
 
 ```html preview
-<sl-tooltip content="Click again to dismiss" trigger="click">
-  <sl-button>Click to Toggle</sl-button>
-</sl-tooltip>
+<i2c-tooltip content="Click again to dismiss" trigger="click">
+  <i2c-button>Click to Toggle</i2c-button>
+</i2c-tooltip>
 ```
 
 ```jsx react
@@ -247,11 +247,11 @@ const App = () => (
 Tooltips can be controller programmatically by setting the `trigger` attribute to `manual`. Use the `open` attribute to control when the tooltip is shown.
 
 ```html preview
-<sl-button style="margin-right: 4rem;">Toggle Manually</sl-button>
+<i2c-button style="margin-right: 4rem;">Toggle Manually</i2c-button>
 
-<sl-tooltip content="This is an avatar" trigger="manual" class="manual-tooltip">
-  <sl-avatar label="User"></sl-avatar>
-</sl-tooltip>
+<i2c-tooltip content="This is an avatar" trigger="manual" class="manual-tooltip">
+  <i2c-avatar label="User"></i2c-avatar>
+</i2c-tooltip>
 
 <script>
   const tooltip = document.querySelector('.manual-tooltip');
@@ -284,17 +284,17 @@ const App = () => {
 
 ### Remove Arrows
 
-You can control the size of tooltip arrows by overriding the `--sl-tooltip-arrow-size` design token.
+You can control the size of tooltip arrows by overriding the `--i2c-tooltip-arrow-size` design token.
 
 ```html preview
-<div style="--sl-tooltip-arrow-size: 0;">
-  <sl-tooltip content="This is a tooltip">
-    <sl-button>Above</sl-button>
-  </sl-tooltip>
+<div style="--i2c-tooltip-arrow-size: 0;">
+  <i2c-tooltip content="This is a tooltip">
+    <i2c-button>Above</i2c-button>
+  </i2c-tooltip>
 
-  <sl-tooltip content="This is a tooltip" placement="bottom">
-    <sl-button>Below</sl-button>
-  </sl-tooltip>
+  <i2c-tooltip content="This is a tooltip" placement="bottom">
+    <i2c-button>Below</i2c-button>
+  </i2c-tooltip>
 </div>
 ```
 
@@ -302,7 +302,7 @@ You can control the size of tooltip arrows by overriding the `--sl-tooltip-arrow
 import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
 
 const App = () => (
-  <div style={{ '--sl-tooltip-arrow-size': '0' }}>
+  <div style={{ '--i2c-tooltip-arrow-size': '0' }}>
     <SlTooltip content="This is a tooltip">
       <SlButton>Above</SlButton>
     </SlTooltip>
@@ -318,7 +318,7 @@ To override it globally, set it in a root block in your stylesheet after the Sho
 
 ```css
 :root {
-  --sl-tooltip-arrow-size: 0;
+  --i2c-tooltip-arrow-size: 0;
 }
 ```
 
@@ -327,11 +327,11 @@ To override it globally, set it in a root block in your stylesheet after the Sho
 Use the `content` slot to create tooltips with HTML content. Tooltips are designed only for text and presentational elements. Avoid placing interactive content, such as buttons, links, and form controls, in a tooltip.
 
 ```html preview
-<sl-tooltip>
+<i2c-tooltip>
   <div slot="content">I'm not <strong>just</strong> a tooltip, I'm a <em>tooltip</em> with HTML!</div>
 
-  <sl-button>Hover me</sl-button>
-</sl-tooltip>
+  <i2c-button>Hover me</i2c-button>
+</i2c-tooltip>
 ```
 
 ```jsx react
@@ -354,20 +354,20 @@ Tooltips will be clipped if they're inside a container that has `overflow: auto|
 
 ```html preview
 <div class="tooltip-hoist">
-  <sl-tooltip content="This is a tooltip">
-    <sl-button>No Hoist</sl-button>
-  </sl-tooltip>
+  <i2c-tooltip content="This is a tooltip">
+    <i2c-button>No Hoist</i2c-button>
+  </i2c-tooltip>
 
-  <sl-tooltip content="This is a tooltip" hoist>
-    <sl-button>Hoist</sl-button>
-  </sl-tooltip>
+  <i2c-tooltip content="This is a tooltip" hoist>
+    <i2c-button>Hoist</i2c-button>
+  </i2c-tooltip>
 </div>
 
 <style>
   .tooltip-hoist {
-    border: solid 2px var(--sl-panel-border-color);
+    border: solid 2px var(--i2c-panel-border-color);
     overflow: hidden;
-    padding: var(--sl-spacing-medium);
+    padding: var(--i2c-spacing-medium);
     position: relative;
   }
 </style>
@@ -378,9 +378,9 @@ import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
   .tooltip-hoist {
-    border: solid 2px var(--sl-panel-border-color);
+    border: solid 2px var(--i2c-panel-border-color);
     overflow: hidden;
-    padding: var(--sl-spacing-medium);
+    padding: var(--i2c-spacing-medium);
     position: relative;
   }
 `;
@@ -402,4 +402,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-tooltip]
+[component-metadata:i2c-tooltip]

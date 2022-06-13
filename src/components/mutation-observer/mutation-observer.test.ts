@@ -1,8 +1,8 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
-describe('<sl-mutation-observer>', () => {
+describe('<i2c-mutation-observer>', () => {
   it('should render a component', async () => {
-    const el = await fixture(html` <sl-mutation-observer></sl-mutation-observer> `);
+    const el = await fixture(html` <i2c-mutation-observer></i2c-mutation-observer> `);
 
     expect(el).to.exist;
   });

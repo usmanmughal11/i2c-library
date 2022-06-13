@@ -1,24 +1,24 @@
 # Split Panel
 
-[component-header:sl-split-panel]
+[component-header:i2c-split-panel]
 
 Split panels display two adjacent panels, allowing the user to reposition them.
 
 ```html preview
-<sl-split-panel>
+<i2c-split-panel>
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -30,7 +30,7 @@ const App = () => (
       slot="start"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -42,7 +42,7 @@ const App = () => (
       slot="end"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -61,20 +61,20 @@ const App = () => (
 To set the initial position, use the `position` attribute. If no position is provided, it will default to 50% of the available space.
 
 ```html preview
-<sl-split-panel position="75">
+<i2c-split-panel position="75">
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ### Initial Position in Pixels
@@ -82,20 +82,20 @@ To set the initial position, use the `position` attribute. If no position is pro
 To set the initial position in pixels instead of a percentage, use the `position-in-pixels` attribute.
 
 ```html preview
-<sl-split-panel position-in-pixels="150">
+<i2c-split-panel position-in-pixels="150">
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -107,7 +107,7 @@ const App = () => (
       slot="start"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -119,7 +119,7 @@ const App = () => (
       slot="end"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -136,20 +136,20 @@ const App = () => (
 Add the `vertical` attribute to render the split panel in a vertical orientation where the start and end panels are stacked. You also need to set a height when using the vertical orientation.
 
 ```html preview
-<sl-split-panel vertical style="height: 400px;">
+<i2c-split-panel vertical style="height: 400px;">
   <div
     slot="start"
-    style="height: 100%; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 100%; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 100%; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 100%; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -161,7 +161,7 @@ const App = () => (
       slot="start"
       style={{
         height: '100%',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -173,7 +173,7 @@ const App = () => (
       slot="end"
       style={{
         height: '100%',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -191,20 +191,20 @@ To snap panels at specific positions while dragging, add the `snap` attribute wi
 
 ```html preview
 <div class="split-panel-snapping">
-  <sl-split-panel snap="100px 50%">
+  <i2c-split-panel snap="100px 50%">
     <div
       slot="start"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       Start
     </div>
     <div
       slot="end"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       End
     </div>
-  </sl-split-panel>
+  </i2c-split-panel>
 
   <div class="split-panel-snapping-dots"></div>
 </div>
@@ -222,7 +222,7 @@ To snap panels at specific positions while dragging, add the `snap` attribute wi
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--sl-color-neutral-400);
+    background: var(--i2c-color-neutral-400);
     transform: translateX(-3px);
   }
 
@@ -252,7 +252,7 @@ const css = `
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--sl-color-neutral-400);
+    background: var(--i2c-color-neutral-400);
     transform: translateX(-3px);
   }
 
@@ -273,7 +273,7 @@ const App = () => (
           slot="start"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -285,7 +285,7 @@ const App = () => (
           slot="end"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -308,20 +308,20 @@ const App = () => (
 Add the `disabled` attribute to prevent the divider from being repositioned.
 
 ```html preview
-<sl-split-panel disabled>
+<i2c-split-panel disabled>
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -333,7 +333,7 @@ const App = () => (
       slot="start"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -345,7 +345,7 @@ const App = () => (
       slot="end"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -365,34 +365,34 @@ Try resizing the example below with each option and notice how the panels respon
 
 ```html preview
 <div class="split-panel-primary">
-  <sl-split-panel>
+  <i2c-split-panel>
     <div
       slot="start"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       Start
     </div>
     <div
       slot="end"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       End
     </div>
-  </sl-split-panel>
+  </i2c-split-panel>
 
-  <sl-select label="Primary Panel" value="" style="max-width: 200px; margin-top: 1rem;">
-    <sl-menu-item value="">None</sl-menu-item>
-    <sl-menu-item value="start">Start</sl-menu-item>
-    <sl-menu-item value="end">End</sl-menu-item>
-  </sl-select>
+  <i2c-select label="Primary Panel" value="" style="max-width: 200px; margin-top: 1rem;">
+    <i2c-menu-item value="">None</i2c-menu-item>
+    <i2c-menu-item value="start">Start</i2c-menu-item>
+    <i2c-menu-item value="end">End</i2c-menu-item>
+  </i2c-select>
 </div>
 
 <script>
   const container = document.querySelector('.split-panel-primary');
-  const splitPanel = container.querySelector('sl-split-panel');
-  const select = container.querySelector('sl-select');
+  const splitPanel = container.querySelector('i2c-split-panel');
+  const select = container.querySelector('i2c-select');
 
-  select.addEventListener('sl-change', () => (splitPanel.primary = select.value));
+  select.addEventListener('i2c-change', () => (splitPanel.primary = select.value));
 </script>
 ```
 
@@ -410,7 +410,7 @@ const App = () => {
           slot="start"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -422,7 +422,7 @@ const App = () => {
           slot="end"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -454,20 +454,20 @@ To set a minimum or maximum size of the primary panel, use the `--min` and `--ma
 This examples demonstrates how you can ensure both panels are at least 150px using `--min`, `--max`, and the `calc()` function.
 
 ```html preview
-<sl-split-panel style="--min: 150px; --max: calc(100% - 150px);">
+<i2c-split-panel style="--min: 150px; --max: calc(100% - 150px);">
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -479,7 +479,7 @@ const App = () => (
       slot="start"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -491,7 +491,7 @@ const App = () => (
       slot="end"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -508,30 +508,30 @@ const App = () => (
 Create complex layouts that can be repositioned independently by nesting split panels.
 
 ```html preview
-<sl-split-panel>
+<i2c-split-panel>
   <div
     slot="start"
-    style="height: 400px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 400px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div slot="end">
-    <sl-split-panel vertical style="height: 400px;">
+    <i2c-split-panel vertical style="height: 400px;">
       <div
         slot="start"
-        style="height: 100%; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+        style="height: 100%; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
       >
         Top
       </div>
       <div
         slot="end"
-        style="height: 100%; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+        style="height: 100%; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
       >
         Bottom
       </div>
-    </sl-split-panel>
+    </i2c-split-panel>
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -543,7 +543,7 @@ const App = () => (
       slot="start"
       style={{
         height: '400px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -557,7 +557,7 @@ const App = () => (
           slot="start"
           style={{
             height: '100%',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -569,7 +569,7 @@ const App = () => (
           slot="end"
           style={{
             height: '100%',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -588,21 +588,21 @@ const App = () => (
 You can target the `divider` part to apply CSS properties to the divider. To add a handle, slot an icon or another element into the `handle` slot. When customizing the divider, make sure to think about focus styles for keyboard users.
 
 ```html preview
-<sl-split-panel style="--divider-width: 20px;">
-  <sl-icon slot="handle" name="grip-vertical"></sl-icon>
+<i2c-split-panel style="--divider-width: 20px;">
+  <i2c-icon slot="handle" name="grip-vertical"></i2c-icon>
   <div
     slot="start"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     Start
   </div>
   <div
     slot="end"
-    style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+    style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
   >
     End
   </div>
-</sl-split-panel>
+</i2c-split-panel>
 ```
 
 ```jsx react
@@ -615,7 +615,7 @@ const App = () => (
       slot="start"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -627,7 +627,7 @@ const App = () => (
       slot="end"
       style={{
         height: '200px',
-        background: 'var(--sl-color-neutral-50)',
+        background: 'var(--i2c-color-neutral-50)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -643,47 +643,47 @@ Here's a more elaborate example that changes the divider's color and width and a
 
 ```html preview
 <div class="split-panel-handle">
-  <sl-split-panel>
-    <sl-icon slot="handle" name="grip-vertical"></sl-icon>
+  <i2c-split-panel>
+    <i2c-icon slot="handle" name="grip-vertical"></i2c-icon>
     <div
       slot="start"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       Start
     </div>
     <div
       slot="end"
-      style="height: 200px; background: var(--sl-color-neutral-50); display: flex; align-items: center; justify-content: center;"
+      style="height: 200px; background: var(--i2c-color-neutral-50); display: flex; align-items: center; justify-content: center;"
     >
       End
     </div>
-  </sl-split-panel>
+  </i2c-split-panel>
 </div>
 
 <style>
-  .split-panel-handle sl-split-panel {
+  .split-panel-handle i2c-split-panel {
     --divider-width: 2px;
   }
 
-  .split-panel-handle sl-split-panel::part(divider) {
-    background-color: var(--sl-color-pink-600);
+  .split-panel-handle i2c-split-panel::part(divider) {
+    background-color: var(--i2c-color-pink-600);
   }
 
-  .split-panel-handle sl-icon {
+  .split-panel-handle i2c-icon {
     position: absolute;
-    border-radius: var(--sl-border-radius-small);
-    background: var(--sl-color-pink-600);
-    color: var(--sl-color-neutral-0);
+    border-radius: var(--i2c-border-radius-small);
+    background: var(--i2c-color-pink-600);
+    color: var(--i2c-color-neutral-0);
     padding: 0.5rem 0.125rem;
   }
 
-  .split-panel-handle sl-split-panel::part(divider):focus-visible {
-    background-color: var(--sl-color-primary-600);
+  .split-panel-handle i2c-split-panel::part(divider):focus-visible {
+    background-color: var(--i2c-color-primary-600);
   }
 
-  .split-panel-handle sl-split-panel:focus-within sl-icon {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+  .split-panel-handle i2c-split-panel:focus-within i2c-icon {
+    background-color: var(--i2c-color-primary-600);
+    color: var(--i2c-color-neutral-0);
   }
 </style>
 ```
@@ -692,29 +692,29 @@ Here's a more elaborate example that changes the divider's color and width and a
 import { SlSplitPanel, SlIcon } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .split-panel-handle sl-split-panel {
+  .split-panel-handle i2c-split-panel {
     --divider-width: 2px;
   }
 
-  .split-panel-handle sl-split-panel::part(divider) {
-    background-color: var(--sl-color-pink-600);
+  .split-panel-handle i2c-split-panel::part(divider) {
+    background-color: var(--i2c-color-pink-600);
   }
 
-  .split-panel-handle sl-icon {
+  .split-panel-handle i2c-icon {
     position: absolute;
-    border-radius: var(--sl-border-radius-small);
-    background: var(--sl-color-pink-600);
-    color: var(--sl-color-neutral-0);
+    border-radius: var(--i2c-border-radius-small);
+    background: var(--i2c-color-pink-600);
+    color: var(--i2c-color-neutral-0);
     padding: .5rem .125rem;
   }
 
-  .split-panel-handle sl-split-panel::part(divider):focus-visible {
-    background-color: var(--sl-color-primary-600);
+  .split-panel-handle i2c-split-panel::part(divider):focus-visible {
+    background-color: var(--i2c-color-primary-600);
   }
 
-  .split-panel-handle sl-split-panel:focus-within sl-icon {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+  .split-panel-handle i2c-split-panel:focus-within i2c-icon {
+    background-color: var(--i2c-color-primary-600);
+    color: var(--i2c-color-neutral-0);
   }
 `;
 
@@ -727,7 +727,7 @@ const App = () => (
           slot="start"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -739,7 +739,7 @@ const App = () => (
           slot="end"
           style={{
             height: '200px',
-            background: 'var(--sl-color-neutral-50)',
+            background: 'var(--i2c-color-neutral-50)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -755,4 +755,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-split-panel]
+[component-metadata:i2c-split-panel]

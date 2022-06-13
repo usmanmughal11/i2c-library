@@ -1,17 +1,17 @@
 # Radio
 
-[component-header:sl-radio]
+[component-header:i2c-radio]
 
 Radios allow the user to select a single option from a group.
 
 Radios are designed to be used with [radio groups](/components/radio-group).
 
 ```html preview
-<sl-radio-group label="Select an option">
-  <sl-radio name="option" value="1" checked>Option 1</sl-radio>
-  <sl-radio name="option" value="2">Option 2</sl-radio>
-  <sl-radio name="option" value="3">Option 3</sl-radio>
-</sl-radio-group>
+<i2c-radio-group label="Select an option">
+  <i2c-radio name="option" value="1" checked>Option 1</i2c-radio>
+  <i2c-radio name="option" value="2">Option 2</i2c-radio>
+  <i2c-radio name="option" value="3">Option 3</i2c-radio>
+</i2c-radio-group>
 ```
 
 ```jsx react
@@ -41,11 +41,11 @@ const App = () => (
 To set the initial checked state, use the `checked` attribute.
 
 ```html preview
-<sl-radio-group label="Select an option">
-  <sl-radio name="option" value="1" checked>Option 1</sl-radio>
-  <sl-radio name="option" value="2">Option 2</sl-radio>
-  <sl-radio name="option" value="3">Option 3</sl-radio>
-</sl-radio-group>
+<i2c-radio-group label="Select an option">
+  <i2c-radio name="option" value="1" checked>Option 1</i2c-radio>
+  <i2c-radio name="option" value="2">Option 2</i2c-radio>
+  <i2c-radio name="option" value="3">Option 3</i2c-radio>
+</i2c-radio-group>
 ```
 
 ```jsx react
@@ -71,11 +71,11 @@ const App = () => (
 Use the `disabled` attribute to disable a radio.
 
 ```html preview
-<sl-radio-group label="Select an option">
-  <sl-radio name="option" value="1" checked>Option 1</sl-radio>
-  <sl-radio name="option" value="2">Option 2</sl-radio>
-  <sl-radio name="option" value="3" disabled>Option 3</sl-radio>
-</sl-radio-group>
+<i2c-radio-group label="Select an option">
+  <i2c-radio name="option" value="1" checked>Option 1</i2c-radio>
+  <i2c-radio name="option" value="2">Option 2</i2c-radio>
+  <i2c-radio name="option" value="3" disabled>Option 3</i2c-radio>
+</i2c-radio-group>
 ```
 
 ```jsx react
@@ -102,24 +102,24 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```html preview
 <form class="custom-validity">
-  <sl-radio-group label="Select an option">
-    <sl-radio name="a" value="1" checked>Not me</sl-radio>
-    <sl-radio name="a" value="2">Me neither</sl-radio>
-    <sl-radio name="a" value="3">Choose me</sl-radio>
-  </sl-radio-group>
+  <i2c-radio-group label="Select an option">
+    <i2c-radio name="a" value="1" checked>Not me</i2c-radio>
+    <i2c-radio name="a" value="2">Me neither</i2c-radio>
+    <i2c-radio name="a" value="3">Choose me</i2c-radio>
+  </i2c-radio-group>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <i2c-button type="submit" variant="primary">Submit</i2c-button>
 </form>
 <script>
   const form = document.querySelector('.custom-validity');
-  const radio = form.querySelectorAll('sl-radio')[2];
+  const radio = form.querySelectorAll('i2c-radio')[2];
   const errorMessage = 'You must choose this option';
   // Set initial validity as soon as the element is defined
-  customElements.whenDefined('sl-radio').then(() => {
+  customElements.whenDefined('i2c-radio').then(() => {
     radio.setCustomValidity(errorMessage);
   });
   // Update validity when a selection is made
-  form.addEventListener('sl-change', () => {
+  form.addEventListener('i2c-change', () => {
     const isValid = radio.checked;
     radio.setCustomValidity(isValid ? '' : errorMessage);
   });
@@ -169,4 +169,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-radio]
+[component-metadata:i2c-radio]

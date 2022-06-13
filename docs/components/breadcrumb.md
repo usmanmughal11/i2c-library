@@ -1,18 +1,18 @@
 # Breadcrumb
 
-[component-header:sl-breadcrumb]
+[component-header:i2c-breadcrumb]
 
 Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
 
 Breadcrumbs are usually placed before a page's main content with the current page shown last to indicate the user's position in the navigation.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
-</sl-breadcrumb>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item>Catalog</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Clothing</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Women's</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Shirts &amp; Tops</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -37,15 +37,15 @@ By default, breadcrumb items are rendered as buttons so you can use them to navi
 For websites, you'll probably want to use links instead. You can make any breadcrumb item a link by applying an `href` attribute to it. Now, when the user activates it, they'll be taken to the corresponding page — no event listeners required.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item href="https://example.com/home">Homepage</sl-breadcrumb-item>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item href="https://example.com/home">Homepage</i2c-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services">Our Services</sl-breadcrumb-item>
+  <i2c-breadcrumb-item href="https://example.com/home/services">Our Services</i2c-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital">Digital Media</sl-breadcrumb-item>
+  <i2c-breadcrumb-item href="https://example.com/home/services/digital">Digital Media</i2c-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital/web-design">Web Design</sl-breadcrumb-item>
-</sl-breadcrumb>
+  <i2c-breadcrumb-item href="https://example.com/home/services/digital/web-design">Web Design</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -69,30 +69,30 @@ const App = () => (
 Use the `separator` slot to change the separator that goes between breadcrumb items. Icons work well, but you can also use text or an image.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-icon name="dot" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+<i2c-breadcrumb>
+  <i2c-icon name="dot" slot="separator"></i2c-icon>
+  <i2c-breadcrumb-item>First</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Second</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Third</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 
 <br />
 
-<sl-breadcrumb>
-  <sl-icon name="arrow-right" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+<i2c-breadcrumb>
+  <i2c-icon name="arrow-right" slot="separator"></i2c-icon>
+  <i2c-breadcrumb-item>First</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Second</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Third</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 
 <br />
 
-<sl-breadcrumb>
+<i2c-breadcrumb>
   <span slot="separator">/</span>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+  <i2c-breadcrumb-item>First</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Second</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Third</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -102,7 +102,7 @@ import { SlBreadcrumb, SlBreadcrumbItem } from '@shoelace-style/shoelace/dist/re
 const App = () => (
   <>
     <SlBreadcrumb>
-      <sl-icon name="dot" slot="separator" />
+      <i2c-icon name="dot" slot="separator" />
       <SlBreadcrumbItem>First</SlBreadcrumbItem>
       <SlBreadcrumbItem>Second</SlBreadcrumbItem>
       <SlBreadcrumbItem>Third</SlBreadcrumbItem>
@@ -111,7 +111,7 @@ const App = () => (
     <br />
 
     <SlBreadcrumb>
-      <sl-icon name="arrow-right" slot="separator" />
+      <i2c-icon name="arrow-right" slot="separator" />
       <SlBreadcrumbItem>First</SlBreadcrumbItem>
       <SlBreadcrumbItem>Second</SlBreadcrumbItem>
       <SlBreadcrumbItem>Third</SlBreadcrumbItem>
@@ -134,14 +134,14 @@ const App = () => (
 Use the `prefix` slot to add content before any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item>
+    <i2c-icon slot="prefix" name="house"></i2c-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Articles</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Traveling</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Articles</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Traveling</i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -164,14 +164,14 @@ const App = () => (
 Use the `suffix` slot to add content after any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Documents</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Policies</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item>Documents</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Policies</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>
     Security
-    <sl-icon slot="suffix" name="shield-lock"></sl-icon>
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <i2c-icon slot="suffix" name="shield-lock"></i2c-icon>
+  </i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -194,24 +194,24 @@ const App = () => (
 Dropdown menus can be placed in a prefix or suffix slot to provide additional options.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Homepage</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Our Services</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Digital Media</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<i2c-breadcrumb>
+  <i2c-breadcrumb-item>Homepage</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Our Services</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>Digital Media</i2c-breadcrumb-item>
+  <i2c-breadcrumb-item>
     Web Design
-    <sl-dropdown slot="suffix">
-      <sl-button slot="trigger" size="small" circle>
-        <sl-icon label="More options" name="three-dots"></sl-icon>
-      </sl-button>
-      <sl-menu>
-        <sl-menu-item checked>Web Design</sl-menu-item>
-        <sl-menu-item>Web Development</sl-menu-item>
-        <sl-menu-item>Marketing</sl-menu-item>
-      </sl-menu>
-    </sl-dropdown>
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <i2c-dropdown slot="suffix">
+      <i2c-button slot="trigger" size="small" circle>
+        <i2c-icon label="More options" name="three-dots"></i2c-icon>
+      </i2c-button>
+      <i2c-menu>
+        <i2c-menu-item checked>Web Design</i2c-menu-item>
+        <i2c-menu-item>Web Development</i2c-menu-item>
+        <i2c-menu-item>Marketing</i2c-menu-item>
+      </i2c-menu>
+    </i2c-dropdown>
+  </i2c-breadcrumb-item>
+</i2c-breadcrumb>
 ```
 
 ```jsx react
@@ -247,4 +247,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-breadcrumb]
+[component-metadata:i2c-breadcrumb]
