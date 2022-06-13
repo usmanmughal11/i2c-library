@@ -2,7 +2,7 @@
 .cache
 docs/dist
 docs/search.json
-dist
+# dist
 examples
 node_modules
 src/react
