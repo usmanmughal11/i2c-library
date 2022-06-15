@@ -48,7 +48,7 @@ fs.mkdirSync(outdir, { recursive: true });
       target: 'es2017',
       entryPoints: [
         // The whole shebang
-        './src/i2cLibrary.ts',
+        './src/shoelace.ts',
         // Components
         ...(await globby('./src/components/**/!(*.(style|test)).ts')),
         // Translations

@@ -1,12 +1,12 @@
 import {
-  checkbox_styles_default
-} from "./chunk.MJSQ733I.js";
-import {
   l as l2
 } from "./chunk.OEDEK5QG.js";
 import {
   FormSubmitController
 } from "./chunk.S6I2SNDG.js";
+import {
+  checkbox_styles_default
+} from "./chunk.MJSQ733I.js";
 import {
   o
 } from "./chunk.H66XLZ2O.js";

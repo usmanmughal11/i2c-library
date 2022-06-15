@@ -6,6 +6,92 @@
   /*
    * Color Primitives
    */
+/* i2c blue */
+--i2c-blue-25:hsl(203, 80%, 98%);
+--i2c-blue-50:hsl(199, 64%, 92%);
+--i2c-blue-100:hsl(200, 65%, 87%);
+--i2c-blue-200:hsl(200, 67%, 81%);
+--i2c-blue-300:hsl(200, 70%, 75%);
+--i2c-blue-400:hsl(201, 72%, 70%);
+--i2c-blue-500:hsl(200, 74%, 64%);
+--i2c-blue-600:hsl(200, 76%, 59%);
+--i2c-blue-700:hsl(200, 57%, 47%);
+--i2c-blue-800:hsl(200, 60%, 35%);
+--i2c-blue-900:hsl(200, 63%, 24%);
+--i2c-blue-950:hsl(200, 63%, 35%);
+
+/* i2c Green */
+--i2c-green-25:	hsl(143, 50%, 97%);
+--i2c-green-50:	hsl(143, 49%, 88%);
+--i2c-green-100:	hsl(143, 51%, 80%);
+--i2c-green-200:	hsl(143, 53%, 72%);
+--i2c-green-300:	hsl(143, 55%, 63%);
+--i2c-green-400:	hsl(143, 57%, 55%);
+--i2c-green-500:hsl(142, 66%, 47%);
+--i2c-green-600:	hsl(143, 97%, 38%);
+--i2c-green-700:hsl(142, 100%, 31%);
+--i2c-green-800:hsl(141, 100%, 24%);
+--i2c-green-900:hsl(140, 100%, 16%);
+--i2c-green-950:hsl(140, 100%, 25%);
+
+/* i2c Red */
+--i2c-red-25:	hsl(12, 83%, 98%);
+--i2c-red-50:	hsl(11, 86%, 91%);
+--i2c-red-100:	hsl(11, 87%, 85%);
+--i2c-red-200:	hsl(11, 85%, 79%);
+--i2c-red-300:	hsl(10, 86%, 73%);
+--i2c-red-400:	hsl(11, 86%, 66%);
+--i2c-red-500:	hsl(11, 85%, 60%);
+--i2c-red-600:	hsl(11, 86%, 54%);
+--i2c-red-700:	hsl(10, 79%, 43%);
+--i2c-red-800:	hsl(10, 84%, 32%);
+--i2c-red-900:	hsl(11, 89%, 21%);
+--i2c-red-950:	hsl(11, 89%, 30%);
+
+/* i2c Orange */
+--i2c-orange-25:	hsl(36, 83%, 98%);
+--i2c-orange-50:	hsl(34, 86%, 92%);
+--i2c-orange-100:	hsl(34, 86%, 85%);
+--i2c-orange-200:	hsl(34, 87%, 79%);
+--i2c-orange-300:hsl(34, 87%, 73%);
+--i2c-orange-400:	hsl(34, 86%, 67%);
+--i2c-orange-500:	hsl(34, 86%, 61%);
+--i2c-orange-600:	hsl(34, 86%, 55%);
+--i2c-orange-700:	hsl(33, 75%, 44%);
+--i2c-orange-800:	hsl(34, 80%, 33%);
+--i2c-orange-900:	hsl(34, 84%, 22%);
+--i2c-orange-950:	hsl(34, 84%, 28%);
+
+/* i2c Black */
+--i2c-black-25:	hsl(0, 0%, 96%);
+--i2c-black-50:	hsl(0, 2%, 87%);
+--i2c-black-100:hsl(0, 1%, 79%);
+--i2c-black-200:	hsl(300, 1%, 70%);
+--i2c-black-300:	hsl(0, 1%, 62%);
+--i2c-black-400:	hsl(330, 1%, 54%);
+--i2c-black-500:hsl(330, 1%, 45%);
+--i2c-black-600:	hsl(340, 2%, 37%);
+--i2c-black-700:	hsl(330, 1%, 29%);
+--i2c-black-800:	hsl(0, 2%, 20%);
+--i2c-black-900:	hsl(340, 5%, 12%);
+--i2c-black-950:	hsl(340, 5%, 16%);
+
+/* i2c Gray */
+--i2c-gray-25:	hsl(240, 11%, 98%);
+--i2c-gray-50:	hsl(240, 11%, 93%);
+--i2c-gray-100:	hsl(232, 12%, 87%);
+--i2c-gray-200:	hsl(235, 12%, 82%);
+--i2c-gray-300:	hsl(236, 13%, 77%);
+--i2c-gray-400:	hsl(234, 14%, 72%);
+--i2c-gray-500:	hsl(237, 13%, 66%);
+--i2c-gray-600:	hsl(236, 14%, 61%);
+--i2c-gray-700:	hsl(235, 10%, 49%);
+--i2c-gray-800:	hsl(237, 10%, 37%);
+--i2c-gray-900:	hsl(235, 10%, 25%);
+--i2c-gray-950:	hsl(235, 10%, 30%);
+
+
+
 
   /* Gray */
   --i2c-color-gray-50: hsl(0 0% 97.5%);
@@ -245,18 +331,77 @@
    * Theme Tokens
    */
 
-  /* Primary */
-  --i2c-color-primary-50: var(--i2c-color-sky-50);
-  --i2c-color-primary-100: var(--i2c-color-sky-100);
-  --i2c-color-primary-200: var(--i2c-color-sky-200);
-  --i2c-color-primary-300: var(--i2c-color-sky-300);
-  --i2c-color-primary-400: var(--i2c-color-sky-400);
-  --i2c-color-primary-500: var(--i2c-color-sky-500);
-  --i2c-color-primary-600: var(--i2c-color-sky-600);
-  --i2c-color-primary-700: var(--i2c-color-sky-700);
-  --i2c-color-primary-800: var(--i2c-color-sky-800);
-  --i2c-color-primary-900: var(--i2c-color-sky-900);
-  --i2c-color-primary-950: var(--i2c-color-sky-950);
+
+
+  /* I2C Primary */
+  --i2c-primary-25: var(--i2c-blue-25);
+  --i2c-color-primary-50: var(--i2c-blue-50);
+  --i2c-color-primary-100: var(--i2c-blue-100);
+  --i2c-color-primary-200: var(--i2c-blue-200);
+  --i2c-color-primary-300: var(--i2c-blue-300);
+  --i2c-color-primary-400: var(--i2c-blue-400);
+  --i2c-color-primary-500: var(--i2c-blue-500);
+  --i2c-color-primary-600: var(--i2c-blue-600);
+  --i2c-color-primary-700: var(--i2c-blue-700);
+  --i2c-color-primary-800: var(--i2c-blue-800);
+  --i2c-color-primary-900: var(--i2c-blue-900);
+  --i2c-color-primary-950: var(--i2c-blue-950);
+
+  /* I2C Success */
+  --i2c-success-25: var(--i2c-green-25);
+  --i2c-success-50: var(--i2c-green-50);
+  --i2c-success-100: var(--i2c-green-100);
+  --i2c-success-200: var(--i2c-green-200);
+  --i2c-success-300: var(--i2c-green-300);
+  --i2c-success-400: var(--i2c-green-400);
+  --i2c-success-500: var(--i2c-green-500);
+  --i2c-success-600: var(--i2c-green-600);
+  --i2c-success-700: var(--i2c-green-700);
+  --i2c-success-800: var(--i2c-green-800);
+  --i2c-success-900: var(--i2c-green-900);
+  --i2c-success-950: var(--i2c-green-950);
+
+  /* I2C Warning */
+  --i2c-warning-50: var(--i2c-color-amber-50);
+  --i2c-warning-100: var(--i2c-color-amber-100);
+  --i2c-warning-200: var(--i2c-color-amber-200);
+  --i2c-warning-300: var(--i2c-color-amber-300);
+  --i2c-warning-400: var(--i2c-color-amber-400);
+  --i2c-warning-500: var(--i2c-color-amber-500);
+  --i2c-warning-600: var(--i2c-color-amber-600);
+  --i2c-warning-700: var(--i2c-color-amber-700);
+  --i2c-warning-800: var(--i2c-color-amber-800);
+  --i2c-warning-900: var(--i2c-color-amber-900);
+  --i2c-warning-950: var(--i2c-color-amber-950);
+
+  /* I2C Danger */
+  --i2c-danger-25: var(--i2c-red-25);
+  --i2c-danger-50: var(--i2c-red-50);
+  --i2c-danger-100: var(--i2c-red-100);
+  --i2c-danger-200: var(--i2c-red-200);
+  --i2c-danger-300: var(--i2c-red-300);
+  --i2c-danger-400: var(--i2c-red-400);
+  --i2c-danger-500: var(--i2c-red-500);
+  --i2c-danger-600: var(--i2c-red-600);
+  --i2c-danger-700: var(--i2c-red-700);
+  --i2c-danger-800: var(--i2c-red-800);
+  --i2c-danger-900: var(--i2c-red-900);
+  --i2c-danger-950: var(--i2c-red-950);
+
+  /* I2C Neutral */
+  --i2c-neutral-25: var(--i2c-gray-25);
+  --i2c-neutral-50: var(--i2c-gray-50);
+  --i2c-neutral-100: var(--i2c-gray-100);
+  --i2c-neutral-200: var(--i2c-gray-200);
+  --i2c-neutral-300: var(--i2c-gray-300);
+  --i2c-neutral-400: var(--i2c-gray-400);
+  --i2c-neutral-500: var(--i2c-gray-500);
+  --i2c-neutral-600: var(--i2c-gray-600);
+  --i2c-neutral-700: var(--i2c-gray-700);
+  --i2c-neutral-800: var(--i2c-gray-800);
+  --i2c-neutral-900: var(--i2c-gray-900);
+  --i2c-neutral-950: var(--i2c-gray-950);
+
 
   /* Success */
   --i2c-color-success-50: var(--i2c-color-green-50);
@@ -315,10 +460,10 @@
   --i2c-color-neutral-1000: hsl(0, 0%, 0%);
 
   /*
-   * Border radii
+   * Border radius
    */
 
-  --i2c-border-radius-small: 0.1875rem; /* 3px */
+  --i2c-border-radius-small: 0.125rem; /* 2px */
   --i2c-border-radius-medium: 0.25rem; /* 4px */
   --i2c-border-radius-large: 0.5rem; /* 8px */
   --i2c-border-radius-x-large: 1rem; /* 16px */
@@ -339,6 +484,35 @@
   /*
    * Spacings
    */
+   --i2c-spacing-0-5: 0.125rem; /* 2px */
+   --i2c-spacing-1: 0.25rem; /* 4px */
+   --i2c-spacing-1-5: 0.35rem; /* 6px */
+   --i2c-spacing-2: 0.5rem; /* 8px */
+   --i2c-spacing-2-5: 0.625rem; /* 10px */
+   --i2c-spacing-3: 0.75rem; /* 12px */
+   --i2c-spacing-3-5: 0.875rem; /* 14px */
+   --i2c-spacing-4: 1rem; /* 16px */
+   --i2c-spacing-4-5: 1.125rem; /* 18px */
+   --i2c-spacing-5: 1.25rem; /* 20px */
+   --i2c-spacing-5-5: 1.375rem; /* 22px */
+   --i2c-spacing-6: 1.5; /* 24px */
+   --i2c-spacing-7: 1.75rem; /* 28px */
+   --i2c-spacing-8: 2rem; /* 32px */
+   --i2c-spacing-9: 2.25rem; /* 36px */
+   --i2c-spacing-10: 2.5rem; /* 40px */
+   --i2c-spacing-11: 2.75rem; /* 44px */
+   --i2c-spacing-12: 3rem; /* 48px */
+   --i2c-spacing-13: 3.25rem; /* 52px */
+   --i2c-spacing-14: 3.5rem; /* 56px */
+   --i2c-spacing-15: 3.75rem; /* 60px */
+   --i2c-spacing-16: 4rem; /* 64px */
+   --i2c-spacing-17: 4.25rem; /* 68px */
+   --i2c-spacing-18: 4.5rem; /* 72px */
+   --i2c-spacing-19: 4.75rem; /* 76px */
+   --i2c-spacing-20: 5rem; /* 80px */
+
+
+
 
   --i2c-spacing-3x-small: 0.125rem; /* 2px */
   --i2c-spacing-2x-small: 0.25rem; /* 4px */
@@ -377,10 +551,11 @@
   --i2c-font-size-small: 0.875rem; /* 14px */
   --i2c-font-size-medium: 1rem; /* 16px */
   --i2c-font-size-large: 1.25rem; /* 20px */
-  --i2c-font-size-x-large: 1.5rem; /* 24px */
-  --i2c-font-size-2x-large: 2.25rem; /* 36px */
-  --i2c-font-size-3x-large: 3rem; /* 48px */
-  --i2c-font-size-4x-large: 4.5rem; /* 72px */
+  --i2c-font-size-large: 1.125rem; /* 20px */
+  --i2c-font-size-x-large: 1.25rem; /* 24px */
+  --i2c-font-size-2x-large: 1.75rem; /* 36px */
+  --i2c-font-size-3x-large: 2.5rem; /* 48px */
+  --i2c-font-size-4x-large: 4rem; /* 72px */
 
   /* Font weights */
   --i2c-font-weight-light: 300;
@@ -405,23 +580,27 @@
   /*
    * Forms
    */
+/* i2c Focus rings */
+--i2c-ring-1:;
 
   /* Focus rings */
   --i2c-focus-ring-color: var(--i2c-color-primary-600);
   --i2c-focus-ring-style: solid;
-  --i2c-focus-ring-width: 3px;
+  --i2c-focus-ring-width: var(--i2c-spacing-1);
   --i2c-focus-ring: var(--i2c-focus-ring-style) var(--i2c-focus-ring-width) var(--i2c-focus-ring-color);
   --i2c-focus-ring-offset: 1px;
 
   /* Buttons */
-  --i2c-button-font-size-small: var(--i2c-font-size-x-small);
+  --i2c-button-font-size-small: var(--i2c-font-size-small);
   --i2c-button-font-size-medium: var(--i2c-font-size-small);
   --i2c-button-font-size-large: var(--i2c-font-size-medium);
+  --i2c-button-font-size-x-large: var(--i2c-font-size-large);
 
   /* Inputs */
-  --i2c-input-height-small: 1.875rem; /* 30px */
-  --i2c-input-height-medium: 2.5rem; /* 40px */
+  --i2c-input-height-small: 2rem; /* 32px */
+  --i2c-input-height-medium: 2.75rem; /* 44px */
   --i2c-input-height-large: 3.125rem; /* 50px */
+  --i2c-input-height-x-large:3.5rem; /* 56px */
 
   --i2c-input-background-color: var(--i2c-color-neutral-0);
   --i2c-input-background-color-hover: var(--i2c-input-background-color);

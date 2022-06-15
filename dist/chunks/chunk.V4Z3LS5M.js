@@ -1,6 +1,6 @@
 import {
   SlCheckbox
-} from "./chunk.O63ZV2HF.js";
+} from "./chunk.ALZA23AD.js";
 
 // src/react/checkbox/index.ts
 import * as React from "react";

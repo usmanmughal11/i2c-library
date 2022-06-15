@@ -58,7 +58,7 @@ export default function (plop) {
       },
       {
         type: 'modify',
-        path: '../../src/i2cLibrary.ts',
+        path: '../../src/shoelace.ts',
         pattern: /\/\* plop:component \*\//,
         template: `export { default as {{ properCase tag }} } from './components/{{ tagWithoutPrefix tag }}/{{ tagWithoutPrefix tag }}';\n/* plop:component */`
       }

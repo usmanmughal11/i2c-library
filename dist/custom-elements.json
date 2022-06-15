@@ -416,119 +416,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/badge/badge.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "i2c-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "src/components/badge/badge.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -918,6 +805,119 @@
           "declaration": {
             "name": "getEasingNames",
             "module": "src/components/animation/animations.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/badge/badge.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "i2c-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "src/components/badge/badge.ts"
           }
         }
       ]

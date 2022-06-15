@@ -1,6 +1,6 @@
 import {
   SlDialog
-} from "./chunk.5SE6WE7N.js";
+} from "./chunk.7QLDF6NG.js";
 
 // src/react/dialog/index.ts
 import * as React from "react";

@@ -2,12 +2,12 @@ import {
   Modal
 } from "./chunk.BQLXYG6H.js";
 import {
-  dialog_styles_default
-} from "./chunk.LYIOWSOS.js";
-import {
   lockBodyScrolling,
   unlockBodyScrolling
 } from "./chunk.PW5AZSPR.js";
+import {
+  dialog_styles_default
+} from "./chunk.LYIOWSOS.js";
 import {
   animateTo,
   stopAnimations
