@@ -6,9 +6,9 @@ function setBasePath(path) {
 function getBasePath() {
   if (!basePath) {
     const scripts = [...document.getElementsByTagName("script")];
-    const configScript = scripts.find((script) => script.hasAttribute("data-i2clib"));
+    const configScript = scripts.find((script) => script.hasAttribute("data-shoelace"));
     if (configScript) {
-      setBasePath(configScript.getAttribute("data-i2clib"));
+      setBasePath(configScript.getAttribute("data-shoelace"));
     } else {
       const fallbackScript = scripts.find((s) => /i2cLibrary(\.min)?\.js($|\?)/.test(s.src));
       let path = "";

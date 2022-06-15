@@ -11,8 +11,8 @@ The easiest way to install i2c-Library is with the CDN. Just add the following t
 ```html
 <!-- https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/themes/light.css -->
 <!-- https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/shoelace.js -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/usmanmughal11/i2c-library@16a9d96/dist/shoelace.js" />
-<script type="module" src="https://cdn.jsdelivr.net/gh/usmanmughal11/i2c-library@16a9d96/dist/shoelace.js"></script>
+<link rel="stylesheet" href="https://webcomponents-qa.mycardplace.com/dist/themes/light.css" />
+<script type="module" src="https://webcomponents-qa.mycardplace.com/dist/i2cLibrary.js"></script>
 ```
 
 ?> If you're only using a handful of components, it will be more efficient to [cherry pick](#cherry-picking) the ones you need.
@@ -22,8 +22,8 @@ The easiest way to install i2c-Library is with the CDN. Just add the following t
 If you prefer to use the [dark theme](/getting-started/themes#dark-theme) instead, use this code and add `<html class="i2c-theme-dark">` to the page.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/themes/dark.css" />
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/shoelace.js"></script>
+<link rel="stylesheet" href="https://webcomponents-qa.mycardplace.com/dist/themes/dark.css" />
+<script type="module" src="https://webcomponents-qa.mycardplace.com/dist/i2cLibrary.js"></script>
 ```
 
 ### Light & Dark Theme
@@ -42,7 +42,7 @@ If you want to load the light or dark theme based on the user's `prefers-color-s
   href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/themes/dark.css"
   onload="document.documentElement.classList.add('i2c-theme-dark');"
 />
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/shoelace.js"></script>
+<script type="module" src="https://webcomponents-qa.mycardplace.com/dist/i2cLibrary.js"></script>
 ```
 
 Now you can [start using i2c-Library!](/getting-started/usage)
@@ -58,7 +58,7 @@ Here's an example that loads only the button component. Again, if you're not usi
 ```html
 <link rel="stylesheet" href="/path/to/shoelace/dist/themes/light.css" />
 
-<script type="module" data-shoelace="/path/to/shoelace/dist">
+<script type="module" data-i2clib="/path/to/shoelace/dist">
   import '@shoelace-style/shoelace/dist/components/button/button.js';
 
   // <i2c-button> is ready to use!
@@ -67,7 +67,7 @@ Here's an example that loads only the button component. Again, if you're not usi
 
 You can copy and paste the code to import a component from the "Importing" section of the component's documentation. Note that some components have dependencies that are automatically imported when you cherry pick. If a component has dependencies, they will be listed in the "Dependencies" section of its docs.
 
-!> Never cherry pick components or utilities from `shoelace.js` as this will cause the browser to load the entire library. Instead, cherry pick from specific modules as shown above.
+!> Never cherry pick components or utilities from `i2cLibrary.js` as this will cause the browser to load the entire library. Instead, cherry pick from specific modules as shown above.
 
 !> You will see files named `chunk.[hash].js` in the `chunks` directory. Never import these files directly, as they are generated and change from version to version.
 

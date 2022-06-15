@@ -22,7 +22,7 @@ export default {
     <html lang="en-US">
       <head></head>
       <body>
-        <script type="module" src="dist/shoelace.js"></script>
+        <script type="module" src="dist/i2cLibrary.js"></script>
         <script type="module" src="${testFramework}"></script>
       </body>
     </html>

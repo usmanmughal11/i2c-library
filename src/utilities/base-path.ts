@@ -16,20 +16,20 @@ export function setBasePath(path: string) {
  * (it probably makes the most sense to attach it to the i2c-Library script, but it could also be on a bundle). The value
  * can be a local folder or it can point to a CORS-enabled endpoint such as a CDN.
  *
- *  <script src="bundle.js" data-shoelace="/custom/base/path"></script>
+ *  <script src="bundle.js" data-i2clib="/custom/base/path"></script>
  *
  * Alternatively, you can set the base path manually using the exported setBasePath() function.
  */
 export function getBasePath() {
   if (!basePath) {
     const scripts = [...document.getElementsByTagName('script')] as HTMLScriptElement[];
-    const configScript = scripts.find(script => script.hasAttribute('data-shoelace'));
+    const configScript = scripts.find(script => script.hasAttribute('data-i2clib'));
 
     if (configScript) {
       // Use the data-i2c-Library attribute
-      setBasePath(configScript.getAttribute('data-shoelace')!);
+      setBasePath(configScript.getAttribute('data-i2clib')!);
     } else {
-      const fallbackScript = scripts.find(s => /shoelace(\.min)?\.js($|\?)/.test(s.src));
+      const fallbackScript = scripts.find(s => /i2cLibrary(\.min)?\.js($|\?)/.test(s.src));
       let path = '';
 
       if (fallbackScript) {

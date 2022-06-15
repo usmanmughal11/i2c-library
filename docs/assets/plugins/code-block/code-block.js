@@ -301,7 +301,7 @@
       // HTML templates
       if (!isReact) {
         htmlTemplate =
-          `<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${version}/dist/shoelace.js"></script>\n` +
+          `<script type="module" src="https://webcomponents-qa.mycardplace.com/dist/i2cLibrary.js"></script>\n` +
           `\n${htmlExample}`;
         jsTemplate = '';
       }

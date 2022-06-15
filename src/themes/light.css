@@ -334,7 +334,7 @@
 
 
   /* I2C Primary */
-  --i2c-primary-25: var(--i2c-blue-25);
+  --i2c-color-primary-25: var(--i2c-blue-25);
   --i2c-color-primary-50: var(--i2c-blue-50);
   --i2c-color-primary-100: var(--i2c-blue-100);
   --i2c-color-primary-200: var(--i2c-blue-200);
@@ -348,75 +348,20 @@
   --i2c-color-primary-950: var(--i2c-blue-950);
 
   /* I2C Success */
-  --i2c-success-25: var(--i2c-green-25);
-  --i2c-success-50: var(--i2c-green-50);
-  --i2c-success-100: var(--i2c-green-100);
-  --i2c-success-200: var(--i2c-green-200);
-  --i2c-success-300: var(--i2c-green-300);
-  --i2c-success-400: var(--i2c-green-400);
-  --i2c-success-500: var(--i2c-green-500);
-  --i2c-success-600: var(--i2c-green-600);
-  --i2c-success-700: var(--i2c-green-700);
-  --i2c-success-800: var(--i2c-green-800);
-  --i2c-success-900: var(--i2c-green-900);
-  --i2c-success-950: var(--i2c-green-950);
+  --i2c-color-success-25: var(--i2c-green-25);
+  --i2c-color-success-50: var(--i2c-green-50);
+  --i2c-color-success-100: var(--i2c-green-100);
+  --i2c-color-success-200: var(--i2c-green-200);
+  --i2c-color-success-300: var(--i2c-green-300);
+  --i2c-color-success-400: var(--i2c-green-400);
+  --i2c-color-success-500: var(--i2c-green-500);
+  --i2c-color-success-600: var(--i2c-green-600);
+  --i2c-color-success-700: var(--i2c-green-700);
+  --i2c-color-success-800: var(--i2c-green-800);
+  --i2c-color-success-900: var(--i2c-green-900);
+  --i2c-color-success-950: var(--i2c-green-950);
 
   /* I2C Warning */
-  --i2c-warning-50: var(--i2c-color-amber-50);
-  --i2c-warning-100: var(--i2c-color-amber-100);
-  --i2c-warning-200: var(--i2c-color-amber-200);
-  --i2c-warning-300: var(--i2c-color-amber-300);
-  --i2c-warning-400: var(--i2c-color-amber-400);
-  --i2c-warning-500: var(--i2c-color-amber-500);
-  --i2c-warning-600: var(--i2c-color-amber-600);
-  --i2c-warning-700: var(--i2c-color-amber-700);
-  --i2c-warning-800: var(--i2c-color-amber-800);
-  --i2c-warning-900: var(--i2c-color-amber-900);
-  --i2c-warning-950: var(--i2c-color-amber-950);
-
-  /* I2C Danger */
-  --i2c-danger-25: var(--i2c-red-25);
-  --i2c-danger-50: var(--i2c-red-50);
-  --i2c-danger-100: var(--i2c-red-100);
-  --i2c-danger-200: var(--i2c-red-200);
-  --i2c-danger-300: var(--i2c-red-300);
-  --i2c-danger-400: var(--i2c-red-400);
-  --i2c-danger-500: var(--i2c-red-500);
-  --i2c-danger-600: var(--i2c-red-600);
-  --i2c-danger-700: var(--i2c-red-700);
-  --i2c-danger-800: var(--i2c-red-800);
-  --i2c-danger-900: var(--i2c-red-900);
-  --i2c-danger-950: var(--i2c-red-950);
-
-  /* I2C Neutral */
-  --i2c-neutral-25: var(--i2c-gray-25);
-  --i2c-neutral-50: var(--i2c-gray-50);
-  --i2c-neutral-100: var(--i2c-gray-100);
-  --i2c-neutral-200: var(--i2c-gray-200);
-  --i2c-neutral-300: var(--i2c-gray-300);
-  --i2c-neutral-400: var(--i2c-gray-400);
-  --i2c-neutral-500: var(--i2c-gray-500);
-  --i2c-neutral-600: var(--i2c-gray-600);
-  --i2c-neutral-700: var(--i2c-gray-700);
-  --i2c-neutral-800: var(--i2c-gray-800);
-  --i2c-neutral-900: var(--i2c-gray-900);
-  --i2c-neutral-950: var(--i2c-gray-950);
-
-
-  /* Success */
-  --i2c-color-success-50: var(--i2c-color-green-50);
-  --i2c-color-success-100: var(--i2c-color-green-100);
-  --i2c-color-success-200: var(--i2c-color-green-200);
-  --i2c-color-success-300: var(--i2c-color-green-300);
-  --i2c-color-success-400: var(--i2c-color-green-400);
-  --i2c-color-success-500: var(--i2c-color-green-500);
-  --i2c-color-success-600: var(--i2c-color-green-600);
-  --i2c-color-success-700: var(--i2c-color-green-700);
-  --i2c-color-success-800: var(--i2c-color-green-800);
-  --i2c-color-success-900: var(--i2c-color-green-900);
-  --i2c-color-success-950: var(--i2c-color-green-950);
-
-  /* Warning */
   --i2c-color-warning-50: var(--i2c-color-amber-50);
   --i2c-color-warning-100: var(--i2c-color-amber-100);
   --i2c-color-warning-200: var(--i2c-color-amber-200);
@@ -429,31 +374,35 @@
   --i2c-color-warning-900: var(--i2c-color-amber-900);
   --i2c-color-warning-950: var(--i2c-color-amber-950);
 
-  /* Danger */
-  --i2c-color-danger-50: var(--i2c-color-red-50);
-  --i2c-color-danger-100: var(--i2c-color-red-100);
-  --i2c-color-danger-200: var(--i2c-color-red-200);
-  --i2c-color-danger-300: var(--i2c-color-red-300);
-  --i2c-color-danger-400: var(--i2c-color-red-400);
-  --i2c-color-danger-500: var(--i2c-color-red-500);
-  --i2c-color-danger-600: var(--i2c-color-red-600);
-  --i2c-color-danger-700: var(--i2c-color-red-700);
-  --i2c-color-danger-800: var(--i2c-color-red-800);
-  --i2c-color-danger-900: var(--i2c-color-red-900);
-  --i2c-color-danger-950: var(--i2c-color-red-950);
+  /* I2C Danger */
+  --i2c-color-danger-25: var(--i2c-red-25);
+  --i2c-color-danger-50: var(--i2c-red-50);
+  --i2c-color-danger-100: var(--i2c-red-100);
+  --i2c-color-danger-200: var(--i2c-red-200);
+  --i2c-color-danger-300: var(--i2c-red-300);
+  --i2c-color-danger-400: var(--i2c-red-400);
+  --i2c-color-danger-500: var(--i2c-red-500);
+  --i2c-color-danger-600: var(--i2c-red-600);
+  --i2c-color-danger-700: var(--i2c-red-700);
+  --i2c-color-danger-800: var(--i2c-red-800);
+  --i2c-color-danger-900: var(--i2c-red-900);
+  --i2c-color-danger-950: var(--i2c-red-950);
 
-  /* Neutral */
-  --i2c-color-neutral-50: var(--i2c-color-gray-50);
-  --i2c-color-neutral-100: var(--i2c-color-gray-100);
-  --i2c-color-neutral-200: var(--i2c-color-gray-200);
-  --i2c-color-neutral-300: var(--i2c-color-gray-300);
-  --i2c-color-neutral-400: var(--i2c-color-gray-400);
-  --i2c-color-neutral-500: var(--i2c-color-gray-500);
-  --i2c-color-neutral-600: var(--i2c-color-gray-600);
-  --i2c-color-neutral-700: var(--i2c-color-gray-700);
-  --i2c-color-neutral-800: var(--i2c-color-gray-800);
-  --i2c-color-neutral-900: var(--i2c-color-gray-900);
-  --i2c-color-neutral-950: var(--i2c-color-gray-950);
+  /* I2C Neutral */
+  --i2c-color-neutral-25: var(--i2c-gray-25);
+  --i2c-color-neutral-50: var(--i2c-gray-50);
+  --i2c-color-neutral-100: var(--i2c-gray-100);
+  --i2c-color-neutral-200: var(--i2c-gray-200);
+  --i2c-color-neutral-300: var(--i2c-gray-300);
+  --i2c-color-neutral-400: var(--i2c-gray-400);
+  --i2c-color-neutral-500: var(--i2c-gray-500);
+  --i2c-color-neutral-600: var(--i2c-gray-600);
+  --i2c-color-neutral-700: var(--i2c-gray-700);
+  --i2c-color-neutral-800: var(--i2c-gray-800);
+  --i2c-color-neutral-900: var(--i2c-gray-900);
+  --i2c-color-neutral-950: var(--i2c-gray-950);
+
+
 
   /* Neutral one-offs */
   --i2c-color-neutral-0: hsl(0, 0%, 100%);

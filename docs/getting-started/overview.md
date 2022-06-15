@@ -33,8 +33,8 @@
 Add the following code to your page.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/themes/light.css" />
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/shoelace.js"></script>
+<link rel="stylesheet" href="https://webcomponents-qa.mycardplace.com/dist/themes/light.css" />
+<script type="module" src="https://webcomponents-qa.mycardplace.com/dist/i2cLibrary.js"></script>
 ```
 
 Now you have access to all of i2c-Library's components! Try adding a button:

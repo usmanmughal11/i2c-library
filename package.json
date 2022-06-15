@@ -5,12 +5,12 @@
   "homepage": "https://github.com/shoelace-style/shoelace",
   "author": "Cory LaViska",
   "license": "MIT",
-  "main": "dist/shoelace.js",
-  "module": "dist/shoelace.js",
+  "main": "dist/i2cLibrary.js",
+  "module": "dist/i2cLibrary.js",
   "customElements": "dist/custom-elements.json",
   "web-types": "dist/web-types.json",
   "type": "module",
-  "types": "dist/shoelace.d.ts",
+  "types": "dist/i2cLibrary.d.ts",
   "files": [
     "dist"
   ],

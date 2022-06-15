@@ -670,7 +670,7 @@ This release changes the way components are registered if you're [cherry picking
 
 From now on, importing a component will register it automatically. The caveat is that bundlers may not tree shake the library properly if you import from `@shoelace-style/shoelace`, so the recommendation is to import components and utilities from their corresponding files instead.
 
-- 🚨 BREAKING: removed `all.shoelace.js` (use `shoelace.js` instead)
+- 🚨 BREAKING: removed `all.i2cLibrary.js` (use `i2cLibrary.js` instead)
 - 🚨 BREAKING: component modules now have a side effect, so bundlers may not tree shake properly when importing from `@shoelace-style/shoelace` (see the [installation page](/getting-started/installation?id=bundling) for more details and how to update)
 - Added `i2c-clear` event to `<i2c-select>`
 - Fixed a bug where dynamically changing menu items in `<i2c-select>` would cause the display label to be blank [#374](https://github.com/shoelace-style/shoelace/discussions/374)
@@ -738,12 +738,12 @@ The component API remains the same except for the changes noted below. Thanks fo
 - 🚨 BREAKING: moved the base stylesheet from `dist/shoelace.css` to `dist/themes/base.css`
 - 🚨 BREAKING: moved `icons` into `assets/icons` to make future assets easier to colocate
 - 🚨 BREAKING: changed `getSymbol` property in `<i2c-rating>` to `symbol` (it now accepts a string or a function that returns an icon name)
-- 🚨 BREAKING: renamed `setAssetPath()` to `setBasePath()` and added the ability to set the library's base path with a `data-shoelace` attribute (`setBasePath()` is exported from `utilities/base-path.js`)
+- 🚨 BREAKING: renamed `setAssetPath()` to `setBasePath()` and added the ability to set the library's base path with a `data-i2clib` attribute (`setBasePath()` is exported from `utilities/base-path.js`)
 - Fixed `min` and `max` types in `<i2c-input>` to allow numbers and strings [#330](https://github.com/shoelace-style/shoelace/issues/330)
 - Fixed a bug where `<i2c-checkbox>`, `<i2c-radio>`, and `<i2c-switch>` controls would shrink with long labels [#325](https://github.com/shoelace-style/shoelace/issues/325)
 - Fixed a bug in `<i2c-select>` where the dropdown menu wouldn't reposition when the box resized [#340](https://github.com/shoelace-style/shoelace/issues/340)
 - Fixed a bug where ignoring clicks and clicking the overlay would prevent the escape key from closing the dialog/drawer [#344](https://github.com/shoelace-style/shoelace/pull/344)
-- Removed the lazy loading dist (importing `shoelace.js` will load and register all components now)
+- Removed the lazy loading dist (importing `i2cLibrary.js` will load and register all components now)
 - Switched from Stencil to Shoemaker
 - Switched to a custom build powered by [esbuild](https://esbuild.github.io/)
 - Updated to Bootstrap Icons 1.4.0

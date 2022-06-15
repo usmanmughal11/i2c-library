@@ -1,7 +1,7 @@
 import {
   getBasePath,
   setBasePath
-} from "../chunks/chunk.B2DPRLWS.js";
+} from "../chunks/chunk.G5P4632Z.js";
 import "../chunks/chunk.K2NRSETB.js";
 export {
   getBasePath,
