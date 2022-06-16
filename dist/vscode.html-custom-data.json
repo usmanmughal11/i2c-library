@@ -18,44 +18,6 @@
       ]
     },
     {
-      "name": "i2c-alert",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods."
-        },
-        {
-          "name": "closable",
-          "description": "Makes the alert closable."
-        },
-        {
-          "name": "variant",
-          "description": "The alert's variant.",
-          "values": [
-            {
-              "name": "primary"
-            },
-            {
-              "name": "success"
-            },
-            {
-              "name": "neutral"
-            },
-            {
-              "name": "warning"
-            },
-            {
-              "name": "danger"
-            }
-          ]
-        },
-        {
-          "name": "duration",
-          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`."
-        }
-      ]
-    },
-    {
       "name": "i2c-animation",
       "attributes": [
         {
@@ -101,6 +63,44 @@
         {
           "name": "playback-rate",
           "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart."
+        }
+      ]
+    },
+    {
+      "name": "i2c-alert",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods."
+        },
+        {
+          "name": "closable",
+          "description": "Makes the alert closable."
+        },
+        {
+          "name": "variant",
+          "description": "The alert's variant.",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "warning"
+            },
+            {
+              "name": "danger"
+            }
+          ]
+        },
+        {
+          "name": "duration",
+          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`."
         }
       ]
     },

@@ -1,6 +1,6 @@
 import {
   SlTabPanel
-} from "./chunk.KBJDGPY2.js";
+} from "./chunk.GGI66GC2.js";
 
 // src/react/tab-panel/index.ts
 import * as React from "react";

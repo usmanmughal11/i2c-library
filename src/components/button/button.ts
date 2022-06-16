@@ -59,7 +59,7 @@ export default class SlButton extends LitElement {
     'default';
 
   /** The button's size. */
-  @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
+  @property({ reflect: true }) size: 'small' | 'medium' | 'large' | 'x-large' = 'medium';
 
   /** Draws the button with a caret for use with dropdowns, popovers, etc. */
   @property({ type: Boolean, reflect: true }) caret = false;
@@ -175,6 +175,7 @@ export default class SlButton extends LitElement {
           'button--small': this.size === 'small',
           'button--medium': this.size === 'medium',
           'button--large': this.size === 'large',
+          'button--xlarge': this.size === 'x-large',
           'button--caret': this.caret,
           'button--circle': this.circle,
           'button--disabled': this.disabled,

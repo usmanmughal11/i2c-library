@@ -1,9 +1,9 @@
 import {
-  tab_panel_styles_default
-} from "./chunk.PHWU3ZV3.js";
-import {
   autoIncrement
 } from "./chunk.KFR7NC2M.js";
+import {
+  tab_panel_styles_default
+} from "./chunk.PHWU3ZV3.js";
 import {
   e,
   n

@@ -108,7 +108,7 @@ fs.mkdirSync(outdir, { recursive: true });
       startPath: '/',
       port,
       logLevel: 'silent',
-      logPrefix: '[shoelace]',
+      logPrefix: '[i2c-Library]',
       logFileChanges: true,
       notify: false,
       single: true,

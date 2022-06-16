@@ -318,8 +318,8 @@
    * Border radii
    */
 
-  --i2c-border-radius-small: 0.1875rem; /* 3px */
-  --i2c-border-radius-medium: 0.25rem; /* 4px */
+   --i2c-border-radius-small: 0.125rem; /* 2px */
+   --i2c-border-radius-medium: 0.25rem; /* 4px */
   --i2c-border-radius-large: 0.5rem; /* 8px */
   --i2c-border-radius-x-large: 1rem; /* 16px */
 
@@ -339,6 +339,35 @@
   /*
    * Spacings
    */
+   --i2c-spacing-0-5: 0.125rem; /* 2px */
+   --i2c-spacing-1: 0.25rem; /* 4px */
+   --i2c-spacing-1-5: 0.35rem; /* 6px */
+   --i2c-spacing-2: 0.5rem; /* 8px */
+   --i2c-spacing-2-5: 0.625rem; /* 10px */
+   --i2c-spacing-3: 0.75rem; /* 12px */
+   --i2c-spacing-3-5: 0.875rem; /* 14px */
+   --i2c-spacing-4: 1rem; /* 16px */
+   --i2c-spacing-4-5: 1.125rem; /* 18px */
+   --i2c-spacing-5: 1.25rem; /* 20px */
+   --i2c-spacing-5-5: 1.375rem; /* 22px */
+   --i2c-spacing-6: 1.5; /* 24px */
+   --i2c-spacing-7: 1.75rem; /* 28px */
+   --i2c-spacing-8: 2rem; /* 32px */
+   --i2c-spacing-9: 2.25rem; /* 36px */
+   --i2c-spacing-10: 2.5rem; /* 40px */
+   --i2c-spacing-11: 2.75rem; /* 44px */
+   --i2c-spacing-12: 3rem; /* 48px */
+   --i2c-spacing-13: 3.25rem; /* 52px */
+   --i2c-spacing-14: 3.5rem; /* 56px */
+   --i2c-spacing-15: 3.75rem; /* 60px */
+   --i2c-spacing-16: 4rem; /* 64px */
+   --i2c-spacing-17: 4.25rem; /* 68px */
+   --i2c-spacing-18: 4.5rem; /* 72px */
+   --i2c-spacing-19: 4.75rem; /* 76px */
+   --i2c-spacing-20: 5rem; /* 80px */
+
+
+
 
   --i2c-spacing-3x-small: 0.125rem; /* 2px */
   --i2c-spacing-2x-small: 0.25rem; /* 4px */
@@ -350,6 +379,7 @@
   --i2c-spacing-2x-large: 2.25rem; /* 36px */
   --i2c-spacing-3x-large: 3rem; /* 48px */
   --i2c-spacing-4x-large: 4.5rem; /* 72px */
+
 
   /*
    * Transitions
@@ -414,14 +444,16 @@
   --i2c-focus-ring-offset: 1px;
 
   /* Buttons */
-  --i2c-button-font-size-small: var(--i2c-font-size-x-small);
+  --i2c-button-font-size-small: var(--i2c-font-size-small);
   --i2c-button-font-size-medium: var(--i2c-font-size-small);
   --i2c-button-font-size-large: var(--i2c-font-size-medium);
+  --i2c-button-font-size-x-large: var(--i2c-font-size-large);
 
   /* Inputs */
-  --i2c-input-height-small: 1.875rem; /* 30px */
-  --i2c-input-height-medium: 2.5rem; /* 40px */
+  --i2c-input-height-small: 2rem; /* 32px */
+  --i2c-input-height-medium: 2.75rem; /* 44px */
   --i2c-input-height-large: 3.125rem; /* 50px */
+  --i2c-input-height-x-large:3.5rem; /* 56px */
 
   --i2c-input-background-color: var(--i2c-color-neutral-0);
   --i2c-input-background-color-hover: var(--i2c-input-background-color);

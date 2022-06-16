@@ -115,142 +115,6 @@
           ]
         },
         {
-          "name": "i2c-alert",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/alert",
-          "js": {
-            "properties": [
-              {
-                "name": "autoHideTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "closable",
-                "description": "Makes the alert closable.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "variant",
-                "description": "The alert's variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "duration",
-                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
-                "value": {}
-              },
-              {
-                "name": "show",
-                "description": "Shows the alert.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the alert",
-                "value": {}
-              },
-              {
-                "name": "toast",
-                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
-                "value": {}
-              },
-              {
-                "name": "restartAutoHide",
-                "value": {}
-              },
-              {
-                "name": "handleCloseClick",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
-                "value": {}
-              },
-              {
-                "name": "handleDurationChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "i2c-show",
-                "description": "Emitted when the alert opens."
-              },
-              {
-                "name": "i2c-after-show",
-                "description": "Emitted after the alert opens and all animations are complete."
-              },
-              {
-                "name": "i2c-hide",
-                "description": "Emitted when the alert closes."
-              },
-              {
-                "name": "i2c-after-hide",
-                "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "open",
-              "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "closable",
-              "description": "Makes the alert closable.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "variant",
-              "description": "The alert's variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "duration",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
-              "value": {}
-            }
-          ]
-        },
-        {
           "name": "i2c-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -516,6 +380,142 @@
             "events": []
           },
           "attributes": []
+        },
+        {
+          "name": "i2c-alert",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/alert",
+          "js": {
+            "properties": [
+              {
+                "name": "autoHideTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "closable",
+                "description": "Makes the alert closable.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "variant",
+                "description": "The alert's variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "duration",
+                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
+                "value": {}
+              },
+              {
+                "name": "show",
+                "description": "Shows the alert.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the alert",
+                "value": {}
+              },
+              {
+                "name": "toast",
+                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
+                "value": {}
+              },
+              {
+                "name": "restartAutoHide",
+                "value": {}
+              },
+              {
+                "name": "handleCloseClick",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              },
+              {
+                "name": "handleDurationChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-show",
+                "description": "Emitted when the alert opens."
+              },
+              {
+                "name": "i2c-after-show",
+                "description": "Emitted after the alert opens and all animations are complete."
+              },
+              {
+                "name": "i2c-hide",
+                "description": "Emitted when the alert closes."
+              },
+              {
+                "name": "i2c-after-hide",
+                "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the alert is open. You can use this in lieu of the show/hide methods.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "closable",
+              "description": "Makes the alert closable.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "variant",
+              "description": "The alert's variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "duration",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
+              "value": {}
+            }
+          ]
         },
         {
           "name": "i2c-avatar",

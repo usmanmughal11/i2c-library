@@ -284,7 +284,7 @@ export default css`
     --i2c-color-neutral-0: hsl(240, 5.9%, 11%);
     --i2c-color-neutral-1000: hsl(0, 0%, 100%);
 
-    --i2c-border-radius-small: 0.1875rem;
+    --i2c-border-radius-small: 0.125rem;
     --i2c-border-radius-medium: 0.25rem;
     --i2c-border-radius-large: 0.5rem;
     --i2c-border-radius-x-large: 1rem;
@@ -297,6 +297,33 @@ export default css`
     --i2c-shadow-medium: 0 2px 4px rgb(0 0 0 / 24%);
     --i2c-shadow-large: 0 2px 8px rgb(0 0 0 / 24%);
     --i2c-shadow-x-large: 0 4px 16px rgb(0 0 0 / 24%);
+
+    --i2c-spacing-0-5: 0.125rem;
+    --i2c-spacing-1: 0.25rem;
+    --i2c-spacing-1-5: 0.35rem;
+    --i2c-spacing-2: 0.5rem;
+    --i2c-spacing-2-5: 0.625rem;
+    --i2c-spacing-3: 0.75rem;
+    --i2c-spacing-3-5: 0.875rem;
+    --i2c-spacing-4: 1rem;
+    --i2c-spacing-4-5: 1.125rem;
+    --i2c-spacing-5: 1.25rem;
+    --i2c-spacing-5-5: 1.375rem;
+    --i2c-spacing-6: 1.5;
+    --i2c-spacing-7: 1.75rem;
+    --i2c-spacing-8: 2rem;
+    --i2c-spacing-9: 2.25rem;
+    --i2c-spacing-10: 2.5rem;
+    --i2c-spacing-11: 2.75rem;
+    --i2c-spacing-12: 3rem;
+    --i2c-spacing-13: 3.25rem;
+    --i2c-spacing-14: 3.5rem;
+    --i2c-spacing-15: 3.75rem;
+    --i2c-spacing-16: 4rem;
+    --i2c-spacing-17: 4.25rem;
+    --i2c-spacing-18: 4.5rem;
+    --i2c-spacing-19: 4.75rem;
+    --i2c-spacing-20: 5rem;
 
     --i2c-spacing-3x-small: 0.125rem;
     --i2c-spacing-2x-small: 0.25rem;
@@ -356,13 +383,15 @@ export default css`
       var(--i2c-focus-ring-color);
     --i2c-focus-ring-offset: 1px;
 
-    --i2c-button-font-size-small: var(--i2c-font-size-x-small);
+    --i2c-button-font-size-small: var(--i2c-font-size-small);
     --i2c-button-font-size-medium: var(--i2c-font-size-small);
     --i2c-button-font-size-large: var(--i2c-font-size-medium);
+    --i2c-button-font-size-x-large: var(--i2c-font-size-large);
 
-    --i2c-input-height-small: 1.875rem;
-    --i2c-input-height-medium: 2.5rem;
+    --i2c-input-height-small: 2rem;
+    --i2c-input-height-medium: 2.75rem;
     --i2c-input-height-large: 3.125rem;
+    --i2c-input-height-x-large: 3.5rem;
 
     --i2c-input-background-color: var(--i2c-color-neutral-0);
     --i2c-input-background-color-hover: var(--i2c-input-background-color);

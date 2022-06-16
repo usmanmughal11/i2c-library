@@ -545,6 +545,13 @@
   --i2c-button-font-size-large: var(--i2c-font-size-medium);
   --i2c-button-font-size-x-large: var(--i2c-font-size-large);
 
+  /* Buttons Height*/
+  --i2c-button-height-small: 2.25rem; /* 36px */
+  --i2c-button-height-medium: 2.5rem; /* 40px */
+  --i2c-button-height-large: 2.75rem; /* 44px */
+  --i2c-button-height-x-large:3rem; /* 48px */
+  --i2c-button-height-2x-large:3.75rem; /* 52px */
+
   /* Inputs */
   --i2c-input-height-small: 2rem; /* 32px */
   --i2c-input-height-medium: 2.75rem; /* 44px */
