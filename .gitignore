@@ -1,6 +1,6 @@
 .DS_Store
 .cache
-docs/dist
+# docs/dist
 docs/search.json
 # dist
 examples
