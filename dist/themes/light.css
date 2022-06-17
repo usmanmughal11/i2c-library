@@ -456,25 +456,85 @@
   --i2c-line-height-loose: 2.2;
   --i2c-line-height-looser: 2.6;
 
+  --i2c-line-height-1: 1px;
+  --i2c-line-height-2: 2px;
+  --i2c-line-height-3: 3px;
+  --i2c-line-height-4: 4px;
+  --i2c-line-height-5: 5px;
+  --i2c-line-height-6: 6px;
+  --i2c-line-height-7: 7px;
+  --i2c-line-height-8: 8px;
+  --i2c-line-height-9: 9px;
+  --i2c-line-height-10: 10px;
+  --i2c-line-height-11: 11px;
+  --i2c-line-height-12: 12px;
+  --i2c-line-height-13: 13px;
+  --i2c-line-height-14: 14px;
+  --i2c-line-height-15: 15px;
+  --i2c-line-height-16: 16px;
+  --i2c-line-height-17: 17px;
+  --i2c-line-height-18: 18px;
+  --i2c-line-height-19: 19px;
+  --i2c-line-height-20: 20px;
+  --i2c-line-height-21: 21px;
+  --i2c-line-height-22: 22px;
+  --i2c-line-height-23: 23px;
+  --i2c-line-height-24: 24px;
+  --i2c-line-height-25: 25px;
+  --i2c-line-height-26: 26px;
+  --i2c-line-height-27: 27px;
+  --i2c-line-height-28: 28px;
+  --i2c-line-height-29: 29px;
+  --i2c-line-height-30: 30px;
+  --i2c-line-height-31: 31px;
+  --i2c-line-height-32: 32px;
+
   --i2c-ring-1: ;
 
-  --i2c-focus-ring-color: var(--i2c-color-primary-600);
+  --i2c-focus-ring-color: var(--i2c-color-primary-50);
   --i2c-focus-ring-style: solid;
   --i2c-focus-ring-width: var(--i2c-spacing-1);
   --i2c-focus-ring: var(--i2c-focus-ring-style) var(--i2c-focus-ring-width)
     var(--i2c-focus-ring-color);
   --i2c-focus-ring-offset: 1px;
+  --i2c-focus-ring-offset-0: 0;
+
+  --i2c-focus-ring-color-default: var(--i2c-color-gray-100);
+  --i2c-focus-ring-color-primary: var(--i2c-color-primary-50);
+  --i2c-focus-ring-color-success: var(--i2c-color-success-50);
+  --i2c-focus-ring-color-danger: var(--i2c-color-danger-50);
+  --i2c-focus-ring-color-warning: var(--i2c-color-warning-50);
+
+  --i2c-focus-ring-default: var(--i2c-focus-ring-style)
+    var(--i2c-focus-ring-width) var(--i2c-focus-ring-color-default);
+  --i2c-focus-ring-primary: var(--i2c-focus-ring-style)
+    var(--i2c-focus-ring-width) var(--i2c-focus-ring-color-primary);
+  --i2c-focus-ring-success: var(--i2c-focus-ring-style)
+    var(--i2c-focus-ring-width) var(--i2c-focus-ring-color-success);
+  --i2c-focus-ring-danger: var(--i2c-focus-ring-style)
+    var(--i2c-focus-ring-width) var(--i2c-focus-ring-color-danger);
+  --i2c-focus-ring-warning: var(--i2c-focus-ring-style)
+    var(--i2c-focus-ring-width) var(--i2c-focus-ring-color-warning);
 
   --i2c-button-font-size-small: var(--i2c-font-size-small);
   --i2c-button-font-size-medium: var(--i2c-font-size-small);
   --i2c-button-font-size-large: var(--i2c-font-size-medium);
   --i2c-button-font-size-x-large: var(--i2c-font-size-large);
+  --i2c-button-font-size-2x-large: var(--i2c-spacing-7);
 
-  --i2c-button-height-small: 2.25rem;
-  --i2c-button-height-medium: 2.5rem;
-  --i2c-button-height-large: 2.75rem;
-  --i2c-button-height-x-large: 3rem;
-  --i2c-button-height-2x-large: 3.75rem;
+  --i2c-button-height-small: var(--i2c-spacing-9);
+  --i2c-button-height-medium: var(--i2c-spacing-10);
+  --i2c-button-height-large: var(--i2c-spacing-11);
+  --i2c-button-height-x-large: var(--i2c-spacing-12);
+  --i2c-button-height-2x-large: var(--i2c-spacing-13);
+
+  --i2c-button-line-height-small: 1.428;
+  --i2c-button-line-height-medium: 1.428;
+  --i2c-button-line-height-large: 1.5;
+  --i2c-button-line-height-x-large: 1.5;
+  --i2c-button-line-height-2x-large: 1.55;
+
+  --i2c-button-border-radius: var(--i2c-border-radius-large);
 
   --i2c-input-height-small: 2rem;
   --i2c-input-height-medium: 2.75rem;

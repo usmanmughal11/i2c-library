@@ -795,14 +795,14 @@
                 "name": "variant",
                 "description": "The button's variant.",
                 "value": {
-                  "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                  "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'primaryLight' | 'successLight' | 'warningLight' | 'dangerLight' | 'text'"
                 }
               },
               {
                 "name": "size",
                 "description": "The button's size.",
                 "value": {
-                  "type": "'small' | 'medium' | 'large' | 'x-large'"
+                  "type": "'small' | 'medium' | 'large' | 'x-large' | '2x-large'"
                 }
               },
               {
@@ -968,14 +968,14 @@
               "name": "variant",
               "description": "The button's variant.",
               "value": {
-                "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'primaryLight' | 'successLight' | 'warningLight' | 'dangerLight' | 'text'"
               }
             },
             {
               "name": "size",
               "description": "The button's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large' | 'x-large'"
+                "type": "'small' | 'medium' | 'large' | 'x-large' | '2x-large'"
               }
             },
             {
@@ -3209,6 +3209,61 @@
           ]
         },
         {
+          "name": "i2c-image-comparer",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/image-comparer",
+          "js": {
+            "properties": [
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "handle",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "position",
+                "description": "The position of the divider as a percentage.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "handleDrag",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handlePositionChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-change",
+                "description": "Emitted when the position changes."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "position",
+              "description": "The position of the divider as a percentage.",
+              "value": {
+                "type": "number"
+              }
+            }
+          ]
+        },
+        {
           "name": "i2c-include",
           "description": "",
           "doc-url": "https://shoelace.style/components/include",
@@ -3286,61 +3341,6 @@
             "events": []
           },
           "attributes": []
-        },
-        {
-          "name": "i2c-image-comparer",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/image-comparer",
-          "js": {
-            "properties": [
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "handle",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "position",
-                "description": "The position of the divider as a percentage.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "handleDrag",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handlePositionChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "i2c-change",
-                "description": "Emitted when the position changes."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "position",
-              "description": "The position of the divider as a percentage.",
-              "value": {
-                "type": "number"
-              }
-            }
-          ]
         },
         {
           "name": "i2c-input",

@@ -1,9 +1,16 @@
-import { css } from 'lit';
-import { focusVisibleSelector } from '../../internal/focus-visible';
-import componentStyles from '../../styles/component.styles';
+import {
+  focusVisibleSelector
+} from "./chunk.AMENFSPY.js";
+import {
+  component_styles_default
+} from "./chunk.6HCWEZWU.js";
+import {
+  r
+} from "./chunk.ZU3WVWU5.js";
 
-export default css`
-  ${componentStyles}
+// src/components/button/button.styles.ts
+var button_styles_default = r`
+  ${component_styles_default}
 
   :host {
     display: inline-block;
@@ -739,3 +746,7 @@ export default css`
     z-index: 2;
   }
 `;
+
+export {
+  button_styles_default
+};

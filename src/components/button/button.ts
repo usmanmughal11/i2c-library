@@ -55,11 +55,10 @@ export default class SlButton extends LitElement {
   @state() private hasFocus = false;
 
   /** The button's variant. */
-  @property({ reflect: true }) variant: 'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text' =
-    'default';
+  @property({ reflect: true }) variant: 'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'primaryLight' | 'successLight' | 'warningLight' | 'dangerLight' | 'text' = 'default';
 
   /** The button's size. */
-  @property({ reflect: true }) size: 'small' | 'medium' | 'large' | 'x-large' = 'medium';
+  @property({ reflect: true }) size: 'small' | 'medium' | 'large' | 'x-large' | '2x-large' = 'medium';
 
   /** Draws the button with a caret for use with dropdowns, popovers, etc. */
   @property({ type: Boolean, reflect: true }) caret = false;
@@ -171,11 +170,16 @@ export default class SlButton extends LitElement {
           'button--neutral': this.variant === 'neutral',
           'button--warning': this.variant === 'warning',
           'button--danger': this.variant === 'danger',
+          'button--danger--light': this.variant === 'dangerLight',
+          'button--warning--light': this.variant === 'warningLight',
+          'button--success--light': this.variant === 'successLight',
+          'button--primary--light': this.variant === 'primaryLight',
           'button--text': this.variant === 'text',
           'button--small': this.size === 'small',
           'button--medium': this.size === 'medium',
           'button--large': this.size === 'large',
           'button--xlarge': this.size === 'x-large',
+          'button--2xlarge': this.size === '2x-large',
           'button--caret': this.caret,
           'button--circle': this.circle,
           'button--disabled': this.disabled,

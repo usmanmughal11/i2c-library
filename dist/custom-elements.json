@@ -1422,7 +1422,7 @@
               "kind": "field",
               "name": "variant",
               "type": {
-                "text": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                "text": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'primaryLight' | 'successLight' | 'warningLight' | 'dangerLight' | 'text'"
               },
               "default": "'default'",
               "description": "The button's variant.",
@@ -1433,7 +1433,7 @@
               "kind": "field",
               "name": "size",
               "type": {
-                "text": "'small' | 'medium' | 'large' | 'x-large'"
+                "text": "'small' | 'medium' | 'large' | 'x-large' | '2x-large'"
               },
               "default": "'medium'",
               "description": "The button's size.",
@@ -1667,7 +1667,7 @@
             {
               "name": "variant",
               "type": {
-                "text": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                "text": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'primaryLight' | 'successLight' | 'warningLight' | 'dangerLight' | 'text'"
               },
               "default": "'default'",
               "description": "The button's variant.",
@@ -1676,7 +1676,7 @@
             {
               "name": "size",
               "type": {
-                "text": "'small' | 'medium' | 'large' | 'x-large'"
+                "text": "'small' | 'medium' | 'large' | 'x-large' | '2x-large'"
               },
               "default": "'medium'",
               "description": "The button's size.",
@@ -5866,6 +5866,165 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/image-comparer/image-comparer.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlImageComparer",
+          "cssProperties": [
+            {
+              "description": "The width of the dividing line.",
+              "name": "--divider-width"
+            },
+            {
+              "description": "The size of the compare handle.",
+              "name": "--handle-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that holds the \"before\" image.",
+              "name": "before"
+            },
+            {
+              "description": "The container that holds the \"after\" image.",
+              "name": "after"
+            },
+            {
+              "description": "The divider that separates the images.",
+              "name": "divider"
+            },
+            {
+              "description": "The handle that the user drags to expose the after image.",
+              "name": "handle"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The before image, an `<img>` or `<svg>` element.",
+              "name": "before"
+            },
+            {
+              "description": "The after image, an `<img>` or `<svg>` element.",
+              "name": "after"
+            },
+            {
+              "description": "The icon used inside the handle.",
+              "name": "handle-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "base",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handle",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "position",
+              "type": {
+                "text": "number"
+              },
+              "default": "50",
+              "description": "The position of the divider as a percentage.",
+              "attribute": "position",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleDrag",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handlePositionChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the position changes.",
+              "name": "i2c-change",
+              "reactName": "onI2cChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "position",
+              "type": {
+                "text": "number"
+              },
+              "default": "50",
+              "description": "The position of the divider as a percentage.",
+              "fieldName": "position"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "i2c-icon"
+          ],
+          "tagName": "i2c-image-comparer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlImageComparer",
+            "module": "src/components/image-comparer/image-comparer.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-image-comparer",
+          "declaration": {
+            "name": "SlImageComparer",
+            "module": "src/components/image-comparer/image-comparer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/include/include.ts",
       "declarations": [
         {
@@ -6027,165 +6186,6 @@
           "declaration": {
             "name": "requestInclude",
             "module": "src/components/include/request.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/image-comparer/image-comparer.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlImageComparer",
-          "cssProperties": [
-            {
-              "description": "The width of the dividing line.",
-              "name": "--divider-width"
-            },
-            {
-              "description": "The size of the compare handle.",
-              "name": "--handle-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that holds the \"before\" image.",
-              "name": "before"
-            },
-            {
-              "description": "The container that holds the \"after\" image.",
-              "name": "after"
-            },
-            {
-              "description": "The divider that separates the images.",
-              "name": "divider"
-            },
-            {
-              "description": "The handle that the user drags to expose the after image.",
-              "name": "handle"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The before image, an `<img>` or `<svg>` element.",
-              "name": "before"
-            },
-            {
-              "description": "The after image, an `<img>` or `<svg>` element.",
-              "name": "after"
-            },
-            {
-              "description": "The icon used inside the handle.",
-              "name": "handle-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "base",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "handle",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "position",
-              "type": {
-                "text": "number"
-              },
-              "default": "50",
-              "description": "The position of the divider as a percentage.",
-              "attribute": "position",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleDrag",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "PointerEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handlePositionChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the position changes.",
-              "name": "i2c-change",
-              "reactName": "onI2cChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "position",
-              "type": {
-                "text": "number"
-              },
-              "default": "50",
-              "description": "The position of the divider as a percentage.",
-              "fieldName": "position"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "i2c-icon"
-          ],
-          "tagName": "i2c-image-comparer",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlImageComparer",
-            "module": "src/components/image-comparer/image-comparer.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-image-comparer",
-          "declaration": {
-            "name": "SlImageComparer",
-            "module": "src/components/image-comparer/image-comparer.ts"
           }
         }
       ]

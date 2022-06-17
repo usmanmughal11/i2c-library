@@ -236,6 +236,18 @@
               "name": "danger"
             },
             {
+              "name": "primaryLight"
+            },
+            {
+              "name": "successLight"
+            },
+            {
+              "name": "warningLight"
+            },
+            {
+              "name": "dangerLight"
+            },
+            {
               "name": "text"
             }
           ]
@@ -255,6 +267,9 @@
             },
             {
               "name": "x-large"
+            },
+            {
+              "name": "2x-large"
             }
           ]
         },
@@ -990,6 +1005,15 @@
       ]
     },
     {
+      "name": "i2c-image-comparer",
+      "attributes": [
+        {
+          "name": "position",
+          "description": "The position of the divider as a percentage."
+        }
+      ]
+    },
+    {
       "name": "i2c-include",
       "attributes": [
         {
@@ -1014,15 +1038,6 @@
         {
           "name": "allow-scripts",
           "description": "Allows included scripts to be executed. You must ensure the content you're including is trusted, otherwise this\noption can lead to XSS vulnerabilities in your app!"
-        }
-      ]
-    },
-    {
-      "name": "i2c-image-comparer",
-      "attributes": [
-        {
-          "name": "position",
-          "description": "The position of the divider as a percentage."
         }
       ]
     },

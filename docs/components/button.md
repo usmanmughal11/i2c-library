@@ -22,7 +22,7 @@ Use the `variant` attribute to set the button's variant.
 
 ```html preview
 <i2c-button variant="default">Default</i2c-button>
-<i2c-button variant="primary">Primary</i2c-button>
+<i2c-button variant="primary">Button CTA</i2c-button>
 <i2c-button variant="success">Success</i2c-button>
 <i2c-button variant="neutral">Neutral</i2c-button>
 <i2c-button variant="warning">Warning</i2c-button>
@@ -41,8 +41,40 @@ const App = () => (
     <SlButton variant="warning">Warning</SlButton>
     <SlButton variant="danger">Danger</SlButton>
   </>
+);`
+```
+
+### Light Buttons
+
+Use the `variant` attribute to set the button's variant.
+
+```html preview
+
+<i2c-button variant="primaryLight">Primary</i2c-button>
+<i2c-button variant="successLight">Success</i2c-button>
+<i2c-button variant="warningLight">Warning</i2c-button>
+<i2c-button variant="dangerLight">Danger</i2c-button>
+```
+
+```jsx react
+import { SlButton } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => (
+  <>
+    <SlButton variant="default">Default</SlButton>
+    <SlButton variant="primary">Primary</SlButton>
+    <SlButton variant="success">Success</SlButton>
+    <SlButton variant="neutral">Neutral</SlButton>
+    <SlButton variant="warning">Warning</SlButton>
+    <SlButton variant="danger">Danger</SlButton>
+  </>
 );
 ```
+
+
+
+
+
 
 ### Sizes
 
@@ -52,6 +84,8 @@ Use the `size` attribute to change a button's size.
 <i2c-button size="small">Small</i2c-button>
 <i2c-button size="medium">Medium</i2c-button>
 <i2c-button size="large">Large</i2c-button>
+<i2c-button size="x-large">Extra Large</i2c-button>
+<i2c-button size="2x-large">2x Large</i2c-button>
 ```
 
 ```jsx react
@@ -62,6 +96,8 @@ const App = () => (
     <SlButton size="small">Small</SlButton>
     <SlButton size="medium">Medium</SlButton>
     <SlButton size="large">Large</SlButton>
+    <SlButton size="xlarge">Extra Large</SlButton>
+    <SlButton size="2xlarge">2x Large</SlButton>
   </>
 );
 ```
@@ -314,6 +350,42 @@ Use the `prefix` and `suffix` slots to add icons.
   <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
   Open
 </i2c-button>
+
+<br /><br />
+
+<i2c-button variant="default" size="x-large">
+  <i2c-icon slot="prefix" name="gear"></i2c-icon>
+  Settings
+</i2c-button>
+
+<i2c-button variant="default" size="x-large">
+  <i2c-icon slot="suffix" name="arrow-counterclockwise"></i2c-icon>
+  Refresh
+</i2c-button>
+
+<i2c-button variant="default" size="x-large">
+  <i2c-icon slot="prefix" name="link-45deg"></i2c-icon>
+  <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
+  Open
+</i2c-button>
+
+<br /><br />
+
+<i2c-button variant="default" size="2x-large">
+  <i2c-icon slot="prefix" name="gear"></i2c-icon>
+  Settings
+</i2c-button>
+
+<i2c-button variant="default" size="2x-large">
+  <i2c-icon slot="suffix" name="arrow-counterclockwise"></i2c-icon>
+  Refresh
+</i2c-button>
+
+<i2c-button variant="default" size="2x-large">
+  <i2c-icon slot="prefix" name="link-45deg"></i2c-icon>
+  <i2c-icon slot="suffix" name="box-arrow-up-right"></i2c-icon>
+  Open
+</i2c-button>
 ```
 
 ```jsx react
@@ -386,6 +458,8 @@ Use the `caret` attribute to add a dropdown indicator when a button will trigger
 <i2c-button size="small" caret>Small</i2c-button>
 <i2c-button size="medium" caret>Medium</i2c-button>
 <i2c-button size="large" caret>Large</i2c-button>
+<i2c-button size="x-large" caret>Large</i2c-button>
+<i2c-button size="2x-large" caret>Large</i2c-button>
 ```
 
 ```jsx react
