@@ -39,23 +39,6 @@
       ]
     },
     {
-      "name": "i2c-animated-image",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The image's src attribute."
-        },
-        {
-          "name": "alt",
-          "description": "The image's alt attribute."
-        },
-        {
-          "name": "play",
-          "description": "When set, the image will animate. Otherwise, it will be paused."
-        }
-      ]
-    },
-    {
       "name": "i2c-animation",
       "attributes": [
         {
@@ -167,6 +150,23 @@
         {
           "name": "pulse",
           "description": "Makes the badge pulsate to draw attention."
+        }
+      ]
+    },
+    {
+      "name": "i2c-animated-image",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The image's src attribute."
+        },
+        {
+          "name": "alt",
+          "description": "The image's alt attribute."
+        },
+        {
+          "name": "play",
+          "description": "When set, the image will animate. Otherwise, it will be paused."
         }
       ]
     },
@@ -1077,6 +1077,26 @@
             },
             {
               "name": "url"
+            }
+          ]
+        },
+        {
+          "name": "theme",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "danger"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "warning"
             }
           ]
         },

@@ -68,6 +68,8 @@ export default class SlInput extends LitElement {
     | 'time'
     | 'url' = 'text';
 
+    @property() theme: 'default' | 'primary' | 'danger' | 'success' | 'warning' = 'default';
+
   /** The input's size. */
   @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
 
@@ -310,7 +312,12 @@ export default class SlInput extends LitElement {
           'form-control--medium': this.size === 'medium',
           'form-control--large': this.size === 'large',
           'form-control--has-label': hasLabel,
-          'form-control--has-help-text': hasHelpText
+          'form-control--has-help-text': hasHelpText,
+          'form-control--default':this.theme === 'default',
+          'form-control--primary':this.theme === 'primary',
+          'form-control--success':this.theme === 'success',
+          'form-control--danger':this.theme === 'danger',
+          'form-control--warning':this.theme === 'warning',
         })}
       >
         <label
@@ -340,7 +347,14 @@ export default class SlInput extends LitElement {
               'input--disabled': this.disabled,
               'input--focused': this.hasFocus,
               'input--empty': !this.value,
-              'input--invalid': this.invalid
+              'input--invalid': this.invalid,
+
+              //Themes
+              'input--default':this.theme === 'default',
+              'input--primary':this.theme === 'primary',
+              'input--success':this.theme === 'success',
+              'input--danger':this.theme === 'danger',
+              'input--warning':this.theme === 'warning',
             })}
           >
             <span part="prefix" class="input__prefix">

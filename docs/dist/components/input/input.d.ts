@@ -9,6 +9,7 @@ export default class SlInput extends LitElement {
     private hasFocus;
     private isPasswordVisible;
     type: 'date' | 'datetime-local' | 'email' | 'number' | 'password' | 'search' | 'tel' | 'text' | 'time' | 'url';
+    theme: 'default' | 'primary' | 'danger' | 'success' | 'warning';
     size: 'small' | 'medium' | 'large';
     name: string;
     value: string;

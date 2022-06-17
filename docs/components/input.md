@@ -32,6 +32,21 @@ import { SlIcon, SlInput } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlInput label="What is your name?" />;
 ```
 
+### Invalid State on minLength = 5
+
+```html preview
+<i2c-input  minlength="5"></i2c-input>
+```
+
+```jsx react
+import { SlInput } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => <SlInput />;
+```
+
+
+
+
 ### Help Text
 
 Add descriptive help text to an input with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.

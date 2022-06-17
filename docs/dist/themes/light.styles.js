@@ -548,11 +548,17 @@ export default css`
     --i2c-input-background-color: var(--i2c-color-neutral-0);
     --i2c-input-background-color-hover: var(--i2c-input-background-color);
     --i2c-input-background-color-focus: var(--i2c-input-background-color);
-    --i2c-input-background-color-disabled: var(--i2c-color-neutral-100);
+    --i2c-input-background-color-disabled: var(--i2c-color-neutral-50);
     --i2c-input-border-color: var(--i2c-color-neutral-300);
     --i2c-input-border-color-hover: var(--i2c-color-neutral-400);
     --i2c-input-border-color-focus: var(--i2c-color-primary-500);
     --i2c-input-border-color-disabled: var(--i2c-color-neutral-300);
+
+    --i2c-input-border-danger: var(--i2c-color-danger-300);
+    --i2c-input-border-danger-hover: var(--i2c-color-dager-400);
+    --i2c-input-border-danger-focus: var(--i2c-color-danger-500);
+    --i2c-input-border-danger-disabled: var(--i2c-color-danger-300);
+
     --i2c-input-border-width: 1px;
 
     --i2c-input-border-radius-small: var(--i2c-border-radius-medium);
@@ -566,18 +572,18 @@ export default css`
     --i2c-input-font-size-large: var(--i2c-font-size-large);
     --i2c-input-letter-spacing: var(--i2c-letter-spacing-normal);
 
-    --i2c-input-color: var(--i2c-color-neutral-700);
-    --i2c-input-color-hover: var(--i2c-color-neutral-700);
-    --i2c-input-color-focus: var(--i2c-color-neutral-700);
-    --i2c-input-color-disabled: var(--i2c-color-neutral-900);
-    --i2c-input-icon-color: var(--i2c-color-neutral-500);
-    --i2c-input-icon-color-hover: var(--i2c-color-neutral-600);
-    --i2c-input-icon-color-focus: var(--i2c-color-neutral-600);
-    --i2c-input-placeholder-color: var(--i2c-color-neutral-500);
-    --i2c-input-placeholder-color-disabled: var(--i2c-color-neutral-600);
+    --i2c-input-color: var(--i2c-color-gray-500);
+    --i2c-input-color-hover: var(--i2c-color-gray-900);
+    --i2c-input-color-focus: var(--i2c-color-gray-900);
+    --i2c-input-color-disabled: var(--i2c-color-gray-500);
+    --i2c-input-icon-color: var(--i2c-color-gray-500);
+    --i2c-input-icon-color-hover: var(--i2c-color-gray-900);
+    --i2c-input-icon-color-focus: var(--i2c-color-gray-900);
+    --i2c-input-placeholder-color: var(--i2c-color-gray-500);
+    --i2c-input-placeholder-color-disabled: var(--i2c-color-gray-600);
     --i2c-input-spacing-small: var(--i2c-spacing-small);
-    --i2c-input-spacing-medium: var(--i2c-spacing-medium);
-    --i2c-input-spacing-large: var(--i2c-spacing-large);
+    --i2c-input-spacing-medium: var(--i2c-spacing-small);
+    --i2c-input-spacing-large: var(--i2c-spacing-medium);
 
     --i2c-input-filled-background-color: var(--i2c-color-neutral-100);
     --i2c-input-filled-background-color-hover: var(--i2c-color-neutral-100);
@@ -588,7 +594,11 @@ export default css`
     --i2c-input-filled-color-focus: var(--i2c-color-neutral-700);
     --i2c-input-filled-color-disabled: var(--i2c-color-neutral-800);
 
-    --i2c-input-focus-ring-color: hsl(198.6 88.7% 48.4% / 40%);
+    --i2c-input-focus-ring-color: var(--i2c-color-primary-25);
+    --i2c-input-focus-ring-danger: var(--i2c-color-danger-50);
+    --i2c-input-focus-ring-warning: var(--i2c-color-warning-100);
+    --i2c-input-focus-ring-success: var(--i2c-color-success-50);
+    --i2c-input-focus-ring-gray: var(--i2c-color-gray-50);
     --i2c-input-focus-ring-offset: 0;
 
     --i2c-input-label-font-size-small: var(--i2c-font-size-small);

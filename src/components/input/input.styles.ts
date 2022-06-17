@@ -63,6 +63,27 @@ export default css`
     color: var(--i2c-input-placeholder-color-disabled);
   }
 
+
+  .input--standard.input--invalid {
+    background-color: var(--i2c-input-background-color);
+    border: solid var(--i2c-input-border-width) var(--i2c-input-border-danger);
+  }
+
+  .input--standard.input--invalid:hover:not(.input--disabled) {
+    border-color: var(--i2c-input-border-danger-hover);
+  }
+
+  .input--standard.input--invalid.input--focused:not(.input--disabled) {
+    background-color: var(--i2c-input-background-color-focus);
+    border-color: var(--i2c-input-border-danger-focus);
+    box-shadow: 0 0 0 var(--i2c-focus-ring-width) var(--i2c-input-focus-ring-danger);
+  }
+
+  .input--standard.input--invalid.input--focused:not(.input--disabled) .input__control {
+    color: var(--i2c-input-danger-focus);
+  }
+
+
   /* Filled inputs */
   .input--filled {
     border: none;
