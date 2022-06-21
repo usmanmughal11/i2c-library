@@ -1,6 +1,23 @@
 {
   "tags": [
     {
+      "name": "i2c-animated-image",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The image's src attribute."
+        },
+        {
+          "name": "alt",
+          "description": "The image's alt attribute."
+        },
+        {
+          "name": "play",
+          "description": "When set, the image will animate. Otherwise, it will be paused."
+        }
+      ]
+    },
+    {
       "name": "i2c-alert",
       "attributes": [
         {
@@ -150,23 +167,6 @@
         {
           "name": "pulse",
           "description": "Makes the badge pulsate to draw attention."
-        }
-      ]
-    },
-    {
-      "name": "i2c-animated-image",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The image's src attribute."
-        },
-        {
-          "name": "alt",
-          "description": "The image's alt attribute."
-        },
-        {
-          "name": "play",
-          "description": "When set, the image will animate. Otherwise, it will be paused."
         }
       ]
     },
@@ -1669,6 +1669,26 @@
       ]
     },
     {
+      "name": "i2c-skeleton",
+      "attributes": [
+        {
+          "name": "effect",
+          "description": "Determines which effect the skeleton will use.",
+          "values": [
+            {
+              "name": "pulse"
+            },
+            {
+              "name": "sheen"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "i2c-select",
       "attributes": [
         {
@@ -1753,26 +1773,6 @@
         {
           "name": "invalid",
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
-        }
-      ]
-    },
-    {
-      "name": "i2c-skeleton",
-      "attributes": [
-        {
-          "name": "effect",
-          "description": "Determines which effect the skeleton will use.",
-          "values": [
-            {
-              "name": "pulse"
-            },
-            {
-              "name": "sheen"
-            },
-            {
-              "name": "none"
-            }
-          ]
         }
       ]
     },

@@ -30,12 +30,8 @@ import "./chunks/chunk.KFR7NC2M.js";
 import "./chunks/chunk.XV3AVMOJ.js";
 import "./chunks/chunk.LBRJSQAU.js";
 import {
-  SlResizeObserver
-} from "./chunks/chunk.YISHIKTO.js";
-import {
   SlResponsiveMedia
 } from "./chunks/chunk.FQOCGHWF.js";
-import "./chunks/chunk.CA3APAOZ.js";
 import {
   SlSelect
 } from "./chunks/chunk.KMKTJU2U.js";
@@ -63,7 +59,11 @@ import "./chunks/chunk.JME4RO5L.js";
 import {
   SlRelativeTime
 } from "./chunks/chunk.2J53FPY3.js";
+import {
+  SlResizeObserver
+} from "./chunks/chunk.YISHIKTO.js";
 import "./chunks/chunk.RHFE6G2N.js";
+import "./chunks/chunk.CA3APAOZ.js";
 import {
   SlProgressRing
 } from "./chunks/chunk.HKCAT74C.js";
