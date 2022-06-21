@@ -10142,90 +10142,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/skeleton/skeleton.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlSkeleton",
-          "cssProperties": [
-            {
-              "description": "The skeleton's border radius.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The color of the skeleton.",
-              "name": "--color"
-            },
-            {
-              "description": "The sheen color when the skeleton is in its loading state.",
-              "name": "--sheen-color"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The skeleton's indicator which is responsible for its color and animation.",
-              "name": "indicator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "effect",
-              "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
-              },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "attribute": "effect"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "effect",
-              "type": {
-                "text": "'pulse' | 'sheen' | 'none'"
-              },
-              "default": "'none'",
-              "description": "Determines which effect the skeleton will use.",
-              "fieldName": "effect"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "i2c-skeleton",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-skeleton",
-          "declaration": {
-            "name": "SlSkeleton",
-            "module": "src/components/skeleton/skeleton.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/select/select.ts",
       "declarations": [
         {
@@ -10936,6 +10852,90 @@
           "declaration": {
             "name": "SlSelect",
             "module": "src/components/select/select.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/skeleton/skeleton.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlSkeleton",
+          "cssProperties": [
+            {
+              "description": "The skeleton's border radius.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The color of the skeleton.",
+              "name": "--color"
+            },
+            {
+              "description": "The sheen color when the skeleton is in its loading state.",
+              "name": "--sheen-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The skeleton's indicator which is responsible for its color and animation.",
+              "name": "indicator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "effect",
+              "type": {
+                "text": "'pulse' | 'sheen' | 'none'"
+              },
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "attribute": "effect"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "effect",
+              "type": {
+                "text": "'pulse' | 'sheen' | 'none'"
+              },
+              "default": "'none'",
+              "description": "Determines which effect the skeleton will use.",
+              "fieldName": "effect"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "i2c-skeleton",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-skeleton",
+          "declaration": {
+            "name": "SlSkeleton",
+            "module": "src/components/skeleton/skeleton.ts"
           }
         }
       ]

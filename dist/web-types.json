@@ -5542,32 +5542,6 @@
           ]
         },
         {
-          "name": "i2c-skeleton",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/skeleton",
-          "js": {
-            "properties": [
-              {
-                "name": "effect",
-                "description": "Determines which effect the skeleton will use.",
-                "value": {
-                  "type": "'pulse' | 'sheen' | 'none'"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "effect",
-              "description": "Determines which effect the skeleton will use.",
-              "value": {
-                "type": "'pulse' | 'sheen' | 'none'"
-              }
-            }
-          ]
-        },
-        {
           "name": "i2c-select",
           "description": "",
           "doc-url": "https://shoelace.style/components/select",
@@ -5980,6 +5954,32 @@
               "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop.",
               "value": {
                 "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "i2c-skeleton",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/skeleton",
+          "js": {
+            "properties": [
+              {
+                "name": "effect",
+                "description": "Determines which effect the skeleton will use.",
+                "value": {
+                  "type": "'pulse' | 'sheen' | 'none'"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "effect",
+              "description": "Determines which effect the skeleton will use.",
+              "value": {
+                "type": "'pulse' | 'sheen' | 'none'"
               }
             }
           ]

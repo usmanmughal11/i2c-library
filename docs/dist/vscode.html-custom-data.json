@@ -1669,26 +1669,6 @@
       ]
     },
     {
-      "name": "i2c-skeleton",
-      "attributes": [
-        {
-          "name": "effect",
-          "description": "Determines which effect the skeleton will use.",
-          "values": [
-            {
-              "name": "pulse"
-            },
-            {
-              "name": "sheen"
-            },
-            {
-              "name": "none"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "i2c-select",
       "attributes": [
         {
@@ -1773,6 +1753,26 @@
         {
           "name": "invalid",
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
+        }
+      ]
+    },
+    {
+      "name": "i2c-skeleton",
+      "attributes": [
+        {
+          "name": "effect",
+          "description": "Determines which effect the skeleton will use.",
+          "values": [
+            {
+              "name": "pulse"
+            },
+            {
+              "name": "sheen"
+            },
+            {
+              "name": "none"
+            }
+          ]
         }
       ]
     },

@@ -254,7 +254,7 @@ Use the `prefix` and `suffix` slots to add icons.
 </i2c-input>
 <br />
 <i2c-input placeholder="Large" size="large">
-  <i2c-icon name="user" slot="prefix"></i2c-icon>
+  <i2c-icon name="check" slot="prefix"></i2c-icon>
 </i2c-input>
 ```
 
