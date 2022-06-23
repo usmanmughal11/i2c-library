@@ -30,12 +30,55 @@ import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlProgressBar value="50" label="Upload progress" />;
 ```
 
+
+
+
+
+### Varients
+
+Use the `varient` attribute for different theme color varients.
+
+```html preview
+<i2c-progress-bar value="50" ></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="60" varient="success" ></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="40" varient="danger" ></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="75" varient="warning" ></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="50" varient="gray" ></i2c-progress-bar>
+```
+
+```jsx react
+import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+
+App = () => <SlProgressBar value="50" />;
+``` 
+
+
+
+
+
+
 ### Custom Height
 
 Use the `--height` custom property to set the progress bar's height.
 
 ```html preview
-<i2c-progress-bar value="50" style="--height: 6px;"></i2c-progress-bar>
+<i2c-progress-bar value="20" style="--height: 4px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="30" style="--height: 8px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="40" style="--height: 12px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="50" style="--height: 14px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="60" style="--height: 16px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="70" style="--height: 20px;"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="80" style="--height: 24px;"></i2c-progress-bar>
 ```
 
 ```jsx react
@@ -44,12 +87,37 @@ import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlProgressBar value={50} style={{ '--height': '6px' }} />;
 ```
 
+
+
+
+### Values Placement
+
+Use the `valPlacement` attribute to to change the placement of the value.
+
+```html preview
+<i2c-progress-bar value="50" style="--height: 16px;" valPosition="top"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="75" style="--height: 16px;" valPosition="bottom"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="100" style="--height: 16px;" valPosition="front"></i2c-progress-bar>
+```
+
+```jsx react
+import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+
+const App = () => <SlProgressBar value="50"  />;
+```
+
+
+
+
+
 ### Showing Values
 
 Use the default slot to show a value.
 
 ```html preview
-<i2c-progress-bar value="50" class="progress-bar-values">50%</i2c-progress-bar>
+<i2c-progress-bar value="50"  style="--height: 14px;" class="progress-bar-values">50%</i2c-progress-bar>
 
 <br />
 

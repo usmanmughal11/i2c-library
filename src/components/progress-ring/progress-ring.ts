@@ -31,6 +31,9 @@ export default class SlProgressRing extends LitElement {
 
   /** A custom label for the progress ring's aria label. */
   @property() label = '';
+  @property() labelText = '';
+
+  
 
   /** The locale to render the component in. */
   @property() lang: string;
@@ -68,10 +71,14 @@ export default class SlProgressRing extends LitElement {
           <circle class="progress-ring__track"></circle>
           <circle class="progress-ring__indicator" style="stroke-dashoffset: ${this.indicatorOffset}"></circle>
         </svg>
-
-        <span part="label" class="progress-ring__label">
-          <slot></slot>
-        </span>
+        <span class="progress-ring__label">
+            <span part="labelText" class="progress-ring__label-text">
+            <slot>${this.labelText}</slot>
+            </span>
+            <span part="label" class="progress-ring__label-value">
+              <slot>${this.label}</slot>
+            </span>
+         </span>
       </div>
     `;
   }

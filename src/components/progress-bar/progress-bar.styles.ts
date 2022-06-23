@@ -5,8 +5,8 @@ export default css`
   ${componentStyles}
 
   :host {
-    --height: 1rem;
-    --track-color: var(--i2c-color-neutral-200);
+    --height: var(--i2c-spacing-2);
+    --track-color: var(--i2c-color-primary-50);
     --indicator-color: var(--i2c-color-primary-600);
     --label-color: var(--i2c-color-neutral-0);
 
@@ -36,6 +36,63 @@ export default css`
     transition: 400ms width, 400ms background-color;
     user-select: none;
   }
+  .progress-bar-inline{
+    display:inline-block;
+    width:calc(100% - 50px);
+    vertical-align:middle;
+  }
+
+.progress-val-label{
+  font-size: var(--i2c-font-size-small);
+  padding-right:var(--i2c-spacing-1-5);
+  font-weight: var(--i2c-font-weight-semibold);
+  text-align:right;
+}
+.progress-val-bottom,.progress-val-top{
+  display:block;
+}
+.progress-val-front{
+  display:inline-block;
+  width:45px;
+  text-align:right;
+}
+  /* Themes */
+  .progress-bar.progress-bar-primary {
+      background-color: var(--track-color);
+  }
+  .progress-bar.progress-bar-primary .progress-bar__indicator{
+    background-color: var(--indicator-color);
+  }
+
+  .progress-bar.progress-bar-warning {
+    background-color: var(--i2c-color-orange-100);
+  }
+  .progress-bar.progress-bar-warning .progress-bar__indicator{
+    background-color: var(--i2c-color-warning-600);
+  }
+
+  .progress-bar.progress-bar-success {
+    background-color: var(--i2c-color-success-50);
+  }
+  .progress-bar.progress-bar-success .progress-bar__indicator{
+    background-color: var(--i2c-color-success-600);
+  }
+
+  .progress-bar.progress-bar-danger {
+    background-color: var(--i2c-color-danger-50);
+  }
+  .progress-bar.progress-bar-danger .progress-bar__indicator{
+    background-color: var(--i2c-color-danger-600);
+  }
+
+  .progress-bar.progress-bar-gray {
+    background-color: var(--i2c-color-gray-100);
+  }
+  .progress-bar.progress-bar-gray .progress-bar__indicator{
+    background-color: var(--i2c-color-gray-500);
+  }
+
+
 
   /* Indeterminate */
   .progress-bar--indeterminate .progress-bar__indicator {

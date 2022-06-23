@@ -34,17 +34,35 @@ export default class SlProgressBar extends LitElement {
 
   /** A custom label for the progress bar's aria label. */
   @property() label = '';
+  @property() varient: 'primary' | 'success' | 'danger' | 'warning' | 'gray' = 'primary';
+
+  @property() valPosition: 'bottom' | 'top' | 'front';
+  
+  @property() tooltip: true | false = false;
 
   /** The locale to render the component in. */
   @property() lang: string;
 
   render() {
     return html`
+
+    ${this.valPosition === 'top'?
+    html`
+    <span part="labelBottom" class="progress-val-label progress-val-top">
+    <slot>${this.value}%</slot>
+    </span>
+    `:''}
       <div
         part="base"
         class=${classMap({
           'progress-bar': true,
-          'progress-bar--indeterminate': this.indeterminate
+          'progress-bar--indeterminate': this.indeterminate,
+          'progress-bar-primary': this.varient === 'primary',
+          'progress-bar-success': this.varient === 'success',
+          'progress-bar-danger': this.varient === 'danger',
+          'progress-bar-warning': this.varient === 'warning',
+          'progress-bar-gray': this.varient === 'gray',
+          'progress-bar-inline':this.valPosition === 'front'
         })}
         role="progressbar"
         title=${ifDefined(this.title)}
@@ -62,7 +80,20 @@ export default class SlProgressBar extends LitElement {
               `
             : ''}
         </div>
+        <span part="labelFront">
+        <slot></slot>
+        </span>
       </div>
+      ${this.valPosition === 'bottom' || this.valPosition === 'front'?
+    html`
+    <span part="labelBottom" class=${classMap({
+      'progress-val-label':true, 
+      'progress-val-bottom':this.valPosition === 'bottom',
+      'progress-val-front':this.valPosition === 'front',
+    })}>
+    <slot>${this.value}%</slot>
+    </span>
+    `:''}
     `;
   }
 }

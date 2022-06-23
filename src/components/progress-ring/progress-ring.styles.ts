@@ -5,10 +5,15 @@ export default css`
   ${componentStyles}
 
   :host {
-    --size: 128px;
-    --track-width: 4px;
-    --track-color: var(--i2c-color-neutral-200);
+    --size: 160px;
+    --track-width: 16px;
+    --track-color: var(--i2c-color-primary-50);
     --indicator-color: var(--i2c-color-primary-600);
+    --label-value-font-size:var(--i2c-font-size-x-large);
+    --label-text-font-size:var(--i2c-font-size-x-small);
+    --label-text-color:var(--i2c-color-gray-500);
+    
+    --label-font-weight:var(--i2c-font-weight-semibold);
 
     display: inline-flex;
   }
@@ -53,14 +58,25 @@ export default css`
 
   .progress-ring__label {
     display: flex;
-    align-items: center;
+    flex-flow: column;
     justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
+    line-height:var(--i2c-line-height-dense);
     text-align: center;
     user-select: none;
+  }
+  .progress-ring__label-text{
+    font-size:var(--label-text-font-size);
+    font-weight:var(--label-font-weight);
+    color:var(--label-text-color)
+  }
+  .progress-ring__label-value{
+    font-size:var(--label-value-font-size);
+    font-weight:var(--label-font-weight);
   }
 `;
