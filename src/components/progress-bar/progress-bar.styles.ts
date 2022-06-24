@@ -24,6 +24,7 @@ export default css`
 
   .progress-bar__indicator {
     height: 100%;
+    border-radius: var(--i2c-border-radius-pill);
     font-family: var(--i2c-font-sans);
     font-size: 12px;
     font-weight: var(--i2c-font-weight-normal);
@@ -56,6 +57,41 @@ export default css`
   width:45px;
   text-align:right;
 }
+[class*="progress-val-tooltip-"]{
+  display:inline-block;
+  position:relative;
+  background:var(--i2c-color-neutral);
+  color:var(--i2c-color-gray-700);
+  padding: var(--i2c-spacing-2-5) var(--i2c-spacing-3-5);
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  font-size:var(--i2c-font-size-x-small);
+  border-radius:var(--i2c-border-radius-large);
+}
+[class*="progress-val-tooltip-"]:after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left:-6px ;
+  border-width: 6px;
+  border-style: solid;
+}
+.progress-val-tooltip-bottom{
+  margin-top:var(--i2c-spacing-3);
+}
+.progress-val-tooltip-bottom:after{
+  bottom: 100%;
+  border-color: transparent transparent var(--i2c-color-neutral-0) transparent;
+}
+
+.progress-val-tooltip-top{
+  margin-bottom:var(--i2c-spacing-3);
+}
+
+.progress-val-tooltip-top:after{
+  top: 100%;
+  border-color: var(--i2c-color-neutral-0) transparent transparent transparent;
+}
+
   /* Themes */
   .progress-bar.progress-bar-primary {
       background-color: var(--track-color);

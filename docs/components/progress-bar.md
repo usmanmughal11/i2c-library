@@ -99,7 +99,12 @@ Use the `valPlacement` attribute to to change the placement of the value.
 <br/>
 <i2c-progress-bar value="75" style="--height: 16px;" valPosition="bottom"></i2c-progress-bar>
 <br/>
-<i2c-progress-bar value="100" style="--height: 16px;" valPosition="front"></i2c-progress-bar>
+<i2c-progress-bar value="65" style="--height: 16px;" valPosition="front"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="40" style="--height: 16px;" valPosition="tooltipTop"></i2c-progress-bar>
+<br/>
+<i2c-progress-bar value="40" style="--height: 16px;" valPosition="tooltipBottom"></i2c-progress-bar>
+
 ```
 
 ```jsx react
@@ -107,9 +112,6 @@ import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
 
 const App = () => <SlProgressBar value="50"  />;
 ```
-
-
-
 
 
 ### Showing Values

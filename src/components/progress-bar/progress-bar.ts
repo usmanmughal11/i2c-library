@@ -36,7 +36,7 @@ export default class SlProgressBar extends LitElement {
   @property() label = '';
   @property() varient: 'primary' | 'success' | 'danger' | 'warning' | 'gray' = 'primary';
 
-  @property() valPosition: 'bottom' | 'top' | 'front';
+  @property() valPosition?: 'bottom' | 'top' | 'front' | 'tooltipTop' | 'tooltipBottom';
   
   @property() tooltip: true | false = false;
 
@@ -46,14 +46,20 @@ export default class SlProgressBar extends LitElement {
   render() {
     return html`
 
-    ${this.valPosition === 'top'?
+    ${this.valPosition === 'top' || this.valPosition === 'tooltipTop'?
     html`
-    <span part="labelBottom" class="progress-val-label progress-val-top">
+    <span part="labelTop" style="left:${this.value-4}%;" class=${classMap({
+      'progress-val-label':true,
+       'progress-val-top':this.valPosition==='top',
+       'progress-val-tooltip-top': this.valPosition === 'tooltipTop',
+      })}>
+
+    
     <slot>${this.value}%</slot>
     </span>
     `:''}
       <div
-        part="base"
+        part="base" 
         class=${classMap({
           'progress-bar': true,
           'progress-bar--indeterminate': this.indeterminate,
@@ -84,12 +90,13 @@ export default class SlProgressBar extends LitElement {
         <slot></slot>
         </span>
       </div>
-      ${this.valPosition === 'bottom' || this.valPosition === 'front'?
+      ${this.valPosition === 'bottom' || this.valPosition === 'front' || this.valPosition === 'tooltipBottom'?
     html`
-    <span part="labelBottom" class=${classMap({
+    <span part="labelBottom" style="left:${this.value-3}%;" class=${classMap({
       'progress-val-label':true, 
       'progress-val-bottom':this.valPosition === 'bottom',
       'progress-val-front':this.valPosition === 'front',
+      'progress-val-tooltip-bottom':this.valPosition === 'tooltipBottom',
     })}>
     <slot>${this.value}%</slot>
     </span>
