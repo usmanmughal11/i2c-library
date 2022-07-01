@@ -43,7 +43,7 @@ export default class SlAlert extends LitElement {
   static styles = styles;
 
   private autoHideTimeout: number;
-  private readonly hasSlotController = new HasSlotController(this, 'icon', 'suffix');
+  private readonly hasSlotController = new HasSlotController(this, 'icon', 'avatar');
   private readonly localize = new LocalizeController(this);
 
   @query('[part="base"]') base: HTMLElement;
@@ -55,13 +55,19 @@ export default class SlAlert extends LitElement {
   @property({ type: Boolean, reflect: true }) closable = false;
 
   /** The alert's variant. */
-  @property({ reflect: true }) variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger' = 'primary';
+  @property({ reflect: true }) variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default' = 'neutral';
+
 
   /**
    * The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with
    * the alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.
    */
   @property({ type: Number }) duration = Infinity;
+
+  @property({ type: String }) badge? = '';
+  @property({ type: String }) alertTitle? = '';
+  @property() type?: 'notification'|'alert' = 'notification';
+ 
 
   firstUpdated() {
     this.base.hidden = !this.open;
@@ -175,6 +181,9 @@ export default class SlAlert extends LitElement {
   }
 
   render() {
+    const hasIconSlot = this.hasSlotController.test('icon');
+    const hasAvatarSlot = this.hasSlotController.test('avatar');
+
     return html`
       <div
         part="base"
@@ -182,12 +191,16 @@ export default class SlAlert extends LitElement {
           alert: true,
           'alert--open': this.open,
           'alert--closable': this.closable,
-          'alert--has-icon': this.hasSlotController.test('icon'),
+          'alert--has-icon': hasIconSlot,
+          'alert--has-avatar':hasAvatarSlot,
           'alert--primary': this.variant === 'primary',
           'alert--success': this.variant === 'success',
           'alert--neutral': this.variant === 'neutral',
           'alert--warning': this.variant === 'warning',
-          'alert--danger': this.variant === 'danger'
+          'alert--danger': this.variant === 'danger',
+          'alert--default': this.variant === 'default',
+          'alert--type-notification': this.type === 'notification',
+          'alert--type-alert': this.type === 'alert',
         })}
         role="alert"
         aria-live="assertive"
@@ -197,8 +210,10 @@ export default class SlAlert extends LitElement {
       >
         <span part="icon" class="alert__icon">
           <slot name="icon"></slot>
-        </span>
-
+        </span>     
+          <span part="avatar" class="alert__avatar">
+             <slot name="avatar"></slot>
+          </span>
         <span part="message" class="alert__message">
           <slot></slot>
         </span>

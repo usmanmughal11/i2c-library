@@ -7,6 +7,7 @@ Alerts are used to display important messages inline or as toast notifications.
 ```html preview
 <i2c-alert open>
   <i2c-icon slot="icon" name="info-circle"></i2c-icon>
+    <strong>This is super informative</strong> <br/>
   This is a standard alert. You can customize its content and even the icon.
 </i2c-alert>
 ```
@@ -24,11 +25,20 @@ const App = () => (
 
 ?> Alerts will not be visible if the `open` attribute is not present.
 
+
 ## Examples
+
+```html preview
+<i2c-alert open>
+  <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
+  This is a standard alert. You can customize its content and even the icon.
+</i2c-alert>
+```
 
 ### Variants
 
 Set the `variant` attribute to change the alert's variant.
+
 
 ```html preview
 <i2c-alert variant="primary" open>

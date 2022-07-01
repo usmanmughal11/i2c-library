@@ -23,14 +23,14 @@ Use the `--size` custom property to set the diameter of the progress ring.
 ```html preview
 <i2c-progress-ring value="50" style="--size: 64px; --track-width: 6px;"></i2c-progress-ring>
 <i2c-progress-ring value="50" style="--size: 160px;"></i2c-progress-ring>
-<i2c-progress-ring value="50" style="--size: 200px; --track-width: 20px;"></i2c-progress-ring>
-<i2c-progress-ring value="50" style="--size: 240px; --track-width: 24px;"></i2c-progress-ring>
+<i2c-progress-ring value="50" style="--size: 200px; --track-width: 20px;" label="50%"></i2c-progress-ring>
+<i2c-progress-ring value="50" style="--size: 240px; --track-width: 24px;" label="50%"></i2c-progress-ring>
 <!-- <i2c-progress-ring value="50" style="--size: 280px; --track-width: 28px;"></i2c-progress-ring> -->
 ```
 
 ```jsx react
 import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
-
+ 
 const App = () => <SlProgressRing value="50" style={{ '--size': '200px' }} />;
 ```
 

@@ -1,6 +1,6 @@
 import {
   avatar_styles_default
-} from "../../chunks/chunk.6UCRUZ2Q.js";
+} from "../../chunks/chunk.3JAPAEYK.js";
 import "../../chunks/chunk.6HCWEZWU.js";
 import "../../chunks/chunk.ZU3WVWU5.js";
 import "../../chunks/chunk.K2NRSETB.js";

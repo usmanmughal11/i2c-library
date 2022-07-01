@@ -61,7 +61,7 @@
               "kind": "field",
               "name": "hasSlotController",
               "privacy": "private",
-              "default": "new HasSlotController(this, 'icon', 'suffix')"
+              "default": "new HasSlotController(this, 'icon', 'avatar')"
             },
             {
               "kind": "field",
@@ -102,9 +102,9 @@
               "kind": "field",
               "name": "variant",
               "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
               },
-              "default": "'primary'",
+              "default": "'neutral'",
               "description": "The alert's variant.",
               "attribute": "variant",
               "reflects": true
@@ -115,6 +115,33 @@
               "default": "Infinity",
               "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
               "attribute": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "badge",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "badge"
+            },
+            {
+              "kind": "field",
+              "name": "alertTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "alertTitle"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'notification'|'alert' | undefined"
+              },
+              "default": "'notification'",
+              "attribute": "type"
             },
             {
               "kind": "method",
@@ -196,9 +223,9 @@
             {
               "name": "variant",
               "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
               },
-              "default": "'primary'",
+              "default": "'neutral'",
               "description": "The alert's variant.",
               "fieldName": "variant"
             },
@@ -210,6 +237,30 @@
                 "module": "src/components/alert/alert.ts"
               },
               "fieldName": "duration"
+            },
+            {
+              "name": "badge",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "badge"
+            },
+            {
+              "name": "alertTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "alertTitle"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'notification'|'alert' | undefined"
+              },
+              "default": "'notification'",
+              "fieldName": "type"
             }
           ],
           "superclass": {
@@ -1346,7 +1397,7 @@
         {
           "kind": "class",
           "description": "",
-          "name": "SlButton",
+          "name": "i2cButton",
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
@@ -1844,7 +1895,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlButton",
+            "name": "i2cButton",
             "module": "src/components/button/button.ts"
           }
         },
@@ -1852,7 +1903,7 @@
           "kind": "custom-element-definition",
           "name": "i2c-button",
           "declaration": {
-            "name": "SlButton",
+            "name": "i2cButton",
             "module": "src/components/button/button.ts"
           }
         }
@@ -13726,11 +13777,10 @@
     }
   ],
   "package": {
-    "name": "@shoelace-style/shoelace",
+    "name": "@i2c-style/i2c",
     "description": "A forward-thinking library of web components.",
     "version": "2.0.0-beta.75",
     "author": "Cory LaViska",
-    "homepage": "https://github.com/shoelace-style/shoelace",
     "license": "MIT"
   }
 }

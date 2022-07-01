@@ -7,7 +7,7 @@ export default css`
   :host {
     display: inline-block;
 
-    --size: 3rem;
+    --size: 2.5rem;
   }
 
   .avatar {

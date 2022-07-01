@@ -30,7 +30,7 @@ import styles from './button.styles';
  * @csspart caret - The button's caret.
  */
 @customElement('i2c-button')
-export default class SlButton extends LitElement {
+export default class i2cButton extends LitElement {
   static styles = styles;
 
   @query('.button') button: HTMLButtonElement | HTMLLinkElement;
@@ -244,6 +244,6 @@ export default class SlButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'i2c-button': SlButton;
+    'i2c-button': i2cButton;
   }
 }

@@ -1,12 +1,12 @@
 {
   "$schema": "http://json.schemastore.org/web-types",
-  "name": "@shoelace-style/shoelace",
+  "name": "@i2c-style/i2c",
   "version": "2.0.0-beta.75",
   "description-markup": "markdown",
   "framework-config": {
     "enable-when": {
       "node-packages": [
-        "@shoelace-style/shoelace"
+        "@i2c-style/i2c"
       ]
     }
   },
@@ -57,13 +57,31 @@
                 "name": "variant",
                 "description": "The alert's variant.",
                 "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
                 }
               },
               {
                 "name": "duration",
                 "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
                 "value": {}
+              },
+              {
+                "name": "badge",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alertTitle",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "type",
+                "value": {
+                  "type": "'linear'|''"
+                }
               },
               {
                 "name": "show",
@@ -139,13 +157,31 @@
               "name": "variant",
               "description": "The alert's variant.",
               "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
               }
             },
             {
               "name": "duration",
               "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
               "value": {}
+            },
+            {
+              "name": "badge",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alertTitle",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "type",
+              "value": {
+                "type": "'linear'|''"
+              }
             }
           ]
         },

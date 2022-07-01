@@ -73,7 +73,8 @@ export default css`
   .progress-ring__label-text{
     font-size:var(--label-text-font-size);
     font-weight:var(--label-font-weight);
-    color:var(--label-text-color)
+    color:var(--label-text-color);
+    max-width: 75%;
   }
   .progress-ring__label-value{
     font-size:var(--label-value-font-size);

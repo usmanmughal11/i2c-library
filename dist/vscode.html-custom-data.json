@@ -29,12 +29,32 @@
             },
             {
               "name": "danger"
+            },
+            {
+              "name": "default"
             }
           ]
         },
         {
           "name": "duration",
           "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`."
+        },
+        {
+          "name": "badge"
+        },
+        {
+          "name": "alertTitle"
+        },
+        {
+          "name": "type",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": ""
+            }
+          ]
         }
       ]
     },

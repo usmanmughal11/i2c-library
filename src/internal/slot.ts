@@ -39,7 +39,7 @@ export class HasSlotController implements ReactiveController {
     return this.host.querySelector(`:scope > [slot="${name}"]`) !== null;
   }
 
-  test(slotName: string) {
+  test(slotName: string) {    
     return slotName === '[default]' ? this.hasDefaultSlot() : this.hasNamedSlot(slotName);
   }
 

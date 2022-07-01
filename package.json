@@ -1,8 +1,8 @@
 {
-  "name": "@shoelace-style/shoelace",
+  "name": "@i2c-style/i2c",
   "description": "A forward-thinking library of web components.",
   "version": "2.0.0-beta.75",
-  "homepage": "https://github.com/shoelace-style/shoelace",
+  
   "author": "Cory LaViska",
   "license": "MIT",
   "main": "dist/i2cLibrary.js",
@@ -23,9 +23,7 @@
     "type": "git",
     "url": "git+https://bitbucket.i2cinc.com/scm/grap/i2c-library.git"
   },
-  "bugs": {
-    "url": "https://github.com/shoelace-style/shoelace/issues"
-  },
+ 
   "funding": {
     "type": "individual",
     "url": "https://github.com/sponsors/claviska"

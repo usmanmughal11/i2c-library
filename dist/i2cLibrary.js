@@ -2,30 +2,30 @@ import "./chunks/chunk.QL5C2XOW.js";
 import "./chunks/chunk.HAL7R4WT.js";
 import {
   SlTooltip
-} from "./chunks/chunk.LOHTR3AS.js";
-import "./chunks/chunk.2O5JQF3H.js";
+} from "./chunks/chunk.UOD22SEU.js";
 import {
   SlTabGroup
-} from "./chunks/chunk.TVCXVHC6.js";
+} from "./chunks/chunk.R2Q45YKY.js";
 import {
   SlTabPanel
 } from "./chunks/chunk.KBJDGPY2.js";
 import "./chunks/chunk.PHWU3ZV3.js";
 import {
   SlTextarea
-} from "./chunks/chunk.RJ2EC37A.js";
+} from "./chunks/chunk.R7QHEKRS.js";
 import "./chunks/chunk.DSJPHGWA.js";
+import "./chunks/chunk.2O5JQF3H.js";
 import {
   SlSplitPanel
 } from "./chunks/chunk.F7ZKV5V5.js";
 import "./chunks/chunk.WLQ3VUOG.js";
 import {
   SlSwitch
-} from "./chunks/chunk.753X5PME.js";
+} from "./chunks/chunk.I7EMLPBB.js";
 import "./chunks/chunk.UQZHFVIC.js";
 import {
   SlTab
-} from "./chunks/chunk.HKX3KS4P.js";
+} from "./chunks/chunk.5NBLT4FL.js";
 import "./chunks/chunk.KFR7NC2M.js";
 import "./chunks/chunk.XV3AVMOJ.js";
 import "./chunks/chunk.LBRJSQAU.js";
@@ -38,10 +38,10 @@ import {
 import "./chunks/chunk.CA3APAOZ.js";
 import {
   SlSelect
-} from "./chunks/chunk.7VA2NYHS.js";
+} from "./chunks/chunk.KMKTJU2U.js";
 import {
   SlTag
-} from "./chunks/chunk.7CZD4QN7.js";
+} from "./chunks/chunk.NSH3TRMA.js";
 import "./chunks/chunk.SD5TBA6Q.js";
 import "./chunks/chunk.D25B7S6Y.js";
 import {
@@ -54,11 +54,11 @@ import {
 import "./chunks/chunk.FWFERI34.js";
 import {
   SlRange
-} from "./chunks/chunk.7AG5FN3D.js";
+} from "./chunks/chunk.UUKUQK6S.js";
 import "./chunks/chunk.TE7O2IZD.js";
 import {
   SlRating
-} from "./chunks/chunk.WYR2MM4J.js";
+} from "./chunks/chunk.ECKRLWAP.js";
 import "./chunks/chunk.JME4RO5L.js";
 import {
   SlRelativeTime
@@ -66,23 +66,23 @@ import {
 import "./chunks/chunk.RHFE6G2N.js";
 import {
   SlProgressRing
-} from "./chunks/chunk.ORCPGKSK.js";
-import "./chunks/chunk.ZAZCOLC5.js";
+} from "./chunks/chunk.6T45A4NL.js";
+import "./chunks/chunk.5CL7O6OY.js";
 import {
   SlQrCode
 } from "./chunks/chunk.BPPN622A.js";
 import "./chunks/chunk.JQCJ5MFA.js";
 import {
   SlRadio
-} from "./chunks/chunk.NUC2XG6F.js";
+} from "./chunks/chunk.GSPHSWEL.js";
 import "./chunks/chunk.V23K4GWV.js";
 import {
   SlRadioButton
-} from "./chunks/chunk.3EUAQRK6.js";
+} from "./chunks/chunk.J24QZRXK.js";
 import "./chunks/chunk.Q567KTFE.js";
 import {
   SlMenuItem
-} from "./chunks/chunk.CIWO3BUM.js";
+} from "./chunks/chunk.UB6G2IJQ.js";
 import "./chunks/chunk.PT2PV2DP.js";
 import {
   SlMenuLabel
@@ -94,7 +94,7 @@ import {
 import "./chunks/chunk.IN25NM4V.js";
 import {
   SlProgressBar
-} from "./chunks/chunk.3XBDR4HU.js";
+} from "./chunks/chunk.F4Q4U7BW.js";
 import "./chunks/chunk.6OPZ2OZA.js";
 import {
   SlImageComparer
@@ -110,7 +110,7 @@ import "./chunks/chunk.W3YSYQMB.js";
 import "./chunks/chunk.U55TMU7Y.js";
 import {
   SlDrawer
-} from "./chunks/chunk.5SB3KTUA.js";
+} from "./chunks/chunk.KHGGQDHZ.js";
 import "./chunks/chunk.RS2PTWYN.js";
 import {
   SlFormatBytes
@@ -123,7 +123,7 @@ import {
 } from "./chunks/chunk.BJEU3ETR.js";
 import {
   SlColorPicker
-} from "./chunks/chunk.WPV2SDQP.js";
+} from "./chunks/chunk.SDMZT2YE.js";
 import {
   SlVisuallyHidden
 } from "./chunks/chunk.4ZEIAOD3.js";
@@ -133,22 +133,22 @@ import "./chunks/chunk.43G6GBOK.js";
 import "./chunks/chunk.IL5OPZ67.js";
 import {
   SlInput
-} from "./chunks/chunk.OONY6MNE.js";
+} from "./chunks/chunk.55GKQVLT.js";
 import "./chunks/chunk.7E3DVIQP.js";
 import "./chunks/chunk.RG6X2WND.js";
 import {
   SlDropdown
-} from "./chunks/chunk.X3XPHHUL.js";
+} from "./chunks/chunk.LFUAGJMT.js";
 import "./chunks/chunk.FZS7I7HO.js";
 import "./chunks/chunk.F4OB4K33.js";
 import "./chunks/chunk.GPJFNGBO.js";
 import {
   SlDetails
-} from "./chunks/chunk.IJCNDJUM.js";
+} from "./chunks/chunk.O257MAMK.js";
 import "./chunks/chunk.V3CHBFA4.js";
 import {
   SlDialog
-} from "./chunks/chunk.ABAAT6WY.js";
+} from "./chunks/chunk.7QLDF6NG.js";
 import "./chunks/chunk.BQLXYG6H.js";
 import "./chunks/chunk.SCUNOITN.js";
 import "./chunks/chunk.PW5AZSPR.js";
@@ -158,8 +158,8 @@ import {
 } from "./chunks/chunk.FPOVK7WN.js";
 import "./chunks/chunk.WM5YOCLX.js";
 import {
-  SlButton
-} from "./chunks/chunk.3TXM2RWB.js";
+  i2cButton
+} from "./chunks/chunk.JZZIG7G4.js";
 import {
   SlSpinner
 } from "./chunks/chunk.2VBWKRKQ.js";
@@ -175,25 +175,25 @@ import {
 import "./chunks/chunk.CIQDTUDK.js";
 import {
   SlCheckbox
-} from "./chunks/chunk.JKY3WG2V.js";
+} from "./chunks/chunk.ALZA23AD.js";
 import "./chunks/chunk.OEDEK5QG.js";
 import "./chunks/chunk.S6I2SNDG.js";
 import "./chunks/chunk.MJSQ733I.js";
 import {
   SlAlert
-} from "./chunks/chunk.34HRZSVP.js";
+} from "./chunks/chunk.D5D3NWR2.js";
 import {
   SlIconButton
-} from "./chunks/chunk.TBC5CZIM.js";
+} from "./chunks/chunk.6Y63SFAS.js";
 import "./chunks/chunk.P5P4GOBY.js";
 import "./chunks/chunk.63W3F5G5.js";
 import "./chunks/chunk.EFXMZY2Q.js";
 import "./chunks/chunk.YTNS3I2U.js";
-import "./chunks/chunk.EPMA6YOG.js";
+import "./chunks/chunk.4CSDO4BX.js";
 import {
-  SlAnimatedImage
-} from "./chunks/chunk.ZSGKUCB7.js";
-import "./chunks/chunk.ZJSVUBJV.js";
+  SlBadge
+} from "./chunks/chunk.TZWZHE7W.js";
+import "./chunks/chunk.5LBK4YU5.js";
 import {
   SlBreadcrumb
 } from "./chunks/chunk.OX46XODZ.js";
@@ -201,7 +201,7 @@ import "./chunks/chunk.E66L43KD.js";
 import "./chunks/chunk.HFUWLCKA.js";
 import {
   SlBreadcrumbItem
-} from "./chunks/chunk.BZ35B2ZS.js";
+} from "./chunks/chunk.B7ONZA72.js";
 import "./chunks/chunk.STCO723X.js";
 import "./chunks/chunk.L2UFKVLM.js";
 import "./chunks/chunk.AMENFSPY.js";
@@ -214,11 +214,16 @@ import {
   getEasingNames
 } from "./chunks/chunk.H3IZUSJ7.js";
 import {
+  SlAnimatedImage
+} from "./chunks/chunk.ZSGKUCB7.js";
+import "./chunks/chunk.ZJSVUBJV.js";
+import {
   SlAvatar
-} from "./chunks/chunk.55XDY4EF.js";
+} from "./chunks/chunk.SDGII6SO.js";
+import "./chunks/chunk.H66XLZ2O.js";
 import {
   SlIcon
-} from "./chunks/chunk.KAB43DS6.js";
+} from "./chunks/chunk.SERTFTJZ.js";
 import {
   registerIconLibrary,
   unregisterIconLibrary
@@ -233,16 +238,11 @@ import "./chunks/chunk.P52GZVKG.js";
 import "./chunks/chunk.RPB53XXV.js";
 import "./chunks/chunk.VXRTKQIS.js";
 import "./chunks/chunk.O4B4UDSO.js";
+import "./chunks/chunk.2JQPDYNA.js";
 import "./chunks/chunk.W6MGCO4G.js";
 import "./chunks/chunk.UY5AQKHP.js";
-import "./chunks/chunk.6UCRUZ2Q.js";
-import {
-  SlBadge
-} from "./chunks/chunk.EKKVXANR.js";
-import "./chunks/chunk.H66XLZ2O.js";
-import "./chunks/chunk.2JQPDYNA.js";
 import "./chunks/chunk.QCFW6O2I.js";
-import "./chunks/chunk.5LBK4YU5.js";
+import "./chunks/chunk.3JAPAEYK.js";
 import "./chunks/chunk.6HCWEZWU.js";
 import "./chunks/chunk.ZU3WVWU5.js";
 import "./chunks/chunk.K2NRSETB.js";
@@ -257,7 +257,7 @@ export {
   SlBadge as i2cBadge,
   SlBreadcrumb as i2cBreadcrumb,
   SlBreadcrumbItem as i2cBreadcrumbItem,
-  SlButton as i2cButton,
+  i2cButton,
   SlButtonGroup as i2cButtonGroup,
   SlCard as i2cCard,
   SlCheckbox as i2cCheckbox,
