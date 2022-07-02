@@ -220,7 +220,7 @@ export default class SlAlert extends LitElement {
 
         ${this.closable
           ? html`
-              <i2c-icon-button
+              <i2c-icon-button size="small"
                 part="close-button"
                 exportparts="base:close-button__base"
                 class="alert__close-button"

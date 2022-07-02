@@ -1,6 +1,23 @@
 {
   "tags": [
     {
+      "name": "i2c-animated-image",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The image's src attribute."
+        },
+        {
+          "name": "alt",
+          "description": "The image's alt attribute."
+        },
+        {
+          "name": "play",
+          "description": "When set, the image will animate. Otherwise, it will be paused."
+        }
+      ]
+    },
+    {
       "name": "i2c-alert",
       "attributes": [
         {
@@ -49,29 +66,12 @@
           "name": "type",
           "values": [
             {
-              "name": "linear"
+              "name": "notification"
             },
             {
-              "name": ""
+              "name": "alert"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "i2c-animated-image",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The image's src attribute."
-        },
-        {
-          "name": "alt",
-          "description": "The image's alt attribute."
-        },
-        {
-          "name": "play",
-          "description": "When set, the image will animate. Otherwise, it will be paused."
         }
       ]
     },

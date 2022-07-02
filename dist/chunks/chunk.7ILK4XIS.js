@@ -1,8 +1,13 @@
-import { css } from 'lit';
-import componentStyles from '../../styles/component.styles';
+import {
+  component_styles_default
+} from "./chunk.6HCWEZWU.js";
+import {
+  r
+} from "./chunk.ZU3WVWU5.js";
 
-export default css`
-  ${componentStyles}
+// src/components/alert/alert.styles.ts
+var alert_styles_default = r`
+  ${component_styles_default}
 
   :host {
     display: contents;
@@ -17,7 +22,7 @@ export default css`
     align-items: stretch;
     background-color: var(--i2c-panel-background-color);
     border: solid var(--i2c-panel-border-width) var(--i2c-color-gray-100);
-    padding: var(--i2c-spacing-4);
+    padding: var(--i2c-spacing-2);
     border-radius: var(--i2c-border-radius-large);
     box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
     font-family: var(--i2c-font-sans);
@@ -136,6 +141,10 @@ alert--type-alert.alert--primary {
     display: flex;
     align-items: center;
     font-size: var(--i2c-font-size-large);
-    // padding-inline-end: var(--i2c-spacing-medium);
+    padding-inline-end: var(--i2c-spacing-medium);
   }
 `;
+
+export {
+  alert_styles_default
+};

@@ -1,8 +1,13 @@
-import { css } from 'lit';
-import componentStyles from '../../styles/component.styles';
+import {
+  component_styles_default
+} from "./chunk.6HCWEZWU.js";
+import {
+  r
+} from "./chunk.ZU3WVWU5.js";
 
-export default css`
-  ${componentStyles}
+// src/components/alert/alert.styles.ts
+var alert_styles_default = r`
+  ${component_styles_default}
 
   :host {
     display: contents;
@@ -136,6 +141,10 @@ alert--type-alert.alert--primary {
     display: flex;
     align-items: center;
     font-size: var(--i2c-font-size-large);
-    // padding-inline-end: var(--i2c-spacing-medium);
+    padding-inline-end: var(--i2c-spacing-medium);
   }
 `;
+
+export {
+  alert_styles_default
+};

@@ -131,6 +131,27 @@ const App = () => (
 );
 ```
 
+
+
+### Designs
+
+Set the `variant` attribute to change the alert's variant.
+
+
+```html preview
+<i2c-alert variant="primary" open>
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
+  <strong>This is super informative</strong><br />
+  Your team has made changes to your company profile since you last logged in.
+  <br/>
+  <a href="#">Dismiss</a>
+  <a href="#">View Changees</a>
+  <!-- <i2c-button variant="text" size="small">Dismiss</i2c-button>
+  <i2c-button variant="text" size="small">View Changees</i2c-button> -->
+</i2c-alert>
+
+
+
 ### Closable
 
 Add the `closable` attribute to show a close button that will hide the alert.
