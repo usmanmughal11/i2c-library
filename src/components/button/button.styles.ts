@@ -691,6 +691,10 @@ export default css`
   .button--caret.button--2xlarge .button__label {
     padding-inline-end: var(--i2c-spacing-small);
   }
+  .button--has-label.no-padding .button__label{
+    padding:0;
+    height:unset;
+  }
   /*
    * Button groups support a variety of button types (e.g. buttons with tooltips, buttons as dropdown triggers, etc.).
    * This means buttons aren't always direct descendants of the button group, thus we can't target them with the

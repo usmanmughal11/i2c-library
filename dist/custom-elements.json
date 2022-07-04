@@ -61,7 +61,7 @@
               "kind": "field",
               "name": "hasSlotController",
               "privacy": "private",
-              "default": "new HasSlotController(this, 'icon', 'avatar')"
+              "default": "new HasSlotController(this, 'icon', 'avatar','link1', 'link2', 'leftImg')"
             },
             {
               "kind": "field",
@@ -100,6 +100,16 @@
             },
             {
               "kind": "field",
+              "name": "iconCenter",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "iconCenter",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "variant",
               "type": {
                 "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
@@ -111,10 +121,30 @@
             },
             {
               "kind": "field",
+              "name": "layout",
+              "type": {
+                "text": "'vertical' | 'linear'"
+              },
+              "default": "'linear'",
+              "description": "The alert's Layout.",
+              "attribute": "layout",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "duration",
               "default": "Infinity",
               "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
               "attribute": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "leftImg",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "leftImg"
             },
             {
               "kind": "field",
@@ -133,6 +163,51 @@
               },
               "default": "''",
               "attribute": "alertTitle"
+            },
+            {
+              "kind": "field",
+              "name": "link1text",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "link1text"
+            },
+            {
+              "kind": "field",
+              "name": "link2text",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "link2text"
+            },
+            {
+              "kind": "field",
+              "name": "link1url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "link1url"
+            },
+            {
+              "kind": "field",
+              "name": "link2url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "link2url"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "target"
             },
             {
               "kind": "field",
@@ -221,6 +296,14 @@
               "fieldName": "closable"
             },
             {
+              "name": "iconCenter",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "iconCenter"
+            },
+            {
               "name": "variant",
               "type": {
                 "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'default'"
@@ -230,6 +313,15 @@
               "fieldName": "variant"
             },
             {
+              "name": "layout",
+              "type": {
+                "text": "'vertical' | 'linear'"
+              },
+              "default": "'linear'",
+              "description": "The alert's Layout.",
+              "fieldName": "layout"
+            },
+            {
               "name": "duration",
               "default": "Infinity",
               "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`.",
@@ -237,6 +329,14 @@
                 "module": "src/components/alert/alert.ts"
               },
               "fieldName": "duration"
+            },
+            {
+              "name": "leftImg",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "leftImg"
             },
             {
               "name": "badge",
@@ -253,6 +353,46 @@
               },
               "default": "''",
               "fieldName": "alertTitle"
+            },
+            {
+              "name": "link1text",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "link1text"
+            },
+            {
+              "name": "link2text",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "link2text"
+            },
+            {
+              "name": "link1url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "link1url"
+            },
+            {
+              "name": "link2url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "link2url"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "target"
             },
             {
               "name": "type",
@@ -461,6 +601,170 @@
           "declaration": {
             "name": "SlAnimatedImage",
             "module": "src/components/animated-image/animated-image.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/avatar/avatar.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "i2c-icon"
+          ],
+          "tagName": "i2c-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-avatar",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
           }
         }
       ]
@@ -856,170 +1160,6 @@
           "declaration": {
             "name": "getEasingNames",
             "module": "src/components/animation/animations.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/avatar/avatar.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "i2c-icon"
-          ],
-          "tagName": "i2c-avatar",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-avatar",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
           }
         }
       ]
@@ -1559,6 +1699,17 @@
             },
             {
               "kind": "field",
+              "name": "noPadding",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a circle button.",
+              "attribute": "noPadding",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "type",
               "type": {
                 "text": "'button' | 'submit'"
@@ -1786,6 +1937,15 @@
               "default": "false",
               "description": "Draws a circle button.",
               "fieldName": "circle"
+            },
+            {
+              "name": "noPadding",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a circle button.",
+              "fieldName": "noPadding"
             },
             {
               "name": "type",

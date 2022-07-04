@@ -31,9 +31,72 @@ const App = () => (
 ```html preview
 <i2c-alert open>
   <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
+   <strong>This is super informative</strong> <br/>
   This is a standard alert. You can customize its content and even the icon.
+  <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
+  <a href="#" slot="link2" class="no-underline">View changes</a>
+  <style>
+    .text-gray{
+      color:#888;
+    }
+    .no-underline{
+      text-decoration:none;
+    }
+  </style>
+</i2c-alert>
+<br/>
+<i2c-alert open>
+  <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
+   <strong>This is super informative</strong> <br/>
+  This is a standard alert. You can customize its content and even the icon.
+  
+</i2c-alert>
+
+<br/>
+<i2c-alert open iconCenter>
+  <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
+   <strong>This is super informative</strong>   
+</i2c-alert>
+
+<br/>
+<i2c-alert open>
+   <strong>This is super informative</strong>   
 </i2c-alert>
 ```
+
+
+## Image
+
+```html preview
+ 
+<i2c-alert open  leftImg="/assets/images/alert-left.png">
+   <strong>This is super informative</strong> <br/>
+  This is a standard alert. You can customize its content and even the icon.
+  <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
+  <a href="#" slot="link2" class="no-underline">View changes</a>
+  <style>
+    .text-gray{
+      color:#888;
+    }
+    .no-underline{
+      text-decoration:none;
+    }
+  </style>
+</i2c-alert>
+
+<br/>
+
+<i2c-alert open leftImg="/assets/images/alert-left.png">
+   <strong>This is super informative</strong> <br/>
+  This is a standard alert. You can customize its content and even the icon.
+</i2c-alert>
+<br/>
+
+<i2c-alert open leftImg="/assets/images/alert-left.png">
+   <strong>This is super informative</strong> 
+   </i2c-alert>
+```
+
 
 ### Variants
 
@@ -132,32 +195,112 @@ const App = () => (
 ```
 
 
+### Vertical Designs
 
-### Designs
-
-Set the `variant` attribute to change the alert's variant.
+Set the `layout` attribute to change the alert's Layout.
 
 
 ```html preview
-<i2c-alert variant="primary" open>
+<i2c-alert variant="primary" open layout="vertical">
   <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   <strong>This is super informative</strong><br />
   Your team has made changes to your company profile since you last logged in.
-  <br/>
-  <a href="#">Dismiss</a>
-  <a href="#">View Changees</a>
-  <!-- <i2c-button variant="text" size="small">Dismiss</i2c-button>
-  <i2c-button variant="text" size="small">View Changees</i2c-button> -->
+   <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
+  <a href="#" slot="link2" class="no-underline">View changes</a>
+  <style>
+    .text-gray{
+      color:#888;
+    }
+    .no-underline{
+      text-decoration:none;
+    }
+  </style>
+</i2c-alert>
+<br/>
+<i2c-alert variant="neutral" open layout="vertical">
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
+  <strong>This is super informative</strong><br />
+  Your team has made changes to your company profile since you last logged in.
+</i2c-alert>
+<br/>
+<i2c-alert variant="neutral" open layout="vertical">
+  <i2c-icon slot="icon" name="info-circle"></i2c-icon>
+  <strong>This is super informative</strong>
+</i2c-alert>
+<br/>
+<i2c-alert open  layout="vertical">
+  <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
+   <strong>This is super informative</strong>  <br/>
+   Your team has made changes to your company profile since you last logged in. 
 </i2c-alert>
 
+<br/>
+<i2c-alert variant="primary" open layout="vertical" closable class="alert-closable">
+  <strong>This is super informative</strong><br />
+  Your team has made changes to your company profile since you last logged in.
+  <img src="/assets/images/alert-img.png" />
+   <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
+  <a href="#" slot="link2" class="no-underline">View changes</a>
+  <style>
+    .text-gray{
+      color:#888;
+    }
+    .no-underline{
+      text-decoration:none;
+    }
+  </style>
+</i2c-alert>
+<br/>
+<i2c-alert variant="primary" open layout="vertical" closable class="alert-closable">
+  <strong>This is super informative</strong><br />
+  Your team has made changes to your company profile since you last logged in.
+  <img src="/assets/images/alert-img.png" />
+</i2c-alert>
+<br/>
+<i2c-alert variant="primary" open layout="vertical" closable class="alert-closable">
+  <strong>This is super informative</strong>
+  <img src="/assets/images/alert-img.png" />
+</i2c-alert>
+```
+### Alert With Progress Bar
 
+```html preview
+<i2c-alert variant="danger" open>
+  <i2c-icon slot="icon" name="exclamation-octagon"></i2c-icon>
+  <strong>Your account has been deleted</strong><br />
+  We're very sorry to see you go!
+  
+  <div style="padding-top:var(--i2c-spacing-4);">
+  <i2c-progress-bar value="60" valPosition="bottom"></i2c-progress-bar>
+  </div>
+    <a href="#" style="color:var(--i2c-gray-600);text-decuration:none;" slot="link1" class="no-underline text-gray">Dismiss</a>
+    <a href="#" style="text-decuration:none;" slot="link2" class="no-underline">View changes</a>
+</i2c-alert>
+<br/>
+<i2c-alert variant="success" open>
+  <i2c-icon slot="icon" name="exclamation-octagon"></i2c-icon>
+  <strong>Your account has been deleted</strong><br />
+  We're very sorry to see you go!
+  <div style="padding-top:var(--i2c-spacing-4);">
+    <i2c-progress-bar value="60" valPosition="bottom"></i2c-progress-bar>
+  </div>
+</i2c-alert>
+<br/>
+<i2c-alert variant="primary" open>
+  <i2c-icon slot="icon" name="exclamation-octagon"></i2c-icon>
+  <strong>Your account has been deleted</strong>
+  <div style="padding-top:var(--i2c-spacing-4);">
+  <i2c-progress-bar value="60" valPosition="bottom"></i2c-progress-bar>
+  </div>
+</i2c-alert>
+```
 
 ### Closable
 
 Add the `closable` attribute to show a close button that will hide the alert.
 
 ```html preview
-<i2c-alert variant="primary" open closable class="alert-closable">
+<i2c-alert variant="success" open closable class="alert-closable" iconCenter>
   <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   You can close this alert any time!
 </i2c-alert>
@@ -461,4 +604,17 @@ By default, the toast stack is positioned at the top-right of the viewport. You 
 
 ?> By design, it is not possible to show toasts in more than one stack simultaneously. Such behavior is confusing and makes for a poor user experience.
 
+### Alerts
+```html preview
+<i2c-alert open  variant="primary" type="alert" badge="Badge" title="New feature" link1text="Learn More" link2text="View changes">Lorem ipsum dolor sit amet consectetur.</i2c-alert>
+<br/>
+<i2c-alert open variant="success" type="alert" badge="Badge" title="New feature" link1text="Learn More" link2text="View changes">Lorem ipsum dolor sit amet consectetur.</i2c-alert>
+<br/>
+<i2c-alert open variant="danger" type="alert" badge="Badge" title="New feature" link1text="Learn More" link2text="View changes">Lorem ipsum dolor sit amet consectetur.</i2c-alert>
+<br/>
+<i2c-alert open variant="warning" type="alert" badge="Badge" title="New feature" link1text="Learn More" link2text="View changes">Lorem ipsum dolor sit amet consectetur.</i2c-alert>
+<br/>
+<i2c-alert open variant="neutral" type="alert" badge="Badge" title="New feature" link1text="Learn More" link2text="View changes">Lorem ipsum dolor sit amet consectetur.</i2c-alert>
+
+```
 [component-metadata:i2c-alert]

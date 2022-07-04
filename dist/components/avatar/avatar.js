@@ -1,6 +1,7 @@
 import {
   SlAvatar
-} from "../../chunks/chunk.DEYER4G2.js";
+} from "../../chunks/chunk.32MYDIEN.js";
+import "../../chunks/chunk.3JAPAEYK.js";
 import "../../chunks/chunk.H66XLZ2O.js";
 import "../../chunks/chunk.SERTFTJZ.js";
 import "../../chunks/chunk.W3YDSPRZ.js";
@@ -12,7 +13,6 @@ import "../../chunks/chunk.RPB53XXV.js";
 import "../../chunks/chunk.VXRTKQIS.js";
 import "../../chunks/chunk.O4B4UDSO.js";
 import "../../chunks/chunk.2JQPDYNA.js";
-import "../../chunks/chunk.3JAPAEYK.js";
 import "../../chunks/chunk.W6MGCO4G.js";
 import "../../chunks/chunk.UY5AQKHP.js";
 import "../../chunks/chunk.QCFW6O2I.js";
