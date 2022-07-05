@@ -219,10 +219,10 @@ export default css`
     line-height: 1.25rem;
     font-weight: var(--i2c-font-weight-semibold);
 
-      max-width:6rem;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
+    max-width:6rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
   }
 
   .linear--alert a{
