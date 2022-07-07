@@ -447,6 +447,330 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/animated-image/animated-image.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's src attribute.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's alt attribute.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "When set, the image will animate. Otherwise, it will be paused.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad"
+            },
+            {
+              "kind": "method",
+              "name": "handleError"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "i2c-load",
+              "reactName": "onI2cLoad"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "i2c-error",
+              "reactName": "onI2cError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's src attribute.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "The image's alt attribute.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "When set, the image will animate. Otherwise, it will be paused.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "i2c-icon"
+          ],
+          "tagName": "i2c-animated-image",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "src/components/animated-image/animated-image.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-animated-image",
+          "declaration": {
+            "name": "SlAnimatedImage",
+            "module": "src/components/animated-image/animated-image.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/avatar/avatar.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "i2c-icon"
+          ],
+          "tagName": "i2c-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-avatar",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -842,336 +1166,12 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/animated-image/animated-image.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's src attribute.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's alt attribute.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "When set, the image will animate. Otherwise, it will be paused.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad"
-            },
-            {
-              "kind": "method",
-              "name": "handleError"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "i2c-load",
-              "reactName": "onI2cLoad"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "i2c-error",
-              "reactName": "onI2cError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's src attribute.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "The image's alt attribute.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "When set, the image will animate. Otherwise, it will be paused.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "i2c-icon"
-          ],
-          "tagName": "i2c-animated-image",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "src/components/animated-image/animated-image.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-animated-image",
-          "declaration": {
-            "name": "SlAnimatedImage",
-            "module": "src/components/animated-image/animated-image.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/avatar/avatar.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "i2c-icon"
-          ],
-          "tagName": "i2c-avatar",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-avatar",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/badge/badge.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "SlBadge",
+          "name": "i2cBadge",
           "cssParts": [
             {
               "description": "The component's internal wrapper.",
@@ -1189,11 +1189,21 @@
               "kind": "field",
               "name": "variant",
               "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' \n                                      | 'light-primary' | 'light-success' | 'light-neutral' | 'dark-neutral' | 'light-warning' | 'light-danger'\n                                      | 'lighter-primary' | 'lighter-success' | 'lighter-neutral' | 'lighter-warning' | 'lighter-danger'"
               },
               "default": "'primary'",
               "description": "The badge's variant.",
               "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "'small' | 'medium' | 'large'"
+              },
+              "default": "'medium'",
+              "attribute": "size",
               "reflects": true
             },
             {
@@ -1205,6 +1215,51 @@
               "default": "false",
               "description": "Draws a pill-style badge with rounded edges.",
               "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "circle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "circle",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "iconname",
+              "type": {
+                "text": "''"
+              },
+              "attribute": "iconname"
+            },
+            {
+              "kind": "field",
+              "name": "rightIcon",
+              "type": {
+                "text": "'x'"
+              },
+              "attribute": "rightIcon"
+            },
+            {
+              "kind": "field",
+              "name": "imgpath",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "imgpath"
+            },
+            {
+              "kind": "field",
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "closable",
               "reflects": true
             },
             {
@@ -1223,11 +1278,19 @@
             {
               "name": "variant",
               "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' \n                                      | 'light-primary' | 'light-success' | 'light-neutral' | 'dark-neutral' | 'light-warning' | 'light-danger'\n                                      | 'lighter-primary' | 'lighter-success' | 'lighter-neutral' | 'lighter-warning' | 'lighter-danger'"
               },
               "default": "'primary'",
               "description": "The badge's variant.",
               "fieldName": "variant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'small' | 'medium' | 'large'"
+              },
+              "default": "'medium'",
+              "fieldName": "size"
             },
             {
               "name": "pill",
@@ -1237,6 +1300,44 @@
               "default": "false",
               "description": "Draws a pill-style badge with rounded edges.",
               "fieldName": "pill"
+            },
+            {
+              "name": "circle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "circle"
+            },
+            {
+              "name": "iconname",
+              "type": {
+                "text": "''"
+              },
+              "fieldName": "iconname"
+            },
+            {
+              "name": "rightIcon",
+              "type": {
+                "text": "'x'"
+              },
+              "fieldName": "rightIcon"
+            },
+            {
+              "name": "imgpath",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "imgpath"
+            },
+            {
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "closable"
             },
             {
               "name": "pulse",
@@ -1263,7 +1364,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "SlBadge",
+            "name": "i2cBadge",
             "module": "src/components/badge/badge.ts"
           }
         },
@@ -1271,8 +1372,119 @@
           "kind": "custom-element-definition",
           "name": "i2c-badge",
           "declaration": {
-            "name": "SlBadge",
+            "name": "i2cBadge",
             "module": "src/components/badge/badge.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/badge-group/badge-group.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "I2cBadgeGroup",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary-light' | 'primary'  | 'success-light' | 'success'  | 'neutral-light' |'neutral'| \n                                        'warning-light' | 'warning'  | 'danger-light' |'danger'"
+              },
+              "default": "'neutral'",
+              "description": "An example property.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "badgeRight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "badgeRight",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted as an example.",
+              "name": "i2c-event-name",
+              "reactName": "onI2cEventName"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary-light' | 'primary'  | 'success-light' | 'success'  | 'neutral-light' |'neutral'| \n                                        'warning-light' | 'warning'  | 'danger-light' |'danger'"
+              },
+              "default": "'neutral'",
+              "description": "An example property.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "badgeRight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "badgeRight"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "i2c-example"
+          ],
+          "tagName": "i2c-badge-group",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "I2cBadgeGroup",
+            "module": "src/components/badge-group/badge-group.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-badge-group",
+          "declaration": {
+            "name": "I2cBadgeGroup",
+            "module": "src/components/badge-group/badge-group.ts"
           }
         }
       ]
@@ -2202,6 +2414,109 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/card/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for card edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of card borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for card sections.*",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The card's image, if present.",
+              "name": "image"
+            },
+            {
+              "description": "The card's header, if present.",
+              "name": "header"
+            },
+            {
+              "description": "The card's body.",
+              "name": "body"
+            },
+            {
+              "description": "The card's footer, if present.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's body.",
+              "name": ""
+            },
+            {
+              "description": "The card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The card's footer.",
+              "name": "footer"
+            },
+            {
+              "description": "The card's image.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "i2c-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "src/components/card/card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/checkbox/checkbox.ts",
       "declarations": [
         {
@@ -2500,109 +2815,6 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "src/components/checkbox/checkbox.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/card/card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for card edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of card borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for card sections.*",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The card's image, if present.",
-              "name": "image"
-            },
-            {
-              "description": "The card's header, if present.",
-              "name": "header"
-            },
-            {
-              "description": "The card's body.",
-              "name": "body"
-            },
-            {
-              "description": "The card's footer, if present.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's body.",
-              "name": ""
-            },
-            {
-              "description": "The card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The card's footer.",
-              "name": "footer"
-            },
-            {
-              "description": "The card's image.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "i2c-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "src/components/card/card.ts"
           }
         }
       ]
@@ -6403,168 +6615,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/menu/menu.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenu",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "menu",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectString",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private",
-              "default": "''"
-            },
-            {
-              "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "getAllItems",
-              "parameters": [
-                {
-                  "name": "options",
-                  "default": "{ includeDisabled: true }",
-                  "type": {
-                    "text": "{ includeDisabled: boolean }"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "typeToSelect",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ],
-              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyUp"
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: SlMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "i2c-select",
-              "reactName": "onI2cSelect"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "tagName": "i2c-menu",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-menu",
-          "declaration": {
-            "name": "SlMenu",
-            "module": "src/components/menu/menu.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/input/input.ts",
       "declarations": [
         {
@@ -7438,6 +7488,168 @@
           "declaration": {
             "name": "SlInput",
             "module": "src/components/input/input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/menu/menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenu",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "menu",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectString",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "typeToSelectTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "getAllItems",
+              "parameters": [
+                {
+                  "name": "options",
+                  "default": "{ includeDisabled: true }",
+                  "type": {
+                    "text": "{ includeDisabled: boolean }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "typeToSelect",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus."
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyUp"
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ item: SlMenuItem }"
+              },
+              "description": "Emitted when a menu item is selected.",
+              "name": "i2c-select",
+              "reactName": "onI2cSelect"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "tagName": "i2c-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-menu",
+          "declaration": {
+            "name": "SlMenu",
+            "module": "src/components/menu/menu.ts"
           }
         }
       ]

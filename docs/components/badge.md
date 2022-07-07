@@ -5,7 +5,7 @@
 Badges are used to draw attention and display statuses or counts.
 
 ```html preview
-<i2c-badge>Badge</i2c-badge>
+<i2c-badge iconname="circle-fill"> Badge</i2c-badge>
 ```
 
 ```jsx react
@@ -21,11 +21,21 @@ const App = () => <SlBadge>Badge</SlBadge>;
 Set the `variant` attribute to change the badge's variant.
 
 ```html preview
+<div>
 <i2c-badge variant="primary">Primary</i2c-badge>
 <i2c-badge variant="success">Success</i2c-badge>
 <i2c-badge variant="neutral">Neutral</i2c-badge>
 <i2c-badge variant="warning">Warning</i2c-badge>
 <i2c-badge variant="danger">Danger</i2c-badge>
+</div>
+<br/>
+<div>
+<i2c-badge variant="light-primary">Primary</i2c-badge>
+<i2c-badge variant="light-success">Success</i2c-badge>
+<i2c-badge variant="light-neutral">Neutral</i2c-badge>
+<i2c-badge variant="light-warning">Warning</i2c-badge>
+<i2c-badge variant="light-danger">Danger</i2c-badge>
+</div>
 ```
 
 ```jsx react
@@ -47,11 +57,21 @@ const App = () => (
 Use the `pill` attribute to give badges rounded edges.
 
 ```html preview
+<div>
 <i2c-badge variant="primary" pill>Primary</i2c-badge>
 <i2c-badge variant="success" pill>Success</i2c-badge>
 <i2c-badge variant="neutral" pill>Neutral</i2c-badge>
 <i2c-badge variant="warning" pill>Warning</i2c-badge>
 <i2c-badge variant="danger" pill>Danger</i2c-badge>
+</div>
+<br/>
+<div>
+<i2c-badge variant="light-primary" pill>Primary</i2c-badge>
+<i2c-badge variant="light-success" pill>Success</i2c-badge>
+<i2c-badge variant="light-neutral" pill>Neutral</i2c-badge>
+<i2c-badge variant="light-warning" pill>Warning</i2c-badge>
+<i2c-badge variant="light-danger" pill>Danger</i2c-badge>
+</div>
 ```
 
 ```jsx react
@@ -78,17 +98,142 @@ const App = () => (
 );
 ```
 
+
+### Badge Sizes
+
+Use the `size` attribute to Change the badge size.
+
+```html preview
+<div>
+  <i2c-badge variant="primary" size="small" pill>Primary</i2c-badge>
+  <i2c-badge variant="success" size="small" pill>Success</i2c-badge>
+  <i2c-badge variant="neutral" size="small" pill>Neutral</i2c-badge>
+  <i2c-badge variant="warning" size="small" pill>Warning</i2c-badge>
+  <i2c-badge variant="danger" size="small" pill>Danger</i2c-badge>
+</div>
+<br/>
+<div>
+  <i2c-badge variant="primary" pill>Primary</i2c-badge>
+  <i2c-badge variant="success" pill>Success</i2c-badge>
+  <i2c-badge variant="neutral" pill>Neutral</i2c-badge>
+  <i2c-badge variant="warning" pill>Warning</i2c-badge>
+  <i2c-badge variant="danger" pill>Danger</i2c-badge>
+  
+</div>
+<br/>
+<div>
+  <i2c-badge variant="primary" size="large" pill>Primary</i2c-badge>
+  <i2c-badge variant="success" size="large" pill>Success</i2c-badge>
+  <i2c-badge variant="neutral" size="large" pill>Neutral</i2c-badge>
+  <i2c-badge variant="warning" size="large" pill>Warning</i2c-badge>
+  <i2c-badge variant="danger" size="large" pill>Danger</i2c-badge>
+</div>
+```
+
+
+### Pill Badges with Icons
+
+Use the `iconname` attribute to give badges an icon.
+
+```html preview
+<i2c-badge variant="primary" pill iconname="circle-fill">Primary</i2c-badge>
+<i2c-badge variant="success" pill iconname="circle-fill">Success</i2c-badge>
+<i2c-badge variant="neutral" pill iconname="circle-fill">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill iconname="circle-fill">Warning</i2c-badge>
+<i2c-badge variant="danger" pill iconname="circle-fill">Danger</i2c-badge>
+
+```
+
+### Pill Badges with image
+
+Use the `iconname` attribute to give badges an icon.
+
+```html preview
+<i2c-badge variant="primary" pill imgpath="/assets/images/AU.svg">Primary</i2c-badge>
+<i2c-badge variant="success" pill imgpath="/assets/images/AU.svg" >Success</i2c-badge>
+<i2c-badge variant="neutral" pill imgpath="/assets/images/AU.svg">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill imgpath="/assets/images/AU.svg">Warning</i2c-badge>
+<i2c-badge variant="danger" pill imgpath="/assets/images/AU.svg">Danger</i2c-badge>
+
+
+<br/><br/>
+<i2c-badge variant="primary" pill imgpath="/assets/images/avatar.svg">Primary</i2c-badge>
+<i2c-badge variant="success" pill imgpath="/assets/images/avatar.svg" >Success</i2c-badge>
+<i2c-badge variant="neutral" pill imgpath="/assets/images/avatar.svg">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill imgpath="/assets/images/avatar.svg">Warning</i2c-badge>
+
+
+
+```
+
+
+Use the `iconname` attribute to give badges an icon.
+
+```html preview
+
+<i2c-badge variant="primary" pill rightIcon="x">Primary</i2c-badge>
+<i2c-badge variant="success" pill rightIcon="x" >Success</i2c-badge>
+<i2c-badge variant="neutral" pill rightIcon="x">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill rightIcon="x">Warning</i2c-badge>
+<i2c-badge variant="danger" pill rightIcon="x">Danger</i2c-badge>
+
+
+<br/><br/>
+<i2c-badge variant="primary" pill rightIcon="arrow-right-short">Primary</i2c-badge>
+<i2c-badge variant="success" pill rightIcon="arrow-right-short" >Success</i2c-badge>
+<i2c-badge variant="neutral" pill rightIcon="arrow-right-short">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill rightIcon="arrow-right-short">Warning</i2c-badge>
+<i2c-badge variant="danger" pill rightIcon="arrow-right-short">Danger</i2c-badge>
+
+<br/><br/>
+<i2c-badge variant="primary" pill rightIcon="arrow-up-short">Primary</i2c-badge>
+<i2c-badge variant="success" pill rightIcon="arrow-up-short" >Success</i2c-badge>
+<i2c-badge variant="neutral" pill rightIcon="arrow-up-short">Neutral</i2c-badge>
+<i2c-badge variant="warning" pill rightIcon="arrow-up-short">Warning</i2c-badge>
+
+
+<br/><br/>
+<i2c-badge variant="primary" style="--i2c-badge-left-icon-size:14px;" pill iconname="arrow-up-short">Primary</i2c-badge>
+<i2c-badge variant="success"  style="--i2c-badge-left-icon-size:14px;" pill iconname="arrow-up-short" >Success</i2c-badge>
+<i2c-badge variant="neutral"  style="--i2c-badge-left-icon-size:14px;" pill iconname="arrow-up-short">Neutral</i2c-badge>
+<i2c-badge variant="warning"  style="--i2c-badge-left-icon-size:14px;" pill iconname="arrow-up-short">Warning</i2c-badge>
+<i2c-badge variant="danger"  style="--i2c-badge-left-icon-size:14px;" pill iconname="arrow-up-short">Danger</i2c-badge>
+
+```
+
+
+
+
 ### Pulsating Badges
 
 Use the `pulse` attribute to draw attention to the badge with a subtle animation.
 
 ```html preview
 <div class="badge-pulse">
-  <i2c-badge variant="primary" pill pulse>1</i2c-badge>
-  <i2c-badge variant="success" pill pulse>1</i2c-badge>
-  <i2c-badge variant="neutral" pill pulse>1</i2c-badge>
-  <i2c-badge variant="warning" pill pulse>1</i2c-badge>
-  <i2c-badge variant="danger" pill pulse>1</i2c-badge>
+  <i2c-badge variant="primary" circle size="small" pulse>+</i2c-badge>
+  <i2c-badge variant="success" circle size="small" pulse>+</i2c-badge>
+  <i2c-badge variant="neutral" circle size="small" pulse>+</i2c-badge>
+  <i2c-badge variant="warning" circle size="small" pulse>+</i2c-badge>
+  <i2c-badge variant="danger" circle size="small" pulse>+</i2c-badge>
+
+</div>
+<br/>
+<div class="badge-pulse">
+  <i2c-badge variant="primary" circle pulse>+</i2c-badge>
+  <i2c-badge variant="success" circle pulse>+</i2c-badge>
+  <i2c-badge variant="neutral" circle pulse>+</i2c-badge>
+  <i2c-badge variant="warning" circle pulse>+</i2c-badge>
+  <i2c-badge variant="danger" circle pulse>+</i2c-badge>
+
+</div>
+<br/>
+<div class="badge-pulse">
+  <i2c-badge variant="primary" circle size="large" pulse>+</i2c-badge>
+  <i2c-badge variant="success" circle size="large" pulse>+</i2c-badge>
+  <i2c-badge variant="neutral" circle size="large" pulse>+</i2c-badge>
+  <i2c-badge variant="warning" circle size="large" pulse>+</i2c-badge>
+  <i2c-badge variant="danger" circle size="large" pulse>+</i2c-badge>
+
 </div>
 
 <style>

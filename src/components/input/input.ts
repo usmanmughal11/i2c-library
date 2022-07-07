@@ -68,7 +68,7 @@ export default class SlInput extends LitElement {
     | 'time'
     | 'url' = 'text';
 
-    @property() theme: 'default' | 'primary' | 'danger' | 'success' | 'warning' = 'default';
+  @property() theme: 'default' | 'primary' | 'danger' | 'success' | 'warning' = 'default';
 
   /** The input's size. */
   @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';

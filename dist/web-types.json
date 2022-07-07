@@ -284,6 +284,185 @@
           ]
         },
         {
+          "name": "i2c-animated-image",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The image's src attribute.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "The image's alt attribute.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "When set, the image will animate. Otherwise, it will be paused.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "i2c-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The image's src attribute.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "The image's alt attribute.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "When set, the image will animate. Otherwise, it will be paused.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "i2c-avatar",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/avatar",
+          "js": {
+            "properties": [
+              {
+                "name": "hasError",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "value": {
+                  "type": "'circle' | 'square' | 'rounded'"
+                }
+              },
+              {
+                "name": "handleImageChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "'circle' | 'square' | 'rounded'"
+              }
+            }
+          ]
+        },
+        {
           "name": "i2c-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -551,185 +730,6 @@
           "attributes": []
         },
         {
-          "name": "i2c-animated-image",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The image's src attribute.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "The image's alt attribute.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "When set, the image will animate. Otherwise, it will be paused.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "i2c-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "i2c-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The image's src attribute.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "The image's alt attribute.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "When set, the image will animate. Otherwise, it will be paused.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "i2c-avatar",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/avatar",
-          "js": {
-            "properties": [
-              {
-                "name": "hasError",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "value": {
-                  "type": "'circle' | 'square' | 'rounded'"
-                }
-              },
-              {
-                "name": "handleImageChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "'circle' | 'square' | 'rounded'"
-              }
-            }
-          ]
-        },
-        {
           "name": "i2c-badge",
           "description": "",
           "doc-url": "https://shoelace.style/components/badge",
@@ -739,12 +739,48 @@
                 "name": "variant",
                 "description": "The badge's variant.",
                 "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' \n                                      | 'light-primary' | 'light-success' | 'light-neutral' | 'dark-neutral' | 'light-warning' | 'light-danger'\n                                      | 'lighter-primary' | 'lighter-success' | 'lighter-neutral' | 'lighter-warning' | 'lighter-danger'"
+                }
+              },
+              {
+                "name": "size",
+                "value": {
+                  "type": "'small' | 'medium' | 'large'"
                 }
               },
               {
                 "name": "pill",
                 "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "circle",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "iconname",
+                "value": {
+                  "type": "''"
+                }
+              },
+              {
+                "name": "rightIcon",
+                "value": {
+                  "type": "'x'"
+                }
+              },
+              {
+                "name": "imgpath",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "closable",
                 "value": {
                   "type": "boolean"
                 }
@@ -764,7 +800,13 @@
               "name": "variant",
               "description": "The badge's variant.",
               "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' \n                                      | 'light-primary' | 'light-success' | 'light-neutral' | 'dark-neutral' | 'light-warning' | 'light-danger'\n                                      | 'lighter-primary' | 'lighter-success' | 'lighter-neutral' | 'lighter-warning' | 'lighter-danger'"
+              }
+            },
+            {
+              "name": "size",
+              "value": {
+                "type": "'small' | 'medium' | 'large'"
               }
             },
             {
@@ -775,8 +817,81 @@
               }
             },
             {
+              "name": "circle",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "iconname",
+              "value": {
+                "type": "''"
+              }
+            },
+            {
+              "name": "rightIcon",
+              "value": {
+                "type": "'x'"
+              }
+            },
+            {
+              "name": "imgpath",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "closable",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
               "name": "pulse",
               "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "i2c-badge-group",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge-group",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "An example property.",
+                "value": {
+                  "type": "'primary-light' | 'primary'  | 'success-light' | 'success'  | 'neutral-light' |'neutral'| \n                                        'warning-light' | 'warning'  | 'danger-light' |'danger'"
+                }
+              },
+              {
+                "name": "badgeRight",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-event-name",
+                "description": "Emitted as an example."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "An example property.",
+              "value": {
+                "type": "'primary-light' | 'primary'  | 'success-light' | 'success'  | 'neutral-light' |'neutral'| \n                                        'warning-light' | 'warning'  | 'danger-light' |'danger'"
+              }
+            },
+            {
+              "name": "badgeRight",
               "value": {
                 "type": "boolean"
               }
@@ -1300,6 +1415,21 @@
           ]
         },
         {
+          "name": "i2c-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
           "name": "i2c-checkbox",
           "description": "",
           "doc-url": "https://shoelace.style/components/checkbox",
@@ -1482,21 +1612,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "i2c-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
         },
         {
           "name": "i2c-color-picker",
@@ -3491,75 +3606,6 @@
           "attributes": []
         },
         {
-          "name": "i2c-menu",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu",
-          "js": {
-            "properties": [
-              {
-                "name": "menu",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "typeToSelectString",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "typeToSelectTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "getAllItems",
-                "value": {}
-              },
-              {
-                "name": "typeToSelect",
-                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleKeyUp",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "i2c-select",
-                "description": "Emitted when a menu item is selected."
-              }
-            ]
-          },
-          "attributes": []
-        },
-        {
           "name": "i2c-input",
           "description": "",
           "doc-url": "https://shoelace.style/components/input",
@@ -4110,6 +4156,75 @@
               }
             }
           ]
+        },
+        {
+          "name": "i2c-menu",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "menu",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "typeToSelectString",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "typeToSelectTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "getAllItems",
+                "value": {}
+              },
+              {
+                "name": "typeToSelect",
+                "description": "Initiates type-to-select logic, which automatically selects an option based on what the user is currently typing.\nThe event passed will be used to append the appropriate characters to the internal query and the selection will be\nupdated. After a brief period, the internal query is cleared automatically. This is useful for enabling\ntype-to-select behavior when the menu doesn't have focus.",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyUp",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
         },
         {
           "name": "i2c-menu-item",

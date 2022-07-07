@@ -631,10 +631,15 @@
   --i2c-input-border-color-disabled: var(--i2c-color-neutral-300);
 
   --i2c-input-border-danger: var(--i2c-color-danger-300);
-  --i2c-input-border-danger-hover: var(--i2c-color-dager-400);
+  --i2c-input-border-danger-hover: var(--i2c-color-danger-400);
   --i2c-input-border-danger-focus: var(--i2c-color-danger-500);
   --i2c-input-border-danger-disabled: var(--i2c-color-danger-300);
 
+
+  --i2c-input-border-success: var(--i2c-color-success-300);
+  --i2c-input-border-success-hover: var(--i2c-color-success-400);
+  --i2c-input-border-success-focus: var(--i2c-color-success-500);
+  --i2c-input-border-success-disabled: var(--i2c-color-success-300);
 
 
   --i2c-input-border-width: 1px;

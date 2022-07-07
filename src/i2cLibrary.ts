@@ -51,6 +51,7 @@ export { default as i2cTag } from './components/tag/tag';
 export { default as i2cTextarea } from './components/textarea/textarea';
 export { default as i2cTooltip } from './components/tooltip/tooltip';
 export { default as i2cVisuallyHidden } from './components/visually-hidden/visually-hidden';
+export { default as I2cBadgeGroup } from './components/badge-group/badge-group';
 /* plop:component */
 
 // Utilities

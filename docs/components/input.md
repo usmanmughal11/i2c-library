@@ -44,7 +44,11 @@ import { SlInput } from '@shoelace-style/shoelace/dist/react';
 const App = () => <SlInput />;
 ```
 
+### Valid or Success State
 
+```html preview
+<i2c-input  theme="success"></i2c-input>
+```
 
 
 ### Help Text

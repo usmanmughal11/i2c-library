@@ -84,6 +84,32 @@ export default css`
   }
 
 
+
+  .input--standard.input--success {
+    background-color: var(--i2c-input-background-color);
+    border: solid var(--i2c-input-border-width) var(--i2c-input-border-success);
+  }
+
+  .input--standard.input--success:hover:not(.input--disabled) {
+    border-color: var(--i2c-input-border-success-hover);
+  }
+
+  .input--standard.input--success.input--focused:not(.input--disabled) {
+    border-color: var(--i2c-input-border-success-focus);
+    box-shadow: 0 0 0 var(--i2c-focus-ring-width) var(--i2c-input-focus-ring-success);
+  }
+
+  .input--standard.input--success.input--focused:not(.input--disabled) .input__control {
+    color: var(--i2c-input-success-focus);
+  }
+
+
+
+
+
+
+
+
   /* Filled inputs */
   .input--filled {
     border: none;

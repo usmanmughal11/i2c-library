@@ -1,12 +1,12 @@
 import { expect, fixture, html } from '@open-wc/testing';
-import type SlBadge from './badge';
+import type i2cBadge from './badge';
 
 describe('<i2c-badge>', () => {
-  let el: SlBadge;
+  let el: i2cBadge;
 
   describe('when provided no parameters', () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <i2c-badge>Badge</i2c-badge> `);
+      el = await fixture<i2cBadge>(html` <i2c-badge>Badge</i2c-badge> `);
     });
 
     it('should pass accessibility tests with a role of status on the base part.', async () => {
@@ -28,7 +28,7 @@ describe('<i2c-badge>', () => {
 
   describe('when provided a pill parameter', () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <i2c-badge pill>Badge</i2c-badge> `);
+      el = await fixture<i2cBadge>(html` <i2c-badge pill>Badge</i2c-badge> `);
     });
 
     it('should pass accessibility tests', async () => {
@@ -43,7 +43,7 @@ describe('<i2c-badge>', () => {
 
   describe('when provided a pulse parameter', () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <i2c-badge pulse>Badge</i2c-badge> `);
+      el = await fixture<i2cBadge>(html` <i2c-badge pulse>Badge</i2c-badge> `);
     });
 
     it('should pass accessibility tests', async () => {
@@ -59,7 +59,7 @@ describe('<i2c-badge>', () => {
   ['primary', 'success', 'neutral', 'warning', 'danger'].forEach(variant => {
     describe(`when passed a variant attribute ${variant}`, () => {
       before(async () => {
-        el = await fixture<SlBadge>(html`<i2c-badge variant="${variant}">Badge</i2c-badge>`);
+        el = await fixture<i2cBadge>(html`<i2c-badge variant="${variant}">Badge</i2c-badge>`);
       });
 
       it('should pass accessibility tests', async () => {

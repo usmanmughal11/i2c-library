@@ -92,55 +92,6 @@
       ]
     },
     {
-      "name": "i2c-animation",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop."
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This prop will be automatically removed when the\nanimation finishes or gets canceled."
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation."
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration."
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete."
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a i2c-Library easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`."
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence."
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution."
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end)."
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart."
-        }
-      ]
-    },
-    {
       "name": "i2c-animated-image",
       "attributes": [
         {
@@ -190,6 +141,55 @@
       ]
     },
     {
+      "name": "i2c-animation",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop."
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This prop will be automatically removed when the\nanimation finishes or gets canceled."
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation."
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration."
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete."
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a i2c-Library easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`."
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence."
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution."
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end)."
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart."
+        }
+      ]
+    },
+    {
       "name": "i2c-badge",
       "attributes": [
         {
@@ -210,6 +210,53 @@
             },
             {
               "name": "danger"
+            },
+            {
+              "name": "light-primary"
+            },
+            {
+              "name": "light-success"
+            },
+            {
+              "name": "light-neutral"
+            },
+            {
+              "name": "dark-neutral"
+            },
+            {
+              "name": "light-warning"
+            },
+            {
+              "name": "light-danger"
+            },
+            {
+              "name": "lighter-primary"
+            },
+            {
+              "name": "lighter-success"
+            },
+            {
+              "name": "lighter-neutral"
+            },
+            {
+              "name": "lighter-warning"
+            },
+            {
+              "name": "lighter-danger"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            {
+              "name": "small"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "large"
             }
           ]
         },
@@ -218,8 +265,77 @@
           "description": "Draws a pill-style badge with rounded edges."
         },
         {
+          "name": "circle"
+        },
+        {
+          "name": "iconname",
+          "values": [
+            {
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "rightIcon",
+          "values": [
+            {
+              "name": "x"
+            }
+          ]
+        },
+        {
+          "name": "imgpath"
+        },
+        {
+          "name": "closable"
+        },
+        {
           "name": "pulse",
           "description": "Makes the badge pulsate to draw attention."
+        }
+      ]
+    },
+    {
+      "name": "i2c-badge-group",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "An example property.",
+          "values": [
+            {
+              "name": "primary-light"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "success-light"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "neutral-light"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "warning-light"
+            },
+            {
+              "name": "warning"
+            },
+            {
+              "name": "danger-light"
+            },
+            {
+              "name": "danger"
+            }
+          ]
+        },
+        {
+          "name": "badgeRight"
         }
       ]
     },
@@ -454,6 +570,9 @@
       ]
     },
     {
+      "name": "i2c-card"
+    },
+    {
       "name": "i2c-checkbox",
       "attributes": [
         {
@@ -485,9 +604,6 @@
           "description": "This will be true when the control is in an invalid state. Validity is determined by the `required` prop."
         }
       ]
-    },
-    {
-      "name": "i2c-card"
     },
     {
       "name": "i2c-color-picker",
@@ -1099,9 +1215,6 @@
       ]
     },
     {
-      "name": "i2c-menu"
-    },
-    {
       "name": "i2c-input",
       "attributes": [
         {
@@ -1349,6 +1462,9 @@
           ]
         }
       ]
+    },
+    {
+      "name": "i2c-menu"
     },
     {
       "name": "i2c-menu-item",

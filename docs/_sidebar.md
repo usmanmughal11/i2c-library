@@ -26,6 +26,7 @@
   - [Alert](/components/alert)
   - [Avatar](/components/avatar)
   - [Badge](/components/badge)
+  - [Badge Group](/components/badge-group)
   - [Breadcrumb](/components/breadcrumb)
   - [Breadcrumb Item](/components/breadcrumb-item)
   - [Button](/components/button)
@@ -65,6 +66,7 @@
   - [Textarea](/components/textarea)
   - [Tooltip](/components/tooltip)
   - [Test](/components/test)
+  - [Badge Group](/components/badge-group)
   <!--plop:component-->
 
 - Utilities
