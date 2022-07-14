@@ -1,7 +1,7 @@
 import {
   i2cBadge
-} from "../../chunks/chunk.D3WXX5U3.js";
-import "../../chunks/chunk.MVBF72A5.js";
+} from "../../chunks/chunk.M7HWJOQK.js";
+import "../../chunks/chunk.L3UKCPPQ.js";
 import "../../chunks/chunk.H66XLZ2O.js";
 import "../../chunks/chunk.2JQPDYNA.js";
 import "../../chunks/chunk.QCFW6O2I.js";

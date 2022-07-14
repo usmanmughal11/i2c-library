@@ -1,5 +1,7 @@
 # Contributing to i2c-Library
 
-Before contributing, please review the contributions guidelines at:
+Before contributing, please review the contributions guidelines:
 
-[shoelace.style/resources/contributing](https://shoelace.style/resources/contributing)
+If you're not from Digital design - Please Contact with Diigital Design team via email
+
+Thanks

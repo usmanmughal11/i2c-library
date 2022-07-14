@@ -259,6 +259,9 @@ export default css`
 .linear--alert.linear--alert--primary  a{
   color: var(--i2c-color-primary-700);
 }
+.linear--alert.linear--alert--primary  a:hover:not(:disabled){
+  color: var(--i2c-color-primary-800);
+}
 
 
 
@@ -283,6 +286,9 @@ export default css`
   color: var(--i2c-color-success-700);
 }
 
+.linear--alert.linear--alert--success a:hover:not(:disabled){
+  color: var(--i2c-color-success-800);
+}
 
 
 .linear--alert.linear--alert--warning {
@@ -303,6 +309,9 @@ export default css`
 }
 .linear--alert.linear--alert--warning  a{
   color: var(--i2c-color-warning-700);
+}
+.linear--alert.linear--alert--warning  a:hover:not(:disabled){
+  color: var(--i2c-color-warning-800);
 }
 
 
@@ -326,6 +335,9 @@ export default css`
 .linear--alert.linear--alert--danger  a{
   color: var(--i2c-color-danger-700);
 }
+.linear--alert.linear--alert--danger  a:hover:not(:disabled){
+  color: var(--i2c-color-danger-800);
+}
 
 .linear--alert.linear--alert--neutral {
   border-color:var(--i2c-color-neutral-600);
@@ -345,5 +357,8 @@ export default css`
 }
 .linear--alert.linear--alert--neutral  a{
   color: var(--i2c-color-neutral-700);
+}
+.linear--alert.linear--alert--neutral  a:hover:not(:disabled){
+  color: var(--i2c-color-neutral-800);
 }
 `;

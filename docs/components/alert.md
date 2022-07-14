@@ -33,16 +33,9 @@ const App = () => (
   <i2c-avatar slot="avatar" image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></i2c-avatar>
    <strong>This is super informative</strong> <br/>
   This is a standard alert. You can customize its content and even the icon.
-  <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
-  <a href="#" slot="link2" class="no-underline">View changes</a>
-  <style>
-    .text-gray{
-      color:#888;
-    }
-    .no-underline{
-      text-decoration:none;
-    }
-  </style>
+  <a href="#" slot="link1" style="color:var(--i2c-color-gray-500);text-decoration:none;">Dismiss</a>
+  <a href="#" slot="link2" style="color:var(--i2c-color-primary-700);text-decoration:none;">View changes</a>
+  
 </i2c-alert>
 <br/>
 <i2c-alert open>
@@ -72,16 +65,8 @@ const App = () => (
 <i2c-alert open  leftImg="/assets/images/alert-left.png">
    <strong>This is super informative</strong> <br/>
   This is a standard alert. You can customize its content and even the icon.
-  <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
-  <a href="#" slot="link2" class="no-underline">View changes</a>
-  <style>
-    .text-gray{
-      color:#888;
-    }
-    .no-underline{
-      text-decoration:none;
-    }
-  </style>
+  <a href="#" slot="link1" style="color:var(--i2c-color-gray-500);text-decoration:none;">Dismiss</a>
+  <a href="#" slot="link2" style="color:var(--i2c-color-primary-700);text-decoration:none;">View changes</a>
 </i2c-alert>
 
 <br/>
@@ -205,16 +190,8 @@ Set the `layout` attribute to change the alert's Layout.
   <i2c-icon slot="icon" name="info-circle"></i2c-icon>
   <strong>This is super informative</strong><br />
   Your team has made changes to your company profile since you last logged in.
-   <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
-  <a href="#" slot="link2" class="no-underline">View changes</a>
-  <style>
-    .text-gray{
-      color:#888;
-    }
-    .no-underline{
-      text-decoration:none;
-    }
-  </style>
+  <a href="#" slot="link1" style="color:var(--i2c-color-gray-500);text-decoration:none;">Dismiss</a>
+  <a href="#" slot="link2" style="color:var(--i2c-color-primary-700);text-decoration:none;">View changes</a>
 </i2c-alert>
 <br/>
 <i2c-alert variant="neutral" open layout="vertical">
@@ -239,16 +216,8 @@ Set the `layout` attribute to change the alert's Layout.
   <strong>This is super informative</strong><br />
   Your team has made changes to your company profile since you last logged in.
   <img src="/assets/images/alert-img.png" />
-   <a href="#" slot="link1" class="no-underline text-gray">Dismiss</a>
-  <a href="#" slot="link2" class="no-underline">View changes</a>
-  <style>
-    .text-gray{
-      color:#888;
-    }
-    .no-underline{
-      text-decoration:none;
-    }
-  </style>
+  <a href="#" slot="link1" style="color:var(--i2c-color-gray-500);text-decoration:none;">Dismiss</a>
+  <a href="#" slot="link2" style="color:var(--i2c-color-primary-700);text-decoration:none;">View changes</a>
 </i2c-alert>
 <br/>
 <i2c-alert variant="primary" open layout="vertical" closable class="alert-closable">

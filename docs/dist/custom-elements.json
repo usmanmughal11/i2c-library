@@ -607,170 +607,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/avatar/avatar.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "'circle' | 'square' | 'rounded'"
-              },
-              "default": "'circle'",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "i2c-icon"
-          ],
-          "tagName": "i2c-avatar",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-avatar",
-          "declaration": {
-            "name": "SlAvatar",
-            "module": "src/components/avatar/avatar.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/animation/animation.ts",
       "declarations": [
         {
@@ -1160,6 +996,170 @@
           "declaration": {
             "name": "getEasingNames",
             "module": "src/components/animation/animations.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/avatar/avatar.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'square' | 'rounded'"
+              },
+              "default": "'circle'",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "i2c-icon"
+          ],
+          "tagName": "i2c-avatar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-avatar",
+          "declaration": {
+            "name": "SlAvatar",
+            "module": "src/components/avatar/avatar.ts"
           }
         }
       ]
@@ -3842,325 +3842,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/dialog/dialog.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlDialog",
-          "cssProperties": [
-            {
-              "description": "The preferred width of the dialog. Note that the dialog will shrink to accommodate smaller screens.",
-              "name": "--width"
-            },
-            {
-              "description": "The amount of padding to use for the header.",
-              "name": "--header-spacing"
-            },
-            {
-              "description": "The amount of padding to use for the body.",
-              "name": "--body-spacing"
-            },
-            {
-              "description": "The amount of padding to use for the footer.",
-              "name": "--footer-spacing"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The overlay.",
-              "name": "overlay"
-            },
-            {
-              "description": "The dialog panel (where the dialog and its content is rendered).",
-              "name": "panel"
-            },
-            {
-              "description": "The dialog header.",
-              "name": "header"
-            },
-            {
-              "description": "The dialog title.",
-              "name": "title"
-            },
-            {
-              "description": "The close button.",
-              "name": "close-button"
-            },
-            {
-              "description": "The close button's `base` part.",
-              "name": "close-button__base"
-            },
-            {
-              "description": "The dialog body.",
-              "name": "body"
-            },
-            {
-              "description": "The dialog footer.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The dialog's content.",
-              "name": ""
-            },
-            {
-              "description": "The dialog's label. Alternatively, you can use the label prop.",
-              "name": "label"
-            },
-            {
-              "description": "The dialog's footer, usually one or more buttons representing various options.",
-              "name": "footer"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dialog",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "panel",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "overlay",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer')"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "modal",
-              "type": {
-                "text": "Modal"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "originalTrigger",
-              "type": {
-                "text": "HTMLElement | null"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
-              "attribute": "label",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "noHeader",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
-              "attribute": "no-header",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the dialog."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the dialog"
-            },
-            {
-              "kind": "method",
-              "name": "requestClose",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "source",
-                  "type": {
-                    "text": "'close-button' | 'keyboard' | 'overlay'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the dialog opens.",
-              "name": "i2c-show",
-              "reactName": "onI2cShow"
-            },
-            {
-              "description": "Emitted after the dialog opens and all animations are complete.",
-              "name": "i2c-after-show",
-              "reactName": "onI2cAfterShow"
-            },
-            {
-              "description": "Emitted when the dialog closes.",
-              "name": "i2c-hide",
-              "reactName": "onI2cHide"
-            },
-            {
-              "description": "Emitted after the dialog closes and all animations are complete.",
-              "name": "i2c-after-hide",
-              "reactName": "onI2cAfterHide"
-            },
-            {
-              "description": "Emitted when the dialog opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.",
-              "name": "i2c-initial-focus",
-              "reactName": "onI2cInitialFocus"
-            },
-            {
-              "type": {
-                "text": "{ source: 'close-button' | 'keyboard' | 'overlay' }"
-              },
-              "description": "Emitted when the user attempts to close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in destructive behavior such as data loss.",
-              "name": "i2c-request-close",
-              "reactName": "onI2cRequestClose"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
-              "fieldName": "open"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
-              "fieldName": "label"
-            },
-            {
-              "name": "no-header",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
-              "fieldName": "noHeader"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "since": "2.0",
-          "status": "stable",
-          "dependencies": [
-            "i2c-icon-button"
-          ],
-          "animations": [
-            {
-              "name": "dialog.show",
-              "description": "The animation to use when showing the dialog."
-            },
-            {
-              "name": "dialog.hide",
-              "description": "The animation to use when hiding the dialog."
-            },
-            {
-              "name": "dialog.denyClose",
-              "description": "The animation to use when a request to close the dialog is denied."
-            },
-            {
-              "name": "dialog.overlay.show",
-              "description": "The animation to use when showing the dialog's overlay."
-            },
-            {
-              "name": "dialog.overlay.hide",
-              "description": "The animation to use when hiding the dialog's overlay."
-            }
-          ],
-          "tagName": "i2c-dialog",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlDialog",
-            "module": "src/components/dialog/dialog.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i2c-dialog",
-          "declaration": {
-            "name": "SlDialog",
-            "module": "src/components/dialog/dialog.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/divider/divider.ts",
       "declarations": [
         {
@@ -4617,6 +4298,325 @@
           "declaration": {
             "name": "SlDrawer",
             "module": "src/components/drawer/drawer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/dialog/dialog.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlDialog",
+          "cssProperties": [
+            {
+              "description": "The preferred width of the dialog. Note that the dialog will shrink to accommodate smaller screens.",
+              "name": "--width"
+            },
+            {
+              "description": "The amount of padding to use for the header.",
+              "name": "--header-spacing"
+            },
+            {
+              "description": "The amount of padding to use for the body.",
+              "name": "--body-spacing"
+            },
+            {
+              "description": "The amount of padding to use for the footer.",
+              "name": "--footer-spacing"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The overlay.",
+              "name": "overlay"
+            },
+            {
+              "description": "The dialog panel (where the dialog and its content is rendered).",
+              "name": "panel"
+            },
+            {
+              "description": "The dialog header.",
+              "name": "header"
+            },
+            {
+              "description": "The dialog title.",
+              "name": "title"
+            },
+            {
+              "description": "The close button.",
+              "name": "close-button"
+            },
+            {
+              "description": "The close button's `base` part.",
+              "name": "close-button__base"
+            },
+            {
+              "description": "The dialog body.",
+              "name": "body"
+            },
+            {
+              "description": "The dialog footer.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The dialog's content.",
+              "name": ""
+            },
+            {
+              "description": "The dialog's label. Alternatively, you can use the label prop.",
+              "name": "label"
+            },
+            {
+              "description": "The dialog's footer, usually one or more buttons representing various options.",
+              "name": "footer"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dialog",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "panel",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "overlay",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer')"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "modal",
+              "type": {
+                "text": "Modal"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "originalTrigger",
+              "type": {
+                "text": "HTMLElement | null"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noHeader",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
+              "attribute": "no-header",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the dialog."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the dialog"
+            },
+            {
+              "kind": "method",
+              "name": "requestClose",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "source",
+                  "type": {
+                    "text": "'close-button' | 'keyboard' | 'overlay'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the dialog opens.",
+              "name": "i2c-show",
+              "reactName": "onI2cShow"
+            },
+            {
+              "description": "Emitted after the dialog opens and all animations are complete.",
+              "name": "i2c-after-show",
+              "reactName": "onI2cAfterShow"
+            },
+            {
+              "description": "Emitted when the dialog closes.",
+              "name": "i2c-hide",
+              "reactName": "onI2cHide"
+            },
+            {
+              "description": "Emitted after the dialog closes and all animations are complete.",
+              "name": "i2c-after-hide",
+              "reactName": "onI2cAfterHide"
+            },
+            {
+              "description": "Emitted when the dialog opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.",
+              "name": "i2c-initial-focus",
+              "reactName": "onI2cInitialFocus"
+            },
+            {
+              "type": {
+                "text": "{ source: 'close-button' | 'keyboard' | 'overlay' }"
+              },
+              "description": "Emitted when the user attempts to close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in destructive behavior such as data loss.",
+              "name": "i2c-request-close",
+              "reactName": "onI2cRequestClose"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
+              "fieldName": "open"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
+              "fieldName": "label"
+            },
+            {
+              "name": "no-header",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
+              "fieldName": "noHeader"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "since": "2.0",
+          "status": "stable",
+          "dependencies": [
+            "i2c-icon-button"
+          ],
+          "animations": [
+            {
+              "name": "dialog.show",
+              "description": "The animation to use when showing the dialog."
+            },
+            {
+              "name": "dialog.hide",
+              "description": "The animation to use when hiding the dialog."
+            },
+            {
+              "name": "dialog.denyClose",
+              "description": "The animation to use when a request to close the dialog is denied."
+            },
+            {
+              "name": "dialog.overlay.show",
+              "description": "The animation to use when showing the dialog's overlay."
+            },
+            {
+              "name": "dialog.overlay.hide",
+              "description": "The animation to use when hiding the dialog's overlay."
+            }
+          ],
+          "tagName": "i2c-dialog",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlDialog",
+            "module": "src/components/dialog/dialog.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "i2c-dialog",
+          "declaration": {
+            "name": "SlDialog",
+            "module": "src/components/dialog/dialog.ts"
           }
         }
       ]

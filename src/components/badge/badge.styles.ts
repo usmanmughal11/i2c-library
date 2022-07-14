@@ -14,7 +14,7 @@ export default css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    line-height:1;
+    
     font-weight: var(--i2c-font-weight-semibold);
     letter-spacing: var(--i2c-letter-spacing-normal);
     border: solid 1px var(--i2c-color-neutral-0);
@@ -23,30 +23,32 @@ export default css`
     cursor: inherit;
   }
   .badge.badge--medium{
-    height:var(--i2c-spacing-6);
-    padding: 0 var(--i2c-spacing-2-5);
+    line-height:1.3;
+     min-height:var(--i2c-spacing-6);
+     padding: 0 var(--i2c-spacing-2);
     font-size: var(--i2c-font-size-small);
   }
   .badge.badge--small{
-    height:var(--i2c-spacing-5-5);
-    padding: 0  var(--i2c-spacing-2);
+    line-height:1;
+    min-height:var(--i2c-spacing-5-5);
+    padding: 0  var(--i2c-spacing-2-5);
     font-size: var(--i2c-font-size-x-small);
   }
   .badge.badge--large{
-    height:var(--i2c-spacing-7);
-    padding:0 var(--i2c-spacing-3);
+    min-height:var(--i2c-spacing-7);
+    padding:0 var(--i2c-spacing-2-5);
     font-size: var(--i2c-font-size-small);
   }
   .badge--icon{
     font-size:var(--i2c-badge-left-icon-size);
-    padding-right:var(--i2c-spacing-1);
+    padding-right:var(--i2c-spacing-1-5);
   }
   .badge.badge--has--img{
     height:28px;
     padding: 0 var(--i2c-spacing-2) 0 var(--i2c-spacing-1);
   }
   .badge.badge--has--right--icon{
-    padding-right:var(--i2c-spacing-1-5);    
+    padding-right:var(--i2c-spacing-1-5);
   }
 
   .badge--img{
@@ -162,13 +164,18 @@ export default css`
 
   .badge.badge--circle.badge--small {
     width:var(--i2c-spacing-5-5);
+    height:var(--i2c-spacing-5-5);
     line-height:unset;
   }
   .badge.badge--circle.badge--medium {
+    height:var(--i2c-spacing-6);
     width:var(--i2c-spacing-6);
+    line-height:unset;
   }
   .badge.badge--circle.badge--large {
     width: var(--i2c-spacing-7);
+    height: var(--i2c-spacing-7);
+    line-height:1;
   }
 
 

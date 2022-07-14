@@ -385,84 +385,6 @@
           ]
         },
         {
-          "name": "i2c-avatar",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/avatar",
-          "js": {
-            "properties": [
-              {
-                "name": "hasError",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "value": {
-                  "type": "'circle' | 'square' | 'rounded'"
-                }
-              },
-              {
-                "name": "handleImageChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "'circle' | 'square' | 'rounded'"
-              }
-            }
-          ]
-        },
-        {
           "name": "i2c-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -728,6 +650,84 @@
             "events": []
           },
           "attributes": []
+        },
+        {
+          "name": "i2c-avatar",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/avatar",
+          "js": {
+            "properties": [
+              {
+                "name": "hasError",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "value": {
+                  "type": "'circle' | 'square' | 'rounded'"
+                }
+              },
+              {
+                "name": "handleImageChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "'circle' | 'square' | 'rounded'"
+              }
+            }
+          ]
         },
         {
           "name": "i2c-badge",
@@ -2116,145 +2116,6 @@
           ]
         },
         {
-          "name": "i2c-dialog",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/dialog",
-          "js": {
-            "properties": [
-              {
-                "name": "dialog",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "panel",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "overlay",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "modal",
-                "value": {
-                  "type": "Modal"
-                }
-              },
-              {
-                "name": "originalTrigger",
-                "value": {
-                  "type": "HTMLElement | null"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "label",
-                "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "noHeader",
-                "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "show",
-                "description": "Shows the dialog.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the dialog",
-                "value": {}
-              },
-              {
-                "name": "requestClose",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "i2c-show",
-                "description": "Emitted when the dialog opens."
-              },
-              {
-                "name": "i2c-after-show",
-                "description": "Emitted after the dialog opens and all animations are complete."
-              },
-              {
-                "name": "i2c-hide",
-                "description": "Emitted when the dialog closes."
-              },
-              {
-                "name": "i2c-after-hide",
-                "description": "Emitted after the dialog closes and all animations are complete."
-              },
-              {
-                "name": "i2c-initial-focus",
-                "description": "Emitted when the dialog opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input."
-              },
-              {
-                "name": "i2c-request-close",
-                "description": "Emitted when the user attempts to close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in destructive behavior such as data loss."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "open",
-              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "label",
-              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "no-header",
-              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "i2c-divider",
           "description": "",
           "doc-url": "https://shoelace.style/components/divider",
@@ -2445,6 +2306,145 @@
             {
               "name": "no-header",
               "description": "Removes the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the drawer.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "i2c-dialog",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/dialog",
+          "js": {
+            "properties": [
+              {
+                "name": "dialog",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "panel",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "overlay",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "modal",
+                "value": {
+                  "type": "Modal"
+                }
+              },
+              {
+                "name": "originalTrigger",
+                "value": {
+                  "type": "HTMLElement | null"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "label",
+                "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "noHeader",
+                "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "show",
+                "description": "Shows the dialog.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the dialog",
+                "value": {}
+              },
+              {
+                "name": "requestClose",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "i2c-show",
+                "description": "Emitted when the dialog opens."
+              },
+              {
+                "name": "i2c-after-show",
+                "description": "Emitted after the dialog opens and all animations are complete."
+              },
+              {
+                "name": "i2c-hide",
+                "description": "Emitted when the dialog closes."
+              },
+              {
+                "name": "i2c-after-hide",
+                "description": "Emitted after the dialog closes and all animations are complete."
+              },
+              {
+                "name": "i2c-initial-focus",
+                "description": "Emitted when the dialog opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input."
+              },
+              {
+                "name": "i2c-request-close",
+                "description": "Emitted when the user attempts to close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in destructive behavior such as data loss."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the dialog is open. You can use this in lieu of the show/hide methods.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "label",
+              "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "no-header",
+              "description": "Disables the header. This will also remove the default close button, so please ensure you provide an easy,\naccessible way for users to dismiss the dialog.",
               "value": {
                 "type": "boolean"
               }
